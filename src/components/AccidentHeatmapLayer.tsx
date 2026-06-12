@@ -11,17 +11,17 @@ export function AccidentHeatmapLayer({ accidents }: { accidents: AccidentRecord[
     const points = accidents.map((accident) => [
       accident.latitude,
       accident.longitude,
-      accident.accidentType === 1 ? 5 : 1,
+      accident.accidentType === 1 ? 1.8 : 0.55,
     ]) as Array<[number, number, number]>;
     const layer = L.heatLayer(points, {
-      radius: 18,
-      blur: 22,
+      radius: 11,
+      blur: 16,
       maxZoom: 17,
-      minOpacity: 0.25,
+      minOpacity: 0.05,
       gradient: {
-        0.2: '#22c55e',
-        0.45: '#eab308',
-        0.7: '#f97316',
+        0.35: '#22c55e',
+        0.68: '#eab308',
+        0.9: '#f97316',
         1: '#dc2626',
       },
     });
