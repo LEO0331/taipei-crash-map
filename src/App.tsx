@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { lazy, Suspense, useEffect, useMemo, useState } from 'react';
 import type { AccidentFilters, MapMode } from './types/accident';
 import type { Language } from './i18n';
 import { translations } from './i18n';
@@ -8,12 +8,15 @@ import { LanguageToggle } from './components/LanguageToggle';
 import { FilterPanel } from './components/FilterPanel';
 import { AccidentMap } from './components/AccidentMap';
 import { NearbyHistoricalAccidents } from './components/NearbyHistoricalAccidents';
-import { Dashboard } from './components/Dashboard';
 import { DisclaimerNotice } from './components/DisclaimerNotice';
 import { Footer } from './components/Footer';
 import { appUrl } from './utils/urls';
 import 'leaflet/dist/leaflet.css';
 import './styles.css';
+
+const Dashboard = lazy(() =>
+  import('./components/Dashboard').then((module) => ({ default: module.Dashboard })),
+);
 
 const defaultFilters: AccidentFilters = {
   years: [2019, 2020, 2021, 2022, 2023, 2024, 2025],
@@ -94,7 +97,7 @@ export default function App() {
             filters={filters}
             t={t}
             onChange={setFilters}
-            onLocate={(latitude, longitude) => setUserLocation({ latitude, longitude })}
+            onLocate={setUserLocation}
           />
         </aside>
         {isLoading ? <p className="loading">Loading accident data...</p> : null}
@@ -111,7 +114,23 @@ export default function App() {
               userLocation={userLocation}
               onModeChange={setMapMode}
             />
-            <Dashboard accidents={filteredAccidents} baseHotspots={hotspots} t={t} />
+            <Suspense
+              fallback={
+                <section className="dashboard dashboard-placeholder" aria-busy="true">
+                  <div className="section-heading">
+                    <p className="eyebrow dark">Selected filters</p>
+                    <h2>{t.dashboard}</h2>
+                  </div>
+                  <div className="placeholder-grid" aria-hidden="true">
+                    <span />
+                    <span />
+                    <span />
+                  </div>
+                </section>
+              }
+            >
+              <Dashboard accidents={filteredAccidents} baseHotspots={hotspots} t={t} />
+            </Suspense>
           </>
         ) : null}
       </main>

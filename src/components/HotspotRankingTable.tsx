@@ -30,7 +30,7 @@ export function HotspotRankingTable({
                   <a
                     href={getGoogleMapsUrl(hotspot.latitude, hotspot.longitude)}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                   >
                     {hotspot.location}
                   </a>

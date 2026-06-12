@@ -27,7 +27,7 @@ export function renderAccidentPopup({ accident, language, t }: Props): string {
       <p>${escapeHtml(accident.accidentTime)}</p>
       <p>${escapeHtml(accident.district ?? '-')}</p>
       <p>${escapeHtml(accident.location)}</p>
-      <a href="${escapeHtml(mapsUrl)}" target="_blank" rel="noreferrer">${escapeHtml(t.openGoogleMaps)}</a>
+      <a href="${escapeHtml(mapsUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(t.openGoogleMaps)}</a>
     </div>
   `;
 }

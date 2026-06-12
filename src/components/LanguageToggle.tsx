@@ -11,6 +11,7 @@ export function LanguageToggle({ language, onChange }: Props) {
       <button
         className={language === 'zh' ? 'active' : ''}
         type="button"
+        aria-pressed={language === 'zh'}
         onClick={() => onChange('zh')}
       >
         中文
@@ -18,6 +19,7 @@ export function LanguageToggle({ language, onChange }: Props) {
       <button
         className={language === 'en' ? 'active' : ''}
         type="button"
+        aria-pressed={language === 'en'}
         onClick={() => onChange('en')}
       >
         EN

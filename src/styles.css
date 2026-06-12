@@ -456,6 +456,23 @@ a {
   padding: 16px;
 }
 
+.dashboard-placeholder {
+  min-height: 260px;
+}
+
+.placeholder-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.placeholder-grid span {
+  background: linear-gradient(90deg, #eef2f7, #f8fafc, #eef2f7);
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  min-height: 108px;
+}
+
 .section-heading {
   align-items: end;
   display: flex;
@@ -727,6 +744,10 @@ td {
   }
 
   .summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .placeholder-grid {
     grid-template-columns: 1fr;
   }
 }

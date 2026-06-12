@@ -37,6 +37,7 @@ export function FilterPanel({ filters, districts, t, onChange }: Props) {
               className={filters.years.includes(year) ? 'active' : ''}
               key={year}
               type="button"
+              aria-pressed={filters.years.includes(year)}
               onClick={() => toggleYear(year)}
             >
               {year}

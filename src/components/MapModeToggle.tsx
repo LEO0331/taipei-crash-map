@@ -21,6 +21,7 @@ export function MapModeToggle({ mode, t, onChange }: Props) {
           className={mode === option.mode ? 'active' : ''}
           key={option.mode}
           type="button"
+          aria-pressed={mode === option.mode}
           onClick={() => onChange(option.mode)}
         >
           {option.label}

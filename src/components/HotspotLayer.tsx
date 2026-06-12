@@ -46,7 +46,7 @@ export function HotspotLayer({ hotspots, t }: Props) {
               <a
                 href={getGoogleMapsUrl(hotspot.latitude, hotspot.longitude)}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 {t.openGoogleMaps}
               </a>

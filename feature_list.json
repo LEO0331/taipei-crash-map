@@ -1,0 +1,44 @@
+{
+  "features": [
+    {
+      "id": "feat-001",
+      "name": "Harness Baseline",
+      "description": "Keep the agent startup path, feature state, progress log, handoff, and verification script current for this repository.",
+      "dependencies": [],
+      "status": "done",
+      "evidence": "Created AGENTS.md, feature_list.json, progress.md, session-handoff.md, and init.sh. ./init.sh passed on 2026-06-12: npm run build succeeded and npm test passed 1 file / 8 tests."
+    },
+    {
+      "id": "feat-002",
+      "name": "Responsive Map and Filter UX",
+      "description": "Maintain non-overlapping desktop layout and mobile/PWA map controls for filters, map modes, and dashboard scroll behavior.",
+      "dependencies": ["feat-001"],
+      "status": "done",
+      "evidence": "Recent work adjusted filter deck flow, map sizing, heatmap readability, nearby geolocation feedback, nearby clear behavior, and active-control accessibility. Playwright checks verified desktop/mobile no horizontal overflow and static control deck."
+    },
+    {
+      "id": "feat-003",
+      "name": "Dashboard Lazy Loading",
+      "description": "Keep dashboard chart code split from the initial app bundle with a stable lightweight loading placeholder.",
+      "dependencies": ["feat-001"],
+      "status": "done",
+      "evidence": "./init.sh on 2026-06-12 emitted dist/assets/Dashboard--FgZ2qW_.js as a separate dashboard chunk; npm run build and npm test passed."
+    },
+    {
+      "id": "feat-004",
+      "name": "Accident Data Conversion Integrity",
+      "description": "Protect the CSV-to-static-JSON conversion pipeline, coordinate validation, summaries, hotspots, and tests.",
+      "dependencies": ["feat-001"],
+      "status": "not-started",
+      "evidence": ""
+    },
+    {
+      "id": "feat-005",
+      "name": "Release and Handoff Hygiene",
+      "description": "Before release or handoff, record verification, deployment assumptions, risks, and next-session instructions.",
+      "dependencies": ["feat-001", "feat-002", "feat-003", "feat-004"],
+      "status": "in-progress",
+      "evidence": "Code review fixed service-worker update strategy and recorded verification in progress.md. Data conversion integrity remains not-started."
+    }
+  ]
+}
