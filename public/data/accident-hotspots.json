@@ -1,0 +1,9486 @@
+[
+  {
+    "id": "hotspot-1",
+    "location": "大同區鄭州路與西寧北路口",
+    "district": "大同區",
+    "longitude": 121.5080476,
+    "latitude": 25.05016526,
+    "totalCount": 292,
+    "a1Count": 1,
+    "a2Count": 291,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-2",
+    "location": "中正區中山南路與信義路1段口",
+    "district": "中正區",
+    "longitude": 121.5177607,
+    "latitude": 25.03867095,
+    "totalCount": 238,
+    "a1Count": 0,
+    "a2Count": 238,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-3",
+    "location": "大同區民權西路與蘭州街口",
+    "district": "大同區",
+    "longitude": 121.5147047,
+    "latitude": 25.062889,
+    "totalCount": 186,
+    "a1Count": 1,
+    "a2Count": 185,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-4",
+    "location": "北投區承德路6段與福國路口",
+    "district": "北投區",
+    "longitude": 121.5124082,
+    "latitude": 25.10156879,
+    "totalCount": 163,
+    "a1Count": 0,
+    "a2Count": 163,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-5",
+    "location": "中山區北安路與大直街口",
+    "district": "中山區",
+    "longitude": 121.5492144,
+    "latitude": 25.08412235,
+    "totalCount": 162,
+    "a1Count": 0,
+    "a2Count": 162,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-6",
+    "location": "中正區中山南路與凱達格蘭大道口",
+    "district": "中正區",
+    "longitude": 121.5167505,
+    "latitude": 25.0401542,
+    "totalCount": 145,
+    "a1Count": 0,
+    "a2Count": 145,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-7",
+    "location": "大同區鄭州路與塔城街口",
+    "district": "大同區",
+    "longitude": 121.5104826,
+    "latitude": 25.0500532,
+    "totalCount": 144,
+    "a1Count": 0,
+    "a2Count": 144,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-8",
+    "location": "士林區承德路5段與士商路口",
+    "district": "士林區",
+    "longitude": 121.5141407,
+    "latitude": 25.09611902,
+    "totalCount": 133,
+    "a1Count": 0,
+    "a2Count": 133,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-9",
+    "location": "北投區大度路3段與立德路口",
+    "district": "北投區",
+    "longitude": 121.4713989,
+    "latitude": 25.122762,
+    "totalCount": 133,
+    "a1Count": 0,
+    "a2Count": 133,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-10",
+    "location": "大安區忠孝東路3段與建國南路1段口",
+    "district": "大安區",
+    "longitude": 121.5372441,
+    "latitude": 25.04163994,
+    "totalCount": 127,
+    "a1Count": 0,
+    "a2Count": 127,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-11",
+    "location": "大安區和平東路3段與基隆路2段口",
+    "district": "大安區",
+    "longitude": 121.5523095,
+    "latitude": 25.02397454,
+    "totalCount": 124,
+    "a1Count": 0,
+    "a2Count": 124,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-12",
+    "location": "大安區仁愛路4段與敦化南路1段口",
+    "district": "大安區",
+    "longitude": 121.5496317,
+    "latitude": 25.03804276,
+    "totalCount": 124,
+    "a1Count": 0,
+    "a2Count": 124,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-13",
+    "location": "中山區市民大道2段與林森北路口",
+    "district": "中山區",
+    "longitude": 121.5242424,
+    "latitude": 25.04789332,
+    "totalCount": 123,
+    "a1Count": 0,
+    "a2Count": 123,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-14",
+    "location": "萬華區西園路2段與西藏路口",
+    "district": "萬華區",
+    "longitude": 121.4956852,
+    "latitude": 25.02867562,
+    "totalCount": 122,
+    "a1Count": 0,
+    "a2Count": 122,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-15",
+    "location": "大安區忠孝東路4段與敦化南路1段口",
+    "district": "大安區",
+    "longitude": 121.5485624,
+    "latitude": 25.04143717,
+    "totalCount": 121,
+    "a1Count": 0,
+    "a2Count": 121,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-16",
+    "location": "大同區延平北路3段與民權西路口",
+    "district": "大同區",
+    "longitude": 121.5112205,
+    "latitude": 25.0627882,
+    "totalCount": 115,
+    "a1Count": 2,
+    "a2Count": 113,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-17",
+    "location": "大安區市民大道4段與敦化南路1段口",
+    "district": "大安區",
+    "longitude": 121.548625,
+    "latitude": 25.04470952,
+    "totalCount": 113,
+    "a1Count": 0,
+    "a2Count": 113,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-18",
+    "location": "大安區仁愛路3段與建國南路1段口",
+    "district": "大安區",
+    "longitude": 121.5380481,
+    "latitude": 25.0379937,
+    "totalCount": 109,
+    "a1Count": 0,
+    "a2Count": 109,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-19",
+    "location": "中山區中山北路2段與民權西路口",
+    "district": "中山區",
+    "longitude": 121.5224546,
+    "latitude": 25.06272957,
+    "totalCount": 106,
+    "a1Count": 1,
+    "a2Count": 105,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-20",
+    "location": "中正區重慶南路3段與和平西路1段口",
+    "district": "中正區",
+    "longitude": 121.5159139,
+    "latitude": 25.0270226,
+    "totalCount": 106,
+    "a1Count": 0,
+    "a2Count": 106,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-21",
+    "location": "文山區羅斯福路4段與基隆路4段口",
+    "district": "文山區",
+    "longitude": 121.5370235,
+    "latitude": 25.01091887,
+    "totalCount": 106,
+    "a1Count": 0,
+    "a2Count": 106,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-22",
+    "location": "信義區基隆路1段與松壽路口",
+    "district": "信義區",
+    "longitude": 121.5614937,
+    "latitude": 25.03594423,
+    "totalCount": 106,
+    "a1Count": 0,
+    "a2Count": 106,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-23",
+    "location": "大安區和平東路3段與敦化南路2段口",
+    "district": "大安區",
+    "longitude": 121.5489757,
+    "latitude": 25.02448751,
+    "totalCount": 105,
+    "a1Count": 1,
+    "a2Count": 104,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-24",
+    "location": "中正區重慶南路2段與南海路口",
+    "district": "中正區",
+    "longitude": 121.5143312,
+    "latitude": 25.03193396,
+    "totalCount": 103,
+    "a1Count": 0,
+    "a2Count": 103,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-25",
+    "location": "北投區大度路3段與關渡路口",
+    "district": "北投區",
+    "longitude": 121.4695287,
+    "latitude": 25.12291941,
+    "totalCount": 103,
+    "a1Count": 0,
+    "a2Count": 103,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-26",
+    "location": "大同區承德路3段與敦煌路口",
+    "district": "大同區",
+    "longitude": 121.5200386,
+    "latitude": 25.0751821,
+    "totalCount": 102,
+    "a1Count": 1,
+    "a2Count": 101,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-27",
+    "location": "大安區基隆路4段與羅斯福路4段口",
+    "district": "大安區",
+    "longitude": 121.5372497,
+    "latitude": 25.01141257,
+    "totalCount": 102,
+    "a1Count": 0,
+    "a2Count": 102,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-28",
+    "location": "中山區中山北路3段與民族東路口",
+    "district": "中山區",
+    "longitude": 121.5229544,
+    "latitude": 25.0683802,
+    "totalCount": 101,
+    "a1Count": 0,
+    "a2Count": 101,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-29",
+    "location": "中正區中山南路與仁愛路1段口",
+    "district": "中正區",
+    "longitude": 121.5179537,
+    "latitude": 25.03952946,
+    "totalCount": 101,
+    "a1Count": 0,
+    "a2Count": 101,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-30",
+    "location": "大同區承德路2段與民權西路口",
+    "district": "大同區",
+    "longitude": 121.51822,
+    "latitude": 25.0628392,
+    "totalCount": 100,
+    "a1Count": 1,
+    "a2Count": 99,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-31",
+    "location": "大安區羅斯福路4段與基隆路4段口",
+    "district": "大安區",
+    "longitude": 121.5370706,
+    "latitude": 25.01086957,
+    "totalCount": 100,
+    "a1Count": 0,
+    "a2Count": 100,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-32",
+    "location": "中正區重慶南路1段與貴陽街1段口",
+    "district": "中正區",
+    "longitude": 121.5128421,
+    "latitude": 25.0387563,
+    "totalCount": 99,
+    "a1Count": 0,
+    "a2Count": 99,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-33",
+    "location": "中正區市民大道2段與林森北路口",
+    "district": "中正區",
+    "longitude": 121.5241273,
+    "latitude": 25.04767204,
+    "totalCount": 99,
+    "a1Count": 0,
+    "a2Count": 99,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-34",
+    "location": "中正區羅斯福路4段與基隆路4段口",
+    "district": "中正區",
+    "longitude": 121.5369606,
+    "latitude": 25.0112437,
+    "totalCount": 99,
+    "a1Count": 0,
+    "a2Count": 99,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-35",
+    "location": "北投區承德路7段與石牌路1段口",
+    "district": "北投區",
+    "longitude": 121.5093219,
+    "latitude": 25.1124963,
+    "totalCount": 97,
+    "a1Count": 0,
+    "a2Count": 97,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-36",
+    "location": "萬華區忠孝西路2段與西寧南路口",
+    "district": "萬華區",
+    "longitude": 121.5075505,
+    "latitude": 25.0484909,
+    "totalCount": 96,
+    "a1Count": 1,
+    "a2Count": 95,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-37",
+    "location": "大安區基隆路3段與辛亥路3段口",
+    "district": "大安區",
+    "longitude": 121.5465579,
+    "latitude": 25.0189232,
+    "totalCount": 96,
+    "a1Count": 0,
+    "a2Count": 96,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-38",
+    "location": "大同區承德路3段與民權西路口",
+    "district": "大同區",
+    "longitude": 121.51822,
+    "latitude": 25.0628392,
+    "totalCount": 92,
+    "a1Count": 0,
+    "a2Count": 92,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-39",
+    "location": "中山區民權東路2段與吉林路口",
+    "district": "中山區",
+    "longitude": 121.5302977,
+    "latitude": 25.0626586,
+    "totalCount": 92,
+    "a1Count": 0,
+    "a2Count": 92,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-40",
+    "location": "大安區基隆路2段與和平東路3段口",
+    "district": "大安區",
+    "longitude": 121.5523948,
+    "latitude": 25.0242863,
+    "totalCount": 92,
+    "a1Count": 0,
+    "a2Count": 92,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-41",
+    "location": "大同區延平北路2段與民權西路口",
+    "district": "大同區",
+    "longitude": 121.5112205,
+    "latitude": 25.0627882,
+    "totalCount": 91,
+    "a1Count": 0,
+    "a2Count": 91,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-42",
+    "location": "萬華區西園路2段與東園街口",
+    "district": "萬華區",
+    "longitude": 121.49519,
+    "latitude": 25.0282005,
+    "totalCount": 91,
+    "a1Count": 0,
+    "a2Count": 91,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-43",
+    "location": "中山區民權東路2段與松江路口",
+    "district": "中山區",
+    "longitude": 121.5331509,
+    "latitude": 25.06262444,
+    "totalCount": 91,
+    "a1Count": 0,
+    "a2Count": 91,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-44",
+    "location": "士林區中山北路4段與通河街口",
+    "district": "士林區",
+    "longitude": 121.521728,
+    "latitude": 25.0804258,
+    "totalCount": 91,
+    "a1Count": 0,
+    "a2Count": 91,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-45",
+    "location": "大安區市民大道3段與建國南路1段口",
+    "district": "大安區",
+    "longitude": 121.5369748,
+    "latitude": 25.04459398,
+    "totalCount": 90,
+    "a1Count": 0,
+    "a2Count": 90,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-46",
+    "location": "信義區信義路5段與松仁路口",
+    "district": "信義區",
+    "longitude": 121.5683658,
+    "latitude": 25.03301875,
+    "totalCount": 90,
+    "a1Count": 0,
+    "a2Count": 90,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-47",
+    "location": "中山區中山北路3段與民族西路口",
+    "district": "中山區",
+    "longitude": 121.5226573,
+    "latitude": 25.06838981,
+    "totalCount": 89,
+    "a1Count": 0,
+    "a2Count": 89,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-48",
+    "location": "大安區和平東路2段與建國南路2段口",
+    "district": "大安區",
+    "longitude": 121.5373533,
+    "latitude": 25.02573747,
+    "totalCount": 87,
+    "a1Count": 1,
+    "a2Count": 86,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-49",
+    "location": "大同區承德路3段與民族西路口",
+    "district": "大同區",
+    "longitude": 121.5183174,
+    "latitude": 25.06844144,
+    "totalCount": 87,
+    "a1Count": 0,
+    "a2Count": 87,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-50",
+    "location": "信義區忠孝東路5段與基隆路1段口",
+    "district": "信義區",
+    "longitude": 121.5644065,
+    "latitude": 25.0412468,
+    "totalCount": 85,
+    "a1Count": 0,
+    "a2Count": 85,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-51",
+    "location": "士林區中山北路5段與劍潭路口",
+    "district": "士林區",
+    "longitude": 121.5256033,
+    "latitude": 25.08408823,
+    "totalCount": 83,
+    "a1Count": 0,
+    "a2Count": 83,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-52",
+    "location": "中山區民權東路2段與中原街口",
+    "district": "中山區",
+    "longitude": 121.5290344,
+    "latitude": 25.06241231,
+    "totalCount": 81,
+    "a1Count": 0,
+    "a2Count": 81,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-53",
+    "location": "中正區市民大道1段168號",
+    "district": "中正區",
+    "longitude": 121.5188644,
+    "latitude": 25.048256,
+    "totalCount": 81,
+    "a1Count": 0,
+    "a2Count": 81,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-54",
+    "location": "中山區長安東路2段與建國北路1段口",
+    "district": "中山區",
+    "longitude": 121.5365326,
+    "latitude": 25.04844694,
+    "totalCount": 80,
+    "a1Count": 0,
+    "a2Count": 80,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-55",
+    "location": "中正區重慶南路3段與汀州路2段口",
+    "district": "中正區",
+    "longitude": 121.5164341,
+    "latitude": 25.02570631,
+    "totalCount": 80,
+    "a1Count": 0,
+    "a2Count": 80,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-56",
+    "location": "士林區中正路與文林路口",
+    "district": "士林區",
+    "longitude": 121.5247691,
+    "latitude": 25.09495286,
+    "totalCount": 80,
+    "a1Count": 0,
+    "a2Count": 80,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-57",
+    "location": "中正區中山南路與徐州路口",
+    "district": "中正區",
+    "longitude": 121.5183849,
+    "latitude": 25.0419587,
+    "totalCount": 78,
+    "a1Count": 0,
+    "a2Count": 78,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-58",
+    "location": "士林區中山北路5段與文林路口",
+    "district": "士林區",
+    "longitude": 121.5257796,
+    "latitude": 25.08547816,
+    "totalCount": 78,
+    "a1Count": 0,
+    "a2Count": 78,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-59",
+    "location": "大同區重慶北路1段與長安西路口",
+    "district": "大同區",
+    "longitude": 121.5138775,
+    "latitude": 25.05159915,
+    "totalCount": 77,
+    "a1Count": 0,
+    "a2Count": 77,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-60",
+    "location": "中山區中山北路2段與民權東路1段口",
+    "district": "中山區",
+    "longitude": 121.5225871,
+    "latitude": 25.0629025,
+    "totalCount": 77,
+    "a1Count": 0,
+    "a2Count": 77,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-61",
+    "location": "中山區民權東路1段與林森北路口",
+    "district": "中山區",
+    "longitude": 121.5256352,
+    "latitude": 25.0628272,
+    "totalCount": 77,
+    "a1Count": 0,
+    "a2Count": 77,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-62",
+    "location": "中山區建國北路1段與長安東路2段口",
+    "district": "中山區",
+    "longitude": 121.5364525,
+    "latitude": 25.04841143,
+    "totalCount": 77,
+    "a1Count": 0,
+    "a2Count": 77,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-63",
+    "location": "松山區民權東路5段與撫遠街口",
+    "district": "松山區",
+    "longitude": 121.5658946,
+    "latitude": 25.0631725,
+    "totalCount": 76,
+    "a1Count": 0,
+    "a2Count": 76,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-64",
+    "location": "大同區鄭州路與環河北路1段口",
+    "district": "大同區",
+    "longitude": 121.5068453,
+    "latitude": 25.050613,
+    "totalCount": 75,
+    "a1Count": 0,
+    "a2Count": 75,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-65",
+    "location": "中山區市民大道3段與建國南路1段口",
+    "district": "中山區",
+    "longitude": 121.5369285,
+    "latitude": 25.0448399,
+    "totalCount": 74,
+    "a1Count": 0,
+    "a2Count": 74,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-66",
+    "location": "中山區北安路與明水路口",
+    "district": "中山區",
+    "longitude": 121.5522006,
+    "latitude": 25.0856751,
+    "totalCount": 74,
+    "a1Count": 0,
+    "a2Count": 74,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-67",
+    "location": "士林區承德路4段與大南路口",
+    "district": "士林區",
+    "longitude": 121.5214986,
+    "latitude": 25.0887876,
+    "totalCount": 74,
+    "a1Count": 0,
+    "a2Count": 74,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-68",
+    "location": "北投區承德路7段與公館路口",
+    "district": "北投區",
+    "longitude": 121.5018232,
+    "latitude": 25.11991588,
+    "totalCount": 74,
+    "a1Count": 0,
+    "a2Count": 74,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-69",
+    "location": "文山區木柵路1段與辛亥路6段口",
+    "district": "文山區",
+    "longitude": 121.5523317,
+    "latitude": 24.9878035,
+    "totalCount": 72,
+    "a1Count": 0,
+    "a2Count": 72,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-70",
+    "location": "內湖區民權東路6段與行愛路口",
+    "district": "內湖區",
+    "longitude": 121.5785593,
+    "latitude": 25.0665966,
+    "totalCount": 72,
+    "a1Count": 0,
+    "a2Count": 72,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-71",
+    "location": "信義區忠孝東路4段與逸仙路口",
+    "district": "信義區",
+    "longitude": 121.5827468,
+    "latitude": 25.045264,
+    "totalCount": 72,
+    "a1Count": 0,
+    "a2Count": 72,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-72",
+    "location": "中山區林森北路與錦州街口",
+    "district": "中山區",
+    "longitude": 121.5255607,
+    "latitude": 25.0603052,
+    "totalCount": 71,
+    "a1Count": 0,
+    "a2Count": 71,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-73",
+    "location": "中正區中山北路1段與市民大道1段口",
+    "district": "中正區",
+    "longitude": 121.5206577,
+    "latitude": 25.04800014,
+    "totalCount": 71,
+    "a1Count": 0,
+    "a2Count": 71,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-74",
+    "location": "中山區中山北路2段與民生西路口",
+    "district": "中山區",
+    "longitude": 121.5229591,
+    "latitude": 25.05794556,
+    "totalCount": 70,
+    "a1Count": 0,
+    "a2Count": 70,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-75",
+    "location": "中山區松江路133巷與南京東路2段115巷口",
+    "district": "中山區",
+    "longitude": 121.5336196,
+    "latitude": 25.05431238,
+    "totalCount": 70,
+    "a1Count": 0,
+    "a2Count": 70,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-76",
+    "location": "大安區和平東路2段與復興南路2段口",
+    "district": "大安區",
+    "longitude": 121.5433246,
+    "latitude": 25.02480492,
+    "totalCount": 70,
+    "a1Count": 0,
+    "a2Count": 70,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-77",
+    "location": "南港區市民大道7段與向陽路口",
+    "district": "南港區",
+    "longitude": 121.5955377,
+    "latitude": 25.0515708,
+    "totalCount": 70,
+    "a1Count": 0,
+    "a2Count": 70,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-78",
+    "location": "大同區承德路2段與民生西路口",
+    "district": "大同區",
+    "longitude": 121.5182487,
+    "latitude": 25.0574188,
+    "totalCount": 69,
+    "a1Count": 1,
+    "a2Count": 68,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-79",
+    "location": "中山區市民大道3段與八德路2段口",
+    "district": "中山區",
+    "longitude": 121.5348015,
+    "latitude": 25.0450514,
+    "totalCount": 69,
+    "a1Count": 0,
+    "a2Count": 69,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-80",
+    "location": "大安區辛亥路3段與基隆路3段口",
+    "district": "大安區",
+    "longitude": 121.5465579,
+    "latitude": 25.0189232,
+    "totalCount": 69,
+    "a1Count": 0,
+    "a2Count": 69,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-81",
+    "location": "士林區中山北路6段與忠誠路1段口",
+    "district": "士林區",
+    "longitude": 121.5240516,
+    "latitude": 25.1050098,
+    "totalCount": 69,
+    "a1Count": 0,
+    "a2Count": 69,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-82",
+    "location": "中正區林森南路與青島東路口",
+    "district": "中正區",
+    "longitude": 121.5230004,
+    "latitude": 25.04362,
+    "totalCount": 68,
+    "a1Count": 0,
+    "a2Count": 68,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-83",
+    "location": "松山區民權東路4段與光復北路口",
+    "district": "松山區",
+    "longitude": 121.5545966,
+    "latitude": 25.0618458,
+    "totalCount": 68,
+    "a1Count": 0,
+    "a2Count": 68,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-84",
+    "location": "南港區市民大道7段與東新街口",
+    "district": "南港區",
+    "longitude": 121.5839999,
+    "latitude": 25.04954991,
+    "totalCount": 68,
+    "a1Count": 0,
+    "a2Count": 68,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-85",
+    "location": "大同區承德路1段與長安西路口",
+    "district": "大同區",
+    "longitude": 121.5171002,
+    "latitude": 25.0508672,
+    "totalCount": 67,
+    "a1Count": 0,
+    "a2Count": 67,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-86",
+    "location": "中正區仁愛路2段與金山南路1段口",
+    "district": "中正區",
+    "longitude": 121.5282255,
+    "latitude": 25.03824043,
+    "totalCount": 67,
+    "a1Count": 0,
+    "a2Count": 67,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-87",
+    "location": "中正區中華路2段與愛國西路口",
+    "district": "中正區",
+    "longitude": 121.5069261,
+    "latitude": 25.03703481,
+    "totalCount": 67,
+    "a1Count": 0,
+    "a2Count": 67,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-88",
+    "location": "信義區市民大道5段與東興路口",
+    "district": "信義區",
+    "longitude": 121.5659544,
+    "latitude": 25.04820683,
+    "totalCount": 67,
+    "a1Count": 0,
+    "a2Count": 67,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-89",
+    "location": "中山區市民大道3段與松江路口",
+    "district": "中山區",
+    "longitude": 121.5328535,
+    "latitude": 25.04558035,
+    "totalCount": 66,
+    "a1Count": 0,
+    "a2Count": 66,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-90",
+    "location": "大安區辛亥路2段與建國南路2段口",
+    "district": "大安區",
+    "longitude": 121.537167,
+    "latitude": 25.0230569,
+    "totalCount": 66,
+    "a1Count": 0,
+    "a2Count": 66,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-91",
+    "location": "中正區公園路與貴陽街1段口",
+    "district": "中正區",
+    "longitude": 121.5152379,
+    "latitude": 25.0385794,
+    "totalCount": 66,
+    "a1Count": 0,
+    "a2Count": 66,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-92",
+    "location": "信義區信義路5段與松智路口",
+    "district": "信義區",
+    "longitude": 121.5654077,
+    "latitude": 25.0328275,
+    "totalCount": 66,
+    "a1Count": 0,
+    "a2Count": 66,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-93",
+    "location": "士林區中正路與基河路口",
+    "district": "士林區",
+    "longitude": 121.5200876,
+    "latitude": 25.0933047,
+    "totalCount": 65,
+    "a1Count": 0,
+    "a2Count": 65,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-94",
+    "location": "萬華區康定路與桂林路口",
+    "district": "萬華區",
+    "longitude": 121.501779,
+    "latitude": 25.03836973,
+    "totalCount": 64,
+    "a1Count": 0,
+    "a2Count": 64,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-95",
+    "location": "士林區至善路1段與福林路254巷口",
+    "district": "士林區",
+    "longitude": 121.5375224,
+    "latitude": 25.09807182,
+    "totalCount": 64,
+    "a1Count": 0,
+    "a2Count": 64,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-96",
+    "location": "北投區承德路7段與立賢路口",
+    "district": "北投區",
+    "longitude": 121.5050925,
+    "latitude": 25.11636388,
+    "totalCount": 64,
+    "a1Count": 0,
+    "a2Count": 64,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-97",
+    "location": "大安區忠孝東路3段與復興南路1段口",
+    "district": "大安區",
+    "longitude": 121.5435753,
+    "latitude": 25.0406955,
+    "totalCount": 63,
+    "a1Count": 1,
+    "a2Count": 62,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-98",
+    "location": "內湖區民權東路6段與成功路2段口",
+    "district": "內湖區",
+    "longitude": 121.5909118,
+    "latitude": 25.06905711,
+    "totalCount": 63,
+    "a1Count": 1,
+    "a2Count": 62,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-99",
+    "location": "中山區民族東路與松江路口",
+    "district": "中山區",
+    "longitude": 121.5331648,
+    "latitude": 25.06774984,
+    "totalCount": 63,
+    "a1Count": 0,
+    "a2Count": 63,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-100",
+    "location": "中山區中山北路2段與長春路口",
+    "district": "中山區",
+    "longitude": 121.5227109,
+    "latitude": 25.0550005,
+    "totalCount": 62,
+    "a1Count": 0,
+    "a2Count": 62,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-101",
+    "location": "中山區中山北路1段與長安東路1段口",
+    "district": "中山區",
+    "longitude": 121.5216667,
+    "latitude": 25.04989845,
+    "totalCount": 62,
+    "a1Count": 0,
+    "a2Count": 62,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-102",
+    "location": "中山區建國北路2段與長春路口",
+    "district": "中山區",
+    "longitude": 121.5370927,
+    "latitude": 25.0547495,
+    "totalCount": 62,
+    "a1Count": 0,
+    "a2Count": 62,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-103",
+    "location": "大安區信義路3段與建國南路1段口",
+    "district": "大安區",
+    "longitude": 121.5380077,
+    "latitude": 25.03364172,
+    "totalCount": 62,
+    "a1Count": 0,
+    "a2Count": 62,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-104",
+    "location": "萬華區西園路1段與桂林路口",
+    "district": "萬華區",
+    "longitude": 121.4997631,
+    "latitude": 25.03847177,
+    "totalCount": 61,
+    "a1Count": 0,
+    "a2Count": 61,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-105",
+    "location": "萬華區環河南路1段與內江街口",
+    "district": "萬華區",
+    "longitude": 121.4675474,
+    "latitude": 25.05582287,
+    "totalCount": 61,
+    "a1Count": 0,
+    "a2Count": 61,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-106",
+    "location": "中正區鄭州路與重慶北路1段口",
+    "district": "中正區",
+    "longitude": 121.5134173,
+    "latitude": 25.04929301,
+    "totalCount": 61,
+    "a1Count": 0,
+    "a2Count": 61,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-107",
+    "location": "中正區重慶南路1段與漢口街1段口",
+    "district": "中正區",
+    "longitude": 121.5132243,
+    "latitude": 25.04516056,
+    "totalCount": 61,
+    "a1Count": 0,
+    "a2Count": 61,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-108",
+    "location": "南港區忠孝東路6段與東新街口",
+    "district": "南港區",
+    "longitude": 121.5851823,
+    "latitude": 25.0479793,
+    "totalCount": 61,
+    "a1Count": 0,
+    "a2Count": 61,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-109",
+    "location": "南港區南港路1段與興中路口",
+    "district": "南港區",
+    "longitude": 121.6074927,
+    "latitude": 25.054496,
+    "totalCount": 61,
+    "a1Count": 0,
+    "a2Count": 61,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-110",
+    "location": "信義區基隆路1段與基隆路1段102巷口",
+    "district": "信義區",
+    "longitude": 121.5667989,
+    "latitude": 25.0453601,
+    "totalCount": 61,
+    "a1Count": 0,
+    "a2Count": 61,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-111",
+    "location": "信義區基隆路1段與松隆路口",
+    "district": "信義區",
+    "longitude": 121.5658352,
+    "latitude": 25.04329583,
+    "totalCount": 61,
+    "a1Count": 0,
+    "a2Count": 61,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-112",
+    "location": "大同區重慶北路3段與民族西路口",
+    "district": "大同區",
+    "longitude": 121.5136337,
+    "latitude": 25.06861629,
+    "totalCount": 60,
+    "a1Count": 0,
+    "a2Count": 60,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-113",
+    "location": "大同區重慶北路3段與民權西路口",
+    "district": "大同區",
+    "longitude": 121.5137384,
+    "latitude": 25.0631982,
+    "totalCount": 60,
+    "a1Count": 0,
+    "a2Count": 60,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-114",
+    "location": "中山區中山北路3段與農安街口",
+    "district": "中山區",
+    "longitude": 121.522323,
+    "latitude": 25.0649593,
+    "totalCount": 60,
+    "a1Count": 0,
+    "a2Count": 60,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-115",
+    "location": "中正區中山南路與青島東路口",
+    "district": "中正區",
+    "longitude": 121.5194295,
+    "latitude": 25.04444626,
+    "totalCount": 60,
+    "a1Count": 0,
+    "a2Count": 60,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-116",
+    "location": "士林區中山北路5段與中正路口",
+    "district": "士林區",
+    "longitude": 121.5280965,
+    "latitude": 25.09589868,
+    "totalCount": 60,
+    "a1Count": 0,
+    "a2Count": 60,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-117",
+    "location": "文山區辛亥路5段與辛亥路5段25巷口",
+    "district": "文山區",
+    "longitude": 121.5540479,
+    "latitude": 24.9998675,
+    "totalCount": 60,
+    "a1Count": 0,
+    "a2Count": 60,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-118",
+    "location": "中山區民生東路1段與林森北路口",
+    "district": "中山區",
+    "longitude": 121.5255237,
+    "latitude": 25.0580554,
+    "totalCount": 59,
+    "a1Count": 1,
+    "a2Count": 58,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-119",
+    "location": "大同區重慶北路2段與民權西路口",
+    "district": "大同區",
+    "longitude": 121.5135035,
+    "latitude": 25.0631314,
+    "totalCount": 59,
+    "a1Count": 0,
+    "a2Count": 59,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-120",
+    "location": "中山區民權西路與天祥路口",
+    "district": "中山區",
+    "longitude": 121.5208235,
+    "latitude": 25.06277601,
+    "totalCount": 59,
+    "a1Count": 0,
+    "a2Count": 59,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-121",
+    "location": "中正區南海路與牯嶺街口",
+    "district": "中正區",
+    "longitude": 121.5150448,
+    "latitude": 25.03203169,
+    "totalCount": 59,
+    "a1Count": 0,
+    "a2Count": 59,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-122",
+    "location": "士林區延平北路5段與中正路口",
+    "district": "士林區",
+    "longitude": 121.5092802,
+    "latitude": 25.0865731,
+    "totalCount": 59,
+    "a1Count": 0,
+    "a2Count": 59,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-123",
+    "location": "信義區忠孝東路5段與松山路口",
+    "district": "信義區",
+    "longitude": 121.5779856,
+    "latitude": 25.04097108,
+    "totalCount": 59,
+    "a1Count": 0,
+    "a2Count": 59,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-124",
+    "location": "中山區建國北路3段與農安街口",
+    "district": "中山區",
+    "longitude": 121.5372577,
+    "latitude": 25.064983,
+    "totalCount": 58,
+    "a1Count": 1,
+    "a2Count": 57,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-125",
+    "location": "信義區基隆路2段與嘉興街216巷口",
+    "district": "信義區",
+    "longitude": 121.555994,
+    "latitude": 25.02730063,
+    "totalCount": 58,
+    "a1Count": 1,
+    "a2Count": 57,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-126",
+    "location": "大同區重慶北路2段與民生西路口",
+    "district": "大同區",
+    "longitude": 121.5136856,
+    "latitude": 25.0570003,
+    "totalCount": 58,
+    "a1Count": 0,
+    "a2Count": 58,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-127",
+    "location": "中山區樂群一路與基湖路口",
+    "district": "中山區",
+    "longitude": 121.5631389,
+    "latitude": 25.0761537,
+    "totalCount": 58,
+    "a1Count": 0,
+    "a2Count": 58,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-128",
+    "location": "中正區重慶南路1段與愛國西路口",
+    "district": "中正區",
+    "longitude": 121.5124191,
+    "latitude": 25.03552989,
+    "totalCount": 58,
+    "a1Count": 0,
+    "a2Count": 58,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-129",
+    "location": "中正區林森南路地下道",
+    "district": "中正區",
+    "longitude": 121.5211845,
+    "latitude": 25.03737634,
+    "totalCount": 58,
+    "a1Count": 0,
+    "a2Count": 58,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-130",
+    "location": "內湖區康寧路3段與安康路口",
+    "district": "內湖區",
+    "longitude": 121.6110039,
+    "latitude": 25.06578164,
+    "totalCount": 58,
+    "a1Count": 0,
+    "a2Count": 58,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-131",
+    "location": "內湖區民權東路6段與瑞光路口",
+    "district": "內湖區",
+    "longitude": 121.5842398,
+    "latitude": 25.06883276,
+    "totalCount": 58,
+    "a1Count": 0,
+    "a2Count": 58,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-132",
+    "location": "中山區民權東路3段與龍江路口",
+    "district": "中山區",
+    "longitude": 121.5407915,
+    "latitude": 25.0624428,
+    "totalCount": 57,
+    "a1Count": 1,
+    "a2Count": 56,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-133",
+    "location": "信義區忠孝東路5段與松仁路口",
+    "district": "信義區",
+    "longitude": 121.5684305,
+    "latitude": 25.04108239,
+    "totalCount": 57,
+    "a1Count": 1,
+    "a2Count": 56,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-134",
+    "location": "中正區市民大道1段與承德路1段口",
+    "district": "中正區",
+    "longitude": 121.5164169,
+    "latitude": 25.04864716,
+    "totalCount": 57,
+    "a1Count": 0,
+    "a2Count": 57,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-135",
+    "location": "中正區林森南路與徐州路口",
+    "district": "中正區",
+    "longitude": 121.5222347,
+    "latitude": 25.0410784,
+    "totalCount": 57,
+    "a1Count": 0,
+    "a2Count": 57,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-136",
+    "location": "士林區承德路4段與劍潭路口",
+    "district": "士林區",
+    "longitude": 121.5236107,
+    "latitude": 25.0840576,
+    "totalCount": 57,
+    "a1Count": 0,
+    "a2Count": 57,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-137",
+    "location": "士林區中山北路6段與福國路口",
+    "district": "士林區",
+    "longitude": 121.5255726,
+    "latitude": 25.10243452,
+    "totalCount": 57,
+    "a1Count": 0,
+    "a2Count": 57,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-138",
+    "location": "中正區中華路1段與漢口街1段口",
+    "district": "中正區",
+    "longitude": 121.5098341,
+    "latitude": 25.0450399,
+    "totalCount": 56,
+    "a1Count": 1,
+    "a2Count": 55,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-139",
+    "location": "中山區林森北路與長春路口",
+    "district": "中山區",
+    "longitude": 121.5254534,
+    "latitude": 25.0549376,
+    "totalCount": 56,
+    "a1Count": 0,
+    "a2Count": 56,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-140",
+    "location": "大安區和平東路1段與師大路口",
+    "district": "大安區",
+    "longitude": 121.5284829,
+    "latitude": 25.02649908,
+    "totalCount": 56,
+    "a1Count": 0,
+    "a2Count": 56,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-141",
+    "location": "大安區市民大道3段與八德路2段口",
+    "district": "大安區",
+    "longitude": 121.5344961,
+    "latitude": 25.04488562,
+    "totalCount": 56,
+    "a1Count": 0,
+    "a2Count": 56,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-142",
+    "location": "士林區中正路與志成街口",
+    "district": "士林區",
+    "longitude": 121.5308677,
+    "latitude": 25.096607,
+    "totalCount": 56,
+    "a1Count": 0,
+    "a2Count": 56,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-143",
+    "location": "士林區中山北路5段與福國路口",
+    "district": "士林區",
+    "longitude": 121.5255933,
+    "latitude": 25.10249908,
+    "totalCount": 56,
+    "a1Count": 0,
+    "a2Count": 56,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-144",
+    "location": "士林區格致路與凱旋路口",
+    "district": "士林區",
+    "longitude": 121.5463921,
+    "latitude": 25.13699935,
+    "totalCount": 56,
+    "a1Count": 0,
+    "a2Count": 56,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-145",
+    "location": "信義區忠孝東路4段與光復南路口",
+    "district": "信義區",
+    "longitude": 121.557755,
+    "latitude": 25.04125497,
+    "totalCount": 55,
+    "a1Count": 1,
+    "a2Count": 54,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-146",
+    "location": "大同區承德路2段與錦西街口",
+    "district": "大同區",
+    "longitude": 121.5181568,
+    "latitude": 25.0602135,
+    "totalCount": 55,
+    "a1Count": 0,
+    "a2Count": 55,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-147",
+    "location": "大同區民權西路與承德路2段口",
+    "district": "大同區",
+    "longitude": 121.51822,
+    "latitude": 25.0628392,
+    "totalCount": 55,
+    "a1Count": 0,
+    "a2Count": 55,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-148",
+    "location": "中正區中華路1段與忠孝西路1段口",
+    "district": "中正區",
+    "longitude": 121.51008,
+    "latitude": 25.04792147,
+    "totalCount": 55,
+    "a1Count": 0,
+    "a2Count": 55,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-149",
+    "location": "松山區市民大道6段與松山路口",
+    "district": "松山區",
+    "longitude": 121.5778548,
+    "latitude": 25.0489802,
+    "totalCount": 55,
+    "a1Count": 0,
+    "a2Count": 55,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-150",
+    "location": "信義區松仁路與松壽路口",
+    "district": "信義區",
+    "longitude": 121.5681992,
+    "latitude": 25.0358248,
+    "totalCount": 55,
+    "a1Count": 0,
+    "a2Count": 55,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-151",
+    "location": "萬華區康定路與廣州街口",
+    "district": "萬華區",
+    "longitude": 121.5014491,
+    "latitude": 25.0365903,
+    "totalCount": 54,
+    "a1Count": 1,
+    "a2Count": 53,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-152",
+    "location": "北投區大度路3段與中央北路4段口",
+    "district": "北投區",
+    "longitude": 121.4643083,
+    "latitude": 25.1237802,
+    "totalCount": 54,
+    "a1Count": 1,
+    "a2Count": 53,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-153",
+    "location": "中山區民生東路2段與吉林路口",
+    "district": "中山區",
+    "longitude": 121.5302027,
+    "latitude": 25.0579794,
+    "totalCount": 54,
+    "a1Count": 0,
+    "a2Count": 54,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-154",
+    "location": "大安區市民大道4段與光復南路口",
+    "district": "大安區",
+    "longitude": 121.5577313,
+    "latitude": 25.04496481,
+    "totalCount": 54,
+    "a1Count": 0,
+    "a2Count": 54,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-155",
+    "location": "中正區和平西路1段與廈門街口",
+    "district": "中正區",
+    "longitude": 121.5179557,
+    "latitude": 25.02665729,
+    "totalCount": 54,
+    "a1Count": 0,
+    "a2Count": 54,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-156",
+    "location": "萬華區康定路與內江街口",
+    "district": "萬華區",
+    "longitude": 121.502281,
+    "latitude": 25.0416993,
+    "totalCount": 53,
+    "a1Count": 1,
+    "a2Count": 52,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-157",
+    "location": "中山區民族東路與新生北路3段口",
+    "district": "中山區",
+    "longitude": 121.5275098,
+    "latitude": 25.0684226,
+    "totalCount": 53,
+    "a1Count": 1,
+    "a2Count": 52,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-158",
+    "location": "南港區市民大道8段與興華路口",
+    "district": "南港區",
+    "longitude": 121.6064287,
+    "latitude": 25.0532714,
+    "totalCount": 53,
+    "a1Count": 1,
+    "a2Count": 52,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-159",
+    "location": "大同區環河北路1段與鄭州路口",
+    "district": "大同區",
+    "longitude": 121.5067042,
+    "latitude": 25.0506546,
+    "totalCount": 53,
+    "a1Count": 0,
+    "a2Count": 53,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-160",
+    "location": "萬華區環河南路2段與桂林路口",
+    "district": "萬華區",
+    "longitude": 121.4970108,
+    "latitude": 25.03844606,
+    "totalCount": 53,
+    "a1Count": 0,
+    "a2Count": 53,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-161",
+    "location": "大安區和平東路1段與金山南路2段口",
+    "district": "大安區",
+    "longitude": 121.5258677,
+    "latitude": 25.026723,
+    "totalCount": 53,
+    "a1Count": 0,
+    "a2Count": 53,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-162",
+    "location": "中正區中山南路與濟南路1段口",
+    "district": "中正區",
+    "longitude": 121.5190287,
+    "latitude": 25.04331141,
+    "totalCount": 53,
+    "a1Count": 0,
+    "a2Count": 53,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-163",
+    "location": "中正區重慶南路1段與襄陽路口",
+    "district": "中正區",
+    "longitude": 121.513307,
+    "latitude": 25.041934,
+    "totalCount": 53,
+    "a1Count": 0,
+    "a2Count": 53,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-164",
+    "location": "文山區木柵路4段與和平東路4段口",
+    "district": "文山區",
+    "longitude": 121.5746026,
+    "latitude": 24.9982023,
+    "totalCount": 53,
+    "a1Count": 0,
+    "a2Count": 53,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-165",
+    "location": "文山區木柵路2段與興隆路4段口",
+    "district": "文山區",
+    "longitude": 121.5602108,
+    "latitude": 24.9887244,
+    "totalCount": 53,
+    "a1Count": 0,
+    "a2Count": 53,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-166",
+    "location": "文山區木柵路1段與辛亥路7段口",
+    "district": "文山區",
+    "longitude": 121.5521853,
+    "latitude": 24.98779957,
+    "totalCount": 53,
+    "a1Count": 0,
+    "a2Count": 53,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-167",
+    "location": "信義區松仁路與松勤街口",
+    "district": "信義區",
+    "longitude": 121.568342,
+    "latitude": 25.03186998,
+    "totalCount": 53,
+    "a1Count": 0,
+    "a2Count": 53,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-168",
+    "location": "萬華區西園路1段與廣州街口",
+    "district": "萬華區",
+    "longitude": 121.4993871,
+    "latitude": 25.0366706,
+    "totalCount": 52,
+    "a1Count": 0,
+    "a2Count": 52,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-169",
+    "location": "中山區林森北路與民生東路1段口",
+    "district": "中山區",
+    "longitude": 121.5255237,
+    "latitude": 25.0580554,
+    "totalCount": 52,
+    "a1Count": 0,
+    "a2Count": 52,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-170",
+    "location": "大安區市民大道4段與延吉街口",
+    "district": "大安區",
+    "longitude": 121.5537837,
+    "latitude": 25.04429282,
+    "totalCount": 52,
+    "a1Count": 0,
+    "a2Count": 52,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-171",
+    "location": "北投區中央北路4段與大度路3段口",
+    "district": "北投區",
+    "longitude": 121.464834,
+    "latitude": 25.12432275,
+    "totalCount": 52,
+    "a1Count": 0,
+    "a2Count": 52,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-172",
+    "location": "中山區北安路與崇實路口",
+    "district": "中山區",
+    "longitude": 121.5443606,
+    "latitude": 25.0797508,
+    "totalCount": 51,
+    "a1Count": 0,
+    "a2Count": 51,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-173",
+    "location": "松山區市民大道4段與敦化南路1段口",
+    "district": "松山區",
+    "longitude": 121.5491577,
+    "latitude": 25.04494042,
+    "totalCount": 51,
+    "a1Count": 0,
+    "a2Count": 51,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-174",
+    "location": "士林區延平北路6段與中正路口",
+    "district": "士林區",
+    "longitude": 121.5092802,
+    "latitude": 25.0865731,
+    "totalCount": 51,
+    "a1Count": 0,
+    "a2Count": 51,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-175",
+    "location": "南港區市民大道8段與興中路口",
+    "district": "南港區",
+    "longitude": 121.6076991,
+    "latitude": 25.0534951,
+    "totalCount": 51,
+    "a1Count": 0,
+    "a2Count": 51,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-176",
+    "location": "中正區重慶南路2段與愛國西路口",
+    "district": "中正區",
+    "longitude": 121.5125975,
+    "latitude": 25.0350177,
+    "totalCount": 50,
+    "a1Count": 1,
+    "a2Count": 49,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-177",
+    "location": "大同區民權西路與民權西路225巷口",
+    "district": "大同區",
+    "longitude": 121.5121947,
+    "latitude": 25.0628143,
+    "totalCount": 50,
+    "a1Count": 0,
+    "a2Count": 50,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-178",
+    "location": "萬華區西園路2段與寶興街口",
+    "district": "萬華區",
+    "longitude": 121.493777,
+    "latitude": 25.02681903,
+    "totalCount": 50,
+    "a1Count": 0,
+    "a2Count": 50,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-179",
+    "location": "萬華區環河南路1段與漢口街2段口",
+    "district": "萬華區",
+    "longitude": 121.5035408,
+    "latitude": 25.0464296,
+    "totalCount": 50,
+    "a1Count": 0,
+    "a2Count": 50,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-180",
+    "location": "信義區松仁路與松高路口",
+    "district": "信義區",
+    "longitude": 121.5683722,
+    "latitude": 25.0390554,
+    "totalCount": 49,
+    "a1Count": 1,
+    "a2Count": 48,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-181",
+    "location": "大同區長安西路與塔城街口",
+    "district": "大同區",
+    "longitude": 121.510368,
+    "latitude": 25.05200323,
+    "totalCount": 49,
+    "a1Count": 0,
+    "a2Count": 49,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-182",
+    "location": "中山區中山北路1段與市民大道2段口",
+    "district": "中山區",
+    "longitude": 121.520441,
+    "latitude": 25.048581,
+    "totalCount": 49,
+    "a1Count": 0,
+    "a2Count": 49,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-183",
+    "location": "中山區民權東路3段與復興北路口",
+    "district": "中山區",
+    "longitude": 121.5441092,
+    "latitude": 25.06214249,
+    "totalCount": 49,
+    "a1Count": 0,
+    "a2Count": 49,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-184",
+    "location": "大安區基隆路3段與長興街口",
+    "district": "大安區",
+    "longitude": 121.5442235,
+    "latitude": 25.01729927,
+    "totalCount": 49,
+    "a1Count": 0,
+    "a2Count": 49,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-185",
+    "location": "中正區中華路1段與貴陽街1段口",
+    "district": "中正區",
+    "longitude": 121.5075987,
+    "latitude": 25.03914667,
+    "totalCount": 49,
+    "a1Count": 0,
+    "a2Count": 49,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-186",
+    "location": "士林區中山北路5段與福林路口",
+    "district": "士林區",
+    "longitude": 121.5284732,
+    "latitude": 25.09383553,
+    "totalCount": 49,
+    "a1Count": 0,
+    "a2Count": 49,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-187",
+    "location": "士林區至善路2段與故宮路口",
+    "district": "士林區",
+    "longitude": 121.5464854,
+    "latitude": 25.09821664,
+    "totalCount": 49,
+    "a1Count": 0,
+    "a2Count": 49,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-188",
+    "location": "南港區市民大道8段與中南街口",
+    "district": "南港區",
+    "longitude": 121.6153193,
+    "latitude": 25.0542106,
+    "totalCount": 49,
+    "a1Count": 0,
+    "a2Count": 49,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-189",
+    "location": "信義區永吉路與松隆路口",
+    "district": "信義區",
+    "longitude": 121.5703281,
+    "latitude": 25.04557676,
+    "totalCount": 49,
+    "a1Count": 0,
+    "a2Count": 49,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-190",
+    "location": "大安區基隆路2段與敦化南路2段口",
+    "district": "大安區",
+    "longitude": 121.5487099,
+    "latitude": 25.02109634,
+    "totalCount": 48,
+    "a1Count": 2,
+    "a2Count": 46,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-191",
+    "location": "文山區羅斯福路5段與萬盛街口",
+    "district": "文山區",
+    "longitude": 121.5382615,
+    "latitude": 25.00808651,
+    "totalCount": 48,
+    "a1Count": 1,
+    "a2Count": 47,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-192",
+    "location": "內湖區潭美街與安美街口",
+    "district": "內湖區",
+    "longitude": 121.5972643,
+    "latitude": 25.06030572,
+    "totalCount": 48,
+    "a1Count": 1,
+    "a2Count": 47,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-193",
+    "location": "大安區忠孝東路4段與大安路1段口",
+    "district": "大安區",
+    "longitude": 121.5461725,
+    "latitude": 25.04166171,
+    "totalCount": 48,
+    "a1Count": 0,
+    "a2Count": 48,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-194",
+    "location": "大安區基隆路2段與樂業街口",
+    "district": "大安區",
+    "longitude": 121.550188,
+    "latitude": 25.022541,
+    "totalCount": 48,
+    "a1Count": 0,
+    "a2Count": 48,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-195",
+    "location": "中正區市民大道2段與金山北路口",
+    "district": "中正區",
+    "longitude": 121.5305136,
+    "latitude": 25.04600149,
+    "totalCount": 48,
+    "a1Count": 0,
+    "a2Count": 48,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-196",
+    "location": "中正區市民大道1段與中山北路1段口",
+    "district": "中正區",
+    "longitude": 121.5200596,
+    "latitude": 25.0480467,
+    "totalCount": 48,
+    "a1Count": 0,
+    "a2Count": 48,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-197",
+    "location": "北投區石牌路2段與天母西路口",
+    "district": "北投區",
+    "longitude": 121.5219215,
+    "latitude": 25.11922233,
+    "totalCount": 48,
+    "a1Count": 0,
+    "a2Count": 48,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-198",
+    "location": "中正區羅斯福路2段與和平西路1段口",
+    "district": "中正區",
+    "longitude": 121.5224017,
+    "latitude": 25.02712518,
+    "totalCount": 47,
+    "a1Count": 1,
+    "a2Count": 46,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-199",
+    "location": "萬華區環河南路1段與武昌街2段口",
+    "district": "萬華區",
+    "longitude": 121.5026341,
+    "latitude": 25.0457147,
+    "totalCount": 47,
+    "a1Count": 0,
+    "a2Count": 47,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-200",
+    "location": "中山區市民大道2段與長安東路1段52巷口",
+    "district": "中山區",
+    "longitude": 121.5277438,
+    "latitude": 25.04709948,
+    "totalCount": 47,
+    "a1Count": 0,
+    "a2Count": 47,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-201",
+    "location": "中山區中山北路1段與長安西路口",
+    "district": "中山區",
+    "longitude": 121.5214683,
+    "latitude": 25.0498271,
+    "totalCount": 47,
+    "a1Count": 0,
+    "a2Count": 47,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-202",
+    "location": "中正區仁愛路1段與林森南路口",
+    "district": "中正區",
+    "longitude": 121.522094,
+    "latitude": 25.0399199,
+    "totalCount": 47,
+    "a1Count": 0,
+    "a2Count": 47,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-203",
+    "location": "中正區和平西路1段與南昌路2段口",
+    "district": "中正區",
+    "longitude": 121.5210027,
+    "latitude": 25.02685682,
+    "totalCount": 47,
+    "a1Count": 0,
+    "a2Count": 47,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-204",
+    "location": "中正區和平西路1段與牯嶺街口",
+    "district": "中正區",
+    "longitude": 121.5189832,
+    "latitude": 25.0264817,
+    "totalCount": 47,
+    "a1Count": 0,
+    "a2Count": 47,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-205",
+    "location": "松山區民權東路3段與復興北路口",
+    "district": "松山區",
+    "longitude": 121.5441397,
+    "latitude": 25.0623324,
+    "totalCount": 47,
+    "a1Count": 0,
+    "a2Count": 47,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-206",
+    "location": "信義區信義路5段與基隆路2段口",
+    "district": "信義區",
+    "longitude": 121.5596372,
+    "latitude": 25.0329619,
+    "totalCount": 47,
+    "a1Count": 0,
+    "a2Count": 47,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-207",
+    "location": "信義區松仁路與松平路口",
+    "district": "信義區",
+    "longitude": 121.5683158,
+    "latitude": 25.0304039,
+    "totalCount": 47,
+    "a1Count": 0,
+    "a2Count": 47,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-208",
+    "location": "大安區忠孝東路3段與新生南路1段口",
+    "district": "大安區",
+    "longitude": 121.5329457,
+    "latitude": 25.04225437,
+    "totalCount": 46,
+    "a1Count": 3,
+    "a2Count": 43,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-209",
+    "location": "中山區長安東路2段與吉林路口",
+    "district": "中山區",
+    "longitude": 121.5300312,
+    "latitude": 25.0485149,
+    "totalCount": 46,
+    "a1Count": 1,
+    "a2Count": 45,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-210",
+    "location": "萬華區中華路1段與成都路口",
+    "district": "萬華區",
+    "longitude": 121.5081166,
+    "latitude": 25.042221,
+    "totalCount": 46,
+    "a1Count": 0,
+    "a2Count": 46,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-211",
+    "location": "萬華區萬大路與莒光路口",
+    "district": "萬華區",
+    "longitude": 121.5006225,
+    "latitude": 25.0310529,
+    "totalCount": 46,
+    "a1Count": 0,
+    "a2Count": 46,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-212",
+    "location": "中山區民族東路與林森北路口",
+    "district": "中山區",
+    "longitude": 121.5257364,
+    "latitude": 25.0683527,
+    "totalCount": 46,
+    "a1Count": 0,
+    "a2Count": 46,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-213",
+    "location": "中正區林森南路與濟南路1段口",
+    "district": "中正區",
+    "longitude": 121.5224526,
+    "latitude": 25.04252353,
+    "totalCount": 46,
+    "a1Count": 0,
+    "a2Count": 46,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-214",
+    "location": "中正區中山北路1段與北平東路口",
+    "district": "中正區",
+    "longitude": 121.5204333,
+    "latitude": 25.04709926,
+    "totalCount": 46,
+    "a1Count": 0,
+    "a2Count": 46,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-215",
+    "location": "士林區中正路與承德路4段口",
+    "district": "士林區",
+    "longitude": 121.5164458,
+    "latitude": 25.0909222,
+    "totalCount": 46,
+    "a1Count": 0,
+    "a2Count": 46,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-216",
+    "location": "士林區承德路4段與福港街口",
+    "district": "士林區",
+    "longitude": 121.5184013,
+    "latitude": 25.08996969,
+    "totalCount": 46,
+    "a1Count": 0,
+    "a2Count": 46,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-217",
+    "location": "北投區中央北路2段與稻香路口",
+    "district": "北投區",
+    "longitude": 121.491292,
+    "latitude": 25.1385135,
+    "totalCount": 46,
+    "a1Count": 0,
+    "a2Count": 46,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-218",
+    "location": "信義區忠孝東路5段與大道路口",
+    "district": "信義區",
+    "longitude": 121.5810945,
+    "latitude": 25.04302957,
+    "totalCount": 46,
+    "a1Count": 0,
+    "a2Count": 46,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-219",
+    "location": "萬華區西園路1段與和平西路3段口",
+    "district": "萬華區",
+    "longitude": 121.4993312,
+    "latitude": 25.03532481,
+    "totalCount": 45,
+    "a1Count": 2,
+    "a2Count": 43,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-220",
+    "location": "中山區南京東路1段與林森北路口",
+    "district": "中山區",
+    "longitude": 121.5253217,
+    "latitude": 25.0520223,
+    "totalCount": 45,
+    "a1Count": 1,
+    "a2Count": 44,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-221",
+    "location": "士林區中正路與延平北路6段口",
+    "district": "士林區",
+    "longitude": 121.5092802,
+    "latitude": 25.0865731,
+    "totalCount": 45,
+    "a1Count": 1,
+    "a2Count": 44,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-222",
+    "location": "士林區承德路4段與中正路口",
+    "district": "士林區",
+    "longitude": 121.5165501,
+    "latitude": 25.09098719,
+    "totalCount": 45,
+    "a1Count": 1,
+    "a2Count": 44,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-223",
+    "location": "大同區延平北路4段與敦煌路口",
+    "district": "大同區",
+    "longitude": 121.5120392,
+    "latitude": 25.07653653,
+    "totalCount": 45,
+    "a1Count": 0,
+    "a2Count": 45,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-224",
+    "location": "大同區民權西路與延平北路3段口",
+    "district": "大同區",
+    "longitude": 121.5112205,
+    "latitude": 25.0627882,
+    "totalCount": 45,
+    "a1Count": 0,
+    "a2Count": 45,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-225",
+    "location": "萬華區艋舺大道與西藏路口",
+    "district": "萬華區",
+    "longitude": 121.4917077,
+    "latitude": 25.0287655,
+    "totalCount": 45,
+    "a1Count": 0,
+    "a2Count": 45,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-226",
+    "location": "中正區愛國西路與延平南路口",
+    "district": "中正區",
+    "longitude": 121.5083982,
+    "latitude": 25.03691581,
+    "totalCount": 45,
+    "a1Count": 0,
+    "a2Count": 45,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-227",
+    "location": "松山區民權東路3段與敦化北路口",
+    "district": "松山區",
+    "longitude": 121.55051,
+    "latitude": 25.06150203,
+    "totalCount": 45,
+    "a1Count": 0,
+    "a2Count": 45,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-228",
+    "location": "士林區延平北路6段與社正路口",
+    "district": "士林區",
+    "longitude": 121.5031555,
+    "latitude": 25.0895319,
+    "totalCount": 45,
+    "a1Count": 0,
+    "a2Count": 45,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-229",
+    "location": "士林區文林路與雙溪街口",
+    "district": "士林區",
+    "longitude": 121.5233738,
+    "latitude": 25.0996821,
+    "totalCount": 45,
+    "a1Count": 0,
+    "a2Count": 45,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-230",
+    "location": "士林區中正路與重慶北路4段口",
+    "district": "士林區",
+    "longitude": 121.509773,
+    "latitude": 25.0865678,
+    "totalCount": 45,
+    "a1Count": 0,
+    "a2Count": 45,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-231",
+    "location": "文山區木柵路4段與萬芳路口",
+    "district": "文山區",
+    "longitude": 121.5717484,
+    "latitude": 24.99472854,
+    "totalCount": 45,
+    "a1Count": 0,
+    "a2Count": 45,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-232",
+    "location": "南港區忠孝東路6段與玉成街口",
+    "district": "南港區",
+    "longitude": 121.583156,
+    "latitude": 25.04615674,
+    "totalCount": 45,
+    "a1Count": 0,
+    "a2Count": 45,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-233",
+    "location": "信義區基隆路2段與光復南路口",
+    "district": "信義區",
+    "longitude": 121.5574744,
+    "latitude": 25.03000552,
+    "totalCount": 45,
+    "a1Count": 0,
+    "a2Count": 45,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-234",
+    "location": "大同區重慶北路2段與涼州街口",
+    "district": "大同區",
+    "longitude": 121.5136312,
+    "latitude": 25.0607873,
+    "totalCount": 44,
+    "a1Count": 0,
+    "a2Count": 44,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-235",
+    "location": "大同區承德路3段與庫倫街口",
+    "district": "大同區",
+    "longitude": 121.5186896,
+    "latitude": 25.0718734,
+    "totalCount": 44,
+    "a1Count": 0,
+    "a2Count": 44,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-236",
+    "location": "萬華區環河南路1段與峨眉街口",
+    "district": "萬華區",
+    "longitude": 121.5015899,
+    "latitude": 25.04478699,
+    "totalCount": 44,
+    "a1Count": 0,
+    "a2Count": 44,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-237",
+    "location": "中正區懷寧街與貴陽街1段口",
+    "district": "中正區",
+    "longitude": 121.5137314,
+    "latitude": 25.03868446,
+    "totalCount": 44,
+    "a1Count": 0,
+    "a2Count": 44,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-238",
+    "location": "士林區中正路與士商路口",
+    "district": "士林區",
+    "longitude": 121.518637,
+    "latitude": 25.09253513,
+    "totalCount": 44,
+    "a1Count": 0,
+    "a2Count": 44,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-239",
+    "location": "北投區中央北路4段與學園路口",
+    "district": "北投區",
+    "longitude": 121.465976,
+    "latitude": 25.1266012,
+    "totalCount": 44,
+    "a1Count": 0,
+    "a2Count": 44,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-240",
+    "location": "北投區公館路與北投路1段口",
+    "district": "北投區",
+    "longitude": 121.5026566,
+    "latitude": 25.12139276,
+    "totalCount": 44,
+    "a1Count": 0,
+    "a2Count": 44,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-241",
+    "location": "文山區興隆路2段與興隆路2段244巷口",
+    "district": "文山區",
+    "longitude": 121.5538374,
+    "latitude": 25.00103703,
+    "totalCount": 44,
+    "a1Count": 0,
+    "a2Count": 44,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-242",
+    "location": "信義區市民大道6段與松山路口",
+    "district": "信義區",
+    "longitude": 121.5777023,
+    "latitude": 25.0489261,
+    "totalCount": 44,
+    "a1Count": 0,
+    "a2Count": 44,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-243",
+    "location": "大同區長安西路與西寧北路口",
+    "district": "大同區",
+    "longitude": 121.5086299,
+    "latitude": 25.05197105,
+    "totalCount": 43,
+    "a1Count": 0,
+    "a2Count": 43,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-244",
+    "location": "萬華區中華路2段與廣州街口",
+    "district": "萬華區",
+    "longitude": 121.5064741,
+    "latitude": 25.0360525,
+    "totalCount": 43,
+    "a1Count": 0,
+    "a2Count": 43,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-245",
+    "location": "中山區北安路與大直橋口",
+    "district": "中山區",
+    "longitude": 121.5443596,
+    "latitude": 25.0796658,
+    "totalCount": 43,
+    "a1Count": 0,
+    "a2Count": 43,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-246",
+    "location": "中山區中山北路1段與南京東路1段口",
+    "district": "中山區",
+    "longitude": 121.5226609,
+    "latitude": 25.05232648,
+    "totalCount": 43,
+    "a1Count": 0,
+    "a2Count": 43,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-247",
+    "location": "中山區林森北路與南京東路1段口",
+    "district": "中山區",
+    "longitude": 121.5255861,
+    "latitude": 25.05199489,
+    "totalCount": 43,
+    "a1Count": 0,
+    "a2Count": 43,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-248",
+    "location": "大安區信義路3段與建國南路2段口",
+    "district": "大安區",
+    "longitude": 121.537588,
+    "latitude": 25.0334522,
+    "totalCount": 43,
+    "a1Count": 0,
+    "a2Count": 43,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-249",
+    "location": "大安區市民大道3段與復興南路1段口",
+    "district": "大安區",
+    "longitude": 121.5437715,
+    "latitude": 25.0447489,
+    "totalCount": 43,
+    "a1Count": 0,
+    "a2Count": 43,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-250",
+    "location": "大安區和平東路1段與羅斯福路2段口",
+    "district": "大安區",
+    "longitude": 121.5225231,
+    "latitude": 25.02708667,
+    "totalCount": 43,
+    "a1Count": 0,
+    "a2Count": 43,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-251",
+    "location": "中正區忠孝西路1段與館前路口",
+    "district": "中正區",
+    "longitude": 121.5149696,
+    "latitude": 25.04684654,
+    "totalCount": 43,
+    "a1Count": 0,
+    "a2Count": 43,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-252",
+    "location": "中正區三元街與南海路口",
+    "district": "中正區",
+    "longitude": 121.5088647,
+    "latitude": 25.0294887,
+    "totalCount": 43,
+    "a1Count": 0,
+    "a2Count": 43,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-253",
+    "location": "士林區承德路4段10巷與通河街76巷口",
+    "district": "士林區",
+    "longitude": 121.5201472,
+    "latitude": 25.08012492,
+    "totalCount": 43,
+    "a1Count": 0,
+    "a2Count": 43,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-254",
+    "location": "內湖區內湖路1段與港墘路口",
+    "district": "內湖區",
+    "longitude": 121.5768116,
+    "latitude": 25.0788249,
+    "totalCount": 43,
+    "a1Count": 0,
+    "a2Count": 43,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-255",
+    "location": "南港區忠孝東路6段與永吉路口",
+    "district": "南港區",
+    "longitude": 121.582639,
+    "latitude": 25.045334,
+    "totalCount": 43,
+    "a1Count": 0,
+    "a2Count": 43,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-256",
+    "location": "信義區信義路5段與松德路口",
+    "district": "信義區",
+    "longitude": 121.5745141,
+    "latitude": 25.0334783,
+    "totalCount": 43,
+    "a1Count": 0,
+    "a2Count": 43,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-257",
+    "location": "信義區信義路5段與莊敬路口",
+    "district": "信義區",
+    "longitude": 121.5613529,
+    "latitude": 25.03293785,
+    "totalCount": 43,
+    "a1Count": 0,
+    "a2Count": 43,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-258",
+    "location": "信義區基隆路1段與東興路口",
+    "district": "信義區",
+    "longitude": 121.5671521,
+    "latitude": 25.04586597,
+    "totalCount": 43,
+    "a1Count": 0,
+    "a2Count": 43,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-259",
+    "location": "大安區辛亥路3段與芳蘭路口",
+    "district": "大安區",
+    "longitude": 121.5487604,
+    "latitude": 25.01690858,
+    "totalCount": 42,
+    "a1Count": 1,
+    "a2Count": 41,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-260",
+    "location": "松山區市民大道5段與東寧路口",
+    "district": "松山區",
+    "longitude": 121.5628908,
+    "latitude": 25.04731945,
+    "totalCount": 42,
+    "a1Count": 1,
+    "a2Count": 41,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-261",
+    "location": "信義區忠孝東路4段與基隆路1段口",
+    "district": "信義區",
+    "longitude": 121.5644065,
+    "latitude": 25.0412468,
+    "totalCount": 42,
+    "a1Count": 1,
+    "a2Count": 41,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-262",
+    "location": "大同區環河北路1段與民生西路口",
+    "district": "大同區",
+    "longitude": 121.5082932,
+    "latitude": 25.0568782,
+    "totalCount": 42,
+    "a1Count": 0,
+    "a2Count": 42,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-263",
+    "location": "萬華區桂林路與柳州街口",
+    "district": "萬華區",
+    "longitude": 121.5051781,
+    "latitude": 25.03773596,
+    "totalCount": 42,
+    "a1Count": 0,
+    "a2Count": 42,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-264",
+    "location": "萬華區環河南路2段與和平西路3段口",
+    "district": "萬華區",
+    "longitude": 121.4945968,
+    "latitude": 25.03572969,
+    "totalCount": 42,
+    "a1Count": 0,
+    "a2Count": 42,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-265",
+    "location": "中山區樂群一路與敬業三路口",
+    "district": "中山區",
+    "longitude": 121.5564865,
+    "latitude": 25.07719433,
+    "totalCount": 42,
+    "a1Count": 0,
+    "a2Count": 42,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-266",
+    "location": "中山區中山北路2段與民生東路1段口",
+    "district": "中山區",
+    "longitude": 121.5226387,
+    "latitude": 25.05789274,
+    "totalCount": 42,
+    "a1Count": 0,
+    "a2Count": 42,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-267",
+    "location": "大安區仁愛路3段與新生南路1段口",
+    "district": "大安區",
+    "longitude": 121.5339848,
+    "latitude": 25.0377484,
+    "totalCount": 42,
+    "a1Count": 0,
+    "a2Count": 42,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-268",
+    "location": "中正區博愛路與貴陽街1段口",
+    "district": "中正區",
+    "longitude": 121.5111923,
+    "latitude": 25.03888904,
+    "totalCount": 42,
+    "a1Count": 0,
+    "a2Count": 42,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-269",
+    "location": "松山區南京東路3段與敦化北路口",
+    "district": "松山區",
+    "longitude": 121.5487353,
+    "latitude": 25.0516603,
+    "totalCount": 42,
+    "a1Count": 0,
+    "a2Count": 42,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-270",
+    "location": "士林區文林路與福國路口",
+    "district": "士林區",
+    "longitude": 121.5216896,
+    "latitude": 25.10194654,
+    "totalCount": 42,
+    "a1Count": 0,
+    "a2Count": 42,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-271",
+    "location": "文山區辛亥路4段與萬美街2段口",
+    "district": "文山區",
+    "longitude": 121.5581295,
+    "latitude": 25.0060777,
+    "totalCount": 42,
+    "a1Count": 0,
+    "a2Count": 42,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-272",
+    "location": "內湖區康寧路3段與康寧路3段165巷口",
+    "district": "內湖區",
+    "longitude": 121.6113498,
+    "latitude": 25.0704866,
+    "totalCount": 42,
+    "a1Count": 0,
+    "a2Count": 42,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-273",
+    "location": "南港區忠孝東路7段與忠孝東路7段265巷口",
+    "district": "南港區",
+    "longitude": 121.6035436,
+    "latitude": 25.0517507,
+    "totalCount": 42,
+    "a1Count": 0,
+    "a2Count": 42,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-274",
+    "location": "北投區承德路7段與承德路7段393巷口",
+    "district": "北投區",
+    "longitude": 121.5013437,
+    "latitude": 25.11949567,
+    "totalCount": 41,
+    "a1Count": 2,
+    "a2Count": 39,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-275",
+    "location": "中山區南京東路3段與龍江路口",
+    "district": "中山區",
+    "longitude": 121.5404718,
+    "latitude": 25.052063,
+    "totalCount": 41,
+    "a1Count": 1,
+    "a2Count": 40,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-276",
+    "location": "大安區羅斯福路2段與和平東路1段口",
+    "district": "大安區",
+    "longitude": 121.5225896,
+    "latitude": 25.0269845,
+    "totalCount": 41,
+    "a1Count": 1,
+    "a2Count": 40,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-277",
+    "location": "文山區興隆路3段與萬芳路口",
+    "district": "文山區",
+    "longitude": 121.5598872,
+    "latitude": 24.99670291,
+    "totalCount": 41,
+    "a1Count": 1,
+    "a2Count": 40,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-278",
+    "location": "大同區忠孝西路2段與塔城街口",
+    "district": "大同區",
+    "longitude": 121.5127104,
+    "latitude": 25.0476299,
+    "totalCount": 41,
+    "a1Count": 0,
+    "a2Count": 41,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-279",
+    "location": "萬華區和平西路3段與康定路口",
+    "district": "萬華區",
+    "longitude": 121.5012398,
+    "latitude": 25.0352619,
+    "totalCount": 41,
+    "a1Count": 0,
+    "a2Count": 41,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-280",
+    "location": "萬華區中華路1段與南寧路口",
+    "district": "萬華區",
+    "longitude": 121.5066579,
+    "latitude": 25.03710465,
+    "totalCount": 41,
+    "a1Count": 0,
+    "a2Count": 41,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-281",
+    "location": "中山區北安路47號",
+    "district": "中山區",
+    "longitude": 121.5284821,
+    "latitude": 25.07766091,
+    "totalCount": 41,
+    "a1Count": 0,
+    "a2Count": 41,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-282",
+    "location": "中山區南京東路2段與吉林路口",
+    "district": "中山區",
+    "longitude": 121.5300836,
+    "latitude": 25.0519903,
+    "totalCount": 41,
+    "a1Count": 0,
+    "a2Count": 41,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-283",
+    "location": "大安區信義路4段與敦化南路1段口",
+    "district": "大安區",
+    "longitude": 121.5489559,
+    "latitude": 25.03332814,
+    "totalCount": 41,
+    "a1Count": 0,
+    "a2Count": 41,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-284",
+    "location": "中正區忠孝東路1段與林森北路口",
+    "district": "中正區",
+    "longitude": 121.5233715,
+    "latitude": 25.04488674,
+    "totalCount": 41,
+    "a1Count": 0,
+    "a2Count": 41,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-285",
+    "location": "中正區市民大道2段與天津街口",
+    "district": "中正區",
+    "longitude": 121.5226393,
+    "latitude": 25.04776151,
+    "totalCount": 41,
+    "a1Count": 0,
+    "a2Count": 41,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-286",
+    "location": "中正區忠孝東路2段與八德路1段口",
+    "district": "中正區",
+    "longitude": 121.5290803,
+    "latitude": 25.0434067,
+    "totalCount": 41,
+    "a1Count": 0,
+    "a2Count": 41,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-287",
+    "location": "中正區汀州路3段與思源街口",
+    "district": "中正區",
+    "longitude": 121.5322347,
+    "latitude": 25.0150487,
+    "totalCount": 41,
+    "a1Count": 0,
+    "a2Count": 41,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-288",
+    "location": "文山區辛亥路7段與忠順街1段口",
+    "district": "文山區",
+    "longitude": 121.5540242,
+    "latitude": 24.9832107,
+    "totalCount": 41,
+    "a1Count": 0,
+    "a2Count": 41,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-289",
+    "location": "文山區木柵路4段與木柵路4段33巷口",
+    "district": "文山區",
+    "longitude": 121.5715894,
+    "latitude": 24.9940353,
+    "totalCount": 41,
+    "a1Count": 0,
+    "a2Count": 41,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-290",
+    "location": "內湖區金湖路與康寧路1段口",
+    "district": "內湖區",
+    "longitude": 121.5996159,
+    "latitude": 25.0790381,
+    "totalCount": 41,
+    "a1Count": 0,
+    "a2Count": 41,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-291",
+    "location": "信義區松智路與松壽路口",
+    "district": "信義區",
+    "longitude": 121.5654622,
+    "latitude": 25.0358761,
+    "totalCount": 41,
+    "a1Count": 0,
+    "a2Count": 41,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-292",
+    "location": "信義區松壽路2號",
+    "district": "信義區",
+    "longitude": 121.5627155,
+    "latitude": 25.03587885,
+    "totalCount": 41,
+    "a1Count": 0,
+    "a2Count": 41,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-293",
+    "location": "大同區延平北路2段與涼州街口",
+    "district": "大同區",
+    "longitude": 121.5113512,
+    "latitude": 25.0606656,
+    "totalCount": 40,
+    "a1Count": 0,
+    "a2Count": 40,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-294",
+    "location": "大同區忠孝西路2段與西寧北路口",
+    "district": "大同區",
+    "longitude": 121.5075505,
+    "latitude": 25.0484909,
+    "totalCount": 40,
+    "a1Count": 0,
+    "a2Count": 40,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-295",
+    "location": "萬華區環河南路1段與成都路口",
+    "district": "萬華區",
+    "longitude": 121.5008163,
+    "latitude": 25.04398427,
+    "totalCount": 40,
+    "a1Count": 0,
+    "a2Count": 40,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-296",
+    "location": "萬華區環河南路1段與忠孝西路2段口",
+    "district": "萬華區",
+    "longitude": 121.5061165,
+    "latitude": 25.04885429,
+    "totalCount": 40,
+    "a1Count": 0,
+    "a2Count": 40,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-297",
+    "location": "萬華區康定路與長沙街2段口",
+    "district": "萬華區",
+    "longitude": 121.5020682,
+    "latitude": 25.040505,
+    "totalCount": 40,
+    "a1Count": 0,
+    "a2Count": 40,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-298",
+    "location": "大安區敦化南路1段187巷與忠孝東路4段147巷口",
+    "district": "大安區",
+    "longitude": 121.5492889,
+    "latitude": 25.0424247,
+    "totalCount": 40,
+    "a1Count": 0,
+    "a2Count": 40,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-299",
+    "location": "大安區忠孝東路4段與延吉街口",
+    "district": "大安區",
+    "longitude": 121.5545111,
+    "latitude": 25.0413958,
+    "totalCount": 40,
+    "a1Count": 0,
+    "a2Count": 40,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-300",
+    "location": "大安區仁愛路4段與安和路1段口",
+    "district": "大安區",
+    "longitude": 121.5511179,
+    "latitude": 25.03803524,
+    "totalCount": 40,
+    "a1Count": 0,
+    "a2Count": 40,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-301",
+    "location": "中正區羅斯福路1段與南海路口",
+    "district": "中正區",
+    "longitude": 121.5179899,
+    "latitude": 25.03299003,
+    "totalCount": 40,
+    "a1Count": 0,
+    "a2Count": 40,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-302",
+    "location": "松山區八德路4段與松山路口",
+    "district": "松山區",
+    "longitude": 121.5776429,
+    "latitude": 25.05011788,
+    "totalCount": 40,
+    "a1Count": 0,
+    "a2Count": 40,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-303",
+    "location": "士林區德行西路與福華路口",
+    "district": "士林區",
+    "longitude": 121.5220166,
+    "latitude": 25.10462894,
+    "totalCount": 40,
+    "a1Count": 0,
+    "a2Count": 40,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-304",
+    "location": "北投區石牌路2段與振興街口",
+    "district": "北投區",
+    "longitude": 121.5212826,
+    "latitude": 25.11897775,
+    "totalCount": 40,
+    "a1Count": 0,
+    "a2Count": 40,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-305",
+    "location": "信義區和平東路3段與信安街口",
+    "district": "信義區",
+    "longitude": 121.5547747,
+    "latitude": 25.02238195,
+    "totalCount": 40,
+    "a1Count": 0,
+    "a2Count": 40,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-306",
+    "location": "中正區忠孝東路2段與金山南路1段口",
+    "district": "中正區",
+    "longitude": 121.5297324,
+    "latitude": 25.04323002,
+    "totalCount": 39,
+    "a1Count": 1,
+    "a2Count": 38,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-307",
+    "location": "中正區中山南路與愛國東路口",
+    "district": "中正區",
+    "longitude": 121.5168759,
+    "latitude": 25.0347855,
+    "totalCount": 39,
+    "a1Count": 1,
+    "a2Count": 38,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-308",
+    "location": "士林區中正路與福港街口",
+    "district": "士林區",
+    "longitude": 121.5177839,
+    "latitude": 25.0917628,
+    "totalCount": 39,
+    "a1Count": 1,
+    "a2Count": 38,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-309",
+    "location": "士林區福國路與福華路口",
+    "district": "士林區",
+    "longitude": 121.5230064,
+    "latitude": 25.10183179,
+    "totalCount": 39,
+    "a1Count": 1,
+    "a2Count": 38,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-310",
+    "location": "信義區市民大道5段與光復南路口",
+    "district": "信義區",
+    "longitude": 121.5578196,
+    "latitude": 25.0451342,
+    "totalCount": 39,
+    "a1Count": 1,
+    "a2Count": 38,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-311",
+    "location": "大同區延平北路2段與民生西路口",
+    "district": "大同區",
+    "longitude": 121.5115836,
+    "latitude": 25.056957,
+    "totalCount": 39,
+    "a1Count": 0,
+    "a2Count": 39,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-312",
+    "location": "萬華區環河南路1段與康定路口",
+    "district": "萬華區",
+    "longitude": 121.5032259,
+    "latitude": 25.0461931,
+    "totalCount": 39,
+    "a1Count": 0,
+    "a2Count": 39,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-313",
+    "location": "萬華區環河南路1段與長沙街2段口",
+    "district": "萬華區",
+    "longitude": 121.4703622,
+    "latitude": 25.05510736,
+    "totalCount": 39,
+    "a1Count": 0,
+    "a2Count": 39,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-314",
+    "location": "中山區建國北路2段與錦州街口",
+    "district": "中山區",
+    "longitude": 121.5372166,
+    "latitude": 25.0602793,
+    "totalCount": 39,
+    "a1Count": 0,
+    "a2Count": 39,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-315",
+    "location": "中山區民權東路2段與建國北路2段口",
+    "district": "中山區",
+    "longitude": 121.5367734,
+    "latitude": 25.06253165,
+    "totalCount": 39,
+    "a1Count": 0,
+    "a2Count": 39,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-316",
+    "location": "中山區建國北路1段與南京東路3段口",
+    "district": "中山區",
+    "longitude": 121.5370329,
+    "latitude": 25.05190129,
+    "totalCount": 39,
+    "a1Count": 0,
+    "a2Count": 39,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-317",
+    "location": "中山區民生東路3段與合江街口",
+    "district": "中山區",
+    "longitude": 121.543053,
+    "latitude": 25.0578656,
+    "totalCount": 39,
+    "a1Count": 0,
+    "a2Count": 39,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-318",
+    "location": "中正區中山南路與青島西路口",
+    "district": "中正區",
+    "longitude": 121.5191242,
+    "latitude": 25.04455613,
+    "totalCount": 39,
+    "a1Count": 0,
+    "a2Count": 39,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-319",
+    "location": "松山區南京東路5段與塔悠路口",
+    "district": "松山區",
+    "longitude": 121.5704646,
+    "latitude": 25.0511534,
+    "totalCount": 39,
+    "a1Count": 0,
+    "a2Count": 39,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-320",
+    "location": "士林區中山北路6段與克強路口",
+    "district": "士林區",
+    "longitude": 121.524897,
+    "latitude": 25.108537,
+    "totalCount": 39,
+    "a1Count": 0,
+    "a2Count": 39,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-321",
+    "location": "士林區文林路與大東路口",
+    "district": "士林區",
+    "longitude": 121.5251827,
+    "latitude": 25.0930582,
+    "totalCount": 39,
+    "a1Count": 0,
+    "a2Count": 39,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-322",
+    "location": "北投區公館路與西安街2段口",
+    "district": "北投區",
+    "longitude": 121.5027041,
+    "latitude": 25.1214461,
+    "totalCount": 39,
+    "a1Count": 0,
+    "a2Count": 39,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-323",
+    "location": "信義區忠孝東路5段與松信路口",
+    "district": "信義區",
+    "longitude": 121.5717962,
+    "latitude": 25.04105778,
+    "totalCount": 39,
+    "a1Count": 0,
+    "a2Count": 39,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-324",
+    "location": "信義區基隆路2段與信義路5段口",
+    "district": "信義區",
+    "longitude": 121.5596866,
+    "latitude": 25.03294657,
+    "totalCount": 39,
+    "a1Count": 0,
+    "a2Count": 39,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-325",
+    "location": "中正區羅斯福路1段與寧波西街口",
+    "district": "中正區",
+    "longitude": 121.5188869,
+    "latitude": 25.03163123,
+    "totalCount": 38,
+    "a1Count": 1,
+    "a2Count": 37,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-326",
+    "location": "士林區延平北路5段與葫蘆街口",
+    "district": "士林區",
+    "longitude": 121.5108808,
+    "latitude": 25.08002552,
+    "totalCount": 38,
+    "a1Count": 1,
+    "a2Count": 37,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-327",
+    "location": "大同區承德路2段與南京西路口",
+    "district": "大同區",
+    "longitude": 121.5176323,
+    "latitude": 25.053328,
+    "totalCount": 38,
+    "a1Count": 0,
+    "a2Count": 38,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-328",
+    "location": "大同區鄭州路與延平北路1段口",
+    "district": "大同區",
+    "longitude": 121.5119572,
+    "latitude": 25.049765,
+    "totalCount": 38,
+    "a1Count": 0,
+    "a2Count": 38,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-329",
+    "location": "中山區中山北路2段與錦州街口",
+    "district": "中山區",
+    "longitude": 121.5230789,
+    "latitude": 25.0603636,
+    "totalCount": 38,
+    "a1Count": 0,
+    "a2Count": 38,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-330",
+    "location": "中山區吉林路與錦州街口",
+    "district": "中山區",
+    "longitude": 121.5302495,
+    "latitude": 25.0603278,
+    "totalCount": 38,
+    "a1Count": 0,
+    "a2Count": 38,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-331",
+    "location": "中山區新生北路2段與錦州街口",
+    "district": "中山區",
+    "longitude": 121.5278061,
+    "latitude": 25.06035217,
+    "totalCount": 38,
+    "a1Count": 0,
+    "a2Count": 38,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-332",
+    "location": "中山區中山北路2段與錦西街口",
+    "district": "中山區",
+    "longitude": 121.5228453,
+    "latitude": 25.06030289,
+    "totalCount": 38,
+    "a1Count": 0,
+    "a2Count": 38,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-333",
+    "location": "大安區建國南路1段與濟南路3段口",
+    "district": "大安區",
+    "longitude": 121.5379686,
+    "latitude": 25.0401745,
+    "totalCount": 38,
+    "a1Count": 0,
+    "a2Count": 38,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-334",
+    "location": "中正區館前路與開封街1段口",
+    "district": "中正區",
+    "longitude": 121.5150246,
+    "latitude": 25.04601474,
+    "totalCount": 38,
+    "a1Count": 0,
+    "a2Count": 38,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-335",
+    "location": "松山區南京東路4段與敦化北路口",
+    "district": "松山區",
+    "longitude": 121.5491994,
+    "latitude": 25.05182423,
+    "totalCount": 38,
+    "a1Count": 0,
+    "a2Count": 38,
+    "years": [
+      2019,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-336",
+    "location": "士林區中正路與文昌路口",
+    "district": "士林區",
+    "longitude": 121.5219115,
+    "latitude": 25.0943616,
+    "totalCount": 38,
+    "a1Count": 0,
+    "a2Count": 38,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-337",
+    "location": "士林區承德路5段與通河東街2段口",
+    "district": "士林區",
+    "longitude": 121.5138879,
+    "latitude": 25.09605625,
+    "totalCount": 38,
+    "a1Count": 0,
+    "a2Count": 38,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-338",
+    "location": "文山區木柵路4段與秀明路1段口",
+    "district": "文山區",
+    "longitude": 121.5710387,
+    "latitude": 24.99172066,
+    "totalCount": 38,
+    "a1Count": 0,
+    "a2Count": 38,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-339",
+    "location": "信義區基隆路1段與忠孝東路5段口",
+    "district": "信義區",
+    "longitude": 121.5644065,
+    "latitude": 25.0412468,
+    "totalCount": 38,
+    "a1Count": 0,
+    "a2Count": 38,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-340",
+    "location": "信義區市民大道6段與松信路口",
+    "district": "信義區",
+    "longitude": 121.5722387,
+    "latitude": 25.0492292,
+    "totalCount": 38,
+    "a1Count": 0,
+    "a2Count": 38,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-341",
+    "location": "信義區信義路5段與基隆路1段口",
+    "district": "信義區",
+    "longitude": 121.5597933,
+    "latitude": 25.0327746,
+    "totalCount": 38,
+    "a1Count": 0,
+    "a2Count": 38,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-342",
+    "location": "大同區民權西路與大龍街口",
+    "district": "大同區",
+    "longitude": 121.5159966,
+    "latitude": 25.06320204,
+    "totalCount": 37,
+    "a1Count": 1,
+    "a2Count": 36,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-343",
+    "location": "松山區市民大道5段與東興路口",
+    "district": "松山區",
+    "longitude": 121.5658559,
+    "latitude": 25.0486147,
+    "totalCount": 37,
+    "a1Count": 1,
+    "a2Count": 36,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-344",
+    "location": "士林區中正路與延平北路5段口",
+    "district": "士林區",
+    "longitude": 121.50943,
+    "latitude": 25.08656296,
+    "totalCount": 37,
+    "a1Count": 1,
+    "a2Count": 36,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-345",
+    "location": "大同區西寧北路與鄭州路口",
+    "district": "大同區",
+    "longitude": 121.508533,
+    "latitude": 25.05030411,
+    "totalCount": 37,
+    "a1Count": 0,
+    "a2Count": 37,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-346",
+    "location": "萬華區西藏路與艋舺大道口",
+    "district": "萬華區",
+    "longitude": 121.4918488,
+    "latitude": 25.02888645,
+    "totalCount": 37,
+    "a1Count": 0,
+    "a2Count": 37,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-347",
+    "location": "中山區松江路與南京東路2段口",
+    "district": "中山區",
+    "longitude": 121.5331506,
+    "latitude": 25.0519076,
+    "totalCount": 37,
+    "a1Count": 0,
+    "a2Count": 37,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-348",
+    "location": "大安區忠孝東路4段77巷與敦化南路1段190巷口",
+    "district": "大安區",
+    "longitude": 121.5471801,
+    "latitude": 25.04264778,
+    "totalCount": 37,
+    "a1Count": 0,
+    "a2Count": 37,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-349",
+    "location": "大安區忠孝東路4段與復興南路1段口",
+    "district": "大安區",
+    "longitude": 121.5439124,
+    "latitude": 25.04175035,
+    "totalCount": 37,
+    "a1Count": 0,
+    "a2Count": 37,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-350",
+    "location": "大安區信義路4段與敦化南路2段口",
+    "district": "大安區",
+    "longitude": 121.5486614,
+    "latitude": 25.0331536,
+    "totalCount": 37,
+    "a1Count": 0,
+    "a2Count": 37,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-351",
+    "location": "大安區市民大道4段與復興南路1段口",
+    "district": "大安區",
+    "longitude": 121.5437715,
+    "latitude": 25.0447489,
+    "totalCount": 37,
+    "a1Count": 0,
+    "a2Count": 37,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-352",
+    "location": "大安區金山南路2段與金華街口",
+    "district": "大安區",
+    "longitude": 121.5266428,
+    "latitude": 25.0302451,
+    "totalCount": 37,
+    "a1Count": 0,
+    "a2Count": 37,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-353",
+    "location": "中正區中山南路與貴陽街1段口",
+    "district": "中正區",
+    "longitude": 121.5175156,
+    "latitude": 25.0380265,
+    "totalCount": 37,
+    "a1Count": 0,
+    "a2Count": 37,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-354",
+    "location": "中正區三元街與寧波西街口",
+    "district": "中正區",
+    "longitude": 121.5113811,
+    "latitude": 25.0280058,
+    "totalCount": 37,
+    "a1Count": 0,
+    "a2Count": 37,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-355",
+    "location": "中正區和平西路2段與南海路口",
+    "district": "中正區",
+    "longitude": 121.5092501,
+    "latitude": 25.03045957,
+    "totalCount": 37,
+    "a1Count": 0,
+    "a2Count": 37,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-356",
+    "location": "松山區塔悠路與南京東路5段口",
+    "district": "松山區",
+    "longitude": 121.570586,
+    "latitude": 25.05133837,
+    "totalCount": 37,
+    "a1Count": 0,
+    "a2Count": 37,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-357",
+    "location": "士林區中正路與承德路5段口",
+    "district": "士林區",
+    "longitude": 121.5164458,
+    "latitude": 25.0909222,
+    "totalCount": 37,
+    "a1Count": 0,
+    "a2Count": 37,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-358",
+    "location": "北投區大業路與大同街口",
+    "district": "北投區",
+    "longitude": 121.4990994,
+    "latitude": 25.1369436,
+    "totalCount": 37,
+    "a1Count": 0,
+    "a2Count": 37,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-359",
+    "location": "信義區基隆路2段與嘉興街口",
+    "district": "信義區",
+    "longitude": 121.5591346,
+    "latitude": 25.03255918,
+    "totalCount": 37,
+    "a1Count": 0,
+    "a2Count": 37,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-360",
+    "location": "大同區承德路2段與平陽街口",
+    "district": "大同區",
+    "longitude": 121.5180627,
+    "latitude": 25.05469001,
+    "totalCount": 36,
+    "a1Count": 1,
+    "a2Count": 35,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-361",
+    "location": "大同區重慶北路1段與鄭州路口",
+    "district": "大同區",
+    "longitude": 121.5133021,
+    "latitude": 25.0495407,
+    "totalCount": 36,
+    "a1Count": 1,
+    "a2Count": 35,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-362",
+    "location": "大安區仁愛路4段與復興南路1段口",
+    "district": "大安區",
+    "longitude": 121.5438021,
+    "latitude": 25.0376463,
+    "totalCount": 36,
+    "a1Count": 1,
+    "a2Count": 35,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-363",
+    "location": "中正區中華路2段與西藏路口",
+    "district": "中正區",
+    "longitude": 121.504204,
+    "latitude": 25.02994651,
+    "totalCount": 36,
+    "a1Count": 1,
+    "a2Count": 35,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-364",
+    "location": "文山區木新路2段與恆光街口",
+    "district": "文山區",
+    "longitude": 121.5668642,
+    "latitude": 24.98326118,
+    "totalCount": 36,
+    "a1Count": 1,
+    "a2Count": 35,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-365",
+    "location": "大同區延平北路4段與酒泉街口",
+    "district": "大同區",
+    "longitude": 121.5109599,
+    "latitude": 25.07211004,
+    "totalCount": 36,
+    "a1Count": 0,
+    "a2Count": 36,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-366",
+    "location": "萬華區西寧南路與洛陽街口",
+    "district": "萬華區",
+    "longitude": 121.5072915,
+    "latitude": 25.0476124,
+    "totalCount": 36,
+    "a1Count": 0,
+    "a2Count": 36,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-367",
+    "location": "中山區北安路與劍南路口",
+    "district": "中山區",
+    "longitude": 121.5539914,
+    "latitude": 25.0854766,
+    "totalCount": 36,
+    "a1Count": 0,
+    "a2Count": 36,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-368",
+    "location": "中山區林森北路與民權東路1段口",
+    "district": "中山區",
+    "longitude": 121.5256352,
+    "latitude": 25.0628272,
+    "totalCount": 36,
+    "a1Count": 0,
+    "a2Count": 36,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-369",
+    "location": "中山區南京東路2段與松江路口",
+    "district": "中山區",
+    "longitude": 121.5330995,
+    "latitude": 25.05207498,
+    "totalCount": 36,
+    "a1Count": 0,
+    "a2Count": 36,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-370",
+    "location": "中山區新生北路3段與民族東路口",
+    "district": "中山區",
+    "longitude": 121.5280275,
+    "latitude": 25.0683714,
+    "totalCount": 36,
+    "a1Count": 0,
+    "a2Count": 36,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-371",
+    "location": "中山區長安東路1段與天津街口",
+    "district": "中山區",
+    "longitude": 121.5228402,
+    "latitude": 25.0495549,
+    "totalCount": 36,
+    "a1Count": 0,
+    "a2Count": 36,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-372",
+    "location": "中山區民權東路3段與建國北路3段口",
+    "district": "中山區",
+    "longitude": 121.5372695,
+    "latitude": 25.06268422,
+    "totalCount": 36,
+    "a1Count": 0,
+    "a2Count": 36,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-373",
+    "location": "中山區民族東路與濱江街180巷口",
+    "district": "中山區",
+    "longitude": 121.5381154,
+    "latitude": 25.0681601,
+    "totalCount": 36,
+    "a1Count": 0,
+    "a2Count": 36,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-374",
+    "location": "中山區中山北路4段與北安路口",
+    "district": "中山區",
+    "longitude": 121.5271028,
+    "latitude": 25.07646546,
+    "totalCount": 36,
+    "a1Count": 0,
+    "a2Count": 36,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-375",
+    "location": "中山區市民大道2段與天津街口",
+    "district": "中山區",
+    "longitude": 121.5224233,
+    "latitude": 25.04804432,
+    "totalCount": 36,
+    "a1Count": 0,
+    "a2Count": 36,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-376",
+    "location": "中山區長春路與建國北路2段口",
+    "district": "中山區",
+    "longitude": 121.5366852,
+    "latitude": 25.05468513,
+    "totalCount": 36,
+    "a1Count": 0,
+    "a2Count": 36,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-377",
+    "location": "大安區基隆路2段與通化街171巷口",
+    "district": "大安區",
+    "longitude": 121.5559311,
+    "latitude": 25.0273806,
+    "totalCount": 36,
+    "a1Count": 0,
+    "a2Count": 36,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-378",
+    "location": "大安區敦化南路2段與安和路2段171巷口",
+    "district": "大安區",
+    "longitude": 121.5489747,
+    "latitude": 25.02806029,
+    "totalCount": 36,
+    "a1Count": 0,
+    "a2Count": 36,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-379",
+    "location": "中正區中華路1段與愛國西路口",
+    "district": "中正區",
+    "longitude": 121.5070492,
+    "latitude": 25.037456,
+    "totalCount": 36,
+    "a1Count": 0,
+    "a2Count": 36,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-380",
+    "location": "中正區中山北路1段與北平西路口",
+    "district": "中正區",
+    "longitude": 121.5202548,
+    "latitude": 25.04740182,
+    "totalCount": 36,
+    "a1Count": 0,
+    "a2Count": 36,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-381",
+    "location": "中正區貴陽街1段與懷寧街口",
+    "district": "中正區",
+    "longitude": 121.5137368,
+    "latitude": 25.03868925,
+    "totalCount": 36,
+    "a1Count": 0,
+    "a2Count": 36,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-382",
+    "location": "士林區至誠路1段與雨聲街口",
+    "district": "士林區",
+    "longitude": 121.5336379,
+    "latitude": 25.1012655,
+    "totalCount": 36,
+    "a1Count": 0,
+    "a2Count": 36,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-383",
+    "location": "北投區承德路7段與實踐街口",
+    "district": "北投區",
+    "longitude": 121.5070848,
+    "latitude": 25.1142955,
+    "totalCount": 36,
+    "a1Count": 0,
+    "a2Count": 36,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-384",
+    "location": "北投區中央北路4段與中央北路4段515巷口",
+    "district": "北投區",
+    "longitude": 121.468368,
+    "latitude": 25.1281794,
+    "totalCount": 36,
+    "a1Count": 0,
+    "a2Count": 36,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-385",
+    "location": "北投區承德路7段與承德路7段344巷口",
+    "district": "北投區",
+    "longitude": 121.5038642,
+    "latitude": 25.11746986,
+    "totalCount": 36,
+    "a1Count": 0,
+    "a2Count": 36,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-386",
+    "location": "文山區辛亥路7段與光輝路21巷口",
+    "district": "文山區",
+    "longitude": 121.5538049,
+    "latitude": 24.9855096,
+    "totalCount": 36,
+    "a1Count": 0,
+    "a2Count": 36,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-387",
+    "location": "內湖區舊宗路1段與新湖三路口",
+    "district": "內湖區",
+    "longitude": 121.576811,
+    "latitude": 25.06361681,
+    "totalCount": 36,
+    "a1Count": 0,
+    "a2Count": 36,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-388",
+    "location": "南港區忠孝東路7段與研究院路1段口",
+    "district": "南港區",
+    "longitude": 121.616375,
+    "latitude": 25.05322244,
+    "totalCount": 36,
+    "a1Count": 0,
+    "a2Count": 36,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-389",
+    "location": "南港區南港路1段與中南街口",
+    "district": "南港區",
+    "longitude": 121.6152855,
+    "latitude": 25.05528275,
+    "totalCount": 36,
+    "a1Count": 0,
+    "a2Count": 36,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-390",
+    "location": "大安區仁愛路3段與復興南路1段口",
+    "district": "大安區",
+    "longitude": 121.5435692,
+    "latitude": 25.03818112,
+    "totalCount": 35,
+    "a1Count": 1,
+    "a2Count": 34,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-391",
+    "location": "中正區中華路1段與長沙街1段口",
+    "district": "中正區",
+    "longitude": 121.5079997,
+    "latitude": 25.04047406,
+    "totalCount": 35,
+    "a1Count": 1,
+    "a2Count": 34,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-392",
+    "location": "大同區重慶北路2段與保安街口",
+    "district": "大同區",
+    "longitude": 121.5135681,
+    "latitude": 25.0592374,
+    "totalCount": 35,
+    "a1Count": 0,
+    "a2Count": 35,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-393",
+    "location": "大同區台北橋機車道往三重",
+    "district": "大同區",
+    "longitude": 121.4831594,
+    "latitude": 25.0472593,
+    "totalCount": 35,
+    "a1Count": 0,
+    "a2Count": 35,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022
+    ]
+  },
+  {
+    "id": "hotspot-394",
+    "location": "中山區南京東路3段與復興北路口",
+    "district": "中山區",
+    "longitude": 121.5439825,
+    "latitude": 25.05180471,
+    "totalCount": 35,
+    "a1Count": 0,
+    "a2Count": 35,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-395",
+    "location": "中山區中山北路3段與德惠街口",
+    "district": "中山區",
+    "longitude": 121.5226262,
+    "latitude": 25.06701266,
+    "totalCount": 35,
+    "a1Count": 0,
+    "a2Count": 35,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-396",
+    "location": "中山區長安東路2段與伊通街口",
+    "district": "中山區",
+    "longitude": 121.5347191,
+    "latitude": 25.0484276,
+    "totalCount": 35,
+    "a1Count": 0,
+    "a2Count": 35,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-397",
+    "location": "中山區長安東路1段與新生北路1段口",
+    "district": "中山區",
+    "longitude": 121.5295687,
+    "latitude": 25.04823929,
+    "totalCount": 35,
+    "a1Count": 0,
+    "a2Count": 35,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-398",
+    "location": "中山區復興北路與民權東路3段口",
+    "district": "中山區",
+    "longitude": 121.5441397,
+    "latitude": 25.0623324,
+    "totalCount": 35,
+    "a1Count": 0,
+    "a2Count": 35,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-399",
+    "location": "中正區中山北路1段與市民大道2段口",
+    "district": "中正區",
+    "longitude": 121.5207948,
+    "latitude": 25.04794024,
+    "totalCount": 35,
+    "a1Count": 0,
+    "a2Count": 35,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-400",
+    "location": "中正區和平西路2段與寧波西街口",
+    "district": "中正區",
+    "longitude": 121.5120353,
+    "latitude": 25.02901217,
+    "totalCount": 35,
+    "a1Count": 0,
+    "a2Count": 35,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-401",
+    "location": "松山區市民大道4段與復興南路1段口",
+    "district": "松山區",
+    "longitude": 121.543943,
+    "latitude": 25.04496793,
+    "totalCount": 35,
+    "a1Count": 0,
+    "a2Count": 35,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-402",
+    "location": "松山區南京東路4段與北寧路口",
+    "district": "松山區",
+    "longitude": 121.5526945,
+    "latitude": 25.05161136,
+    "totalCount": 35,
+    "a1Count": 0,
+    "a2Count": 35,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-403",
+    "location": "士林區中山北路6段與德行東路口",
+    "district": "士林區",
+    "longitude": 121.5250901,
+    "latitude": 25.1063027,
+    "totalCount": 35,
+    "a1Count": 0,
+    "a2Count": 35,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-404",
+    "location": "士林區福林路與福林路100巷口",
+    "district": "士林區",
+    "longitude": 121.5312437,
+    "latitude": 25.095845,
+    "totalCount": 35,
+    "a1Count": 0,
+    "a2Count": 35,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-405",
+    "location": "內湖區成功路4段與金龍路口",
+    "district": "內湖區",
+    "longitude": 121.5951732,
+    "latitude": 25.0840286,
+    "totalCount": 35,
+    "a1Count": 0,
+    "a2Count": 35,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-406",
+    "location": "南港區南港路1段與經貿一路口",
+    "district": "南港區",
+    "longitude": 121.6187454,
+    "latitude": 25.0547923,
+    "totalCount": 35,
+    "a1Count": 0,
+    "a2Count": 35,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-407",
+    "location": "信義區基隆路1段與永吉路口",
+    "district": "信義區",
+    "longitude": 121.5673611,
+    "latitude": 25.04569958,
+    "totalCount": 35,
+    "a1Count": 0,
+    "a2Count": 35,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-408",
+    "location": "信義區基隆路汽機車混合地下道往北",
+    "district": "信義區",
+    "longitude": 121.5622402,
+    "latitude": 25.037077,
+    "totalCount": 35,
+    "a1Count": 0,
+    "a2Count": 35,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-409",
+    "location": "中正區中山南路與愛國西路口",
+    "district": "中正區",
+    "longitude": 121.5167504,
+    "latitude": 25.03498961,
+    "totalCount": 34,
+    "a1Count": 1,
+    "a2Count": 33,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-410",
+    "location": "中正區金山南路1段與濟南路2段口",
+    "district": "中正區",
+    "longitude": 121.529273,
+    "latitude": 25.0407962,
+    "totalCount": 34,
+    "a1Count": 1,
+    "a2Count": 33,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-411",
+    "location": "信義區信義路4段與光復南路口",
+    "district": "信義區",
+    "longitude": 121.557553,
+    "latitude": 25.03319697,
+    "totalCount": 34,
+    "a1Count": 1,
+    "a2Count": 33,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ]
+  },
+  {
+    "id": "hotspot-412",
+    "location": "信義區信安街67巷81號",
+    "district": "信義區",
+    "longitude": 121.5602461,
+    "latitude": 25.02591215,
+    "totalCount": 34,
+    "a1Count": 1,
+    "a2Count": 33,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-413",
+    "location": "中山區中山北路1段與市民大道1段口",
+    "district": "中山區",
+    "longitude": 121.5207013,
+    "latitude": 25.04823721,
+    "totalCount": 34,
+    "a1Count": 0,
+    "a2Count": 34,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-414",
+    "location": "中山區吉林路與長春路口",
+    "district": "中山區",
+    "longitude": 121.5301188,
+    "latitude": 25.05493638,
+    "totalCount": 34,
+    "a1Count": 0,
+    "a2Count": 34,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-415",
+    "location": "大安區基隆路4段43號",
+    "district": "大安區",
+    "longitude": 121.5399183,
+    "latitude": 25.01330494,
+    "totalCount": 34,
+    "a1Count": 0,
+    "a2Count": 34,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-416",
+    "location": "中正區中山南路與常德街口",
+    "district": "中正區",
+    "longitude": 121.5180258,
+    "latitude": 25.040771,
+    "totalCount": 34,
+    "a1Count": 0,
+    "a2Count": 34,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-417",
+    "location": "中正區重慶南路1段與凱達格蘭大道口",
+    "district": "中正區",
+    "longitude": 121.5129431,
+    "latitude": 25.04009614,
+    "totalCount": 34,
+    "a1Count": 0,
+    "a2Count": 34,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-418",
+    "location": "中正區中華路2段與廣州街口",
+    "district": "中正區",
+    "longitude": 121.5065711,
+    "latitude": 25.03601084,
+    "totalCount": 34,
+    "a1Count": 0,
+    "a2Count": 34,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-419",
+    "location": "士林區基河路與劍潭路口",
+    "district": "士林區",
+    "longitude": 121.5247442,
+    "latitude": 25.0842567,
+    "totalCount": 34,
+    "a1Count": 0,
+    "a2Count": 34,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-420",
+    "location": "士林區承德路4段與通河街口",
+    "district": "士林區",
+    "longitude": 121.5223008,
+    "latitude": 25.0801873,
+    "totalCount": 34,
+    "a1Count": 0,
+    "a2Count": 34,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-421",
+    "location": "北投區承德路6段與文林北路口",
+    "district": "北投區",
+    "longitude": 121.5113866,
+    "latitude": 25.11043173,
+    "totalCount": 34,
+    "a1Count": 0,
+    "a2Count": 34,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-422",
+    "location": "北投區大度路3段與立功街口",
+    "district": "北投區",
+    "longitude": 121.4689513,
+    "latitude": 25.12311173,
+    "totalCount": 34,
+    "a1Count": 0,
+    "a2Count": 34,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-423",
+    "location": "文山區羅斯福路5段與興隆路1段口",
+    "district": "文山區",
+    "longitude": 121.5392422,
+    "latitude": 25.00426887,
+    "totalCount": 34,
+    "a1Count": 0,
+    "a2Count": 34,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-424",
+    "location": "內湖區成功路2段與安康路口",
+    "district": "內湖區",
+    "longitude": 121.5885097,
+    "latitude": 25.0574393,
+    "totalCount": 34,
+    "a1Count": 0,
+    "a2Count": 34,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-425",
+    "location": "內湖區康寧路3段與東湖路口",
+    "district": "內湖區",
+    "longitude": 121.6121729,
+    "latitude": 25.06880281,
+    "totalCount": 34,
+    "a1Count": 0,
+    "a2Count": 34,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-426",
+    "location": "內湖區潭美街與安康路228巷口",
+    "district": "內湖區",
+    "longitude": 121.603557,
+    "latitude": 25.0611664,
+    "totalCount": 34,
+    "a1Count": 0,
+    "a2Count": 34,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-427",
+    "location": "內湖區民權東路6段與舊宗路1段口",
+    "district": "內湖區",
+    "longitude": 121.5752499,
+    "latitude": 25.0656468,
+    "totalCount": 34,
+    "a1Count": 0,
+    "a2Count": 34,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-428",
+    "location": "內湖區民權大橋東向西",
+    "district": "內湖區",
+    "longitude": 121.5706273,
+    "latitude": 25.06425176,
+    "totalCount": 34,
+    "a1Count": 0,
+    "a2Count": 34,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-429",
+    "location": "內湖區南京東路6段與新明路298巷口",
+    "district": "內湖區",
+    "longitude": 121.5816071,
+    "latitude": 25.05700908,
+    "totalCount": 34,
+    "a1Count": 0,
+    "a2Count": 34,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-430",
+    "location": "南港區忠孝東路7段與興中路口",
+    "district": "南港區",
+    "longitude": 121.6079619,
+    "latitude": 25.0521574,
+    "totalCount": 34,
+    "a1Count": 0,
+    "a2Count": 34,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-431",
+    "location": "南港區南港路1段與經貿二路口",
+    "district": "南港區",
+    "longitude": 121.6168832,
+    "latitude": 25.05515107,
+    "totalCount": 34,
+    "a1Count": 0,
+    "a2Count": 34,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-432",
+    "location": "信義區信安街與崇德街口",
+    "district": "信義區",
+    "longitude": 121.5557761,
+    "latitude": 25.0240178,
+    "totalCount": 34,
+    "a1Count": 0,
+    "a2Count": 34,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-433",
+    "location": "萬華區西園路2段與莒光路口",
+    "district": "萬華區",
+    "longitude": 121.4968723,
+    "latitude": 25.0311062,
+    "totalCount": 33,
+    "a1Count": 1,
+    "a2Count": 32,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-434",
+    "location": "松山區八德路4段與塔悠路口",
+    "district": "松山區",
+    "longitude": 121.5726009,
+    "latitude": 25.04995267,
+    "totalCount": 33,
+    "a1Count": 1,
+    "a2Count": 32,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-435",
+    "location": "信義區基隆路2段155號",
+    "district": "信義區",
+    "longitude": 121.5543693,
+    "latitude": 25.02587233,
+    "totalCount": 33,
+    "a1Count": 1,
+    "a2Count": 32,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-436",
+    "location": "大同區塔城街與鄭州路口",
+    "district": "大同區",
+    "longitude": 121.510532,
+    "latitude": 25.0502893,
+    "totalCount": 33,
+    "a1Count": 0,
+    "a2Count": 33,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-437",
+    "location": "大同區民權西路與承德路3段口",
+    "district": "大同區",
+    "longitude": 121.5178756,
+    "latitude": 25.06300718,
+    "totalCount": 33,
+    "a1Count": 0,
+    "a2Count": 33,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-438",
+    "location": "大同區民生西路與太原路口",
+    "district": "大同區",
+    "longitude": 121.5169761,
+    "latitude": 25.0572318,
+    "totalCount": 33,
+    "a1Count": 0,
+    "a2Count": 33,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-439",
+    "location": "大同區承德路3段與酒泉街口",
+    "district": "大同區",
+    "longitude": 121.5185088,
+    "latitude": 25.0706133,
+    "totalCount": 33,
+    "a1Count": 0,
+    "a2Count": 33,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-440",
+    "location": "萬華區艋舺大道與萬大路口",
+    "district": "萬華區",
+    "longitude": 121.5005203,
+    "latitude": 25.033023,
+    "totalCount": 33,
+    "a1Count": 0,
+    "a2Count": 33,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-441",
+    "location": "中山區長安東路1段與林森北路口",
+    "district": "中山區",
+    "longitude": 121.5245217,
+    "latitude": 25.0491304,
+    "totalCount": 33,
+    "a1Count": 0,
+    "a2Count": 33,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-442",
+    "location": "中山區民權東路2段與新生北路3段口",
+    "district": "中山區",
+    "longitude": 121.527876,
+    "latitude": 25.0625486,
+    "totalCount": 33,
+    "a1Count": 0,
+    "a2Count": 33,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-443",
+    "location": "中山區松江路與民生東路2段口",
+    "district": "中山區",
+    "longitude": 121.5331115,
+    "latitude": 25.05815703,
+    "totalCount": 33,
+    "a1Count": 0,
+    "a2Count": 33,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-444",
+    "location": "大安區辛亥路3段與辛亥路3段157巷口",
+    "district": "大安區",
+    "longitude": 121.5491741,
+    "latitude": 25.01705267,
+    "totalCount": 33,
+    "a1Count": 0,
+    "a2Count": 33,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-445",
+    "location": "中正區林森北路與北平東路口",
+    "district": "中正區",
+    "longitude": 121.523806,
+    "latitude": 25.0463495,
+    "totalCount": 33,
+    "a1Count": 0,
+    "a2Count": 33,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-446",
+    "location": "士林區格致路與建業路口",
+    "district": "士林區",
+    "longitude": 121.546098,
+    "latitude": 25.1356849,
+    "totalCount": 33,
+    "a1Count": 0,
+    "a2Count": 33,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-447",
+    "location": "士林區中山北路5段與雙溪街口",
+    "district": "士林區",
+    "longitude": 121.5263707,
+    "latitude": 25.10093847,
+    "totalCount": 33,
+    "a1Count": 0,
+    "a2Count": 33,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-448",
+    "location": "士林區延平北路6段與社中街口",
+    "district": "士林區",
+    "longitude": 121.5012769,
+    "latitude": 25.09043399,
+    "totalCount": 33,
+    "a1Count": 0,
+    "a2Count": 33,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-449",
+    "location": "文山區木柵路1段與景美溪橋口",
+    "district": "文山區",
+    "longitude": 121.5453686,
+    "latitude": 24.9867486,
+    "totalCount": 33,
+    "a1Count": 0,
+    "a2Count": 33,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-450",
+    "location": "文山區辛亥路4段與辛亥路4段166巷口",
+    "district": "文山區",
+    "longitude": 121.5563026,
+    "latitude": 25.0036356,
+    "totalCount": 33,
+    "a1Count": 0,
+    "a2Count": 33,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-451",
+    "location": "內湖區南京東路6段與堤頂大道1段口",
+    "district": "內湖區",
+    "longitude": 121.5762709,
+    "latitude": 25.0547762,
+    "totalCount": 33,
+    "a1Count": 0,
+    "a2Count": 33,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-452",
+    "location": "內湖區舊宗路1段與行善路口",
+    "district": "內湖區",
+    "longitude": 121.5803841,
+    "latitude": 25.0588508,
+    "totalCount": 33,
+    "a1Count": 0,
+    "a2Count": 33,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-453",
+    "location": "信義區松仁路與信義路5段口",
+    "district": "信義區",
+    "longitude": 121.5684281,
+    "latitude": 25.03278193,
+    "totalCount": 33,
+    "a1Count": 0,
+    "a2Count": 33,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ]
+  },
+  {
+    "id": "hotspot-454",
+    "location": "信義區基隆路1段與忠孝東路4段口",
+    "district": "信義區",
+    "longitude": 121.5642723,
+    "latitude": 25.04102547,
+    "totalCount": 33,
+    "a1Count": 0,
+    "a2Count": 33,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-455",
+    "location": "信義區松智路與松平路口",
+    "district": "信義區",
+    "longitude": 121.5653692,
+    "latitude": 25.0305017,
+    "totalCount": 33,
+    "a1Count": 0,
+    "a2Count": 33,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-456",
+    "location": "信義區松智路與松高路口",
+    "district": "信義區",
+    "longitude": 121.5655025,
+    "latitude": 25.0391144,
+    "totalCount": 33,
+    "a1Count": 0,
+    "a2Count": 33,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-457",
+    "location": "士林區中山北路6段與德行西路口",
+    "district": "士林區",
+    "longitude": 121.5247455,
+    "latitude": 25.10640017,
+    "totalCount": 32,
+    "a1Count": 1,
+    "a2Count": 31,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-458",
+    "location": "北投區承德路6段與文承路口",
+    "district": "北投區",
+    "longitude": 121.5122933,
+    "latitude": 25.10341596,
+    "totalCount": 32,
+    "a1Count": 1,
+    "a2Count": 31,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-459",
+    "location": "大同區民族西路與大龍街口",
+    "district": "大同區",
+    "longitude": 121.5159374,
+    "latitude": 25.06858095,
+    "totalCount": 32,
+    "a1Count": 0,
+    "a2Count": 32,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-460",
+    "location": "大同區延平北路3段與昌吉街口",
+    "district": "大同區",
+    "longitude": 121.5110262,
+    "latitude": 25.0659334,
+    "totalCount": 32,
+    "a1Count": 0,
+    "a2Count": 32,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-461",
+    "location": "萬華區忠孝西路2段與忠孝西路2段16巷口",
+    "district": "萬華區",
+    "longitude": 121.5086182,
+    "latitude": 25.0483368,
+    "totalCount": 32,
+    "a1Count": 0,
+    "a2Count": 32,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-462",
+    "location": "萬華區桂林路與昆明街口",
+    "district": "萬華區",
+    "longitude": 121.5038377,
+    "latitude": 25.0380071,
+    "totalCount": 32,
+    "a1Count": 0,
+    "a2Count": 32,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-463",
+    "location": "中山區大直街與北安路口",
+    "district": "中山區",
+    "longitude": 121.5470923,
+    "latitude": 25.0798423,
+    "totalCount": 32,
+    "a1Count": 0,
+    "a2Count": 32,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-464",
+    "location": "中山區建國北路3段與民權東路3段口",
+    "district": "中山區",
+    "longitude": 121.5372699,
+    "latitude": 25.06248446,
+    "totalCount": 32,
+    "a1Count": 0,
+    "a2Count": 32,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-465",
+    "location": "中山區民生東路2段與松江路口",
+    "district": "中山區",
+    "longitude": 121.5331131,
+    "latitude": 25.0579266,
+    "totalCount": 32,
+    "a1Count": 0,
+    "a2Count": 32,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-466",
+    "location": "中山區新生北路2段與民生東路1段口",
+    "district": "中山區",
+    "longitude": 121.5274413,
+    "latitude": 25.0580346,
+    "totalCount": 32,
+    "a1Count": 0,
+    "a2Count": 32,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-467",
+    "location": "中山區中山北路3段與酒泉街口",
+    "district": "中山區",
+    "longitude": 121.5142493,
+    "latitude": 25.071877,
+    "totalCount": 32,
+    "a1Count": 0,
+    "a2Count": 32,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ]
+  },
+  {
+    "id": "hotspot-468",
+    "location": "中山區新生北路2段與長春路口",
+    "district": "中山區",
+    "longitude": 121.5274128,
+    "latitude": 25.05506719,
+    "totalCount": 32,
+    "a1Count": 0,
+    "a2Count": 32,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-469",
+    "location": "中山區長春路與吉林路口",
+    "district": "中山區",
+    "longitude": 121.5301359,
+    "latitude": 25.05488696,
+    "totalCount": 32,
+    "a1Count": 0,
+    "a2Count": 32,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-470",
+    "location": "大安區基隆路3段與臥龍街口",
+    "district": "大安區",
+    "longitude": 121.5483699,
+    "latitude": 25.0204653,
+    "totalCount": 32,
+    "a1Count": 0,
+    "a2Count": 32,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-471",
+    "location": "中正區重慶北路1段與鄭州路口",
+    "district": "中正區",
+    "longitude": 121.5135423,
+    "latitude": 25.04921869,
+    "totalCount": 32,
+    "a1Count": 0,
+    "a2Count": 32,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-472",
+    "location": "中正區重慶南路1段與衡陽路口",
+    "district": "中正區",
+    "longitude": 121.5131677,
+    "latitude": 25.04232288,
+    "totalCount": 32,
+    "a1Count": 0,
+    "a2Count": 32,
+    "years": [
+      2019,
+      2020,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-473",
+    "location": "中正區市民大道3段8號",
+    "district": "中正區",
+    "longitude": 121.532335,
+    "latitude": 25.0454499,
+    "totalCount": 32,
+    "a1Count": 0,
+    "a2Count": 32,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-474",
+    "location": "中正區汀州路3段與基隆路4段口",
+    "district": "中正區",
+    "longitude": 121.536238,
+    "latitude": 25.01102658,
+    "totalCount": 32,
+    "a1Count": 0,
+    "a2Count": 32,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-475",
+    "location": "中正區汀州路2段與重慶南路3段口",
+    "district": "中正區",
+    "longitude": 121.5163477,
+    "latitude": 25.02563869,
+    "totalCount": 32,
+    "a1Count": 0,
+    "a2Count": 32,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-476",
+    "location": "中正區羅斯福路3段與辛亥路1段口",
+    "district": "中正區",
+    "longitude": 121.5293482,
+    "latitude": 25.01941431,
+    "totalCount": 32,
+    "a1Count": 0,
+    "a2Count": 32,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-477",
+    "location": "士林區中山北路6段與中山北路6段405巷口",
+    "district": "士林區",
+    "longitude": 121.5277143,
+    "latitude": 25.11524437,
+    "totalCount": 32,
+    "a1Count": 0,
+    "a2Count": 32,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-478",
+    "location": "北投區承德路7段303號",
+    "district": "北投區",
+    "longitude": 121.5038308,
+    "latitude": 25.11722715,
+    "totalCount": 32,
+    "a1Count": 0,
+    "a2Count": 32,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-479",
+    "location": "內湖區成功路3段與星雲街口",
+    "district": "內湖區",
+    "longitude": 121.590121,
+    "latitude": 25.077845,
+    "totalCount": 32,
+    "a1Count": 0,
+    "a2Count": 32,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-480",
+    "location": "內湖區民權東路6段與民權東路6段46巷口",
+    "district": "內湖區",
+    "longitude": 121.5822468,
+    "latitude": 25.0676269,
+    "totalCount": 32,
+    "a1Count": 0,
+    "a2Count": 32,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-481",
+    "location": "內湖區瑞光路與瑞湖街口",
+    "district": "內湖區",
+    "longitude": 121.5769494,
+    "latitude": 25.07510246,
+    "totalCount": 32,
+    "a1Count": 0,
+    "a2Count": 32,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-482",
+    "location": "信義區松智路與松勤街口",
+    "district": "信義區",
+    "longitude": 121.565387,
+    "latitude": 25.031975,
+    "totalCount": 32,
+    "a1Count": 0,
+    "a2Count": 32,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-483",
+    "location": "信義區市民大道6段與虎林街口",
+    "district": "信義區",
+    "longitude": 121.5760079,
+    "latitude": 25.0491756,
+    "totalCount": 32,
+    "a1Count": 0,
+    "a2Count": 32,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-484",
+    "location": "信義區松仁路與忠孝東路5段236巷2弄口",
+    "district": "信義區",
+    "longitude": 121.568531,
+    "latitude": 25.0404901,
+    "totalCount": 32,
+    "a1Count": 0,
+    "a2Count": 32,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-485",
+    "location": "信義區松山路與松德路口",
+    "district": "信義區",
+    "longitude": 121.5777454,
+    "latitude": 25.0396242,
+    "totalCount": 32,
+    "a1Count": 0,
+    "a2Count": 32,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-486",
+    "location": "信義區仁愛路4段與逸仙路口",
+    "district": "信義區",
+    "longitude": 121.5614986,
+    "latitude": 25.03757702,
+    "totalCount": 32,
+    "a1Count": 0,
+    "a2Count": 32,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-487",
+    "location": "大同區民權西路與延平北路2段口",
+    "district": "大同區",
+    "longitude": 121.5112205,
+    "latitude": 25.0627882,
+    "totalCount": 31,
+    "a1Count": 0,
+    "a2Count": 31,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-488",
+    "location": "大同區市民大道1段與承德路1段口",
+    "district": "大同區",
+    "longitude": 121.5181099,
+    "latitude": 25.0490476,
+    "totalCount": 31,
+    "a1Count": 0,
+    "a2Count": 31,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-489",
+    "location": "萬華區中華路1段與開封街2段口",
+    "district": "萬華區",
+    "longitude": 121.5091793,
+    "latitude": 25.046064,
+    "totalCount": 31,
+    "a1Count": 0,
+    "a2Count": 31,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-490",
+    "location": "萬華區西寧南路與內江街口",
+    "district": "萬華區",
+    "longitude": 121.5059805,
+    "latitude": 25.0416585,
+    "totalCount": 31,
+    "a1Count": 0,
+    "a2Count": 31,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-491",
+    "location": "萬華區西園路1段與大理街口",
+    "district": "萬華區",
+    "longitude": 121.4988265,
+    "latitude": 25.0343802,
+    "totalCount": 31,
+    "a1Count": 0,
+    "a2Count": 31,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-492",
+    "location": "萬華區環河南路1段與貴陽街2段口",
+    "district": "萬華區",
+    "longitude": 121.497957,
+    "latitude": 25.0400594,
+    "totalCount": 31,
+    "a1Count": 0,
+    "a2Count": 31,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-493",
+    "location": "萬華區中華路2段與艋舺大道口",
+    "district": "萬華區",
+    "longitude": 121.5056927,
+    "latitude": 25.0344481,
+    "totalCount": 31,
+    "a1Count": 0,
+    "a2Count": 31,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-494",
+    "location": "中正區公園路與凱達格蘭大道口",
+    "district": "中正區",
+    "longitude": 121.5155035,
+    "latitude": 25.0394258,
+    "totalCount": 31,
+    "a1Count": 0,
+    "a2Count": 31,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-495",
+    "location": "中正區北平東路與林森北路口",
+    "district": "中正區",
+    "longitude": 121.523806,
+    "latitude": 25.0463495,
+    "totalCount": 31,
+    "a1Count": 0,
+    "a2Count": 31,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-496",
+    "location": "中正區重慶南路1段與開封街1段口",
+    "district": "中正區",
+    "longitude": 121.5132729,
+    "latitude": 25.04608088,
+    "totalCount": 31,
+    "a1Count": 0,
+    "a2Count": 31,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-497",
+    "location": "中正區濟南路2段與臨沂街口",
+    "district": "中正區",
+    "longitude": 121.5300893,
+    "latitude": 25.0406036,
+    "totalCount": 31,
+    "a1Count": 0,
+    "a2Count": 31,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-498",
+    "location": "中正區汀州路1段與西藏路口",
+    "district": "中正區",
+    "longitude": 121.5070642,
+    "latitude": 25.0306614,
+    "totalCount": 31,
+    "a1Count": 0,
+    "a2Count": 31,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-499",
+    "location": "中正區汀州路3段與師大路口",
+    "district": "中正區",
+    "longitude": 121.5253092,
+    "latitude": 25.02090769,
+    "totalCount": 31,
+    "a1Count": 0,
+    "a2Count": 31,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  {
+    "id": "hotspot-500",
+    "location": "中正區羅斯福路1段與愛國西路口",
+    "district": "中正區",
+    "longitude": 121.5166773,
+    "latitude": 25.03461203,
+    "totalCount": 31,
+    "a1Count": 0,
+    "a2Count": 31,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  }
+]

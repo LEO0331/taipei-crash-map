@@ -1,0 +1,300 @@
+{
+  "generatedAt": "2026-06-12T05:13:34.957Z",
+  "totalRecords": 167550,
+  "validCoordinateRecords": 167547,
+  "a1Count": 461,
+  "a2Count": 167089,
+  "years": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "districts": [
+    "士林區",
+    "大同區",
+    "大安區",
+    "中山區",
+    "中正區",
+    "內湖區",
+    "文山區",
+    "北投區",
+    "松山區",
+    "信義區",
+    "南港區",
+    "萬華區"
+  ],
+  "byYear": [
+    {
+      "year": 2019,
+      "totalCount": 22918,
+      "a1Count": 83,
+      "a2Count": 22835
+    },
+    {
+      "year": 2020,
+      "totalCount": 25649,
+      "a1Count": 60,
+      "a2Count": 25589
+    },
+    {
+      "year": 2021,
+      "totalCount": 24157,
+      "a1Count": 70,
+      "a2Count": 24087
+    },
+    {
+      "year": 2022,
+      "totalCount": 25424,
+      "a1Count": 62,
+      "a2Count": 25362
+    },
+    {
+      "year": 2023,
+      "totalCount": 24272,
+      "a1Count": 61,
+      "a2Count": 24211
+    },
+    {
+      "year": 2024,
+      "totalCount": 22368,
+      "a1Count": 68,
+      "a2Count": 22300
+    },
+    {
+      "year": 2025,
+      "totalCount": 22762,
+      "a1Count": 57,
+      "a2Count": 22705
+    }
+  ],
+  "byHour": [
+    {
+      "hour": 0,
+      "totalCount": 2234,
+      "a1Count": 16,
+      "a2Count": 2218
+    },
+    {
+      "hour": 1,
+      "totalCount": 1396,
+      "a1Count": 15,
+      "a2Count": 1381
+    },
+    {
+      "hour": 2,
+      "totalCount": 925,
+      "a1Count": 12,
+      "a2Count": 913
+    },
+    {
+      "hour": 3,
+      "totalCount": 737,
+      "a1Count": 14,
+      "a2Count": 723
+    },
+    {
+      "hour": 4,
+      "totalCount": 769,
+      "a1Count": 14,
+      "a2Count": 755
+    },
+    {
+      "hour": 5,
+      "totalCount": 1230,
+      "a1Count": 24,
+      "a2Count": 1206
+    },
+    {
+      "hour": 6,
+      "totalCount": 3034,
+      "a1Count": 25,
+      "a2Count": 3009
+    },
+    {
+      "hour": 7,
+      "totalCount": 8945,
+      "a1Count": 25,
+      "a2Count": 8920
+    },
+    {
+      "hour": 8,
+      "totalCount": 14825,
+      "a1Count": 23,
+      "a2Count": 14802
+    },
+    {
+      "hour": 9,
+      "totalCount": 11658,
+      "a1Count": 28,
+      "a2Count": 11630
+    },
+    {
+      "hour": 10,
+      "totalCount": 9825,
+      "a1Count": 32,
+      "a2Count": 9793
+    },
+    {
+      "hour": 11,
+      "totalCount": 9922,
+      "a1Count": 25,
+      "a2Count": 9897
+    },
+    {
+      "hour": 12,
+      "totalCount": 9879,
+      "a1Count": 13,
+      "a2Count": 9866
+    },
+    {
+      "hour": 13,
+      "totalCount": 8759,
+      "a1Count": 11,
+      "a2Count": 8748
+    },
+    {
+      "hour": 14,
+      "totalCount": 8957,
+      "a1Count": 20,
+      "a2Count": 8937
+    },
+    {
+      "hour": 15,
+      "totalCount": 8938,
+      "a1Count": 18,
+      "a2Count": 8920
+    },
+    {
+      "hour": 16,
+      "totalCount": 9538,
+      "a1Count": 16,
+      "a2Count": 9522
+    },
+    {
+      "hour": 17,
+      "totalCount": 12201,
+      "a1Count": 21,
+      "a2Count": 12180
+    },
+    {
+      "hour": 18,
+      "totalCount": 12283,
+      "a1Count": 26,
+      "a2Count": 12257
+    },
+    {
+      "hour": 19,
+      "totalCount": 8884,
+      "a1Count": 23,
+      "a2Count": 8861
+    },
+    {
+      "hour": 20,
+      "totalCount": 6282,
+      "a1Count": 11,
+      "a2Count": 6271
+    },
+    {
+      "hour": 21,
+      "totalCount": 6557,
+      "a1Count": 20,
+      "a2Count": 6537
+    },
+    {
+      "hour": 22,
+      "totalCount": 5970,
+      "a1Count": 18,
+      "a2Count": 5952
+    },
+    {
+      "hour": 23,
+      "totalCount": 3802,
+      "a1Count": 11,
+      "a2Count": 3791
+    }
+  ],
+  "byDistrict": [
+    {
+      "district": "中山區",
+      "totalCount": 21902,
+      "a1Count": 45,
+      "a2Count": 21857
+    },
+    {
+      "district": "大安區",
+      "totalCount": 17589,
+      "a1Count": 45,
+      "a2Count": 17544
+    },
+    {
+      "district": "中正區",
+      "totalCount": 15883,
+      "a1Count": 38,
+      "a2Count": 15845
+    },
+    {
+      "district": "信義區",
+      "totalCount": 15786,
+      "a1Count": 25,
+      "a2Count": 15761
+    },
+    {
+      "district": "內湖區",
+      "totalCount": 15420,
+      "a1Count": 36,
+      "a2Count": 15384
+    },
+    {
+      "district": "士林區",
+      "totalCount": 14914,
+      "a1Count": 51,
+      "a2Count": 14863
+    },
+    {
+      "district": "北投區",
+      "totalCount": 13822,
+      "a1Count": 53,
+      "a2Count": 13769
+    },
+    {
+      "district": "文山區",
+      "totalCount": 12882,
+      "a1Count": 24,
+      "a2Count": 12858
+    },
+    {
+      "district": "萬華區",
+      "totalCount": 11424,
+      "a1Count": 58,
+      "a2Count": 11366
+    },
+    {
+      "district": "大同區",
+      "totalCount": 10884,
+      "a1Count": 34,
+      "a2Count": 10850
+    },
+    {
+      "district": "松山區",
+      "totalCount": 9431,
+      "a1Count": 28,
+      "a2Count": 9403
+    },
+    {
+      "district": "南港區",
+      "totalCount": 6996,
+      "a1Count": 22,
+      "a2Count": 6974
+    },
+    {
+      "district": "未辨識",
+      "totalCount": 617,
+      "a1Count": 2,
+      "a2Count": 615
+    }
+  ]
+}

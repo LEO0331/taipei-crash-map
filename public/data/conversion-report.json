@@ -1,0 +1,106 @@
+{
+  "generatedAt": "2026-06-12T05:13:34.650Z",
+  "inputFiles": [
+    "108年臺北市道路交通事故斑點圖(改A1A2).csv",
+    "109年臺北市道路交通事故斑點圖(改A1A2).csv",
+    "110年臺北市道路交通事故斑點圖(改A1A2).csv",
+    "111年臺北市道路交通事故斑點圖(改A1A2).csv",
+    "112年臺北市道路交通事故斑點圖.csv",
+    "113年臺北市道路交通事故斑點圖 .csv",
+    "114年臺北市道路交通事故斑點圖.csv"
+  ],
+  "totalRawRows": 167550,
+  "totalConvertedRows": 167550,
+  "totalSkippedRows": 0,
+  "totalMissingCoordinates": 0,
+  "totalCoordinateOutliers": 3,
+  "totalInvalidTimes": 0,
+  "totalInvalidTypes": 0,
+  "totalDecodeReplacementCharacters": 1,
+  "byFile": [
+    {
+      "sourceFile": "108年臺北市道路交通事故斑點圖(改A1A2).csv",
+      "sourceYear": 2019,
+      "rawRows": 22918,
+      "convertedRows": 22918,
+      "skippedRows": 0,
+      "missingCoordinates": 0,
+      "coordinateOutliers": 0,
+      "invalidTimes": 0,
+      "invalidTypes": 0,
+      "decodeReplacementCharacters": 0
+    },
+    {
+      "sourceFile": "109年臺北市道路交通事故斑點圖(改A1A2).csv",
+      "sourceYear": 2020,
+      "rawRows": 25649,
+      "convertedRows": 25649,
+      "skippedRows": 0,
+      "missingCoordinates": 0,
+      "coordinateOutliers": 0,
+      "invalidTimes": 0,
+      "invalidTypes": 0,
+      "decodeReplacementCharacters": 0
+    },
+    {
+      "sourceFile": "110年臺北市道路交通事故斑點圖(改A1A2).csv",
+      "sourceYear": 2021,
+      "rawRows": 24157,
+      "convertedRows": 24157,
+      "skippedRows": 0,
+      "missingCoordinates": 0,
+      "coordinateOutliers": 0,
+      "invalidTimes": 0,
+      "invalidTypes": 0,
+      "decodeReplacementCharacters": 0
+    },
+    {
+      "sourceFile": "111年臺北市道路交通事故斑點圖(改A1A2).csv",
+      "sourceYear": 2022,
+      "rawRows": 25424,
+      "convertedRows": 25424,
+      "skippedRows": 0,
+      "missingCoordinates": 0,
+      "coordinateOutliers": 0,
+      "invalidTimes": 0,
+      "invalidTypes": 0,
+      "decodeReplacementCharacters": 0
+    },
+    {
+      "sourceFile": "112年臺北市道路交通事故斑點圖.csv",
+      "sourceYear": 2023,
+      "rawRows": 24272,
+      "convertedRows": 24272,
+      "skippedRows": 0,
+      "missingCoordinates": 0,
+      "coordinateOutliers": 1,
+      "invalidTimes": 0,
+      "invalidTypes": 0,
+      "decodeReplacementCharacters": 0
+    },
+    {
+      "sourceFile": "113年臺北市道路交通事故斑點圖 .csv",
+      "sourceYear": 2024,
+      "rawRows": 22368,
+      "convertedRows": 22368,
+      "skippedRows": 0,
+      "missingCoordinates": 0,
+      "coordinateOutliers": 0,
+      "invalidTimes": 0,
+      "invalidTypes": 0,
+      "decodeReplacementCharacters": 0
+    },
+    {
+      "sourceFile": "114年臺北市道路交通事故斑點圖.csv",
+      "sourceYear": 2025,
+      "rawRows": 22762,
+      "convertedRows": 22762,
+      "skippedRows": 0,
+      "missingCoordinates": 0,
+      "coordinateOutliers": 2,
+      "invalidTimes": 0,
+      "invalidTypes": 0,
+      "decodeReplacementCharacters": 1
+    }
+  ]
+}

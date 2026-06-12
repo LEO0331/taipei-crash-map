@@ -1,0 +1,47 @@
+{
+  "name": "taipei-crash-map",
+  "version": "1.0.0",
+  "description": "Taipei Traffic Accident Hotspot Map / 台北交通事故斑點地圖",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "convert:accidents": "tsx scripts/convertAccidents.ts",
+    "test": "vitest run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LEO0331/taipei-crash-map.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LEO0331/taipei-crash-map/issues"
+  },
+  "homepage": "https://github.com/LEO0331/taipei-crash-map#readme",
+  "dependencies": {
+    "leaflet": "^1.9.4",
+    "leaflet.heat": "^0.2.0",
+    "leaflet.markercluster": "^1.5.3",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-leaflet": "^5.0.0",
+    "recharts": "^3.8.1"
+  },
+  "devDependencies": {
+    "@types/leaflet": "^1.9.21",
+    "@types/node": "^25.9.3",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.2",
+    "csv-parse": "^6.2.1",
+    "iconv-lite": "^0.7.2",
+    "jsdom": "^29.1.1",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.16",
+    "vitest": "^4.1.8"
+  }
+}
