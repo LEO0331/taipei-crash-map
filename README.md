@@ -30,6 +30,7 @@ npm run convert:accidents
 Outputs:
 
 - `public/data/accidents.json`
+- `public/data/heatmap-points.json`
 - `public/data/accident-summary.json`
 - `public/data/accident-hotspots.json`
 - `public/data/conversion-report.json`
@@ -71,6 +72,7 @@ npm run preview
 ## Features
 
 - Heatmap default mode, weighted so A1 records count more strongly than A2 records
+- Compact heatmap data loads before the full accident record dataset to reduce first-load cost
 - Clustered accident point mode using Leaflet marker clustering
 - Aggregated hotspot intersection mode
 - Filters for year, accident type, district, time period, weekday/weekend, and location text

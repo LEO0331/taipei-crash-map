@@ -29,8 +29,8 @@
       "name": "Accident Data Conversion Integrity",
       "description": "Protect the CSV-to-static-JSON conversion pipeline, coordinate validation, summaries, hotspots, and tests.",
       "dependencies": ["feat-001"],
-      "status": "not-started",
-      "evidence": ""
+      "status": "in-progress",
+      "evidence": "Added compact heatmap dataset generation, tuple dataset tests, and lazy raw accident loading. Full CSV conversion was not rerun because source CSVs live outside the repo; heatmap-points.json was generated from existing public/data/accidents.json."
     },
     {
       "id": "feat-005",
@@ -38,7 +38,7 @@
       "description": "Before release or handoff, record verification, deployment assumptions, risks, and next-session instructions.",
       "dependencies": ["feat-001", "feat-002", "feat-003", "feat-004"],
       "status": "in-progress",
-      "evidence": "Code review fixed service-worker update strategy. Anti-slop cleanup removed non-null assertions, simplified dashboard fallback markup, normalized i18n formatting, and added malformed-hour regression coverage. Verification recorded in progress.md. Data conversion integrity remains not-started."
+      "evidence": "Code review fixed service-worker update strategy. Anti-slop cleanup removed non-null assertions, simplified dashboard fallback markup, normalized i18n formatting, and added malformed-hour regression coverage. First-load data work verified initial requests exclude accidents.json; verification recorded in progress.md."
     }
   ]
 }

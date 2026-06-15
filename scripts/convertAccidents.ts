@@ -5,6 +5,7 @@ import path from 'node:path';
 import {
   ACCIDENT_TYPE_LABELS,
   aggregateByYear,
+  buildHeatmapDataset,
   buildHotspots,
   extractDistrict,
   isCoordinateOutlier,
@@ -227,6 +228,7 @@ async function main() {
     writeFile(path.join(OUTPUT_DIR, 'accidents.json'), JSON.stringify(records), 'utf8'),
     writeFile(path.join(OUTPUT_DIR, 'accident-summary.json'), JSON.stringify(buildSummary(records), null, 2), 'utf8'),
     writeFile(path.join(OUTPUT_DIR, 'accident-hotspots.json'), JSON.stringify(hotspots, null, 2), 'utf8'),
+    writeFile(path.join(OUTPUT_DIR, 'heatmap-points.json'), JSON.stringify(buildHeatmapDataset(records)), 'utf8'),
     writeFile(path.join(OUTPUT_DIR, 'conversion-report.json'), JSON.stringify(report, null, 2), 'utf8'),
   ]);
 

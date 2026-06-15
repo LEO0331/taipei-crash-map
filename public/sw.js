@@ -4,7 +4,7 @@ const toAppPath = (path) => `${BASE_PATH}${path.replace(/^\/+/, '')}`;
 const CORE_ASSETS = [
   BASE_PATH,
   toAppPath('manifest.webmanifest'),
-  toAppPath('data/accidents.json'),
+  toAppPath('data/heatmap-points.json'),
   toAppPath('data/accident-summary.json'),
   toAppPath('data/accident-hotspots.json'),
 ];

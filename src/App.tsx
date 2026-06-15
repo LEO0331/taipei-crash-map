@@ -1,9 +1,9 @@
-import { lazy, Suspense, useEffect, useMemo, useState } from 'react';
-import type { AccidentFilters, MapMode } from './types/accident';
-import type { Language } from './i18n';
+import { lazy, Suspense, useEffect, useMemo, useRef, useState } from 'react';
+import type { AccidentFilters, AccidentHotspot, AccidentRecord, MapMode } from './types/accident';
+import type { Language, Translation } from './i18n';
 import { translations } from './i18n';
 import { useAccidentData } from './hooks/useAccidentData';
-import { filterAccidents } from './utils/accidents';
+import { buildHeatmapPoints, filterAccidents, filterHeatmapPoints } from './utils/accidents';
 import { LanguageToggle } from './components/LanguageToggle';
 import { FilterPanel } from './components/FilterPanel';
 import { AccidentMap } from './components/AccidentMap';
@@ -34,6 +34,61 @@ function DashboardFallback({ title }: { title: string }) {
   );
 }
 
+function DashboardLoader({
+  accidents,
+  baseHotspots,
+  isLoading,
+  title,
+  error,
+  t,
+  onVisible,
+}: {
+  accidents: AccidentRecord[] | null;
+  baseHotspots: AccidentHotspot[];
+  isLoading: boolean;
+  title: string;
+  error?: string;
+  t: Translation;
+  onVisible: () => void;
+}) {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const element = containerRef.current;
+    if (!element || accidents) return;
+
+    if (!('IntersectionObserver' in window)) {
+      onVisible();
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          onVisible();
+          observer.disconnect();
+        }
+      },
+      { rootMargin: '320px' },
+    );
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, [accidents, onVisible]);
+
+  return (
+    <div ref={containerRef}>
+      {error ? <p className="error">{error}</p> : null}
+      {!accidents || isLoading ? (
+        <DashboardFallback title={title} />
+      ) : (
+        <Suspense fallback={<DashboardFallback title={title} />}>
+          <Dashboard accidents={accidents} baseHotspots={baseHotspots} t={t} />
+        </Suspense>
+      )}
+    </div>
+  );
+}
+
 const defaultFilters: AccidentFilters = {
   years: [2019, 2020, 2021, 2022, 2023, 2024, 2025],
   accidentType: 'all',
@@ -55,7 +110,17 @@ export default function App() {
   const [filters, setFilters] = useState(defaultFilters);
   const [mapMode, setMapMode] = useState<MapMode>('heatmap');
   const [userLocation, setUserLocation] = useState<{ latitude: number; longitude: number }>();
-  const { accidents, hotspots, summary, isLoading, error } = useAccidentData();
+  const {
+    accidents,
+    heatmapPoints,
+    hotspots,
+    summary,
+    isLoading,
+    isAccidentsLoading,
+    error,
+    accidentsError,
+    loadAccidents,
+  } = useAccidentData();
   const t = translations[language];
 
   useEffect(() => {
@@ -73,11 +138,30 @@ export default function App() {
     }
   }, []);
 
+  const needsRawAccidents =
+    mapMode === 'clusters' || Boolean(filters.search.trim()) || Boolean(filters.nearby);
+
+  useEffect(() => {
+    if (needsRawAccidents) {
+      void loadAccidents();
+    }
+  }, [loadAccidents, needsRawAccidents]);
+
   const districts = summary?.districts ?? [];
   const filteredAccidents = useMemo(
-    () => filterAccidents(accidents, filters),
+    () => (accidents ? filterAccidents(accidents, filters) : []),
     [accidents, filters],
   );
+  const filteredHeatmapPoints = useMemo(
+    () =>
+      accidents
+        ? buildHeatmapPoints(filteredAccidents)
+        : filterHeatmapPoints(heatmapPoints, filters),
+    [accidents, filteredAccidents, filters, heatmapPoints],
+  );
+  const visibleRecordCount = accidents
+    ? filteredAccidents.length
+    : filteredHeatmapPoints.reduce((total, point) => total + point.count, 0);
   const heroStats = [
     { label: 'Records', value: summary?.totalRecords.toLocaleString() ?? '...' },
     { label: 'A1', value: summary?.a1Count.toLocaleString() ?? '...' },
@@ -118,21 +202,33 @@ export default function App() {
         </aside>
         {isLoading ? <p className="loading">Loading accident data...</p> : null}
         {error ? <p className="error">{error}</p> : null}
+        {needsRawAccidents && isAccidentsLoading ? (
+          <p className="loading">Loading detailed accident records...</p>
+        ) : null}
+        {needsRawAccidents && accidentsError ? <p className="error">{accidentsError}</p> : null}
         {!isLoading && !error ? (
           <>
             <AccidentMap
               accidents={filteredAccidents}
+              heatmapPoints={filteredHeatmapPoints}
               hotspots={hotspots}
               filters={filters}
               mode={mapMode}
               language={language}
               t={t}
               userLocation={userLocation}
+              recordCount={visibleRecordCount}
               onModeChange={setMapMode}
             />
-            <Suspense fallback={<DashboardFallback title={t.dashboard} />}>
-              <Dashboard accidents={filteredAccidents} baseHotspots={hotspots} t={t} />
-            </Suspense>
+            <DashboardLoader
+              accidents={accidents}
+              baseHotspots={hotspots}
+              isLoading={isAccidentsLoading}
+              title={t.dashboard}
+              error={accidentsError}
+              t={t}
+              onVisible={() => void loadAccidents()}
+            />
           </>
         ) : null}
       </main>

@@ -4,6 +4,8 @@ import type {
   AccidentRecord,
   AccidentType,
   DistrictSummary,
+  HeatmapDataset,
+  HeatmapPoint,
   HourSummary,
   YearSummary,
 } from '../types/accident';
@@ -115,12 +117,32 @@ function matchesTimePeriod(record: AccidentRecord, timePeriod: AccidentFilters['
   return record.hour >= 21 || record.hour <= 5;
 }
 
+function matchesHeatmapTimePeriod(
+  point: HeatmapPoint,
+  timePeriod: AccidentFilters['timePeriod'],
+) {
+  if (timePeriod === 'all') return true;
+  if (timePeriod === 'morning') return point.hour >= 6 && point.hour <= 11;
+  if (timePeriod === 'afternoon') return point.hour >= 12 && point.hour <= 16;
+  if (timePeriod === 'evening') return point.hour >= 17 && point.hour <= 20;
+  return point.hour >= 21 || point.hour <= 5;
+}
+
 function matchesWeekdayWeekend(
   record: AccidentRecord,
   weekdayWeekend: AccidentFilters['weekdayWeekend'],
 ) {
   if (weekdayWeekend === 'all') return true;
   const isWeekend = record.weekday === 0 || record.weekday === 6;
+  return weekdayWeekend === 'weekend' ? isWeekend : !isWeekend;
+}
+
+function matchesHeatmapWeekdayWeekend(
+  point: HeatmapPoint,
+  weekdayWeekend: AccidentFilters['weekdayWeekend'],
+) {
+  if (weekdayWeekend === 'all') return true;
+  const isWeekend = point.weekday === 0 || point.weekday === 6;
   return weekdayWeekend === 'weekend' ? isWeekend : !isWeekend;
 }
 
@@ -160,6 +182,100 @@ export function filterAccidents(
     .filter(({ distance }) => distance <= nearby.radiusMeters)
     .sort((a, b) => a.distance - b.distance)
     .map(({ record }) => record);
+}
+
+function heatmapWeight(record: AccidentRecord): number {
+  return record.accidentType === 1 ? 1.8 : 0.55;
+}
+
+export function buildHeatmapPoints(accidents: AccidentRecord[]): HeatmapPoint[] {
+  const grouped = new Map<string, HeatmapPoint>();
+
+  accidents.forEach((record) => {
+    const key = [
+      record.latitude,
+      record.longitude,
+      record.year,
+      record.accidentType,
+      record.district ?? '',
+      record.hour,
+      record.weekday,
+    ].join('|');
+    const current =
+      grouped.get(key) ??
+      ({
+        latitude: record.latitude,
+        longitude: record.longitude,
+        weight: 0,
+        count: 0,
+        year: record.year,
+        accidentType: record.accidentType,
+        ...(record.district ? { district: record.district } : {}),
+        hour: record.hour,
+        weekday: record.weekday,
+      } satisfies HeatmapPoint);
+    current.weight += heatmapWeight(record);
+    current.count += 1;
+    grouped.set(key, current);
+  });
+
+  return [...grouped.values()];
+}
+
+export function buildHeatmapDataset(accidents: AccidentRecord[]): HeatmapDataset {
+  const points = buildHeatmapPoints(accidents);
+  const districts = [
+    ...new Set(points.map((point) => point.district).filter((district): district is string => Boolean(district))),
+  ].sort((a, b) => a.localeCompare(b, 'zh-Hant'));
+
+  return {
+    districts,
+    points: points.map((point) => [
+      point.latitude,
+      point.longitude,
+      point.weight,
+      point.count,
+      point.year,
+      point.accidentType,
+      point.district ? districts.indexOf(point.district) : -1,
+      point.hour,
+      point.weekday,
+    ]),
+  };
+}
+
+export function expandHeatmapDataset(dataset: HeatmapDataset): HeatmapPoint[] {
+  return dataset.points.map(
+    ([latitude, longitude, weight, count, year, accidentType, districtIndex, hour, weekday]) => ({
+      latitude,
+      longitude,
+      weight,
+      count,
+      year,
+      accidentType,
+      ...(districtIndex >= 0 ? { district: dataset.districts[districtIndex] } : {}),
+      hour,
+      weekday,
+    }),
+  );
+}
+
+export function filterHeatmapPoints(
+  points: HeatmapPoint[],
+  filters: AccidentFilters,
+): HeatmapPoint[] {
+  if (filters.search.trim() || filters.nearby) {
+    return [];
+  }
+
+  return points.filter(
+    (point) =>
+      filters.years.includes(point.year) &&
+      (filters.accidentType === 'all' || point.accidentType === filters.accidentType) &&
+      (filters.district === 'all' || point.district === filters.district) &&
+      matchesHeatmapTimePeriod(point, filters.timePeriod) &&
+      matchesHeatmapWeekdayWeekend(point, filters.weekdayWeekend),
+  );
 }
 
 export function aggregateByYear(accidents: AccidentRecord[]): YearSummary[] {

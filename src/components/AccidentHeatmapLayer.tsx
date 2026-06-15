@@ -2,18 +2,18 @@ import { useEffect } from 'react';
 import { useMap } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet.heat';
-import type { AccidentRecord } from '../types/accident';
+import type { HeatmapPoint } from '../types/accident';
 
-export function AccidentHeatmapLayer({ accidents }: { accidents: AccidentRecord[] }) {
+export function AccidentHeatmapLayer({ points }: { points: HeatmapPoint[] }) {
   const map = useMap();
 
   useEffect(() => {
-    const points = accidents.map((accident) => [
-      accident.latitude,
-      accident.longitude,
-      accident.accidentType === 1 ? 1.8 : 0.55,
+    const heatPoints = points.map((point) => [
+      point.latitude,
+      point.longitude,
+      point.weight,
     ]) as Array<[number, number, number]>;
-    const layer = L.heatLayer(points, {
+    const layer = L.heatLayer(heatPoints, {
       radius: 11,
       blur: 16,
       maxZoom: 17,
@@ -29,7 +29,7 @@ export function AccidentHeatmapLayer({ accidents }: { accidents: AccidentRecord[
     return () => {
       layer.remove();
     };
-  }, [accidents, map]);
+  }, [points, map]);
 
   return null;
 }

@@ -2,8 +2,8 @@
 
 ## Current State
 
-**Last Updated:** 2026-06-15 08:10 CST  
-**Active Feature:** feat-005 - Release and Handoff Hygiene
+**Last Updated:** 2026-06-15 08:27 CST  
+**Active Feature:** feat-004 - Accident Data Conversion Integrity
 
 ## Status
 
@@ -25,17 +25,22 @@
 - [x] Normalized translation file indentation.
 - [x] Replaced root DOM non-null assertion with an explicit startup error.
 - [x] Added a regression test for malformed out-of-range accident hours.
+- [x] Added compact `heatmap-points.json` first-load dataset.
+- [x] Changed initial app data loading to fetch summary, hotspots, and heatmap points before full accident records.
+- [x] Lazy-loads full `accidents.json` only for cluster mode, search/nearby filters, or dashboard visibility.
+- [x] Updated service worker precache to use compact heatmap data instead of full raw accidents.
+- [x] Added tests for compact heatmap point building, filtering, and tuple dataset encoding.
 
 ### What's In Progress
 
 - [ ] Prepare commit or continue with the next feature.
-  - Details: Current cleanup changes are uncommitted.
+  - Details: Current first-load data changes are uncommitted.
   - Blockers: None.
 
 ### What's Next
 
-1. Review the cleanup diff.
-2. Decide whether to commit cleanup separately from prior UI/review changes.
+1. Review the first-load data diff.
+2. Decide whether to commit this separately from cleanup/review work.
 3. Continue with the next unfinished feature in `feature_list.json`.
 
 ## Blockers / Risks
@@ -69,7 +74,8 @@ Existing uncommitted source files before harness work:
 - [x] Tests: `npm test` passed 1 test file / 8 tests.
 - [x] Code-review verification: `node --check public/sw.js`, `npm audit --audit-level=high`, `./init.sh`, and Playwright desktop/mobile smoke checks passed on 2026-06-12.
 - [x] Cleanup verification: `npm test` after each cleanup pass; final `./init.sh`, `node --check public/sw.js`, and `npm audit --audit-level=high` passed on 2026-06-15.
+- [x] First-load data verification: `./init.sh`, `node --check public/sw.js`, `npm audit --audit-level=high`, and Playwright network smoke checks passed on 2026-06-15. Initial data requests included `heatmap-points.json`, `accident-hotspots.json`, and `accident-summary.json`; `accidents.json` loaded only after switching to cluster mode.
 
 ## Notes for Next Session
 
-Start by reading `AGENTS.md`, then check `feature_list.json` and this progress log. The current uncommitted diff is a bounded cleanup pass in app startup, translations, accident utilities, dashboard fallback markup, and tests.
+Start by reading `AGENTS.md`, then check `feature_list.json` and this progress log. The current uncommitted diff implements compact first-load heatmap data and lazy full accident loading.

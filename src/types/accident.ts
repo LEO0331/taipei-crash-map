@@ -30,6 +30,35 @@ export type AccidentHotspot = {
   years: number[];
 };
 
+export type HeatmapPoint = {
+  latitude: number;
+  longitude: number;
+  weight: number;
+  count: number;
+  year: number;
+  accidentType: AccidentType;
+  district?: string;
+  hour: number;
+  weekday: number;
+};
+
+export type HeatmapPointTuple = [
+  latitude: number,
+  longitude: number,
+  weight: number,
+  count: number,
+  year: number,
+  accidentType: AccidentType,
+  districtIndex: number,
+  hour: number,
+  weekday: number,
+];
+
+export type HeatmapDataset = {
+  districts: string[];
+  points: HeatmapPointTuple[];
+};
+
 export type AccidentSummary = {
   generatedAt: string;
   totalRecords: number;

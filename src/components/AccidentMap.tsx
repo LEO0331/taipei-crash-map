@@ -1,6 +1,12 @@
 import { CircleMarker, MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet';
 import L from 'leaflet';
-import type { AccidentFilters, AccidentHotspot, AccidentRecord, MapMode } from '../types/accident';
+import type {
+  AccidentFilters,
+  AccidentHotspot,
+  AccidentRecord,
+  HeatmapPoint,
+  MapMode,
+} from '../types/accident';
 import type { Language, Translation } from '../i18n';
 import { AccidentHeatmapLayer } from './AccidentHeatmapLayer';
 import { AccidentClusterLayer } from './AccidentClusterLayer';
@@ -10,12 +16,14 @@ import { useEffect } from 'react';
 
 type Props = {
   accidents: AccidentRecord[];
+  heatmapPoints: HeatmapPoint[];
   hotspots: AccidentHotspot[];
   filters: AccidentFilters;
   mode: MapMode;
   language: Language;
   t: Translation;
   userLocation?: { latitude: number; longitude: number };
+  recordCount: number;
   onModeChange: (mode: MapMode) => void;
 };
 
@@ -36,12 +44,14 @@ const userIcon = L.divIcon({
 
 export function AccidentMap({
   accidents,
+  heatmapPoints,
   hotspots,
   filters,
   mode,
   language,
   t,
   userLocation,
+  recordCount,
   onModeChange,
 }: Props) {
   const visibleHotspots = hotspots.filter((hotspot) => {
@@ -54,7 +64,7 @@ export function AccidentMap({
     <section className="map-shell">
       <div className="map-toolbar">
         <MapModeToggle mode={mode} t={t} onChange={onModeChange} />
-        <span className="record-badge">{t.recordsShown}: {accidents.length.toLocaleString()}</span>
+        <span className="record-badge">{t.recordsShown}: {recordCount.toLocaleString()}</span>
       </div>
       <MapContainer
         center={[25.0478, 121.517]}
@@ -68,7 +78,7 @@ export function AccidentMap({
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        {mode === 'heatmap' ? <AccidentHeatmapLayer accidents={accidents} /> : null}
+        {mode === 'heatmap' ? <AccidentHeatmapLayer points={heatmapPoints} /> : null}
         {mode === 'clusters' ? (
           <AccidentClusterLayer accidents={accidents} language={language} t={t} />
         ) : null}

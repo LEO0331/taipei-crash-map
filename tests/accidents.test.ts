@@ -1,10 +1,13 @@
 import { describe, expect, it } from 'vitest';
 import {
   aggregateByHour,
+  buildHeatmapDataset,
+  buildHeatmapPoints,
   buildHotspots,
   calculateDistanceMeters,
   extractDistrict,
   filterAccidents,
+  filterHeatmapPoints,
   isCoordinateOutlier,
   parseAccidentTime,
 } from '../src/utils/accidents';
@@ -124,6 +127,70 @@ describe('accident utilities', () => {
       a2Count: 2,
       years: [2019, 2020],
     });
+  });
+
+  it('builds compact heatmap points without carrying full accident text fields', () => {
+    const [point] = buildHeatmapPoints([baseRecord]);
+
+    expect(point).toEqual({
+      latitude: baseRecord.latitude,
+      longitude: baseRecord.longitude,
+      weight: 0.55,
+      count: 1,
+      year: 2019,
+      accidentType: 2,
+      district: '大同區',
+      hour: 8,
+      weekday: 3,
+    });
+    expect('location' in point).toBe(false);
+    expect('sourceFile' in point).toBe(false);
+  });
+
+  it('filters compact heatmap points with first-load map filters', () => {
+    const heatmapPoints = buildHeatmapPoints([
+      baseRecord,
+      {
+        ...baseRecord,
+        id: '2020-1',
+        year: 2020,
+        accidentType: 1,
+        district: '信義區',
+        hour: 22,
+        weekday: 0,
+      },
+    ]);
+
+    const filtered = filterHeatmapPoints(heatmapPoints, {
+      years: [2020],
+      accidentType: 1,
+      district: '信義區',
+      timePeriod: 'lateNight',
+      weekdayWeekend: 'weekend',
+      search: '',
+    });
+
+    expect(filtered).toHaveLength(1);
+    expect(filtered[0]).toMatchObject({ year: 2020, accidentType: 1, district: '信義區' });
+  });
+
+  it('encodes heatmap points as compact tuples with a district lookup table', () => {
+    const dataset = buildHeatmapDataset([baseRecord]);
+
+    expect(dataset.districts).toEqual(['大同區']);
+    expect(dataset.points).toEqual([
+      [
+        baseRecord.latitude,
+        baseRecord.longitude,
+        0.55,
+        1,
+        2019,
+        2,
+        0,
+        8,
+        3,
+      ],
+    ]);
   });
 
   it('escapes dataset text before rendering Leaflet popup HTML', () => {

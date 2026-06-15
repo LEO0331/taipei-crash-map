@@ -3,7 +3,7 @@
 ## Current Objective
 
 - Goal: Keep the Taipei crash map repo reviewable, verified, and ready for commit.
-- Current status: Whole-project anti-slop cleanup completed; verification passed.
+- Current status: First-load data cost reduction implemented; verification passed.
 - Branch / commit: Check with `git status --short` and `git log --oneline -5`.
 
 ## Completed This Session
@@ -18,6 +18,10 @@
 - [x] Simplified dashboard fallback markup into a local component.
 - [x] Normalized `src/i18n.ts` formatting.
 - [x] Added malformed-hour regression coverage.
+- [x] Added compact tuple-based `public/data/heatmap-points.json`.
+- [x] Updated the converter to generate the heatmap dataset.
+- [x] Updated initial app loading to avoid `accidents.json`.
+- [x] Verified raw accidents load on demand when switching to cluster mode.
 
 ## Verification Evidence
 
@@ -28,6 +32,8 @@
 | Dependency audit | `npm audit --audit-level=high` | Passed | 0 vulnerabilities. |
 | Browser smoke | Playwright desktop/mobile checks | Passed | No horizontal overflow; control deck static; dashboard loads. |
 | Cleanup baseline | `./init.sh` | Passed | Build passed; tests passed 1 file / 9 tests. |
+| First-load data | Playwright resource check | Passed | Initial load excluded `accidents.json`; cluster mode requested it on demand. |
+| Final baseline | `./init.sh` | Passed | Build passed; tests passed 1 file / 12 tests. |
 
 ## Files Changed
 
@@ -50,6 +56,13 @@
 - `src/main.tsx`
 - `src/utils/accidents.ts`
 - `tests/accidents.test.ts`
+- `README.md`
+- `scripts/convertAccidents.ts`
+- `src/components/AccidentHeatmapLayer.tsx`
+- `src/components/AccidentMap.tsx`
+- `src/hooks/useAccidentData.ts`
+- `src/types/accident.ts`
+- `public/data/heatmap-points.json`
 
 ## Decisions Made
 
@@ -58,10 +71,12 @@
 - Require browser checks only when UI/map/PWA work changes visible behavior.
 - Use network-first service-worker handling for navigation and data JSON so GitHub Pages users can receive updates.
 - Avoid broad cleanup rewrites; keep behavior protected by focused tests and `./init.sh`.
+- Keep full raw accident records lazy; do not reintroduce `accidents.json` into initial load or service-worker precache.
 
 ## Blockers / Risks
 
-- `public/data/accidents.json` is about 66 MB; improving first-load data architecture is still a larger future optimization.
+- `public/data/accidents.json` remains about 66 MB, but is now an on-demand detail dataset.
+- `public/data/heatmap-points.json` is about 7.4 MB; further reduction would require stronger aggregation or binary/compressed hosting.
 - Current cleanup diff is bounded, but prior project history includes UI/review work; group commits deliberately.
 
 ## Next Session Startup
@@ -73,4 +88,4 @@
 
 ## Recommended Next Step
 
-- Review the cleanup diff and prepare a commit with verification evidence.
+- Review the first-load data diff and prepare a commit with verification evidence.
