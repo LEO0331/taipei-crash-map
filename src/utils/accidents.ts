@@ -54,7 +54,12 @@ export function parseAccidentTime(raw: string): Date | null {
     return null;
   }
 
-  const [, year, month, day, hour, minute] = match.map(Number);
+  const [, rawYear, rawMonth, rawDay, rawHour, rawMinute] = match;
+  const year = Number(rawYear);
+  const month = Number(rawMonth);
+  const day = Number(rawDay);
+  const hour = Number(rawHour);
+  const minute = Number(rawMinute);
   const date = new Date(year, month - 1, day, hour, minute);
 
   if (
@@ -136,7 +141,8 @@ export function filterAccidents(
     );
   };
 
-  if (!filters.nearby) {
+  const nearby = filters.nearby;
+  if (!nearby) {
     return accidents.filter(matchesFilters);
   }
 
@@ -145,13 +151,13 @@ export function filterAccidents(
     .map((record) => ({
       record,
       distance: calculateDistanceMeters(
-        filters.nearby!.latitude,
-        filters.nearby!.longitude,
+        nearby.latitude,
+        nearby.longitude,
         record.latitude,
         record.longitude,
       ),
     }))
-    .filter(({ distance }) => distance <= filters.nearby!.radiusMeters)
+    .filter(({ distance }) => distance <= nearby.radiusMeters)
     .sort((a, b) => a.distance - b.distance)
     .map(({ record }) => record);
 }
@@ -179,7 +185,10 @@ export function aggregateByHour(accidents: AccidentRecord[]): HourSummary[] {
     byHour.set(hour, { hour, totalCount: 0 });
   }
   accidents.forEach((record) => {
-    byHour.get(record.hour)!.totalCount += 1;
+    const hour = byHour.get(record.hour);
+    if (hour) {
+      hour.totalCount += 1;
+    }
   });
   return [...byHour.values()];
 }

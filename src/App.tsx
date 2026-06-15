@@ -18,6 +18,22 @@ const Dashboard = lazy(() =>
   import('./components/Dashboard').then((module) => ({ default: module.Dashboard })),
 );
 
+function DashboardFallback({ title }: { title: string }) {
+  return (
+    <section className="dashboard dashboard-placeholder" aria-busy="true">
+      <div className="section-heading">
+        <p className="eyebrow dark">Selected filters</p>
+        <h2>{title}</h2>
+      </div>
+      <div className="placeholder-grid" aria-hidden="true">
+        <span />
+        <span />
+        <span />
+      </div>
+    </section>
+  );
+}
+
 const defaultFilters: AccidentFilters = {
   years: [2019, 2020, 2021, 2022, 2023, 2024, 2025],
   accidentType: 'all',
@@ -114,21 +130,7 @@ export default function App() {
               userLocation={userLocation}
               onModeChange={setMapMode}
             />
-            <Suspense
-              fallback={
-                <section className="dashboard dashboard-placeholder" aria-busy="true">
-                  <div className="section-heading">
-                    <p className="eyebrow dark">Selected filters</p>
-                    <h2>{t.dashboard}</h2>
-                  </div>
-                  <div className="placeholder-grid" aria-hidden="true">
-                    <span />
-                    <span />
-                    <span />
-                  </div>
-                </section>
-              }
-            >
+            <Suspense fallback={<DashboardFallback title={t.dashboard} />}>
               <Dashboard accidents={filteredAccidents} baseHotspots={hotspots} t={t} />
             </Suspense>
           </>

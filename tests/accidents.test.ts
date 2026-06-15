@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import {
+  aggregateByHour,
   buildHotspots,
   calculateDistanceMeters,
   extractDistrict,
@@ -101,6 +102,13 @@ describe('accident utilities', () => {
     });
 
     expect(filtered.map((accident) => accident.id)).toEqual(['near', 'far']);
+  });
+
+  it('keeps hour aggregation stable when a malformed record has an out-of-range hour', () => {
+    const hourly = aggregateByHour([{ ...baseRecord, hour: 25 }]);
+
+    expect(hourly).toHaveLength(24);
+    expect(hourly.every((hour) => hour.totalCount === 0)).toBe(true);
   });
 
   it('builds repeated-location hotspot totals with A1 and A2 counts', () => {

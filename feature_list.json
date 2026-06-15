@@ -38,7 +38,7 @@
       "description": "Before release or handoff, record verification, deployment assumptions, risks, and next-session instructions.",
       "dependencies": ["feat-001", "feat-002", "feat-003", "feat-004"],
       "status": "in-progress",
-      "evidence": "Code review fixed service-worker update strategy and recorded verification in progress.md. Data conversion integrity remains not-started."
+      "evidence": "Code review fixed service-worker update strategy. Anti-slop cleanup removed non-null assertions, simplified dashboard fallback markup, normalized i18n formatting, and added malformed-hour regression coverage. Verification recorded in progress.md. Data conversion integrity remains not-started."
     }
   ]
 }
