@@ -456,6 +456,10 @@ a {
   padding: 16px;
 }
 
+.dashboard-slot {
+  min-width: 0;
+}
+
 .dashboard-placeholder {
   min-height: 260px;
 }
@@ -665,7 +669,8 @@ td {
     grid-row: 1;
   }
 
-  .dashboard {
+  .dashboard,
+  .dashboard-slot {
     grid-column: 2;
   }
 

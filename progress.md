@@ -2,7 +2,7 @@
 
 ## Current State
 
-**Last Updated:** 2026-06-15 08:27 CST  
+**Last Updated:** 2026-06-15 08:35 CST  
 **Active Feature:** feat-004 - Accident Data Conversion Integrity
 
 ## Status
@@ -30,6 +30,7 @@
 - [x] Lazy-loads full `accidents.json` only for cluster mode, search/nearby filters, or dashboard visibility.
 - [x] Updated service worker precache to use compact heatmap data instead of full raw accidents.
 - [x] Added tests for compact heatmap point building, filtering, and tuple dataset encoding.
+- [x] Restored dashboard column sizing after lazy loader wrapper made it appear too narrow.
 
 ### What's In Progress
 
@@ -75,6 +76,7 @@ Existing uncommitted source files before harness work:
 - [x] Code-review verification: `node --check public/sw.js`, `npm audit --audit-level=high`, `./init.sh`, and Playwright desktop/mobile smoke checks passed on 2026-06-12.
 - [x] Cleanup verification: `npm test` after each cleanup pass; final `./init.sh`, `node --check public/sw.js`, and `npm audit --audit-level=high` passed on 2026-06-15.
 - [x] First-load data verification: `./init.sh`, `node --check public/sw.js`, `npm audit --audit-level=high`, and Playwright network smoke checks passed on 2026-06-15. Initial data requests included `heatmap-points.json`, `accident-hotspots.json`, and `accident-summary.json`; `accidents.json` loaded only after switching to cluster mode.
+- [x] Dashboard layout verification: `npm test`, `npm run build`, and Playwright desktop measurement passed on 2026-06-15. Map, dashboard slot, and dashboard all measured 994px wide at 1440px viewport.
 
 ## Notes for Next Session
 

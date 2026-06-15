@@ -22,6 +22,7 @@
 - [x] Updated the converter to generate the heatmap dataset.
 - [x] Updated initial app loading to avoid `accidents.json`.
 - [x] Verified raw accidents load on demand when switching to cluster mode.
+- [x] Restored dashboard loader wrapper to the full map/content grid column.
 
 ## Verification Evidence
 
@@ -34,6 +35,7 @@
 | Cleanup baseline | `./init.sh` | Passed | Build passed; tests passed 1 file / 9 tests. |
 | First-load data | Playwright resource check | Passed | Initial load excluded `accidents.json`; cluster mode requested it on demand. |
 | Final baseline | `./init.sh` | Passed | Build passed; tests passed 1 file / 12 tests. |
+| Dashboard layout | Playwright desktop measurement | Passed | Map, dashboard slot, and dashboard each measured 994px wide at 1440px viewport. |
 
 ## Files Changed
 

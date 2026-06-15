@@ -76,7 +76,7 @@ function DashboardLoader({
   }, [accidents, onVisible]);
 
   return (
-    <div ref={containerRef}>
+    <div className="dashboard-slot" ref={containerRef}>
       {error ? <p className="error">{error}</p> : null}
       {!accidents || isLoading ? (
         <DashboardFallback title={title} />
