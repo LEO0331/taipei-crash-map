@@ -4,11 +4,9 @@ import type {
   AccidentFilters,
   AccidentHotspot,
   AccidentRecord,
-  HeatmapPoint,
   MapMode,
 } from '../types/accident';
 import type { Language, Translation } from '../i18n';
-import { AccidentHeatmapLayer } from './AccidentHeatmapLayer';
 import { AccidentClusterLayer } from './AccidentClusterLayer';
 import { HotspotLayer } from './HotspotLayer';
 import { MapModeToggle } from './MapModeToggle';
@@ -16,7 +14,6 @@ import { useEffect } from 'react';
 
 type Props = {
   accidents: AccidentRecord[];
-  heatmapPoints: HeatmapPoint[];
   hotspots: AccidentHotspot[];
   filters: AccidentFilters;
   mode: MapMode;
@@ -44,7 +41,6 @@ const userIcon = L.divIcon({
 
 export function AccidentMap({
   accidents,
-  heatmapPoints,
   hotspots,
   filters,
   mode,
@@ -78,7 +74,6 @@ export function AccidentMap({
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        {mode === 'heatmap' ? <AccidentHeatmapLayer points={heatmapPoints} /> : null}
         {mode === 'clusters' ? (
           <AccidentClusterLayer accidents={accidents} language={language} t={t} />
         ) : null}

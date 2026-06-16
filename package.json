@@ -8,6 +8,8 @@
     "build": "tsc -b && vite build",
     "preview": "vite preview --host 127.0.0.1",
     "convert:accidents": "tsx scripts/convertAccidents.ts",
+    "fetch:crash-details": "tsx scripts/fetchCrashDetailData.ts",
+    "convert:crash-details": "tsx scripts/convertCrashDetailData.ts",
     "test": "vitest run"
   },
   "repository": {

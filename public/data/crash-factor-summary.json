@@ -1,0 +1,340 @@
+{
+  "generatedAt": "2026-06-16T07:30:32.159Z",
+  "partyRecordCount": 22762,
+  "byVehicleType": [
+    {
+      "label": "C03",
+      "count": 10850
+    },
+    {
+      "label": "B03",
+      "count": 6293
+    },
+    {
+      "label": "B01",
+      "count": 1684
+    },
+    {
+      "label": "F01",
+      "count": 704
+    },
+    {
+      "label": "B12",
+      "count": 659
+    },
+    {
+      "label": "B02",
+      "count": 557
+    },
+    {
+      "label": "A02",
+      "count": 406
+    },
+    {
+      "label": "C04",
+      "count": 355
+    },
+    {
+      "label": "H01",
+      "count": 241
+    },
+    {
+      "label": "未辨識",
+      "count": 157
+    },
+    {
+      "label": "C02",
+      "count": 125
+    },
+    {
+      "label": "F02",
+      "count": 119
+    }
+  ],
+  "byAgeGroup": [
+    {
+      "label": "45-54",
+      "count": 4242
+    },
+    {
+      "label": "25-34",
+      "count": 4129
+    },
+    {
+      "label": "55-64",
+      "count": 4044
+    },
+    {
+      "label": "35-44",
+      "count": 3877
+    },
+    {
+      "label": "65+",
+      "count": 3078
+    },
+    {
+      "label": "18-24",
+      "count": 2939
+    },
+    {
+      "label": "0-17",
+      "count": 441
+    },
+    {
+      "label": "未辨識",
+      "count": 12
+    }
+  ],
+  "bySex": [
+    {
+      "label": "1",
+      "count": 16318
+    },
+    {
+      "label": "2",
+      "count": 6184
+    },
+    {
+      "label": "4",
+      "count": 206
+    },
+    {
+      "label": "3",
+      "count": 52
+    },
+    {
+      "label": "未辨識",
+      "count": 2
+    }
+  ],
+  "byInjurySeverity": [
+    {
+      "label": "3",
+      "count": 11798
+    },
+    {
+      "label": "2",
+      "count": 10281
+    },
+    {
+      "label": "4",
+      "count": 435
+    },
+    {
+      "label": "未辨識",
+      "count": 215
+    },
+    {
+      "label": "1",
+      "count": 28
+    },
+    {
+      "label": "5",
+      "count": 5
+    }
+  ],
+  "byAlcoholCondition": [
+    {
+      "label": "1",
+      "count": 14921
+    },
+    {
+      "label": "2",
+      "count": 5547
+    },
+    {
+      "label": "9",
+      "count": 1050
+    },
+    {
+      "label": "11",
+      "count": 778
+    },
+    {
+      "label": "10",
+      "count": 215
+    },
+    {
+      "label": "未辨識",
+      "count": 106
+    },
+    {
+      "label": "8",
+      "count": 41
+    },
+    {
+      "label": "7",
+      "count": 35
+    },
+    {
+      "label": "6",
+      "count": 23
+    },
+    {
+      "label": "3",
+      "count": 18
+    },
+    {
+      "label": "4",
+      "count": 17
+    },
+    {
+      "label": "5",
+      "count": 11
+    }
+  ],
+  "byProtectionDevice": [
+    {
+      "label": "7",
+      "count": 7016
+    },
+    {
+      "label": "6",
+      "count": 4897
+    },
+    {
+      "label": "3",
+      "count": 4836
+    },
+    {
+      "label": "5",
+      "count": 4791
+    },
+    {
+      "label": "4",
+      "count": 834
+    },
+    {
+      "label": "未辨識",
+      "count": 219
+    },
+    {
+      "label": "2",
+      "count": 169
+    }
+  ],
+  "byPhoneUse": [
+    {
+      "label": "1",
+      "count": 16138
+    },
+    {
+      "label": "4",
+      "count": 6099
+    },
+    {
+      "label": "5",
+      "count": 252
+    },
+    {
+      "label": "未辨識",
+      "count": 219
+    },
+    {
+      "label": "2",
+      "count": 40
+    },
+    {
+      "label": "3",
+      "count": 14
+    }
+  ],
+  "byHitAndRun": [
+    {
+      "label": "1",
+      "count": 21856
+    },
+    {
+      "label": "2",
+      "count": 884
+    },
+    {
+      "label": "未辨識",
+      "count": 22
+    }
+  ],
+  "byDrivingQualification": [
+    {
+      "label": "1",
+      "count": 20314
+    },
+    {
+      "label": "8",
+      "count": 1172
+    },
+    {
+      "label": "3",
+      "count": 429
+    },
+    {
+      "label": "6",
+      "count": 299
+    },
+    {
+      "label": "7",
+      "count": 297
+    },
+    {
+      "label": "未辨識",
+      "count": 198
+    },
+    {
+      "label": "2",
+      "count": 40
+    },
+    {
+      "label": "5",
+      "count": 13
+    }
+  ],
+  "byDriverLicenseType": [
+    {
+      "label": "10",
+      "count": 10191
+    },
+    {
+      "label": "8",
+      "count": 7187
+    },
+    {
+      "label": "4",
+      "count": 1594
+    },
+    {
+      "label": "20",
+      "count": 1172
+    },
+    {
+      "label": "18",
+      "count": 618
+    },
+    {
+      "label": "2",
+      "count": 507
+    },
+    {
+      "label": "9",
+      "count": 407
+    },
+    {
+      "label": "19",
+      "count": 286
+    },
+    {
+      "label": "未辨識",
+      "count": 209
+    },
+    {
+      "label": "1",
+      "count": 117
+    },
+    {
+      "label": "11",
+      "count": 112
+    },
+    {
+      "label": "3",
+      "count": 103
+    }
+  ]
+}

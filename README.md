@@ -4,7 +4,9 @@ Mobile-first bilingual web app for exploring Taipei A1/A2 road traffic accident 
 
 ## Data Source
 
-Data comes from the Taipei Open Data dataset `臺北市道路交通事故斑點圖` and the seven local CSV files for ROC years 108-114.
+The main map comes from the Taipei Open Data dataset `臺北市道路交通事故斑點圖` and the seven local CSV files for ROC years 108-114.
+
+The `事故特徵` / `Crash Factors` tab uses a second Taipei Open Data dataset, `臺北市死傷交通事故資料`, to summarize fatal/injury crash detail records and involved-party characteristics. This detail dataset includes involved-party fields such as vehicle type, sex, age, injury severity, protection device, phone use, driving qualification, alcohol condition, hit-and-run flag, and occupation.
 
 Official field meanings:
 
@@ -30,12 +32,38 @@ npm run convert:accidents
 Outputs:
 
 - `public/data/accidents.json`
-- `public/data/heatmap-points.json`
 - `public/data/accident-summary.json`
 - `public/data/accident-hotspots.json`
 - `public/data/conversion-report.json`
 
 The report includes raw row counts, converted row counts, skipped rows, missing coordinates, coordinate outliers, invalid times, invalid types, and decode replacement characters.
+
+Fetch crash-detail raw API pages:
+
+```bash
+npm run fetch:crash-details
+```
+
+Convert crash-detail raw JSON or CSV files:
+
+```bash
+npm run convert:crash-details
+```
+
+The crash-detail fetch script writes raw Taipei Open Data API pages and `resource-index.json` under `data/raw/crash-details/`. The conversion script reads raw API JSON and CSV files from that folder and writes:
+
+- `public/data/crash-detail-party-records.json`
+- `public/data/crash-detail-accidents.json`
+- `public/data/crash-detail-summary.json`
+- `public/data/crash-factor-summary.json`
+- `public/data/crash-detail-conversion-report.json`
+
+Crash-detail rows are handled at two data levels:
+
+- `CrashDetailPartyRecord`: one involved-party/source row.
+- `CrashDetailAccidentRecord`: deduplicated accident-level record using year, month, day, hour, minute, location, longitude, and latitude when no official case ID is available.
+
+The dashboard avoids counting party rows as unique accidents. Accident-level records power accident counts and trend/environment distributions; party-level records power aggregate vehicle, age group, sex, injury severity, alcohol, protection-device, phone-use, driving-qualification, license-type, and hit-and-run distributions.
 
 ## Development
 
@@ -71,13 +99,12 @@ npm run preview
 
 ## Features
 
-- Heatmap default mode, weighted so A1 records count more strongly than A2 records
-- Compact heatmap data loads before the full accident record dataset to reduce first-load cost
 - Clustered accident point mode using Leaflet marker clustering
 - Aggregated hotspot intersection mode
 - Filters for year, accident type, district, time period, weekday/weekend, and location text
 - Optional browser geolocation for nearby historical accident records at 300m, 500m, or 1km
 - Dashboard cards and charts for selected filters
+- Crash Factors tab for aggregate fatal/injury crash detail and involved-party distributions
 - Traditional Chinese default UI with persisted English toggle
 - PWA manifest, icons, mobile viewport, and service worker cache
 
@@ -86,6 +113,8 @@ npm run preview
 The dashboard reports historical accident counts in the public dataset. Counts are not normalized by traffic volume, pedestrian volume, road length, road design, weather, enforcement, or population density. Do not interpret the values as causal explanations or objective risk scores.
 
 Use wording such as `事故較集中`, `higher concentration of recorded accidents`, and `historical accident count`.
+
+The crash-detail dashboard summarizes fatal/injury crash detail records and involved-party characteristics from public data. Person-level fields are shown only in aggregate charts and are not displayed in map popups. Counts are historical records, not normalized risk scores, and do not imply causation or real-time risk.
 
 ## Deployment Notes
 

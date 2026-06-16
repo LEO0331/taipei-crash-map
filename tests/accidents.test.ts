@@ -1,13 +1,17 @@
 import { describe, expect, it } from 'vitest';
 import {
+  buildCrashDetailAccidents,
+  buildCrashDetailSummary,
+  deriveCrashSeverity,
+  filterCrashDetailData,
+  normalizeCrashDetailPartyRecord,
+} from '../src/utils/crashDetails';
+import {
   aggregateByHour,
-  buildHeatmapDataset,
-  buildHeatmapPoints,
   buildHotspots,
   calculateDistanceMeters,
   extractDistrict,
   filterAccidents,
-  filterHeatmapPoints,
   isCoordinateOutlier,
   parseAccidentTime,
 } from '../src/utils/accidents';
@@ -129,70 +133,6 @@ describe('accident utilities', () => {
     });
   });
 
-  it('builds compact heatmap points without carrying full accident text fields', () => {
-    const [point] = buildHeatmapPoints([baseRecord]);
-
-    expect(point).toEqual({
-      latitude: baseRecord.latitude,
-      longitude: baseRecord.longitude,
-      weight: 0.55,
-      count: 1,
-      year: 2019,
-      accidentType: 2,
-      district: '大同區',
-      hour: 8,
-      weekday: 3,
-    });
-    expect('location' in point).toBe(false);
-    expect('sourceFile' in point).toBe(false);
-  });
-
-  it('filters compact heatmap points with first-load map filters', () => {
-    const heatmapPoints = buildHeatmapPoints([
-      baseRecord,
-      {
-        ...baseRecord,
-        id: '2020-1',
-        year: 2020,
-        accidentType: 1,
-        district: '信義區',
-        hour: 22,
-        weekday: 0,
-      },
-    ]);
-
-    const filtered = filterHeatmapPoints(heatmapPoints, {
-      years: [2020],
-      accidentType: 1,
-      district: '信義區',
-      timePeriod: 'lateNight',
-      weekdayWeekend: 'weekend',
-      search: '',
-    });
-
-    expect(filtered).toHaveLength(1);
-    expect(filtered[0]).toMatchObject({ year: 2020, accidentType: 1, district: '信義區' });
-  });
-
-  it('encodes heatmap points as compact tuples with a district lookup table', () => {
-    const dataset = buildHeatmapDataset([baseRecord]);
-
-    expect(dataset.districts).toEqual(['大同區']);
-    expect(dataset.points).toEqual([
-      [
-        baseRecord.latitude,
-        baseRecord.longitude,
-        0.55,
-        1,
-        2019,
-        2,
-        0,
-        8,
-        3,
-      ],
-    ]);
-  });
-
   it('escapes dataset text before rendering Leaflet popup HTML', () => {
     const popup = renderAccidentPopup({
       accident: {
@@ -208,5 +148,123 @@ describe('accident utilities', () => {
     expect(popup).toContain('&lt;img src=x onerror=alert(1)&gt;');
     expect(popup).not.toContain('<script>');
     expect(popup).not.toContain('<img src=x');
+  });
+});
+
+describe('crash detail utilities', () => {
+  const rawParty = {
+    發生年度: '113',
+    發生月: '5',
+    發生日: '20',
+    '發生時-Hours': '8',
+    發生分: '30',
+    區序: '大安區',
+    肇事地點: '大安區仁愛路與復興南路口',
+    死亡人數: '0',
+    '2-30日死亡人數': '0',
+    受傷人數: '1',
+    當事人序號: '1',
+    車種: '普通重型機車',
+    天候: '晴',
+    光線: '日間自然光線',
+    道路類別: '市區道路',
+    '速限-速度限制': '50',
+    道路型態: '交岔路',
+    事故位置: '交叉路口內',
+    路面狀況1: '乾燥',
+    號誌1: '行車管制號誌',
+    事故類型及型態: '側撞',
+    性別: '男',
+    年齡: '23',
+    受傷程度: '受傷',
+    保護裝置: '戴安全帽',
+    行動電話: '未使用',
+    駕駛資格情形: '有適當駕照',
+    駕駛執照種類: '普通重型機車',
+    飲酒情形: '未飲酒',
+    '肇因碼-主要': '未注意車前狀態',
+    個人肇逃否: '否',
+    '座標-X': '121.543',
+    '座標-Y': '25.037',
+  };
+
+  it('normalizes party rows with ROC year, severity, age group and Taipei coordinate status', () => {
+    const party = normalizeCrashDetailPartyRecord(rawParty, 'sample', 0);
+
+    expect(party).toMatchObject({
+      year: 2024,
+      month: 5,
+      hour: 8,
+      severity: 'a2_injury_or_late_death',
+      coordinateStatus: 'valid',
+      ageGroup: '18-24',
+      vehicleType: '普通重型機車',
+    });
+  });
+
+  it('deduplicates involved-party rows into one accident record', () => {
+    const first = normalizeCrashDetailPartyRecord(rawParty, 'sample', 0);
+    const second = normalizeCrashDetailPartyRecord({ ...rawParty, 當事人序號: '2', 車種: '自用小客車' }, 'sample', 1);
+    const accidents = buildCrashDetailAccidents([first!, second!]);
+
+    expect(accidents).toHaveLength(1);
+    expect(accidents[0]).toMatchObject({
+      partyCount: 2,
+      injuryCount: 1,
+      vehicleTypes: ['普通重型機車', '自用小客車'],
+    });
+  });
+
+  it('keeps party row count separate from deduplicated accident count in summaries', () => {
+    const first = normalizeCrashDetailPartyRecord(rawParty, 'sample', 0)!;
+    const second = normalizeCrashDetailPartyRecord({ ...rawParty, 當事人序號: '2', 車種: '自用小客車' }, 'sample', 1)!;
+    const accidents = buildCrashDetailAccidents([first, second]);
+    const summary = buildCrashDetailSummary(accidents, [first, second]);
+
+    expect(summary.partyRecordCount).toBe(2);
+    expect(summary.accidentRecordCount).toBe(1);
+  });
+
+  it('filters crash detail data by accident and party-level factors', () => {
+    const motorcycle = normalizeCrashDetailPartyRecord(rawParty, 'sample', 0)!;
+    const car = normalizeCrashDetailPartyRecord(
+      { ...rawParty, 肇事地點: '中山區南京東路口', 區序: '中山區', 車種: '自用小客車', 性別: '女' },
+      'sample',
+      1,
+    )!;
+    const accidents = buildCrashDetailAccidents([motorcycle, car]);
+    const filtered = filterCrashDetailData(accidents, [motorcycle, car], {
+      years: [],
+      months: [],
+      district: 'all',
+      severity: 'all',
+      vehicleType: '普通重型機車',
+      weather: 'all',
+      lighting: 'all',
+      roadType: 'all',
+      speedLimit: 'all',
+      roadShape: 'all',
+      accidentPosition: 'all',
+      roadSurfaceCondition: 'all',
+      signalCondition: 'all',
+      accidentPattern: 'all',
+      sex: '男',
+      ageGroup: 'all',
+      injurySeverity: 'all',
+      alcoholCondition: 'all',
+      protectionDevice: 'all',
+      phoneUse: 'all',
+      causeCode: 'all',
+      hitAndRun: 'all',
+      search: '',
+    });
+
+    expect(filtered.accidents).toHaveLength(1);
+    expect(filtered.parties).toHaveLength(1);
+  });
+
+  it('derives fatal and unknown severity without adding A3', () => {
+    expect(deriveCrashSeverity(1, 0, 0)).toBe('a1_fatal_24h');
+    expect(deriveCrashSeverity(0, 0, 0)).toBe('unknown');
   });
 });

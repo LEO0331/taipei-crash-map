@@ -1,0 +1,509 @@
+{
+  "generatedAt": "2026-06-16T07:30:32.003Z",
+  "partyRecordCount": 22762,
+  "accidentRecordCount": 22762,
+  "validCoordinateAccidentCount": 22760,
+  "missingCoordinatePartyCount": 0,
+  "outlierCoordinatePartyCount": 2,
+  "deathWithin24hCount": 58,
+  "death2To30DayCount": 3,
+  "injuryCount": 30201,
+  "years": [
+    2025
+  ],
+  "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "districts": [
+    "士林區",
+    "大同區",
+    "大安區",
+    "中山區",
+    "中正區",
+    "內湖區",
+    "文山區",
+    "北投區",
+    "松山區",
+    "信義區",
+    "南港區",
+    "萬華區"
+  ],
+  "byYear": [
+    {
+      "year": 2025,
+      "totalCount": 22762,
+      "fatalCount": 57,
+      "injuryOrLateDeathCount": 22703
+    }
+  ],
+  "byMonth": [
+    {
+      "month": 1,
+      "totalCount": 1896
+    },
+    {
+      "month": 2,
+      "totalCount": 1641
+    },
+    {
+      "month": 3,
+      "totalCount": 2020
+    },
+    {
+      "month": 4,
+      "totalCount": 1855
+    },
+    {
+      "month": 5,
+      "totalCount": 1867
+    },
+    {
+      "month": 6,
+      "totalCount": 1773
+    },
+    {
+      "month": 7,
+      "totalCount": 1851
+    },
+    {
+      "month": 8,
+      "totalCount": 1949
+    },
+    {
+      "month": 9,
+      "totalCount": 1929
+    },
+    {
+      "month": 10,
+      "totalCount": 1951
+    },
+    {
+      "month": 11,
+      "totalCount": 1967
+    },
+    {
+      "month": 12,
+      "totalCount": 2063
+    }
+  ],
+  "byHour": [
+    {
+      "hour": 0,
+      "totalCount": 274
+    },
+    {
+      "hour": 1,
+      "totalCount": 164
+    },
+    {
+      "hour": 2,
+      "totalCount": 121
+    },
+    {
+      "hour": 3,
+      "totalCount": 105
+    },
+    {
+      "hour": 4,
+      "totalCount": 118
+    },
+    {
+      "hour": 5,
+      "totalCount": 168
+    },
+    {
+      "hour": 6,
+      "totalCount": 414
+    },
+    {
+      "hour": 7,
+      "totalCount": 1298
+    },
+    {
+      "hour": 8,
+      "totalCount": 2117
+    },
+    {
+      "hour": 9,
+      "totalCount": 1558
+    },
+    {
+      "hour": 10,
+      "totalCount": 1359
+    },
+    {
+      "hour": 11,
+      "totalCount": 1362
+    },
+    {
+      "hour": 12,
+      "totalCount": 1395
+    },
+    {
+      "hour": 13,
+      "totalCount": 1106
+    },
+    {
+      "hour": 14,
+      "totalCount": 1191
+    },
+    {
+      "hour": 15,
+      "totalCount": 1215
+    },
+    {
+      "hour": 16,
+      "totalCount": 1342
+    },
+    {
+      "hour": 17,
+      "totalCount": 1755
+    },
+    {
+      "hour": 18,
+      "totalCount": 1718
+    },
+    {
+      "hour": 19,
+      "totalCount": 1161
+    },
+    {
+      "hour": 20,
+      "totalCount": 796
+    },
+    {
+      "hour": 21,
+      "totalCount": 863
+    },
+    {
+      "hour": 22,
+      "totalCount": 717
+    },
+    {
+      "hour": 23,
+      "totalCount": 445
+    }
+  ],
+  "byDistrict": [
+    {
+      "label": "中山區",
+      "count": 3015
+    },
+    {
+      "label": "大安區",
+      "count": 2495
+    },
+    {
+      "label": "中正區",
+      "count": 2174
+    },
+    {
+      "label": "信義區",
+      "count": 2097
+    },
+    {
+      "label": "士林區",
+      "count": 2074
+    },
+    {
+      "label": "內湖區",
+      "count": 2010
+    },
+    {
+      "label": "萬華區",
+      "count": 1684
+    },
+    {
+      "label": "大同區",
+      "count": 1639
+    },
+    {
+      "label": "北投區",
+      "count": 1592
+    },
+    {
+      "label": "文山區",
+      "count": 1504
+    },
+    {
+      "label": "松山區",
+      "count": 1459
+    },
+    {
+      "label": "南港區",
+      "count": 1019
+    }
+  ],
+  "bySeverity": [
+    {
+      "label": "a2_injury_or_late_death",
+      "count": 22703
+    },
+    {
+      "label": "a1_fatal_24h",
+      "count": 57
+    },
+    {
+      "label": "unknown",
+      "count": 2
+    }
+  ],
+  "byWeather": [
+    {
+      "label": "8",
+      "count": 12966
+    },
+    {
+      "label": "7",
+      "count": 6440
+    },
+    {
+      "label": "6",
+      "count": 3353
+    },
+    {
+      "label": "未辨識",
+      "count": 2
+    },
+    {
+      "label": "9",
+      "count": 1
+    }
+  ],
+  "byLighting": [
+    {
+      "label": "6",
+      "count": 9296
+    },
+    {
+      "label": "5",
+      "count": 9058
+    },
+    {
+      "label": "7",
+      "count": 4396
+    },
+    {
+      "label": "未辨識",
+      "count": 12
+    }
+  ],
+  "byRoadType": [
+    {
+      "label": "5",
+      "count": 21772
+    },
+    {
+      "label": "8",
+      "count": 513
+    },
+    {
+      "label": "6",
+      "count": 300
+    },
+    {
+      "label": "7",
+      "count": 142
+    },
+    {
+      "label": "4",
+      "count": 21
+    },
+    {
+      "label": "未辨識",
+      "count": 12
+    },
+    {
+      "label": "3",
+      "count": 1
+    },
+    {
+      "label": "9",
+      "count": 1
+    }
+  ],
+  "bySpeedLimit": [
+    {
+      "label": "50",
+      "count": 14931
+    },
+    {
+      "label": "30",
+      "count": 4880
+    },
+    {
+      "label": "40",
+      "count": 2284
+    },
+    {
+      "label": "0",
+      "count": 315
+    },
+    {
+      "label": "60",
+      "count": 208
+    },
+    {
+      "label": "70",
+      "count": 62
+    },
+    {
+      "label": "80",
+      "count": 32
+    },
+    {
+      "label": "20",
+      "count": 26
+    },
+    {
+      "label": "25",
+      "count": 16
+    },
+    {
+      "label": "未辨識",
+      "count": 4
+    },
+    {
+      "label": "5",
+      "count": 2
+    },
+    {
+      "label": "15",
+      "count": 1
+    }
+  ],
+  "byRoadShape": [
+    {
+      "label": "4",
+      "count": 8286
+    },
+    {
+      "label": "14",
+      "count": 7528
+    },
+    {
+      "label": "3",
+      "count": 4503
+    },
+    {
+      "label": "5",
+      "count": 1278
+    },
+    {
+      "label": "22",
+      "count": 389
+    },
+    {
+      "label": "11",
+      "count": 298
+    },
+    {
+      "label": "8",
+      "count": 242
+    },
+    {
+      "label": "10",
+      "count": 68
+    },
+    {
+      "label": "12",
+      "count": 51
+    },
+    {
+      "label": "18",
+      "count": 41
+    },
+    {
+      "label": "7",
+      "count": 33
+    },
+    {
+      "label": "6",
+      "count": 21
+    }
+  ],
+  "bySignal": [
+    {
+      "label": "4",
+      "count": 12491
+    },
+    {
+      "label": "2",
+      "count": 5008
+    },
+    {
+      "label": "1",
+      "count": 4788
+    },
+    {
+      "label": "3",
+      "count": 463
+    },
+    {
+      "label": "未辨識",
+      "count": 12
+    }
+  ],
+  "byAccidentPattern": [
+    {
+      "label": "17",
+      "count": 7585
+    },
+    {
+      "label": "16",
+      "count": 4383
+    },
+    {
+      "label": "13",
+      "count": 3440
+    },
+    {
+      "label": "12",
+      "count": 2368
+    },
+    {
+      "label": "15",
+      "count": 1677
+    },
+    {
+      "label": "3",
+      "count": 889
+    },
+    {
+      "label": "9",
+      "count": 725
+    },
+    {
+      "label": "18",
+      "count": 423
+    },
+    {
+      "label": "11",
+      "count": 263
+    },
+    {
+      "label": "2",
+      "count": 198
+    },
+    {
+      "label": "10",
+      "count": 168
+    },
+    {
+      "label": "29",
+      "count": 143
+    }
+  ],
+  "byMainCauseCode": []
+}

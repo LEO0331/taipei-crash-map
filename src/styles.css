@@ -175,6 +175,39 @@ a {
   padding: 14px clamp(12px, 3vw, 28px) calc(38px + env(safe-area-inset-bottom));
 }
 
+.app-tabs {
+  display: flex;
+  gap: 8px;
+  margin: 14px auto 0;
+  max-width: 1540px;
+  overflow-x: auto;
+  padding: 0 clamp(12px, 3vw, 28px);
+}
+
+.app-tabs button {
+  background: #e8edf2;
+  border: 1px solid rgb(15 23 42 / 8%);
+  border-radius: 8px;
+  color: var(--ink);
+  flex: 0 0 auto;
+  font-weight: 900;
+  min-height: 42px;
+  padding: 9px 13px;
+  transition:
+    background 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.app-tabs button:hover {
+  transform: translateY(-1px);
+}
+
+.app-tabs button.active {
+  background: var(--night);
+  color: #ffffff;
+}
+
 .control-deck {
   display: grid;
   gap: 12px;
@@ -415,10 +448,6 @@ a {
   color: var(--ink) !important;
 }
 
-.leaflet-heatmap-layer {
-  opacity: 0.62;
-}
-
 .leaflet-popup-content-wrapper {
   border-radius: 8px;
   box-shadow: var(--shadow);
@@ -458,6 +487,16 @@ a {
 
 .dashboard-slot {
   min-width: 0;
+}
+
+.full-width-panel {
+  min-width: 0;
+}
+
+.data-notes p {
+  color: var(--ink-soft);
+  line-height: 1.65;
+  margin: 0;
 }
 
 .dashboard-placeholder {
@@ -568,6 +607,20 @@ a {
   padding: 14px;
 }
 
+.empty-state {
+  color: var(--muted);
+  margin: 0;
+  min-height: 80px;
+}
+
+.crash-detail-disclaimer {
+  box-shadow: none;
+}
+
+.crash-filter-panel {
+  box-shadow: none;
+}
+
 .recharts-default-tooltip {
   border: 1px solid var(--line) !important;
   border-radius: 8px;
@@ -674,6 +727,15 @@ td {
     grid-column: 2;
   }
 
+  .workspace-crashFactors,
+  .workspace-dataNotes {
+    grid-template-columns: 1fr;
+  }
+
+  .full-width-panel {
+    grid-column: 1;
+  }
+
   .filter-panel {
     grid-template-columns: 1fr;
   }
@@ -730,7 +792,7 @@ td {
 
   .map-mode .segmented {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     width: 100%;
   }
 

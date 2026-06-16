@@ -1,0 +1,199 @@
+{
+  "generatedAt": "2026-06-16T07:30:32.236Z",
+  "inputDirectory": "/Users/Leo/Documents/taipei-crash-map/data/raw/crash-details",
+  "outputDirectory": "/Users/Leo/Documents/taipei-crash-map/public/data",
+  "inputFiles": [
+    "83d6d29c-6801-41a2-95c6-47d551646db3-offset-0.json",
+    "83d6d29c-6801-41a2-95c6-47d551646db3-offset-1000.json",
+    "83d6d29c-6801-41a2-95c6-47d551646db3-offset-10000.json",
+    "83d6d29c-6801-41a2-95c6-47d551646db3-offset-11000.json",
+    "83d6d29c-6801-41a2-95c6-47d551646db3-offset-12000.json",
+    "83d6d29c-6801-41a2-95c6-47d551646db3-offset-13000.json",
+    "83d6d29c-6801-41a2-95c6-47d551646db3-offset-14000.json",
+    "83d6d29c-6801-41a2-95c6-47d551646db3-offset-15000.json",
+    "83d6d29c-6801-41a2-95c6-47d551646db3-offset-16000.json",
+    "83d6d29c-6801-41a2-95c6-47d551646db3-offset-17000.json",
+    "83d6d29c-6801-41a2-95c6-47d551646db3-offset-18000.json",
+    "83d6d29c-6801-41a2-95c6-47d551646db3-offset-19000.json",
+    "83d6d29c-6801-41a2-95c6-47d551646db3-offset-2000.json",
+    "83d6d29c-6801-41a2-95c6-47d551646db3-offset-20000.json",
+    "83d6d29c-6801-41a2-95c6-47d551646db3-offset-21000.json",
+    "83d6d29c-6801-41a2-95c6-47d551646db3-offset-22000.json",
+    "83d6d29c-6801-41a2-95c6-47d551646db3-offset-3000.json",
+    "83d6d29c-6801-41a2-95c6-47d551646db3-offset-4000.json",
+    "83d6d29c-6801-41a2-95c6-47d551646db3-offset-5000.json",
+    "83d6d29c-6801-41a2-95c6-47d551646db3-offset-6000.json",
+    "83d6d29c-6801-41a2-95c6-47d551646db3-offset-7000.json",
+    "83d6d29c-6801-41a2-95c6-47d551646db3-offset-8000.json",
+    "83d6d29c-6801-41a2-95c6-47d551646db3-offset-9000.json"
+  ],
+  "totalRawRows": 22762,
+  "totalPartyRecords": 22762,
+  "totalAccidentRecords": 22762,
+  "totalSkippedRows": 0,
+  "missingCoordinatePartyCount": 0,
+  "outlierCoordinatePartyCount": 2,
+  "byFile": [
+    {
+      "file": "83d6d29c-6801-41a2-95c6-47d551646db3-offset-0.json",
+      "sourceResource": "83d6d29c-6801-41a2-95c6-47d551646db3",
+      "rawRows": 1000,
+      "convertedRows": 1000,
+      "skippedRows": 0
+    },
+    {
+      "file": "83d6d29c-6801-41a2-95c6-47d551646db3-offset-1000.json",
+      "sourceResource": "83d6d29c-6801-41a2-95c6-47d551646db3",
+      "rawRows": 1000,
+      "convertedRows": 1000,
+      "skippedRows": 0
+    },
+    {
+      "file": "83d6d29c-6801-41a2-95c6-47d551646db3-offset-10000.json",
+      "sourceResource": "83d6d29c-6801-41a2-95c6-47d551646db3",
+      "rawRows": 1000,
+      "convertedRows": 1000,
+      "skippedRows": 0
+    },
+    {
+      "file": "83d6d29c-6801-41a2-95c6-47d551646db3-offset-11000.json",
+      "sourceResource": "83d6d29c-6801-41a2-95c6-47d551646db3",
+      "rawRows": 1000,
+      "convertedRows": 1000,
+      "skippedRows": 0
+    },
+    {
+      "file": "83d6d29c-6801-41a2-95c6-47d551646db3-offset-12000.json",
+      "sourceResource": "83d6d29c-6801-41a2-95c6-47d551646db3",
+      "rawRows": 1000,
+      "convertedRows": 1000,
+      "skippedRows": 0
+    },
+    {
+      "file": "83d6d29c-6801-41a2-95c6-47d551646db3-offset-13000.json",
+      "sourceResource": "83d6d29c-6801-41a2-95c6-47d551646db3",
+      "rawRows": 1000,
+      "convertedRows": 1000,
+      "skippedRows": 0
+    },
+    {
+      "file": "83d6d29c-6801-41a2-95c6-47d551646db3-offset-14000.json",
+      "sourceResource": "83d6d29c-6801-41a2-95c6-47d551646db3",
+      "rawRows": 1000,
+      "convertedRows": 1000,
+      "skippedRows": 0
+    },
+    {
+      "file": "83d6d29c-6801-41a2-95c6-47d551646db3-offset-15000.json",
+      "sourceResource": "83d6d29c-6801-41a2-95c6-47d551646db3",
+      "rawRows": 1000,
+      "convertedRows": 1000,
+      "skippedRows": 0
+    },
+    {
+      "file": "83d6d29c-6801-41a2-95c6-47d551646db3-offset-16000.json",
+      "sourceResource": "83d6d29c-6801-41a2-95c6-47d551646db3",
+      "rawRows": 1000,
+      "convertedRows": 1000,
+      "skippedRows": 0
+    },
+    {
+      "file": "83d6d29c-6801-41a2-95c6-47d551646db3-offset-17000.json",
+      "sourceResource": "83d6d29c-6801-41a2-95c6-47d551646db3",
+      "rawRows": 1000,
+      "convertedRows": 1000,
+      "skippedRows": 0
+    },
+    {
+      "file": "83d6d29c-6801-41a2-95c6-47d551646db3-offset-18000.json",
+      "sourceResource": "83d6d29c-6801-41a2-95c6-47d551646db3",
+      "rawRows": 1000,
+      "convertedRows": 1000,
+      "skippedRows": 0
+    },
+    {
+      "file": "83d6d29c-6801-41a2-95c6-47d551646db3-offset-19000.json",
+      "sourceResource": "83d6d29c-6801-41a2-95c6-47d551646db3",
+      "rawRows": 1000,
+      "convertedRows": 1000,
+      "skippedRows": 0
+    },
+    {
+      "file": "83d6d29c-6801-41a2-95c6-47d551646db3-offset-2000.json",
+      "sourceResource": "83d6d29c-6801-41a2-95c6-47d551646db3",
+      "rawRows": 1000,
+      "convertedRows": 1000,
+      "skippedRows": 0
+    },
+    {
+      "file": "83d6d29c-6801-41a2-95c6-47d551646db3-offset-20000.json",
+      "sourceResource": "83d6d29c-6801-41a2-95c6-47d551646db3",
+      "rawRows": 1000,
+      "convertedRows": 1000,
+      "skippedRows": 0
+    },
+    {
+      "file": "83d6d29c-6801-41a2-95c6-47d551646db3-offset-21000.json",
+      "sourceResource": "83d6d29c-6801-41a2-95c6-47d551646db3",
+      "rawRows": 1000,
+      "convertedRows": 1000,
+      "skippedRows": 0
+    },
+    {
+      "file": "83d6d29c-6801-41a2-95c6-47d551646db3-offset-22000.json",
+      "sourceResource": "83d6d29c-6801-41a2-95c6-47d551646db3",
+      "rawRows": 762,
+      "convertedRows": 762,
+      "skippedRows": 0
+    },
+    {
+      "file": "83d6d29c-6801-41a2-95c6-47d551646db3-offset-3000.json",
+      "sourceResource": "83d6d29c-6801-41a2-95c6-47d551646db3",
+      "rawRows": 1000,
+      "convertedRows": 1000,
+      "skippedRows": 0
+    },
+    {
+      "file": "83d6d29c-6801-41a2-95c6-47d551646db3-offset-4000.json",
+      "sourceResource": "83d6d29c-6801-41a2-95c6-47d551646db3",
+      "rawRows": 1000,
+      "convertedRows": 1000,
+      "skippedRows": 0
+    },
+    {
+      "file": "83d6d29c-6801-41a2-95c6-47d551646db3-offset-5000.json",
+      "sourceResource": "83d6d29c-6801-41a2-95c6-47d551646db3",
+      "rawRows": 1000,
+      "convertedRows": 1000,
+      "skippedRows": 0
+    },
+    {
+      "file": "83d6d29c-6801-41a2-95c6-47d551646db3-offset-6000.json",
+      "sourceResource": "83d6d29c-6801-41a2-95c6-47d551646db3",
+      "rawRows": 1000,
+      "convertedRows": 1000,
+      "skippedRows": 0
+    },
+    {
+      "file": "83d6d29c-6801-41a2-95c6-47d551646db3-offset-7000.json",
+      "sourceResource": "83d6d29c-6801-41a2-95c6-47d551646db3",
+      "rawRows": 1000,
+      "convertedRows": 1000,
+      "skippedRows": 0
+    },
+    {
+      "file": "83d6d29c-6801-41a2-95c6-47d551646db3-offset-8000.json",
+      "sourceResource": "83d6d29c-6801-41a2-95c6-47d551646db3",
+      "rawRows": 1000,
+      "convertedRows": 1000,
+      "skippedRows": 0
+    },
+    {
+      "file": "83d6d29c-6801-41a2-95c6-47d551646db3-offset-9000.json",
+      "sourceResource": "83d6d29c-6801-41a2-95c6-47d551646db3",
+      "rawRows": 1000,
+      "convertedRows": 1000,
+      "skippedRows": 0
+    }
+  ]
+}

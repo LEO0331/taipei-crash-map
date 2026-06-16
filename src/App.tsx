@@ -1,9 +1,10 @@
-import { lazy, Suspense, useEffect, useMemo, useRef, useState } from 'react';
-import type { AccidentFilters, AccidentHotspot, AccidentRecord, MapMode } from './types/accident';
-import type { Language, Translation } from './i18n';
+import { lazy, Suspense, useEffect, useMemo, useState } from 'react';
+import type { AccidentFilters, MapMode } from './types/accident';
+import type { Language } from './i18n';
 import { translations } from './i18n';
 import { useAccidentData } from './hooks/useAccidentData';
-import { buildHeatmapPoints, filterAccidents, filterHeatmapPoints } from './utils/accidents';
+import { useCrashDetailData } from './hooks/useCrashDetailData';
+import { filterAccidents } from './utils/accidents';
 import { LanguageToggle } from './components/LanguageToggle';
 import { FilterPanel } from './components/FilterPanel';
 import { AccidentMap } from './components/AccidentMap';
@@ -17,6 +18,11 @@ import './styles.css';
 const Dashboard = lazy(() =>
   import('./components/Dashboard').then((module) => ({ default: module.Dashboard })),
 );
+const CrashFactorDashboard = lazy(() =>
+  import('./components/CrashFactorDashboard').then((module) => ({ default: module.CrashFactorDashboard })),
+);
+
+type AppTab = 'crashMap' | 'hotspotAnalysis' | 'crashFactors' | 'dataNotes';
 
 function DashboardFallback({ title }: { title: string }) {
   return (
@@ -31,61 +37,6 @@ function DashboardFallback({ title }: { title: string }) {
         <span />
       </div>
     </section>
-  );
-}
-
-function DashboardLoader({
-  accidents,
-  baseHotspots,
-  isLoading,
-  title,
-  error,
-  t,
-  onVisible,
-}: {
-  accidents: AccidentRecord[] | null;
-  baseHotspots: AccidentHotspot[];
-  isLoading: boolean;
-  title: string;
-  error?: string;
-  t: Translation;
-  onVisible: () => void;
-}) {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const element = containerRef.current;
-    if (!element || accidents) return;
-
-    if (!('IntersectionObserver' in window)) {
-      onVisible();
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          onVisible();
-          observer.disconnect();
-        }
-      },
-      { rootMargin: '320px' },
-    );
-    observer.observe(element);
-    return () => observer.disconnect();
-  }, [accidents, onVisible]);
-
-  return (
-    <div className="dashboard-slot" ref={containerRef}>
-      {error ? <p className="error">{error}</p> : null}
-      {!accidents || isLoading ? (
-        <DashboardFallback title={title} />
-      ) : (
-        <Suspense fallback={<DashboardFallback title={title} />}>
-          <Dashboard accidents={accidents} baseHotspots={baseHotspots} t={t} />
-        </Suspense>
-      )}
-    </div>
   );
 }
 
@@ -108,11 +59,11 @@ export default function App() {
     }
   });
   const [filters, setFilters] = useState(defaultFilters);
-  const [mapMode, setMapMode] = useState<MapMode>('heatmap');
+  const [mapMode, setMapMode] = useState<MapMode>('hotspots');
+  const [activeTab, setActiveTab] = useState<AppTab>('crashMap');
   const [userLocation, setUserLocation] = useState<{ latitude: number; longitude: number }>();
   const {
     accidents,
-    heatmapPoints,
     hotspots,
     summary,
     isLoading,
@@ -121,6 +72,15 @@ export default function App() {
     accidentsError,
     loadAccidents,
   } = useAccidentData();
+  const {
+    accidents: crashDetailAccidents,
+    parties: crashDetailParties,
+    detailSummary: crashDetailSummary,
+    factorSummary: crashFactorSummary,
+    isLoading: isCrashDetailsLoading,
+    error: crashDetailsError,
+    loadCrashDetails,
+  } = useCrashDetailData();
   const t = translations[language];
 
   useEffect(() => {
@@ -147,25 +107,28 @@ export default function App() {
     }
   }, [loadAccidents, needsRawAccidents]);
 
+  useEffect(() => {
+    if (activeTab === 'crashFactors') {
+      void loadCrashDetails();
+    }
+  }, [activeTab, loadCrashDetails]);
+
   const districts = summary?.districts ?? [];
   const filteredAccidents = useMemo(
     () => (accidents ? filterAccidents(accidents, filters) : []),
     [accidents, filters],
   );
-  const filteredHeatmapPoints = useMemo(
-    () =>
-      accidents
-        ? buildHeatmapPoints(filteredAccidents)
-        : filterHeatmapPoints(heatmapPoints, filters),
-    [accidents, filteredAccidents, filters, heatmapPoints],
-  );
-  const visibleRecordCount = accidents
-    ? filteredAccidents.length
-    : filteredHeatmapPoints.reduce((total, point) => total + point.count, 0);
+  const visibleRecordCount = accidents ? filteredAccidents.length : (summary?.totalRecords ?? 0);
   const heroStats = [
     { label: 'Records', value: summary?.totalRecords.toLocaleString() ?? '...' },
     { label: 'A1', value: summary?.a1Count.toLocaleString() ?? '...' },
     { label: 'A2', value: summary?.a2Count.toLocaleString() ?? '...' },
+  ];
+  const tabs: Array<{ id: AppTab; label: string }> = [
+    { id: 'crashMap', label: t.crashMap },
+    { id: 'hotspotAnalysis', label: t.hotspotAnalysis },
+    { id: 'crashFactors', label: t.crashFactors },
+    { id: 'dataNotes', label: t.dataNotes },
   ];
 
   return (
@@ -189,47 +152,97 @@ export default function App() {
         </div>
       </header>
 
-      <main className="workspace">
-        <aside className="control-deck">
-          <DisclaimerNotice t={t} />
-          <FilterPanel filters={filters} districts={districts} t={t} onChange={setFilters} />
-          <NearbyHistoricalAccidents
-            filters={filters}
-            t={t}
-            onChange={setFilters}
-            onLocate={setUserLocation}
-          />
-        </aside>
-        {isLoading ? <p className="loading">Loading accident data...</p> : null}
-        {error ? <p className="error">{error}</p> : null}
-        {needsRawAccidents && isAccidentsLoading ? (
-          <p className="loading">Loading detailed accident records...</p>
-        ) : null}
-        {needsRawAccidents && accidentsError ? <p className="error">{accidentsError}</p> : null}
-        {!isLoading && !error ? (
+      <nav className="app-tabs" aria-label="App sections">
+        {tabs.map((tab) => (
+          <button
+            key={tab.id}
+            type="button"
+            className={activeTab === tab.id ? 'active' : ''}
+            aria-pressed={activeTab === tab.id}
+            onClick={() => setActiveTab(tab.id)}
+          >
+            {tab.label}
+          </button>
+        ))}
+      </nav>
+
+      <main className={`workspace workspace-${activeTab}`}>
+        {activeTab === 'crashMap' || activeTab === 'hotspotAnalysis' ? (
           <>
-            <AccidentMap
-              accidents={filteredAccidents}
-              heatmapPoints={filteredHeatmapPoints}
-              hotspots={hotspots}
-              filters={filters}
-              mode={mapMode}
-              language={language}
-              t={t}
-              userLocation={userLocation}
-              recordCount={visibleRecordCount}
-              onModeChange={setMapMode}
-            />
-            <DashboardLoader
-              accidents={accidents}
-              baseHotspots={hotspots}
-              isLoading={isAccidentsLoading}
-              title={t.dashboard}
-              error={accidentsError}
-              t={t}
-              onVisible={() => void loadAccidents()}
-            />
+            <aside className="control-deck">
+              <DisclaimerNotice t={t} />
+              <FilterPanel filters={filters} districts={districts} t={t} onChange={setFilters} />
+              {activeTab === 'crashMap' ? (
+                <NearbyHistoricalAccidents
+                  filters={filters}
+                  t={t}
+                  onChange={setFilters}
+                  onLocate={setUserLocation}
+                />
+              ) : null}
+            </aside>
+            {isLoading ? <p className="loading">Loading accident data...</p> : null}
+            {error ? <p className="error">{error}</p> : null}
+            {needsRawAccidents && isAccidentsLoading ? (
+              <p className="loading">Loading detailed accident records...</p>
+            ) : null}
+            {needsRawAccidents && accidentsError ? <p className="error">{accidentsError}</p> : null}
+            {!isLoading && !error ? (
+              <>
+                {activeTab === 'crashMap' ? (
+                  <AccidentMap
+                    accidents={filteredAccidents}
+                    hotspots={hotspots}
+                    filters={filters}
+                    mode={mapMode}
+                    language={language}
+                    t={t}
+                    userLocation={userLocation}
+                    recordCount={visibleRecordCount}
+                    onModeChange={setMapMode}
+                  />
+                ) : null}
+                <div className="dashboard-slot">
+                  <Suspense fallback={<DashboardFallback title={t.dashboard} />}>
+                    <Dashboard
+                      accidents={accidents ? filteredAccidents : null}
+                      baseHotspots={hotspots}
+                      summary={summary}
+                      t={t}
+                    />
+                  </Suspense>
+                </div>
+              </>
+            ) : null}
           </>
+        ) : null}
+
+        {activeTab === 'crashFactors' ? (
+          <div className="full-width-panel">
+            <Suspense fallback={<DashboardFallback title={t.crashFactors} />}>
+              <CrashFactorDashboard
+                accidents={crashDetailAccidents}
+                parties={crashDetailParties}
+                detailSummary={crashDetailSummary}
+                factorSummary={crashFactorSummary}
+                isLoading={isCrashDetailsLoading}
+                error={crashDetailsError}
+                t={t}
+              />
+            </Suspense>
+          </div>
+        ) : null}
+
+        {activeTab === 'dataNotes' ? (
+          <section className="dashboard data-notes full-width-panel">
+            <div className="section-heading">
+              <p className="eyebrow dark">Taipei Open Data</p>
+              <h2>{t.dataNotes}</h2>
+            </div>
+            <p>{t.dataDisclaimer}</p>
+            <p>{t.crashDetailDisclaimer}</p>
+            <p>{t.partyLevelNotice}</p>
+          </section>
         ) : null}
       </main>
 

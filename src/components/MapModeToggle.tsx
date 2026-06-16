@@ -9,9 +9,8 @@ type Props = {
 
 export function MapModeToggle({ mode, t, onChange }: Props) {
   const options: Array<{ mode: MapMode; label: string }> = [
-    { mode: 'heatmap', label: t.heatmap },
-    { mode: 'clusters', label: t.clusters },
     { mode: 'hotspots', label: t.hotspots },
+    { mode: 'clusters', label: t.clusters },
   ];
 
   return (

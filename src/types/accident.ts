@@ -30,35 +30,6 @@ export type AccidentHotspot = {
   years: number[];
 };
 
-export type HeatmapPoint = {
-  latitude: number;
-  longitude: number;
-  weight: number;
-  count: number;
-  year: number;
-  accidentType: AccidentType;
-  district?: string;
-  hour: number;
-  weekday: number;
-};
-
-export type HeatmapPointTuple = [
-  latitude: number,
-  longitude: number,
-  weight: number,
-  count: number,
-  year: number,
-  accidentType: AccidentType,
-  districtIndex: number,
-  hour: number,
-  weekday: number,
-];
-
-export type HeatmapDataset = {
-  districts: string[];
-  points: HeatmapPointTuple[];
-};
-
 export type AccidentSummary = {
   generatedAt: string;
   totalRecords: number;
@@ -74,7 +45,7 @@ export type AccidentSummary = {
 
 export type TimePeriod = 'all' | 'morning' | 'afternoon' | 'evening' | 'lateNight';
 export type WeekdayWeekend = 'all' | 'weekday' | 'weekend';
-export type MapMode = 'heatmap' | 'clusters' | 'hotspots';
+export type MapMode = 'clusters' | 'hotspots';
 
 export type AccidentFilters = {
   years: number[];
@@ -105,4 +76,191 @@ export type HourSummary = {
 export type DistrictSummary = {
   district: string;
   totalCount: number;
+};
+
+export type CoordinateStatus = 'valid' | 'missing' | 'outlier';
+
+export type CrashSeverity = 'a1_fatal_24h' | 'a2_injury_or_late_death' | 'unknown';
+
+export type CrashDetailPartyRecord = {
+  id: string;
+  accidentKey: string;
+
+  year: number;
+  month: number;
+  day: number;
+  hour: number;
+  minute: number;
+  occurredAt: string;
+
+  district?: string;
+  location: string;
+  longitude?: number;
+  latitude?: number;
+  coordinateStatus: CoordinateStatus;
+
+  deathWithin24hCount: number;
+  death2To30DayCount: number;
+  injuryCount: number;
+  severity: CrashSeverity;
+
+  partySequence?: string;
+  vehicleType?: string;
+  sex?: string;
+  age?: number | null;
+  ageGroup?: string;
+  injurySeverity?: string;
+  mainInjuryPart?: string;
+  protectionDevice?: string;
+  phoneUse?: string;
+  vehiclePurpose?: string;
+  partyActionStatus?: string;
+  drivingQualification?: string;
+  driverLicenseType?: string;
+  alcoholCondition?: string;
+  vehicleImpactPart1?: string;
+  vehicleImpactPart2?: string;
+  individualCauseCode?: string;
+  mainCauseCode?: string;
+  hitAndRun?: string;
+  occupation?: string;
+
+  weather?: string;
+  lighting?: string;
+  roadType?: string;
+  speedLimit?: number | null;
+  roadShape?: string;
+  accidentPosition?: string;
+  roadSurfaceCondition1?: string;
+  roadSurfaceCondition2?: string;
+  roadSurfaceCondition3?: string;
+  roadObstacle1?: string;
+  roadObstacle2?: string;
+  signal1?: string;
+  signal2?: string;
+  laneDirectionDivision?: string;
+  laneDivision1?: string;
+  laneDivision2?: string;
+  laneDivision3?: string;
+  accidentPattern?: string;
+
+  sourceResource: string;
+};
+
+export type CrashDetailAccidentRecord = {
+  id: string;
+  accidentKey: string;
+
+  year: number;
+  month: number;
+  day: number;
+  hour: number;
+  minute: number;
+  occurredAt: string;
+
+  district?: string;
+  location: string;
+  longitude?: number;
+  latitude?: number;
+  coordinateStatus: CoordinateStatus;
+
+  deathWithin24hCount: number;
+  death2To30DayCount: number;
+  injuryCount: number;
+  severity: CrashSeverity;
+
+  partyCount: number;
+  vehicleTypes: string[];
+
+  weather?: string;
+  lighting?: string;
+  roadType?: string;
+  speedLimit?: number | null;
+  roadShape?: string;
+  accidentPosition?: string;
+  roadSurfaceCondition1?: string;
+  roadSurfaceCondition2?: string;
+  roadSurfaceCondition3?: string;
+  roadObstacle1?: string;
+  roadObstacle2?: string;
+  signal1?: string;
+  signal2?: string;
+  accidentPattern?: string;
+  mainCauseCodes: string[];
+
+  sourceResources: string[];
+};
+
+export type CountSummary = {
+  label: string;
+  count: number;
+};
+
+export type CrashDetailSummary = {
+  generatedAt: string;
+  partyRecordCount: number;
+  accidentRecordCount: number;
+  validCoordinateAccidentCount: number;
+  missingCoordinatePartyCount: number;
+  outlierCoordinatePartyCount: number;
+  deathWithin24hCount: number;
+  death2To30DayCount: number;
+  injuryCount: number;
+  years: number[];
+  months: number[];
+  districts: string[];
+  byYear: Array<{ year: number; totalCount: number; fatalCount: number; injuryOrLateDeathCount: number }>;
+  byMonth: Array<{ month: number; totalCount: number }>;
+  byHour: Array<{ hour: number; totalCount: number }>;
+  byDistrict: CountSummary[];
+  bySeverity: CountSummary[];
+  byWeather: CountSummary[];
+  byLighting: CountSummary[];
+  byRoadType: CountSummary[];
+  bySpeedLimit: CountSummary[];
+  byRoadShape: CountSummary[];
+  bySignal: CountSummary[];
+  byAccidentPattern: CountSummary[];
+  byMainCauseCode: CountSummary[];
+};
+
+export type CrashFactorSummary = {
+  generatedAt: string;
+  partyRecordCount: number;
+  byVehicleType: CountSummary[];
+  byAgeGroup: CountSummary[];
+  bySex: CountSummary[];
+  byInjurySeverity: CountSummary[];
+  byAlcoholCondition: CountSummary[];
+  byProtectionDevice: CountSummary[];
+  byPhoneUse: CountSummary[];
+  byHitAndRun: CountSummary[];
+  byDrivingQualification: CountSummary[];
+  byDriverLicenseType: CountSummary[];
+};
+
+export type CrashDetailFilters = {
+  years: number[];
+  months: number[];
+  district: string;
+  severity: 'all' | CrashSeverity;
+  vehicleType: string;
+  weather: string;
+  lighting: string;
+  roadType: string;
+  speedLimit: string;
+  roadShape: string;
+  accidentPosition: string;
+  roadSurfaceCondition: string;
+  signalCondition: string;
+  accidentPattern: string;
+  sex: string;
+  ageGroup: string;
+  injurySeverity: string;
+  alcoholCondition: string;
+  protectionDevice: string;
+  phoneUse: string;
+  causeCode: string;
+  hitAndRun: string;
+  search: string;
 };

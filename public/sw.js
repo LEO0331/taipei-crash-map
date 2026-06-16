@@ -4,9 +4,12 @@ const toAppPath = (path) => `${BASE_PATH}${path.replace(/^\/+/, '')}`;
 const CORE_ASSETS = [
   BASE_PATH,
   toAppPath('manifest.webmanifest'),
-  toAppPath('data/heatmap-points.json'),
   toAppPath('data/accident-summary.json'),
   toAppPath('data/accident-hotspots.json'),
+  toAppPath('data/crash-detail-party-records.json'),
+  toAppPath('data/crash-detail-accidents.json'),
+  toAppPath('data/crash-detail-summary.json'),
+  toAppPath('data/crash-factor-summary.json'),
 ];
 
 self.addEventListener('install', (event) => {

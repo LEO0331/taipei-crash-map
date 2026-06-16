@@ -2,7 +2,7 @@
 
 ## Current State
 
-**Last Updated:** 2026-06-15 08:35 CST  
+**Last Updated:** 2026-06-16 15:30 CST  
 **Active Feature:** feat-004 - Accident Data Conversion Integrity
 
 ## Status
@@ -31,11 +31,20 @@
 - [x] Updated service worker precache to use compact heatmap data instead of full raw accidents.
 - [x] Added tests for compact heatmap point building, filtering, and tuple dataset encoding.
 - [x] Restored dashboard column sizing after lazy loader wrapper made it appear too narrow.
+- [x] Removed heatmap mode, heatmap data generation, and heatmap-only assets.
+- [x] Changed default map mode to high-frequency hotspots.
+- [x] Stopped dashboard from auto-fetching the full raw accident file on first entry.
+- [x] Dashboard now renders initial cards/charts from `accident-summary.json` and hotspots.
+- [x] Added offline fetch and conversion scripts for `臺北市死傷交通事故資料`.
+- [x] Added `CrashDetailPartyRecord` and deduplicated `CrashDetailAccidentRecord` contracts.
+- [x] Generated crash-detail static JSON from Taipei Open Data sample resource `83d6d29c-6801-41a2-95c6-47d551646db3`.
+- [x] Added `事故特徵` / `Crash Factors` app tab with aggregate crash detail filters, summary cards, and charts.
+- [x] Kept involved-party fields aggregated; no person-level detail is shown in map popups.
 
 ### What's In Progress
 
 - [ ] Prepare commit or continue with the next feature.
-  - Details: Current first-load data changes are uncommitted.
+  - Details: Current heatmap-removal and crash-detail dataset changes are uncommitted.
   - Blockers: None.
 
 ### What's Next
@@ -47,6 +56,7 @@
 ## Blockers / Risks
 
 - [ ] Generated data conversion is not part of the default harness check because it depends on CSV files in `/Users/Leo/Downloads`.
+- [ ] Crash-detail public JSON generated from the sample API resource is large: party records ~28 MB and accident records ~19 MB before HTTP compression.
 - [ ] UI changes still need browser checks when layout, map, or PWA behavior changes.
 
 ## Decisions Made
@@ -77,7 +87,12 @@ Existing uncommitted source files before harness work:
 - [x] Cleanup verification: `npm test` after each cleanup pass; final `./init.sh`, `node --check public/sw.js`, and `npm audit --audit-level=high` passed on 2026-06-15.
 - [x] First-load data verification: `./init.sh`, `node --check public/sw.js`, `npm audit --audit-level=high`, and Playwright network smoke checks passed on 2026-06-15. Initial data requests included `heatmap-points.json`, `accident-hotspots.json`, and `accident-summary.json`; `accidents.json` loaded only after switching to cluster mode.
 - [x] Dashboard layout verification: `npm test`, `npm run build`, and Playwright desktop measurement passed on 2026-06-15. Map, dashboard slot, and dashboard all measured 994px wide at 1440px viewport.
+- [x] Heatmap removal verification: `npm test`, `npm run build`, `node --check public/sw.js`, and Playwright smoke check passed on 2026-06-16. Initial map buttons are `高頻事故地點` and `群聚點位`; dashboard has no `Failed to fetch`; initial data requests are only `accident-summary.json` and `accident-hotspots.json`.
+- [x] Crash-detail fetch verification: `npm run fetch:crash-details` passed on 2026-06-16; saved 23 pages / 22,762 rows from resource `83d6d29c-6801-41a2-95c6-47d551646db3` into `data/raw/crash-details`.
+- [x] Crash-detail conversion verification: `npm run convert:crash-details` passed on 2026-06-16; converted 22,762 party rows, deduplicated 22,762 accident records, reported 0 missing coordinates and 2 coordinate outliers.
+- [x] Crash-detail test/build verification: `npm test` passed 1 file / 14 tests and `npm run build` passed on 2026-06-16.
+- [x] Crash Factors browser smoke: desktop and mobile checks passed on 2026-06-16. Tabs render as `事故地圖`, `熱點分析`, `事故特徵`, `資料說明`; first entry has no `Failed to fetch`; no horizontal overflow; Crash Factors loads 22,762 accident and 22,762 involved-party records.
 
 ## Notes for Next Session
 
-Start by reading `AGENTS.md`, then check `feature_list.json` and this progress log. The current uncommitted diff implements compact first-load heatmap data and lazy full accident loading.
+Start by reading `AGENTS.md`, then check `feature_list.json` and this progress log. The current uncommitted diff removes heatmap mode, keeps the existing hotspot map as default, adds the second crash-detail dataset pipeline, and adds the lazy `事故特徵` / `Crash Factors` tab.

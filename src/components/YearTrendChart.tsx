@@ -9,16 +9,25 @@ import {
   YAxis,
 } from 'recharts';
 import type { AccidentRecord } from '../types/accident';
+import type { YearSummary } from '../types/accident';
 import type { Translation } from '../i18n';
 import { aggregateByYear } from '../utils/accidents';
 
-export function YearTrendChart({ accidents, t }: { accidents: AccidentRecord[]; t: Translation }) {
-  const data = aggregateByYear(accidents);
+export function YearTrendChart({
+  accidents,
+  data,
+  t,
+}: {
+  accidents: AccidentRecord[];
+  data?: YearSummary[];
+  t: Translation;
+}) {
+  const chartData = data ?? aggregateByYear(accidents);
   return (
     <section className="chart-block">
       <h3>{t.typeByYear}</h3>
       <ResponsiveContainer width="100%" height={240}>
-        <BarChart data={data}>
+        <BarChart data={chartData}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="year" />
           <YAxis width={42} />

@@ -30,7 +30,7 @@
       "description": "Protect the CSV-to-static-JSON conversion pipeline, coordinate validation, summaries, hotspots, and tests.",
       "dependencies": ["feat-001"],
       "status": "in-progress",
-      "evidence": "Added compact heatmap dataset generation, tuple dataset tests, and lazy raw accident loading. Full CSV conversion was not rerun because source CSVs live outside the repo; heatmap-points.json was generated from existing public/data/accidents.json."
+      "evidence": "Removed heatmap data generation after UI removal. Added crash-detail fetch/convert scripts for 臺北市死傷交通事故資料, party-level and deduplicated accident-level models, generated static JSON from sample resource 83d6d29c-6801-41a2-95c6-47d551646db3, and added conversion/filter tests. Existing hotspot map pipeline remains intact."
     },
     {
       "id": "feat-005",
