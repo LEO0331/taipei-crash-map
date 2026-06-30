@@ -1,0 +1,176 @@
+{
+  "generatedAt": "2026-06-30T07:21:19.766Z",
+  "trafficViolationReportTop5Statistics": {
+    "totalRecords": 25,
+    "minYear": 2015,
+    "maxYear": 2019,
+    "latestYear": 2019,
+    "uniqueViolationItemCount": 6,
+    "uniqueViolationCategoryCount": 5,
+    "latestYearTotalReportCount": 577477,
+    "latestYearTopItems": [
+      {
+        "rankWithinYear": 1,
+        "violationItem": "違規臨時停車(第55條)",
+        "violationItemCategory": "parking_or_stopping",
+        "reportCount": 290280,
+        "shareWithinYearPercent": 50.26693703818507
+      },
+      {
+        "rankWithinYear": 2,
+        "violationItem": "違規停車(第56條)",
+        "violationItemCategory": "parking_or_stopping",
+        "reportCount": 120690,
+        "shareWithinYearPercent": 20.899533661080874
+      },
+      {
+        "rankWithinYear": 3,
+        "violationItem": "違規轉彎或變換車道(第48條)",
+        "violationItemCategory": "lane_or_turn",
+        "reportCount": 101852,
+        "shareWithinYearPercent": 17.637412399108534
+      },
+      {
+        "rankWithinYear": 4,
+        "violationItem": "違規爭道(第45條)",
+        "violationItemCategory": "other",
+        "reportCount": 42047,
+        "shareWithinYearPercent": 7.281155786291056
+      },
+      {
+        "rankWithinYear": 5,
+        "violationItem": "闖紅燈(第53條)",
+        "violationItemCategory": "red_light_or_signal",
+        "reportCount": 22608,
+        "shareWithinYearPercent": 3.9149611153344637
+      }
+    ],
+    "byYear": [
+      {
+        "year": 2015,
+        "totalReportCount": 120226,
+        "itemCount": 5,
+        "topViolationItem": "違規停車(第56條)",
+        "topViolationReportCount": 51370
+      },
+      {
+        "year": 2016,
+        "totalReportCount": 202492,
+        "itemCount": 5,
+        "topViolationItem": "違規停車(第56條)",
+        "topViolationReportCount": 77154
+      },
+      {
+        "year": 2017,
+        "totalReportCount": 171775,
+        "itemCount": 5,
+        "topViolationItem": "違規停車(第56條)",
+        "topViolationReportCount": 86258
+      },
+      {
+        "year": 2018,
+        "totalReportCount": 230962,
+        "itemCount": 5,
+        "topViolationItem": "違規停車(第56條)",
+        "topViolationReportCount": 97191
+      },
+      {
+        "year": 2019,
+        "totalReportCount": 577477,
+        "itemCount": 5,
+        "topViolationItem": "違規臨時停車(第55條)",
+        "topViolationReportCount": 290280,
+        "crashCount": 22918
+      }
+    ],
+    "byViolationItem": [
+      {
+        "violationItem": "違規停車(第56條)",
+        "violationItemCategory": "parking_or_stopping",
+        "recordCount": 5,
+        "firstYear": 2015,
+        "latestYear": 2019,
+        "latestReportCount": 120690,
+        "totalReportCountAcrossYears": 432663,
+        "maxAnnualReportCount": 120690
+      },
+      {
+        "violationItem": "違規臨時停車(第55條)",
+        "violationItemCategory": "parking_or_stopping",
+        "recordCount": 3,
+        "firstYear": 2015,
+        "latestYear": 2019,
+        "latestReportCount": 290280,
+        "totalReportCountAcrossYears": 385037,
+        "maxAnnualReportCount": 290280
+      },
+      {
+        "violationItem": "違規爭道(第45條)",
+        "violationItemCategory": "other",
+        "recordCount": 5,
+        "firstYear": 2015,
+        "latestYear": 2019,
+        "latestReportCount": 42047,
+        "totalReportCountAcrossYears": 149432,
+        "maxAnnualReportCount": 42047
+      },
+      {
+        "violationItem": "違規轉彎或變換車道(第48條)",
+        "violationItemCategory": "lane_or_turn",
+        "recordCount": 5,
+        "firstYear": 2015,
+        "latestYear": 2019,
+        "latestReportCount": 101852,
+        "totalReportCountAcrossYears": 263215,
+        "maxAnnualReportCount": 101852
+      },
+      {
+        "violationItem": "闖紅燈(第53條)",
+        "violationItemCategory": "red_light_or_signal",
+        "recordCount": 5,
+        "firstYear": 2015,
+        "latestYear": 2019,
+        "latestReportCount": 22608,
+        "totalReportCountAcrossYears": 66549,
+        "maxAnnualReportCount": 22608
+      },
+      {
+        "violationItem": "未繫安全帶或未戴安全帽(第31條)",
+        "violationItemCategory": "helmet_or_seatbelt",
+        "recordCount": 2,
+        "firstYear": 2017,
+        "latestYear": 2018,
+        "latestReportCount": 3709,
+        "totalReportCountAcrossYears": 6036,
+        "maxAnnualReportCount": 3709
+      }
+    ],
+    "byViolationCategory": [
+      {
+        "violationItemCategory": "parking_or_stopping",
+        "recordCount": 8,
+        "totalReportCountAcrossYears": 817700
+      },
+      {
+        "violationItemCategory": "other",
+        "recordCount": 5,
+        "totalReportCountAcrossYears": 149432
+      },
+      {
+        "violationItemCategory": "lane_or_turn",
+        "recordCount": 5,
+        "totalReportCountAcrossYears": 263215
+      },
+      {
+        "violationItemCategory": "red_light_or_signal",
+        "recordCount": 5,
+        "totalReportCountAcrossYears": 66549
+      },
+      {
+        "violationItemCategory": "helmet_or_seatbelt",
+        "recordCount": 2,
+        "totalReportCountAcrossYears": 6036
+      }
+    ]
+  }
+}

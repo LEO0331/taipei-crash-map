@@ -4,6 +4,7 @@ import type { Language } from './i18n';
 import { translations } from './i18n';
 import { useAccidentData } from './hooks/useAccidentData';
 import { useCrashDetailData } from './hooks/useCrashDetailData';
+import { useTrafficViolationReportData } from './hooks/useTrafficViolationReportData';
 import { filterAccidents } from './utils/accidents';
 import { LanguageToggle } from './components/LanguageToggle';
 import { FilterPanel } from './components/FilterPanel';
@@ -21,8 +22,11 @@ const Dashboard = lazy(() =>
 const CrashFactorDashboard = lazy(() =>
   import('./components/CrashFactorDashboard').then((module) => ({ default: module.CrashFactorDashboard })),
 );
+const TrafficViolationReportDashboard = lazy(() =>
+  import('./components/TrafficViolationReportDashboard').then((module) => ({ default: module.TrafficViolationReportDashboard })),
+);
 
-type AppTab = 'crashMap' | 'hotspotAnalysis' | 'crashFactors' | 'dataNotes';
+type AppTab = 'crashMap' | 'hotspotAnalysis' | 'crashFactors' | 'reportedViolations' | 'dataNotes';
 
 function DashboardFallback({ title }: { title: string }) {
   return (
@@ -81,6 +85,7 @@ export default function App() {
     error: crashDetailsError,
     loadCrashDetails,
   } = useCrashDetailData();
+  const trafficViolationReport = useTrafficViolationReportData();
   const t = translations[language];
 
   useEffect(() => {
@@ -128,6 +133,7 @@ export default function App() {
     { id: 'crashMap', label: t.crashMap },
     { id: 'hotspotAnalysis', label: t.hotspotAnalysis },
     { id: 'crashFactors', label: t.crashFactors },
+    { id: 'reportedViolations', label: t.reportedViolationsTop5 },
     { id: 'dataNotes', label: t.dataNotes },
   ];
 
@@ -233,6 +239,21 @@ export default function App() {
           </div>
         ) : null}
 
+        {activeTab === 'reportedViolations' ? (
+          <div className="full-width-panel">
+            <Suspense fallback={<DashboardFallback title={t.trafficViolationReportTop5Statistics} />}>
+              <TrafficViolationReportDashboard
+                records={trafficViolationReport.records}
+                summary={trafficViolationReport.summary}
+                crashSummary={summary}
+                isLoading={trafficViolationReport.isLoading}
+                error={trafficViolationReport.error}
+                t={t}
+              />
+            </Suspense>
+          </div>
+        ) : null}
+
         {activeTab === 'dataNotes' ? (
           <section className="dashboard data-notes full-width-panel">
             <div className="section-heading">
@@ -242,6 +263,8 @@ export default function App() {
             <p>{t.dataDisclaimer}</p>
             <p>{t.crashDetailDisclaimer}</p>
             <p>{t.partyLevelNotice}</p>
+            <p>{t.trafficViolationReportDataNote}</p>
+            <p>{t.trafficViolationReportInterpretationNote}</p>
           </section>
         ) : null}
       </main>

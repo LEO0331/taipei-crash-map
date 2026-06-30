@@ -402,6 +402,21 @@ a {
   margin: 0;
 }
 
+.module-subtitle,
+.small-note {
+  color: var(--muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.violation-dashboard .notice {
+  box-shadow: none;
+}
+
+.violation-filters {
+  box-shadow: none;
+}
+
 .map-shell {
   min-width: 0;
   overflow: hidden;

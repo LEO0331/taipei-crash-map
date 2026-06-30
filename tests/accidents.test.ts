@@ -17,6 +17,12 @@ import {
 } from '../src/utils/accidents';
 import { renderAccidentPopup } from '../src/components/AccidentPopup';
 import { translations } from '../src/i18n';
+import {
+  classifyTrafficViolationItem,
+  normalizeTrafficViolationRows,
+  parseRocYear,
+  parseReportCount,
+} from '../src/utils/trafficViolations';
 import type { AccidentRecord } from '../src/types/accident';
 
 const baseRecord: AccidentRecord = {
@@ -148,6 +154,31 @@ describe('accident utilities', () => {
     expect(popup).toContain('&lt;img src=x onerror=alert(1)&gt;');
     expect(popup).not.toContain('<script>');
     expect(popup).not.toContain('<img src=x');
+  });
+});
+
+describe('traffic violation report utilities', () => {
+  it('parses ROC years and missing counts without treating missing as zero', () => {
+    expect(parseRocYear('104年')).toMatchObject({ rocYear: 104, year: 2015 });
+    expect(parseRocYear('2023')).toMatchObject({ year: 2023 });
+    expect(parseReportCount('--')).toBeUndefined();
+    expect(parseReportCount('0')).toBe(0);
+  });
+
+  it('classifies violation items and derives dense rank, share, and YoY by item', () => {
+    const records = normalizeTrafficViolationRows([
+      { 序號: '1', 年度: '104', 縣市: '臺北市', 縣市代碼: '063000', 違規項目: '違規停車', 筆數: '100' },
+      { 序號: '2', 年度: '104', 縣市: '臺北市', 縣市代碼: '063000', 違規項目: '闖紅燈', 筆數: '50' },
+      { 序號: '3', 年度: '105', 縣市: '臺北市', 縣市代碼: '063000', 違規項目: '違規停車', 筆數: '150' },
+    ]);
+
+    expect(classifyTrafficViolationItem('違規臨時停車')).toBe('parking_or_stopping');
+    expect(records.find((record) => record.year === 2015 && record.violationItem === '違規停車')).toMatchObject({
+      rankWithinYear: 1,
+      shareWithinYearPercent: 66.66666666666666,
+      isTopItemWithinYear: true,
+    });
+    expect(records.find((record) => record.year === 2016)?.reportCountYoYChangePercent).toBe(50);
   });
 });
 

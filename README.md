@@ -1,4 +1,4 @@
-# Taipei Traffic Accident Hotspot Map / 台北交通事故斑點地圖
+# Taipei Crash Map / 台北市道路交通事故斑點圖
 
 Mobile-first bilingual web app for exploring Taipei A1/A2 road traffic accident hotspot records from 2019 to 2025. The app uses Vite, React, TypeScript, Leaflet, OpenStreetMap tiles, static JSON data, and a PWA-ready app shell.
 
@@ -7,6 +7,8 @@ Mobile-first bilingual web app for exploring Taipei A1/A2 road traffic accident 
 The main map comes from the Taipei Open Data dataset `臺北市道路交通事故斑點圖` and the seven local CSV files for ROC years 108-114.
 
 The `事故特徵` / `Crash Factors` tab uses a second Taipei Open Data dataset, `臺北市死傷交通事故資料`, to summarize fatal/injury crash detail records and involved-party characteristics. This detail dataset includes involved-party fields such as vehicle type, sex, age, injury severity, protection device, phone use, driving qualification, alcohol condition, hit-and-run flag, and occupation.
+
+The `檢舉違規Top 5` / `Reported Violations Top 5` tab uses `臺北市民眾檢舉前五大違規項目統計表`. It is annual citywide top-five citizen-reported traffic violation statistics only. It has no coordinates, roads, intersections, locations, or districts, so the app does not create map markers for it.
 
 Official field meanings:
 
@@ -65,6 +67,25 @@ Crash-detail rows are handled at two data levels:
 
 The dashboard avoids counting party rows as unique accidents. Accident-level records power accident counts and trend/environment distributions; party-level records power aggregate vehicle, age group, sex, injury severity, alcohol, protection-device, phone-use, driving-qualification, license-type, and hit-and-run distributions.
 
+Fetch top-five reported violation CSV resources:
+
+```bash
+npm run data:fetch:reported-violations
+```
+
+Convert reported violation statistics:
+
+```bash
+npm run data:convert:reported-violations
+```
+
+The reported-violation conversion reads CSV files under `data/raw/traffic-violation-report-top5-statistics/`, converts ROC years to Gregorian years, preserves city codes as text, classifies violation items, derives rank within year, share within year, YoY change by violation item, and writes:
+
+- `public/data/traffic-violation-report-top5-statistics-records.json`
+- `public/data/traffic-violation-report-top5-statistics-summary.json`
+- `public/data/traffic-violation-report-top5-statistics-latest.json`
+- `public/data/crash-dashboard-summary.json`
+
 ## Development
 
 Install dependencies:
@@ -105,6 +126,7 @@ npm run preview
 - Optional browser geolocation for nearby historical accident records at 300m, 500m, or 1km
 - Dashboard cards and charts for selected filters
 - Crash Factors tab for aggregate fatal/injury crash detail and involved-party distributions
+- Traffic violation context: annual top-five citizen-reported traffic violation statistics / 交通違規背景：年度民眾檢舉前五大違規項目統計
 - Traditional Chinese default UI with persisted English toggle
 - PWA manifest, icons, mobile viewport, and service worker cache
 
@@ -115,6 +137,8 @@ The dashboard reports historical accident counts in the public dataset. Counts a
 Use wording such as `事故較集中`, `higher concentration of recorded accidents`, and `historical accident count`.
 
 The crash-detail dashboard summarizes fatal/injury crash detail records and involved-party characteristics from public data. Person-level fields are shown only in aggregate charts and are not displayed in map popups. Counts are historical records, not normalized risk scores, and do not imply causation or real-time risk.
+
+Reported violation statistics are annual aggregate reporting counts. They do not show crash causes, enforcement intensity, real-time risk, legal conclusions, safe/unsafe routes, or exact violation locations.
 
 ## Deployment Notes
 

@@ -10,6 +10,11 @@ const CORE_ASSETS = [
   toAppPath('data/crash-detail-accidents.json'),
   toAppPath('data/crash-detail-summary.json'),
   toAppPath('data/crash-factor-summary.json'),
+  toAppPath('data/traffic-violation-report-top5-statistics-records.json'),
+  toAppPath('data/traffic-violation-report-top5-statistics-summary.json'),
+  toAppPath('data/traffic-violation-report-top5-statistics-latest.json'),
+  toAppPath('data/crash-dashboard-summary.json'),
+  toAppPath('data/conversion-report.json'),
 ];
 
 self.addEventListener('install', (event) => {

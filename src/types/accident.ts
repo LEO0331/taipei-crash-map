@@ -239,6 +239,93 @@ export type CrashFactorSummary = {
   byDriverLicenseType: CountSummary[];
 };
 
+export type CrashDashboardModule =
+  | 'crash_points'
+  | 'crash_factors'
+  | 'crash_trends'
+  | 'district_summary'
+  | 'traffic_violation_report_top5_statistics'
+  | 'data_table'
+  | 'data_notes';
+
+export type TrafficViolationReportItemCategory =
+  | 'parking_or_stopping'
+  | 'red_light_or_signal'
+  | 'lane_or_turn'
+  | 'speed'
+  | 'license_or_registration'
+  | 'mobile_phone_or_distraction'
+  | 'helmet_or_seatbelt'
+  | 'pedestrian_or_crosswalk'
+  | 'other'
+  | 'unknown';
+
+export type TrafficViolationReportTop5StatisticRecord = {
+  id: string;
+  module: 'traffic_violation_report_top5_statistics';
+  sourceSequenceNumber?: number;
+  yearRaw?: string;
+  rocYear?: number;
+  year: number;
+  cityName?: string;
+  cityNameNormalized?: string;
+  cityCode?: string;
+  cityCodeNormalized?: string;
+  violationItemRaw: string;
+  violationItem: string;
+  violationItemNormalized?: string;
+  violationItemCategory: TrafficViolationReportItemCategory;
+  reportCount?: number;
+  rankWithinYear?: number;
+  shareWithinYearPercent?: number;
+  reportCountYoYChangePercent?: number;
+  firstYearReportCount?: number;
+  changeFromFirstYearPercent?: number;
+  isTopItemWithinYear: boolean;
+  source: string;
+  sourceAgency: string;
+};
+
+export type TrafficViolationReportTop5StatisticSummary = {
+  totalRecords: number;
+  minYear?: number;
+  maxYear?: number;
+  latestYear?: number;
+  uniqueViolationItemCount: number;
+  uniqueViolationCategoryCount: number;
+  latestYearTotalReportCount?: number;
+  latestYearTopItems: Array<{
+    rankWithinYear?: number;
+    violationItem: string;
+    violationItemCategory: TrafficViolationReportItemCategory;
+    reportCount?: number;
+    shareWithinYearPercent?: number;
+  }>;
+  byYear: Array<{
+    year: number;
+    totalReportCount: number;
+    itemCount: number;
+    topViolationItem?: string;
+    topViolationReportCount?: number;
+    crashCount?: number;
+  }>;
+  byViolationItem: Array<{
+    violationItem: string;
+    violationItemCategory: TrafficViolationReportItemCategory;
+    recordCount: number;
+    firstYear?: number;
+    latestYear?: number;
+    latestReportCount?: number;
+    totalReportCountAcrossYears: number;
+    maxAnnualReportCount?: number;
+  }>;
+  byViolationCategory: Array<{
+    violationItemCategory: TrafficViolationReportItemCategory;
+    recordCount: number;
+    totalReportCountAcrossYears: number;
+  }>;
+};
+
 export type CrashDetailFilters = {
   years: number[];
   months: number[];

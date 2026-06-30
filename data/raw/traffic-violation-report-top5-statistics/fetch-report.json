@@ -1,0 +1,31 @@
+{
+  "downloadedAt": "2026-06-30T07:13:37.064Z",
+  "downloads": [
+    {
+      "url": "https://data.taipei/api/frontstage/tpeod/dataset/resource.download?rid=8c105798-8fb5-46af-8ffb-693b24007494",
+      "file": "resource-1.csv",
+      "size": 265
+    },
+    {
+      "url": "https://data.taipei/api/frontstage/tpeod/dataset/resource.download?rid=e64741ea-f8dc-41ec-a236-e872cbc6019c",
+      "file": "resource-2.csv",
+      "size": 265
+    },
+    {
+      "url": "https://data.taipei/api/frontstage/tpeod/dataset/resource.download?rid=c4c925ed-2ee6-4ad7-b8c9-39190a529fb5",
+      "file": "resource-3.csv",
+      "size": 275
+    },
+    {
+      "url": "https://data.taipei/api/frontstage/tpeod/dataset/resource.download?rid=cd1e16b0-a81f-485d-b26f-c44b04a675ef",
+      "file": "resource-4.csv",
+      "size": 275
+    },
+    {
+      "url": "https://data.taipei/api/frontstage/tpeod/dataset/resource.download?rid=c76c0eb1-7904-4888-82ca-830d5dc428e5",
+      "file": "resource-5.csv",
+      "size": 269
+    }
+  ],
+  "warnings": []
+}

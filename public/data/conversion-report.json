@@ -102,5 +102,45 @@
       "invalidTypes": 0,
       "decodeReplacementCharacters": 1
     }
-  ]
+  ],
+  "trafficViolationReportTop5Statistics": {
+    "generatedAt": "2026-06-30T07:21:19.612Z",
+    "source": "臺北市民眾檢舉前五大違規項目統計表",
+    "sourceAgencyOfficialMetadata": "警察局交通大隊",
+    "rankingMethod": "Dense rank by reportCount descending within Gregorian year.",
+    "files": [
+      {
+        "file": "resource-1.csv",
+        "encoding": "cp950",
+        "rowCount": 5
+      },
+      {
+        "file": "resource-2.csv",
+        "encoding": "cp950",
+        "rowCount": 5
+      },
+      {
+        "file": "resource-3.csv",
+        "encoding": "cp950",
+        "rowCount": 5
+      },
+      {
+        "file": "resource-4.csv",
+        "encoding": "cp950",
+        "rowCount": 5
+      },
+      {
+        "file": "resource-5.csv",
+        "encoding": "cp950",
+        "rowCount": 5
+      }
+    ],
+    "rawRows": 25,
+    "convertedRows": 25,
+    "duplicateYearCityCodeViolationItemPairs": [],
+    "notes": [
+      "No geocoding is performed.",
+      "No map markers are generated because the dataset has no coordinates, roads, intersections, or districts."
+    ]
+  }
 }

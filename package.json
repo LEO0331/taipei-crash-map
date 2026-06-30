@@ -10,6 +10,8 @@
     "convert:accidents": "tsx scripts/convertAccidents.ts",
     "fetch:crash-details": "tsx scripts/fetchCrashDetailData.ts",
     "convert:crash-details": "tsx scripts/convertCrashDetailData.ts",
+    "data:fetch:reported-violations": "tsx scripts/fetchTrafficViolationReportTop5Statistics.ts",
+    "data:convert:reported-violations": "tsx scripts/convertTrafficViolationReportTop5Statistics.ts && tsx scripts/buildTrafficViolationReportTop5Summary.ts",
     "test": "vitest run"
   },
   "repository": {
