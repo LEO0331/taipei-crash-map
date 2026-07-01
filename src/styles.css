@@ -743,6 +743,7 @@ td {
   }
 
   .workspace-crashFactors,
+  .workspace-reportedViolations,
   .workspace-dataNotes {
     grid-template-columns: 1fr;
   }
