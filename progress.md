@@ -95,4 +95,10 @@ Existing uncommitted source files before harness work:
 
 ## Notes for Next Session
 
+- Split project-facing documentation into an English `README.md` and Traditional Chinese `README-zh.md` on 2026-08-13. Both include reciprocal links and aligned sections for scope, decision limits, data conversion, development, verification, and deployment.
+
+- Added `dashboard-decision-insights-and-technical-notes.md` on 2026-08-13 after a whole-project customer/technical review. It records decision boundaries, customer workflow, data-governance checklist, and prioritised follow-ups for cache size, dashboard controls, lazy loading, freshness, tests, and public-data minimisation.
+
+- Added the separate `Traffic Accident Appraisal Reconsiderations` module on 2026-08-13. It converts the official 12-field monthly CSV from ROC year/month to local static records plus metadata, preserves raw values, and uses no map layer. Verification: `npm run data:convert:appraisal-reconsiderations`, `npm run build`, and `npm test` passed (16 tests).
+
 Start by reading `AGENTS.md`, then check `feature_list.json` and this progress log. The current uncommitted diff removes heatmap mode, keeps the existing hotspot map as default, adds the second crash-detail dataset pipeline, and adds the lazy `事故特徵` / `Crash Factors` tab.

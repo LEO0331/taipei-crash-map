@@ -5,6 +5,7 @@ import { translations } from './i18n';
 import { useAccidentData } from './hooks/useAccidentData';
 import { useCrashDetailData } from './hooks/useCrashDetailData';
 import { useTrafficViolationReportData } from './hooks/useTrafficViolationReportData';
+import { useAppraisalReconsiderationData } from './hooks/useAppraisalReconsiderationData';
 import { filterAccidents } from './utils/accidents';
 import { LanguageToggle } from './components/LanguageToggle';
 import { FilterPanel } from './components/FilterPanel';
@@ -25,8 +26,11 @@ const CrashFactorDashboard = lazy(() =>
 const TrafficViolationReportDashboard = lazy(() =>
   import('./components/TrafficViolationReportDashboard').then((module) => ({ default: module.TrafficViolationReportDashboard })),
 );
+const AppraisalReconsiderationDashboard = lazy(() =>
+  import('./components/AppraisalReconsiderationDashboard').then((module) => ({ default: module.AppraisalReconsiderationDashboard })),
+);
 
-type AppTab = 'crashMap' | 'hotspotAnalysis' | 'crashFactors' | 'reportedViolations' | 'dataNotes';
+type AppTab = 'crashMap' | 'hotspotAnalysis' | 'crashFactors' | 'reportedViolations' | 'appraisalReconsiderations' | 'dataNotes';
 
 function DashboardFallback({ title }: { title: string }) {
   return (
@@ -86,6 +90,7 @@ export default function App() {
     loadCrashDetails,
   } = useCrashDetailData();
   const trafficViolationReport = useTrafficViolationReportData();
+  const appraisalReconsiderations = useAppraisalReconsiderationData();
   const t = translations[language];
 
   useEffect(() => {
@@ -134,6 +139,7 @@ export default function App() {
     { id: 'hotspotAnalysis', label: t.hotspotAnalysis },
     { id: 'crashFactors', label: t.crashFactors },
     { id: 'reportedViolations', label: t.reportedViolationsTop5 },
+    { id: 'appraisalReconsiderations', label: t.appraisalReconsiderations },
     { id: 'dataNotes', label: t.dataNotes },
   ];
 
@@ -254,6 +260,14 @@ export default function App() {
           </div>
         ) : null}
 
+        {activeTab === 'appraisalReconsiderations' ? (
+          <div className="full-width-panel">
+            <Suspense fallback={<DashboardFallback title={t.appraisalReconsiderations} />}>
+              <AppraisalReconsiderationDashboard {...appraisalReconsiderations} t={t} />
+            </Suspense>
+          </div>
+        ) : null}
+
         {activeTab === 'dataNotes' ? (
           <section className="dashboard data-notes full-width-panel">
             <div className="section-heading">
@@ -265,6 +279,7 @@ export default function App() {
             <p>{t.partyLevelNotice}</p>
             <p>{t.trafficViolationReportDataNote}</p>
             <p>{t.trafficViolationReportInterpretationNote}</p>
+            <p>{t.appraisalReconsiderationDisclaimer}</p>
           </section>
         ) : null}
       </main>

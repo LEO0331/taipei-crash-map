@@ -24,6 +24,7 @@ import {
   parseReportCount,
 } from '../src/utils/trafficViolations';
 import type { AccidentRecord } from '../src/types/accident';
+import { normalizeAppraisalReconsiderationRows, parseCount, parsePercent, parseReconsiderationPeriod } from '../src/utils/appraisalReconsiderations';
 
 const baseRecord: AccidentRecord = {
   id: '2019-1',
@@ -154,6 +155,20 @@ describe('accident utilities', () => {
     expect(popup).toContain('&lt;img src=x onerror=alert(1)&gt;');
     expect(popup).not.toContain('<script>');
     expect(popup).not.toContain('<img src=x');
+  });
+});
+
+describe('appraisal reconsideration utilities', () => {
+  it('converts ROC monthly periods and keeps malformed values missing', () => {
+    expect(parseReconsiderationPeriod('106年1月')).toEqual({ year: 2017, month: 1, period: '2017-01' });
+    expect(parseReconsiderationPeriod('106年13月').period).toBeNull();
+    expect(parseCount('—')).toBeNull();
+    expect(parsePercent('12.4%')).toBe(12.4);
+  });
+
+  it('preserves source values alongside normalized fields', () => {
+    const [record] = normalizeAppraisalReconsiderationRows([{ '年/月': '106年1月', '申請件數_有進覆議會討論之件數': '26', '覆議件數_申請件數扣除不予覆議件數': '25', '司法囑託': '18', '個人申請': '8', '不予覆議': '1', 'A1件數（總計）': '3', 'A2件數（總計）': '17', 'A3件數（總計）': '6', 'A1比例_%': '11.54%', 'A2比例_%': '65.38%', 'A3比例_%': '23.08%' }]);
+    expect(record).toMatchObject({ period: '2017-01', reconsiderationCases: 25, a3Rate: 23.08, a3RateRaw: '23.08%' });
   });
 });
 

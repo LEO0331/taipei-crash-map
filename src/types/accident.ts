@@ -326,6 +326,26 @@ export type TrafficViolationReportTop5StatisticSummary = {
   }>;
 };
 
+export type AccidentAppraisalReconsiderationRecord = {
+  id: string;
+  module: 'traffic_accident_appraisal_reconsiderations';
+  periodRaw: string; year: number | null; month: number | null; period: string | null;
+  applicationsDiscussedRaw: string; applicationsDiscussed: number | null;
+  reconsiderationCasesRaw: string; reconsiderationCases: number | null;
+  judicialReferralsRaw: string; judicialReferrals: number | null;
+  individualApplicationsRaw: string; individualApplications: number | null;
+  rejectedReconsiderationsRaw: string; rejectedReconsiderations: number | null;
+  a1CasesRaw: string; a1Cases: number | null; a2CasesRaw: string; a2Cases: number | null; a3CasesRaw: string; a3Cases: number | null;
+  a1RateRaw: string; a1Rate: number | null; a2RateRaw: string; a2Rate: number | null; a3RateRaw: string; a3Rate: number | null;
+  sourceFields: Record<string, string>;
+};
+
+export type AccidentAppraisalReconsiderationMetadata = {
+  sourceUrl: string; sourceUpdateDate: string; metadataUpdatedAt: string; ingestedAt: string;
+  earliestPeriod: string | null; latestPeriod: string | null; recordCount: number; missingPeriods: string[];
+  periodParsing: string; fieldDefinitions: Record<string, string>; dataQuality: string[];
+};
+
 export type CrashDetailFilters = {
   years: number[];
   months: number[];

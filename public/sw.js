@@ -1,4 +1,4 @@
-const CACHE_NAME = 'taipei-crash-map-v2';
+const CACHE_NAME = 'taipei-crash-map-v3';
 const BASE_PATH = new URL(self.registration.scope).pathname;
 const toAppPath = (path) => `${BASE_PATH}${path.replace(/^\/+/, '')}`;
 const CORE_ASSETS = [
@@ -15,6 +15,8 @@ const CORE_ASSETS = [
   toAppPath('data/traffic-violation-report-top5-statistics-latest.json'),
   toAppPath('data/crash-dashboard-summary.json'),
   toAppPath('data/conversion-report.json'),
+  toAppPath('data/traffic-accident-appraisal-reconsiderations/records.json'),
+  toAppPath('data/traffic-accident-appraisal-reconsiderations/metadata.json'),
 ];
 
 self.addEventListener('install', (event) => {

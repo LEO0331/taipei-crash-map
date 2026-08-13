@@ -1,0 +1,26 @@
+{
+  "sourceUrl": "https://data.taipei/dataset/detail?id=9479ef01-8f57-40a0-b894-63f172595145",
+  "sourceUpdateDate": "2025-07-09 15:33:07",
+  "metadataUpdatedAt": "2026-04-17 15:28:28",
+  "ingestedAt": "2026-08-13T03:10:07.318Z",
+  "earliestPeriod": "2017-01",
+  "latestPeriod": "2023-03",
+  "recordCount": 75,
+  "missingPeriods": [],
+  "periodParsing": "Source values use ROC YYYY年M月; Gregorian year = ROC year + 1911. Month is validated from 1 through 12 and no daily date is inferred.",
+  "fieldDefinitions": {
+    "period": "年/月",
+    "applicationsDiscussed": "申請件數_有進覆議會討論之件數",
+    "reconsiderationCases": "覆議件數_申請件數扣除不予覆議件數",
+    "judicialReferrals": "司法囑託",
+    "individualApplications": "個人申請",
+    "rejectedReconsiderations": "不予覆議",
+    "a1Cases": "A1件數（總計）",
+    "a2Cases": "A2件數（總計）",
+    "a3Cases": "A3件數（總計）",
+    "a1Rate": "A1比例_%",
+    "a2Rate": "A2比例_%",
+    "a3Rate": "A3比例_%"
+  },
+  "dataQuality": []
+}
