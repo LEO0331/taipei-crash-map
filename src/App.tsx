@@ -35,8 +35,10 @@ function DashboardFallback({ title, t }: { title: string; t: Translation }) {
   return (
     <section className="dashboard dashboard-placeholder" aria-busy="true">
       <div className="section-heading">
-        <p className="eyebrow dark">{t.selectedFilters}</p>
-        <h2>{title}</h2>
+        <div>
+          <p className="eyebrow dark">{t.selectedFilters}</p>
+          <h2>{title}</h2>
+        </div>
       </div>
       <div className="placeholder-grid" aria-hidden="true">
         <span />
@@ -142,11 +144,6 @@ export default function App() {
     [accidents, filteredAccidents, hotspots],
   );
   const visibleRecordCount = accidents ? filteredAccidents.length : (summary?.totalRecords ?? 0);
-  const heroStats = [
-    { label: t.recordsCovered, value: summary?.totalRecords.toLocaleString() ?? '...' },
-    { label: 'A1', value: summary?.a1Count.toLocaleString() ?? '...' },
-    { label: 'A2', value: summary?.a2Count.toLocaleString() ?? '...' },
-  ];
   const tabs: Array<{ id: AppTab; label: string }> = [
     { id: 'crashMap', label: t.crashMap },
     { id: 'hotspotAnalysis', label: t.hotspotAnalysis },
@@ -166,14 +163,6 @@ export default function App() {
         </div>
         <div className="hero-panel">
           <LanguageToggle language={language} t={t} onChange={setLanguage} />
-          <dl className="hero-stats">
-            {heroStats.map((stat) => (
-              <div key={stat.label}>
-                <dt>{stat.label}</dt>
-                <dd>{stat.value}</dd>
-              </div>
-            ))}
-          </dl>
         </div>
       </header>
 
@@ -283,8 +272,10 @@ export default function App() {
         {activeTab === 'dataNotes' ? (
           <section className="dashboard data-notes full-width-panel">
             <div className="section-heading">
-              <p className="eyebrow dark">{t.openData}</p>
-              <h2>{t.dataNotes}</h2>
+              <div>
+                <p className="eyebrow dark">{t.openData}</p>
+                <h2>{t.dataNotes}</h2>
+              </div>
             </div>
             <p>{t.dataDisclaimer}</p>
             <p>{t.crashDetailDisclaimer}</p>

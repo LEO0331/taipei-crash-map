@@ -27,8 +27,10 @@ export function Dashboard({ accidents, baseHotspots, summary, t }: Props) {
   return (
     <section className="dashboard">
       <div className="section-heading">
-        <p className="eyebrow dark">{t.selectedFilters}</p>
-        <h2>{t.dashboard}</h2>
+        <div>
+          <p className="eyebrow dark">{t.selectedFilters}</p>
+          <h2>{t.dashboard}</h2>
+        </div>
       </div>
       <SummaryCards accidents={accidents} hotspots={filteredHotspots} summary={summary} t={t} />
       <div className="chart-grid">

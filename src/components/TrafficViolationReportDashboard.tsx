@@ -103,8 +103,10 @@ export function TrafficViolationReportDashboard({ records, summary, crashSummary
   return (
     <section className="dashboard violation-dashboard">
       <div className="section-heading">
-        <p className="eyebrow dark">{t.trafficViolationsCrashContext}</p>
-        <h2>{t.trafficViolationReportTop5Statistics}</h2>
+        <div>
+          <p className="eyebrow dark">{t.trafficViolationsCrashContext}</p>
+          <h2>{t.trafficViolationReportTop5Statistics}</h2>
+        </div>
       </div>
       <p className="module-subtitle">
         {t.trafficViolationReportChartNotice}

@@ -180,8 +180,10 @@ export function CrashFactorDashboard({
   return (
     <section className="dashboard crash-factor-dashboard">
       <div className="section-heading">
-        <p className="eyebrow dark">{t.factorDistribution}</p>
-        <h2>{t.crashFactors}</h2>
+        <div>
+          <p className="eyebrow dark">{t.factorDistribution}</p>
+          <h2>{t.crashFactors}</h2>
+        </div>
       </div>
       <p className="notice crash-detail-disclaimer">{t.crashDetailDisclaimer}</p>
       <p className="notice crash-detail-disclaimer">{t.partyLevelNotice}</p>

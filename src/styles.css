@@ -138,39 +138,6 @@ a {
   backdrop-filter: blur(14px);
 }
 
-.hero-stats {
-  display: grid;
-  gap: 8px;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin: 0;
-}
-
-.hero-stats div {
-  border-top: 1px solid rgb(255 255 255 / 18%);
-  min-width: 0;
-  padding-top: 10px;
-}
-
-.hero-stats dt {
-  color: #9fb0c7;
-  font-size: 0.72rem;
-  font-weight: 900;
-  margin: 0 0 4px;
-  text-transform: uppercase;
-}
-
-.hero-stats dd {
-  color: #ffffff;
-  font-family: "DIN Condensed", "Arial Narrow", Inter, sans-serif;
-  font-size: clamp(1.1rem, 2vw, 2.1rem);
-  font-weight: 900;
-  line-height: 1;
-  margin: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
 .workspace {
   display: grid;
   gap: 14px;

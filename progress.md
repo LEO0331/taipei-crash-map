@@ -2,7 +2,7 @@
 
 ## Current State
 
-**Last Updated:** 2026-08-31 15:35 CST
+**Last Updated:** 2026-08-31 15:45 CST
 **Active Feature:** feat-005 - Release and Handoff Hygiene
 
 ## Status
@@ -98,6 +98,8 @@ Existing uncommitted source files before harness work:
 - [x] Project-wide filtering audit: main accident filters now trigger detailed-record loading, rebuild filtered hotspot aggregates, and preserve empty results; violation-report filters now recalculate cards and charts as well as the table. Added shared violation filtering/summary regression coverage. `npm test` passed 19 tests, `npm run build` passed, and `git diff --check` passed on 2026-08-31. Browser smoke remains unavailable because the local Vite server could not start under the environment execution restriction.
 - [x] Hero summary-card overflow fix: constrained hero stat cells and made large numeric values responsive with an overflow guard so Records/A1/A2 stay inside the top-right card. `npm test` passed 19 tests, `npm run build` passed, and `git diff --check` passed on 2026-08-31. Live browser rendering remains unavailable because the local Vite server could not start under the environment execution restriction.
 - [x] Disclaimer placement fix: removed the long data disclaimer from the top of the `事故地圖` and `熱點分析` control deck and moved it into the footer for those tabs only; Data Notes retains its in-page copy without duplication. `npm test` passed 19 tests and `npm run build` passed on 2026-08-31.
+- [x] Section-heading alignment fix: grouped eyebrow and title elements so `趨勢儀表板` and other dashboard titles remain left-aligned like the appraisal reconsideration module. `npm test` passed 19 tests, `npm run build` passed, and `git diff --check` passed on 2026-08-31.
+- [x] Hero summary cleanup: removed the Records/A1/A2 metrics and unused stat styles from the top-right card, leaving only the language switcher. `npm test` passed 19 tests, `npm run build` passed, and `git diff --check` passed on 2026-08-31.
 
 ## Notes for Next Session
 
