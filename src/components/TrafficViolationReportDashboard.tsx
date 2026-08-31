@@ -18,6 +18,7 @@ import type {
   TrafficViolationReportTop5StatisticSummary,
 } from '../types/accident';
 import type { Translation } from '../i18n';
+import { buildTrafficViolationSummary, filterTrafficViolationRecords } from '../utils/trafficViolations';
 
 type Props = {
   records: TrafficViolationReportTop5StatisticRecord[];
@@ -48,37 +49,38 @@ function percent(value: number | undefined) {
 export function TrafficViolationReportDashboard({ records, summary, crashSummary, isLoading, error, t }: Props) {
   const [search, setSearch] = useState('');
   const [year, setYear] = useState('all');
-  const [category, setCategory] = useState('all');
+  const [category, setCategory] = useState<TrafficViolationReportItemCategory | 'all'>('all');
 
-  const filtered = useMemo(() => {
-    const query = search.trim().toLocaleLowerCase('zh-Hant');
-    return records.filter((record) => {
-      const text = `${record.year} ${record.violationItem} ${t[categoryKey[record.violationItemCategory]]} ${record.cityName ?? ''} ${record.cityCode ?? ''}`.toLocaleLowerCase('zh-Hant');
-      return (
-        (year === 'all' || record.year === Number(year)) &&
-        (category === 'all' || record.violationItemCategory === category) &&
-        (!query || text.includes(query))
-      );
-    });
-  }, [category, records, search, t, year]);
+  const filtered = useMemo(
+    () => filterTrafficViolationRecords(
+      records,
+      { search, year: year === 'all' ? 'all' : Number(year), category },
+      (item) => t[categoryKey[item]],
+    ),
+    [category, records, search, t, year],
+  );
 
-  if (isLoading) return <p className="loading">Loading reported violation statistics...</p>;
-  if (error) return <p className="error">{error}</p>;
+  const filteredSummary = useMemo(
+    () => buildTrafficViolationSummary(filtered, crashSummary ?? undefined),
+    [crashSummary, filtered],
+  );
+
+  if (isLoading) return <p className="loading">{t.loadingReportedViolationStatistics}</p>;
+  if (error) return <p className="error">{t.dataLoadError}</p>;
   if (!summary) return null;
 
-  const highestYear = summary.byYear.reduce((best, current) =>
-    current.totalReportCount > best.totalReportCount ? current : best,
-  summary.byYear[0]);
-  const latestTop = summary.latestYearTopItems[0];
+  const highestYear = [...filteredSummary.byYear].sort((a, b) => b.totalReportCount - a.totalReportCount)[0];
+  const latestTop = filteredSummary.latestYearTopItems[0];
   const years = summary.byYear.map((item) => item.year);
   const categories = [...new Set(records.map((record) => record.violationItemCategory))];
-  const comparisonData = summary.byYear.map((item) => ({
+  const visibleCategories = [...new Set(filtered.map((record) => record.violationItemCategory))];
+  const comparisonData = filteredSummary.byYear.map((item) => ({
     ...item,
     crashCount: crashSummary?.byYear.find((crashYear) => crashYear.year === item.year)?.totalCount,
   }));
-  const categoryTrend = years.map((trendYear) => {
+  const categoryTrend = filteredSummary.byYear.map(({ year: trendYear }) => {
     const entry: Record<string, number | string> = { year: trendYear };
-    records
+    filtered
       .filter((record) => record.year === trendYear)
       .forEach((record) => {
         const label = t[categoryKey[record.violationItemCategory]];
@@ -88,12 +90,12 @@ export function TrafficViolationReportDashboard({ records, summary, crashSummary
   });
 
   const cards = [
-    [t.latestYear, summary.latestYear ?? '-'],
-    [t.latestYearReportedCount, summary.latestYearTotalReportCount?.toLocaleString() ?? '-'],
+    [t.latestYear, filteredSummary.latestYear ?? '-'],
+    [t.latestYearReportedCount, filteredSummary.latestYearTotalReportCount?.toLocaleString() ?? '-'],
     [t.latestYearTopViolationItem, latestTop?.violationItem ?? '-'],
     [t.topViolationItemCount, latestTop?.reportCount?.toLocaleString() ?? '-'],
-    [t.uniqueViolationItemCount, summary.uniqueViolationItemCount.toLocaleString()],
-    [t.violationCategoryCount, summary.uniqueViolationCategoryCount.toLocaleString()],
+    [t.uniqueViolationItemCount, filteredSummary.uniqueViolationItemCount.toLocaleString()],
+    [t.violationCategoryCount, filteredSummary.uniqueViolationCategoryCount.toLocaleString()],
     [t.highestAnnualReportedCount, highestYear?.totalReportCount.toLocaleString() ?? '-'],
     [t.yearWithHighestReportedCount, highestYear?.year ?? '-'],
   ];
@@ -116,7 +118,7 @@ export function TrafficViolationReportDashboard({ records, summary, crashSummary
         ))}
       </div>
 
-      <section className="filter-panel violation-filters" aria-label="Violation filters">
+      <section className="filter-panel violation-filters" aria-label={t.violationFilters}>
         <label className="field field-wide">
           <span>{t.trafficViolationReportSearchPlaceholder}</span>
           <input value={search} placeholder={t.trafficViolationReportSearchPlaceholder} onChange={(event) => setSearch(event.target.value)} />
@@ -130,7 +132,7 @@ export function TrafficViolationReportDashboard({ records, summary, crashSummary
         </label>
         <label className="field">
           <span>{t.violationCategory}</span>
-          <select value={category} onChange={(event) => setCategory(event.target.value)}>
+          <select value={category} onChange={(event) => setCategory(event.target.value as TrafficViolationReportItemCategory | 'all')}>
             <option value="all">{t.all}</option>
             {categories.map((item) => <option key={item} value={item}>{t[categoryKey[item]]}</option>)}
           </select>
@@ -141,7 +143,7 @@ export function TrafficViolationReportDashboard({ records, summary, crashSummary
         <section className="chart-block">
           <h3>{t.totalReportedViolationCountByYear}</h3>
           <ResponsiveContainer width="100%" height={240}>
-            <LineChart data={summary.byYear}>
+            <LineChart data={filteredSummary.byYear}>
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="year" />
               <YAxis width={52} />
@@ -154,7 +156,7 @@ export function TrafficViolationReportDashboard({ records, summary, crashSummary
         <section className="chart-block">
           <h3>{t.latestYearTopFiveViolationItems}</h3>
           <ResponsiveContainer width="100%" height={260}>
-            <BarChart data={summary.latestYearTopItems} layout="vertical" margin={{ left: 24 }}>
+            <BarChart data={filteredSummary.latestYearTopItems} layout="vertical" margin={{ left: 24 }}>
               <XAxis type="number" hide />
               <YAxis dataKey="violationItem" type="category" width={110} />
               <Tooltip />
@@ -172,7 +174,7 @@ export function TrafficViolationReportDashboard({ records, summary, crashSummary
               <YAxis width={52} />
               <Tooltip />
               <Legend />
-              {categories.map((item, index) => (
+              {visibleCategories.map((item, index) => (
                 <Bar key={item} dataKey={t[categoryKey[item]]} stackId="category" fill={['#0f766e', '#f97316', '#2563eb', '#b42318', '#dca54c'][index % 5]} />
               ))}
             </BarChart>

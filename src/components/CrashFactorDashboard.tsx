@@ -65,11 +65,15 @@ const defaultFilters: CrashDetailFilters = {
 function severityLabel(severity: CrashSeverity, t: Translation): string {
   if (severity === 'a1_fatal_24h') return t.deathsWithin24h;
   if (severity === 'a2_injury_or_late_death') return t.injuries;
-  return 'Unknown';
+  return t.unknown;
 }
 
-function topLabel(items: CountSummary[] | undefined): string {
-  return items?.[0]?.label ?? '-';
+function localizeCountLabel(label: string, t: Translation): string {
+  return label === '未辨識' ? t.unknown : label;
+}
+
+function topLabel(items: CountSummary[] | undefined, t: Translation): string {
+  return items?.[0] ? localizeCountLabel(items[0].label, t) : '-';
 }
 
 function SelectField({
@@ -103,26 +107,29 @@ function SelectField({
 function DistributionChart({
   title,
   data,
+  t,
   color = '#0f766e',
 }: {
   title: string;
   data: CountSummary[];
+  t: Translation;
   color?: string;
 }) {
+  const chartData = data.map((item) => ({ ...item, label: localizeCountLabel(item.label, t) }));
   return (
     <section className="chart-block">
       <h3>{title}</h3>
-      {data.length ? (
+      {chartData.length ? (
         <ResponsiveContainer width="100%" height={260}>
-          <BarChart data={data.slice(0, 10)} layout="vertical" margin={{ left: 24 }}>
+          <BarChart data={chartData.slice(0, 10)} layout="vertical" margin={{ left: 24 }}>
             <XAxis type="number" hide />
             <YAxis dataKey="label" type="category" width={96} />
             <Tooltip />
-            <Bar dataKey="count" fill={color} />
+            <Bar dataKey="count" name={t.count} fill={color} />
           </BarChart>
         </ResponsiveContainer>
       ) : (
-        <p className="empty-state">No data</p>
+        <p className="empty-state">{t.noData}</p>
       )}
     </section>
   );
@@ -159,11 +166,11 @@ export function CrashFactorDashboard({
     { label: t.injuries, value: currentDetailSummary.injuryCount.toLocaleString() },
     { label: t.deathsWithin24h, value: currentDetailSummary.deathWithin24hCount.toLocaleString() },
     { label: t.deaths2To30Days, value: currentDetailSummary.death2To30DayCount.toLocaleString() },
-    { label: t.topVehicleType, value: topLabel(currentFactorSummary.byVehicleType) },
-    { label: t.topCrashPattern, value: topLabel(currentDetailSummary.byAccidentPattern) },
-    { label: t.topWeatherCondition, value: topLabel(currentDetailSummary.byWeather) },
-    { label: t.topRoadType, value: topLabel(currentDetailSummary.byRoadType) },
-    { label: t.topMainCauseCode, value: topLabel(currentDetailSummary.byMainCauseCode) },
+    { label: t.topVehicleType, value: topLabel(currentFactorSummary.byVehicleType, t) },
+    { label: t.topCrashPattern, value: topLabel(currentDetailSummary.byAccidentPattern, t) },
+    { label: t.topWeatherCondition, value: topLabel(currentDetailSummary.byWeather, t) },
+    { label: t.topRoadType, value: topLabel(currentDetailSummary.byRoadType, t) },
+    { label: t.topMainCauseCode, value: topLabel(currentDetailSummary.byMainCauseCode, t) },
   ];
 
   const setFilter = <Key extends keyof CrashDetailFilters>(key: Key, value: CrashDetailFilters[Key]) => {
@@ -178,8 +185,8 @@ export function CrashFactorDashboard({
       </div>
       <p className="notice crash-detail-disclaimer">{t.crashDetailDisclaimer}</p>
       <p className="notice crash-detail-disclaimer">{t.partyLevelNotice}</p>
-      {isLoading ? <p className="loading">Loading crash detail records...</p> : null}
-      {error ? <p className="error">{error}</p> : null}
+      {isLoading ? <p className="loading">{t.loadingCrashDetailRecords}</p> : null}
+      {error ? <p className="error">{t.dataLoadError}</p> : null}
       <section className="filter-panel crash-filter-panel" aria-label={t.crashFactors}>
         <label className="field field-wide">
           <span>{t.searchPlaceholder}</span>
@@ -264,28 +271,28 @@ export function CrashFactorDashboard({
             </BarChart>
           </ResponsiveContainer>
         </section>
-        <DistributionChart title={t.accidentsByMonth} data={currentDetailSummary.byMonth.map((item) => ({ label: String(item.month), count: item.totalCount }))} color="#2563eb" />
-        <DistributionChart title={t.accidentsByHour} data={currentDetailSummary.byHour.map((item) => ({ label: `${item.hour}:00`, count: item.totalCount }))} color="#2563eb" />
-        <DistributionChart title={t.topDistricts} data={currentDetailSummary.byDistrict} />
-        <DistributionChart title={t.severityDistribution} data={currentDetailSummary.bySeverity.map((item) => ({ ...item, label: severityLabel(item.label as CrashSeverity, t) }))} color="#b42318" />
-        <DistributionChart title={t.weatherDistribution} data={currentDetailSummary.byWeather} />
-        <DistributionChart title={t.lightingDistribution} data={currentDetailSummary.byLighting} />
-        <DistributionChart title={t.roadTypeDistribution} data={currentDetailSummary.byRoadType} />
-        <DistributionChart title={t.speedLimitDistribution} data={currentDetailSummary.bySpeedLimit} />
-        <DistributionChart title={t.roadShapeDistribution} data={currentDetailSummary.byRoadShape} />
-        <DistributionChart title={t.signalDistribution} data={currentDetailSummary.bySignal} />
-        <DistributionChart title={t.crashPatternDistribution} data={currentDetailSummary.byAccidentPattern} />
-        <DistributionChart title={t.causeCodeDistribution} data={currentDetailSummary.byMainCauseCode} />
-        <DistributionChart title={t.vehicleTypeDistribution} data={currentFactorSummary.byVehicleType} color="#dca54c" />
-        <DistributionChart title={t.ageGroupDistribution} data={currentFactorSummary.byAgeGroup} color="#dca54c" />
-        <DistributionChart title={t.sexDistribution} data={currentFactorSummary.bySex} color="#dca54c" />
-        <DistributionChart title={t.injurySeverityDistribution} data={currentFactorSummary.byInjurySeverity} color="#dca54c" />
-        <DistributionChart title={t.alcoholDistribution} data={currentFactorSummary.byAlcoholCondition} color="#dca54c" />
-        <DistributionChart title={t.protectionDeviceDistribution} data={currentFactorSummary.byProtectionDevice} color="#dca54c" />
-        <DistributionChart title={t.phoneUseDistribution} data={currentFactorSummary.byPhoneUse} color="#dca54c" />
-        <DistributionChart title={t.hitAndRunDistribution} data={currentFactorSummary.byHitAndRun} color="#dca54c" />
-        <DistributionChart title={t.drivingQualificationDistribution} data={currentFactorSummary.byDrivingQualification} color="#dca54c" />
-        <DistributionChart title={t.driverLicenseDistribution} data={currentFactorSummary.byDriverLicenseType} color="#dca54c" />
+        <DistributionChart title={t.accidentsByMonth} data={currentDetailSummary.byMonth.map((item) => ({ label: String(item.month), count: item.totalCount }))} t={t} color="#2563eb" />
+        <DistributionChart title={t.accidentsByHour} data={currentDetailSummary.byHour.map((item) => ({ label: `${item.hour}:00`, count: item.totalCount }))} t={t} color="#2563eb" />
+        <DistributionChart title={t.topDistricts} data={currentDetailSummary.byDistrict} t={t} />
+        <DistributionChart title={t.severityDistribution} data={currentDetailSummary.bySeverity.map((item) => ({ ...item, label: severityLabel(item.label as CrashSeverity, t) }))} t={t} color="#b42318" />
+        <DistributionChart title={t.weatherDistribution} data={currentDetailSummary.byWeather} t={t} />
+        <DistributionChart title={t.lightingDistribution} data={currentDetailSummary.byLighting} t={t} />
+        <DistributionChart title={t.roadTypeDistribution} data={currentDetailSummary.byRoadType} t={t} />
+        <DistributionChart title={t.speedLimitDistribution} data={currentDetailSummary.bySpeedLimit} t={t} />
+        <DistributionChart title={t.roadShapeDistribution} data={currentDetailSummary.byRoadShape} t={t} />
+        <DistributionChart title={t.signalDistribution} data={currentDetailSummary.bySignal} t={t} />
+        <DistributionChart title={t.crashPatternDistribution} data={currentDetailSummary.byAccidentPattern} t={t} />
+        <DistributionChart title={t.causeCodeDistribution} data={currentDetailSummary.byMainCauseCode} t={t} />
+        <DistributionChart title={t.vehicleTypeDistribution} data={currentFactorSummary.byVehicleType} t={t} color="#dca54c" />
+        <DistributionChart title={t.ageGroupDistribution} data={currentFactorSummary.byAgeGroup} t={t} color="#dca54c" />
+        <DistributionChart title={t.sexDistribution} data={currentFactorSummary.bySex} t={t} color="#dca54c" />
+        <DistributionChart title={t.injurySeverityDistribution} data={currentFactorSummary.byInjurySeverity} t={t} color="#dca54c" />
+        <DistributionChart title={t.alcoholDistribution} data={currentFactorSummary.byAlcoholCondition} t={t} color="#dca54c" />
+        <DistributionChart title={t.protectionDeviceDistribution} data={currentFactorSummary.byProtectionDevice} t={t} color="#dca54c" />
+        <DistributionChart title={t.phoneUseDistribution} data={currentFactorSummary.byPhoneUse} t={t} color="#dca54c" />
+        <DistributionChart title={t.hitAndRunDistribution} data={currentFactorSummary.byHitAndRun} t={t} color="#dca54c" />
+        <DistributionChart title={t.drivingQualificationDistribution} data={currentFactorSummary.byDrivingQualification} t={t} color="#dca54c" />
+        <DistributionChart title={t.driverLicenseDistribution} data={currentFactorSummary.byDriverLicenseType} t={t} color="#dca54c" />
       </div>
     </section>
   );

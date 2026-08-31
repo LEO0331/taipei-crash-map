@@ -1,13 +1,14 @@
-import type { Language } from '../i18n';
+import type { Language, Translation } from '../i18n';
 
 type Props = {
   language: Language;
+  t: Translation;
   onChange: (language: Language) => void;
 };
 
-export function LanguageToggle({ language, onChange }: Props) {
+export function LanguageToggle({ language, t, onChange }: Props) {
   return (
-    <div className="segmented" aria-label="Language">
+    <div className="segmented" aria-label={t.language}>
       <button
         className={language === 'zh' ? 'active' : ''}
         type="button"

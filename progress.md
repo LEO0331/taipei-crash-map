@@ -2,8 +2,8 @@
 
 ## Current State
 
-**Last Updated:** 2026-06-16 15:30 CST  
-**Active Feature:** feat-004 - Accident Data Conversion Integrity
+**Last Updated:** 2026-08-31 15:35 CST
+**Active Feature:** feat-005 - Release and Handoff Hygiene
 
 ## Status
 
@@ -58,6 +58,7 @@
 - [ ] Generated data conversion is not part of the default harness check because it depends on CSV files in `/Users/Leo/Downloads`.
 - [ ] Crash-detail public JSON generated from the sample API resource is large: party records ~28 MB and accident records ~19 MB before HTTP compression.
 - [ ] UI changes still need browser checks when layout, map, or PWA behavior changes.
+- [ ] Crash-detail source data contains official coded values for several factor fields (for example `車種`, `天候`, and `道路類別`) but this repository has no codebook. The localization audit preserves those raw values instead of guessing Chinese descriptions.
 
 ## Decisions Made
 
@@ -92,6 +93,11 @@ Existing uncommitted source files before harness work:
 - [x] Crash-detail conversion verification: `npm run convert:crash-details` passed on 2026-06-16; converted 22,762 party rows, deduplicated 22,762 accident records, reported 0 missing coordinates and 2 coordinate outliers.
 - [x] Crash-detail test/build verification: `npm test` passed 1 file / 14 tests and `npm run build` passed on 2026-06-16.
 - [x] Crash Factors browser smoke: desktop and mobile checks passed on 2026-06-16. Tabs render as `事故地圖`, `熱點分析`, `事故特徵`, `資料說明`; first entry has no `Failed to fetch`; no horizontal overflow; Crash Factors loads 22,762 accident and 22,762 involved-party records.
+- [x] Map basemap watermark fix: replaced the CARTO tile URL with keyless OpenStreetMap tiles and retained contributor attribution on 2026-08-31. `npm test` passed 18 tests, `npm run build` passed, and `git diff --check` passed. Browser smoke was skipped because the local Vite server could not start under the environment execution restriction.
+- [x] Chinese localization audit: translated remaining visible/accessibility labels, loading and empty states, data-load errors, map attribution, chart count tooltips, missing-value fallbacks, and localized reconsideration search terms on 2026-08-31. `npm test` passed 18 tests, `npm run build` passed, and source scans found no remaining known hardcoded English UI labels. Browser smoke remains unavailable because the local Vite server could not start under the environment execution restriction.
+- [x] Project-wide filtering audit: main accident filters now trigger detailed-record loading, rebuild filtered hotspot aggregates, and preserve empty results; violation-report filters now recalculate cards and charts as well as the table. Added shared violation filtering/summary regression coverage. `npm test` passed 19 tests, `npm run build` passed, and `git diff --check` passed on 2026-08-31. Browser smoke remains unavailable because the local Vite server could not start under the environment execution restriction.
+- [x] Hero summary-card overflow fix: constrained hero stat cells and made large numeric values responsive with an overflow guard so Records/A1/A2 stay inside the top-right card. `npm test` passed 19 tests, `npm run build` passed, and `git diff --check` passed on 2026-08-31. Live browser rendering remains unavailable because the local Vite server could not start under the environment execution restriction.
+- [x] Disclaimer placement fix: removed the long data disclaimer from the top of the `事故地圖` and `熱點分析` control deck and moved it into the footer for those tabs only; Data Notes retains its in-page copy without duplication. `npm test` passed 19 tests and `npm run build` passed on 2026-08-31.
 
 ## Notes for Next Session
 

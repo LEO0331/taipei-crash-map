@@ -67,9 +67,9 @@ export function NearbyHistoricalAccidents({ filters, t, onChange, onLocate }: Pr
             value={radius}
             onChange={(event) => updateRadius(Number(event.target.value))}
           >
-            <option value={300}>300m</option>
-            <option value={500}>500m</option>
-            <option value={1000}>1km</option>
+            <option value={300}>300 {t.meters}</option>
+            <option value={500}>500 {t.meters}</option>
+            <option value={1000}>1 {t.kilometers}</option>
           </select>
         </label>
         {filters.nearby ? (

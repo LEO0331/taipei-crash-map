@@ -19,7 +19,7 @@ export function FilterPanel({ filters, districts, t, onChange }: Props) {
   };
 
   return (
-    <section className="filter-panel" aria-label="Filters">
+    <section className="filter-panel" aria-label={t.filters}>
       <label className="field field-wide">
         <span>{t.searchPlaceholder}</span>
         <input

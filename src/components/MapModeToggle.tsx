@@ -14,7 +14,7 @@ export function MapModeToggle({ mode, t, onChange }: Props) {
   ];
 
   return (
-    <div className="segmented map-mode" aria-label="Map mode">
+    <div className="segmented map-mode" aria-label={t.mapMode}>
       {options.map((option) => (
         <button
           className={mode === option.mode ? 'active' : ''}

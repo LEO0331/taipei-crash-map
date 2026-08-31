@@ -73,6 +73,29 @@ export function classifyTrafficViolationItem(raw: string | undefined): TrafficVi
   return 'other';
 }
 
+export type TrafficViolationFilters = {
+  search: string;
+  year: number | 'all';
+  category: TrafficViolationReportItemCategory | 'all';
+};
+
+export function filterTrafficViolationRecords(
+  records: TrafficViolationReportTop5StatisticRecord[],
+  filters: TrafficViolationFilters,
+  categoryLabel: (category: TrafficViolationReportItemCategory) => string,
+): TrafficViolationReportTop5StatisticRecord[] {
+  const query = filters.search.trim().toLocaleLowerCase('zh-Hant');
+  return records.filter((record) => {
+    const text = `${record.year} ${record.violationItem} ${categoryLabel(record.violationItemCategory)} ${record.cityName ?? ''} ${record.cityCode ?? ''}`
+      .toLocaleLowerCase('zh-Hant');
+    return (
+      (filters.year === 'all' || record.year === filters.year) &&
+      (filters.category === 'all' || record.violationItemCategory === filters.category) &&
+      (!query || text.includes(query))
+    );
+  });
+}
+
 export function safeRatioPercent(numerator: number | undefined, denominator: number | undefined): number | undefined {
   if (numerator === undefined || denominator === undefined || denominator === 0) return undefined;
   return (numerator / denominator) * 100;

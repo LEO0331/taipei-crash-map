@@ -17,7 +17,7 @@ type Props = {
 
 export function Dashboard({ accidents, baseHotspots, summary, t }: Props) {
   const filteredHotspots = useMemo(
-    () => (accidents && accidents.length > 0 ? buildHotspots(accidents, 50) : baseHotspots.slice(0, 50)),
+    () => (accidents !== null ? buildHotspots(accidents, 50) : baseHotspots.slice(0, 50)),
     [accidents, baseHotspots],
   );
   const yearData = accidents ? undefined : summary?.byYear;
@@ -27,7 +27,7 @@ export function Dashboard({ accidents, baseHotspots, summary, t }: Props) {
   return (
     <section className="dashboard">
       <div className="section-heading">
-        <p className="eyebrow dark">Selected filters</p>
+        <p className="eyebrow dark">{t.selectedFilters}</p>
         <h2>{t.dashboard}</h2>
       </div>
       <SummaryCards accidents={accidents} hotspots={filteredHotspots} summary={summary} t={t} />

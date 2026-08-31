@@ -19,6 +19,8 @@ import { renderAccidentPopup } from '../src/components/AccidentPopup';
 import { translations } from '../src/i18n';
 import {
   classifyTrafficViolationItem,
+  filterTrafficViolationRecords,
+  buildTrafficViolationSummary,
   normalizeTrafficViolationRows,
   parseRocYear,
   parseReportCount,
@@ -194,6 +196,25 @@ describe('traffic violation report utilities', () => {
       isTopItemWithinYear: true,
     });
     expect(records.find((record) => record.year === 2016)?.reportCountYoYChangePercent).toBe(50);
+  });
+
+  it('filters violation records and rebuilds summary totals for the selected records', () => {
+    const records = normalizeTrafficViolationRows([
+      { 序號: '1', 年度: '104', 縣市: '臺北市', 縣市代碼: '063000', 違規項目: '違規停車', 筆數: '100' },
+      { 序號: '2', 年度: '104', 縣市: '臺北市', 縣市代碼: '063000', 違規項目: '闖紅燈', 筆數: '50' },
+      { 序號: '3', 年度: '105', 縣市: '臺北市', 縣市代碼: '063000', 違規項目: '違規停車', 筆數: '150' },
+    ]);
+
+    const filtered = filterTrafficViolationRecords(
+      records,
+      { search: '停車', year: 'all', category: 'all' },
+      (category) => category,
+    );
+    const summary = buildTrafficViolationSummary(filtered);
+
+    expect(filtered).toHaveLength(2);
+    expect(summary.latestYearTotalReportCount).toBe(150);
+    expect(summary.byYear.map((item) => item.totalReportCount)).toEqual([100, 150]);
   });
 });
 

@@ -13,7 +13,9 @@ export function DistrictRankingChart({
   data?: DistrictSummary[];
   t: Translation;
 }) {
-  const chartData = (data ?? aggregateByDistrict(accidents)).slice(0, 10);
+  const chartData = (data ?? aggregateByDistrict(accidents))
+    .slice(0, 10)
+    .map((item) => ({ ...item, district: item.district === '未辨識' ? t.unknown : item.district }));
   return (
     <section className="chart-block">
       <h3>{t.topDistricts}</h3>

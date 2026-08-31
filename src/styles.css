@@ -147,6 +147,7 @@ a {
 
 .hero-stats div {
   border-top: 1px solid rgb(255 255 255 / 18%);
+  min-width: 0;
   padding-top: 10px;
 }
 
@@ -161,10 +162,13 @@ a {
 .hero-stats dd {
   color: #ffffff;
   font-family: "DIN Condensed", "Arial Narrow", Inter, sans-serif;
-  font-size: clamp(1.25rem, 5vw, 2.1rem);
+  font-size: clamp(1.1rem, 2vw, 2.1rem);
   font-weight: 900;
   line-height: 1;
   margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .workspace {
@@ -687,6 +691,14 @@ td {
   color: var(--muted);
   line-height: 1.5;
   padding: 18px clamp(16px, 4vw, 44px) 28px;
+}
+
+.footer .notice {
+  margin-bottom: 12px;
+}
+
+.footer p:last-child {
+  margin: 0;
 }
 
 @media (prefers-reduced-motion: reduce) {

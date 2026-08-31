@@ -1,17 +1,16 @@
 import { lazy, Suspense, useEffect, useMemo, useState } from 'react';
 import type { AccidentFilters, MapMode } from './types/accident';
-import type { Language } from './i18n';
+import type { Language, Translation } from './i18n';
 import { translations } from './i18n';
 import { useAccidentData } from './hooks/useAccidentData';
 import { useCrashDetailData } from './hooks/useCrashDetailData';
 import { useTrafficViolationReportData } from './hooks/useTrafficViolationReportData';
 import { useAppraisalReconsiderationData } from './hooks/useAppraisalReconsiderationData';
-import { filterAccidents } from './utils/accidents';
+import { buildHotspots, filterAccidents } from './utils/accidents';
 import { LanguageToggle } from './components/LanguageToggle';
 import { FilterPanel } from './components/FilterPanel';
 import { AccidentMap } from './components/AccidentMap';
 import { NearbyHistoricalAccidents } from './components/NearbyHistoricalAccidents';
-import { DisclaimerNotice } from './components/DisclaimerNotice';
 import { Footer } from './components/Footer';
 import { appUrl } from './utils/urls';
 import 'leaflet/dist/leaflet.css';
@@ -32,11 +31,11 @@ const AppraisalReconsiderationDashboard = lazy(() =>
 
 type AppTab = 'crashMap' | 'hotspotAnalysis' | 'crashFactors' | 'reportedViolations' | 'appraisalReconsiderations' | 'dataNotes';
 
-function DashboardFallback({ title }: { title: string }) {
+function DashboardFallback({ title, t }: { title: string; t: Translation }) {
   return (
     <section className="dashboard dashboard-placeholder" aria-busy="true">
       <div className="section-heading">
-        <p className="eyebrow dark">Selected filters</p>
+        <p className="eyebrow dark">{t.selectedFilters}</p>
         <h2>{title}</h2>
       </div>
       <div className="placeholder-grid" aria-hidden="true">
@@ -108,8 +107,18 @@ export default function App() {
     }
   }, []);
 
-  const needsRawAccidents =
-    mapMode === 'clusters' || Boolean(filters.search.trim()) || Boolean(filters.nearby);
+  const allYearsSelected =
+    filters.years.length === defaultFilters.years.length &&
+    filters.years.every((year, index) => year === defaultFilters.years[index]);
+  const hasAccidentFilters =
+    !allYearsSelected ||
+    filters.accidentType !== 'all' ||
+    filters.district !== 'all' ||
+    filters.timePeriod !== 'all' ||
+    filters.weekdayWeekend !== 'all' ||
+    Boolean(filters.search.trim()) ||
+    Boolean(filters.nearby);
+  const needsRawAccidents = mapMode === 'clusters' || hasAccidentFilters;
 
   useEffect(() => {
     if (needsRawAccidents) {
@@ -128,9 +137,13 @@ export default function App() {
     () => (accidents ? filterAccidents(accidents, filters) : []),
     [accidents, filters],
   );
+  const filteredHotspots = useMemo(
+    () => (accidents !== null ? buildHotspots(filteredAccidents, 300) : hotspots),
+    [accidents, filteredAccidents, hotspots],
+  );
   const visibleRecordCount = accidents ? filteredAccidents.length : (summary?.totalRecords ?? 0);
   const heroStats = [
-    { label: 'Records', value: summary?.totalRecords.toLocaleString() ?? '...' },
+    { label: t.recordsCovered, value: summary?.totalRecords.toLocaleString() ?? '...' },
     { label: 'A1', value: summary?.a1Count.toLocaleString() ?? '...' },
     { label: 'A2', value: summary?.a2Count.toLocaleString() ?? '...' },
   ];
@@ -147,12 +160,12 @@ export default function App() {
     <div className="app">
       <header className="hero">
         <div className="hero-copy">
-          <p className="eyebrow">A1/A2 · 2019-2025 · Taipei Open Data</p>
+          <p className="eyebrow">A1/A2 · 2019-2025 · {t.openData}</p>
           <h1>{t.appTitle}</h1>
           <p>{t.appSubtitle}</p>
         </div>
         <div className="hero-panel">
-          <LanguageToggle language={language} onChange={setLanguage} />
+          <LanguageToggle language={language} t={t} onChange={setLanguage} />
           <dl className="hero-stats">
             {heroStats.map((stat) => (
               <div key={stat.label}>
@@ -164,7 +177,7 @@ export default function App() {
         </div>
       </header>
 
-      <nav className="app-tabs" aria-label="App sections">
+      <nav className="app-tabs" aria-label={t.appSections}>
         {tabs.map((tab) => (
           <button
             key={tab.id}
@@ -182,7 +195,6 @@ export default function App() {
         {activeTab === 'crashMap' || activeTab === 'hotspotAnalysis' ? (
           <>
             <aside className="control-deck">
-              <DisclaimerNotice t={t} />
               <FilterPanel filters={filters} districts={districts} t={t} onChange={setFilters} />
               {activeTab === 'crashMap' ? (
                 <NearbyHistoricalAccidents
@@ -193,18 +205,18 @@ export default function App() {
                 />
               ) : null}
             </aside>
-            {isLoading ? <p className="loading">Loading accident data...</p> : null}
-            {error ? <p className="error">{error}</p> : null}
+            {isLoading ? <p className="loading">{t.loadingAccidentData}</p> : null}
+            {error ? <p className="error">{t.dataLoadError}</p> : null}
             {needsRawAccidents && isAccidentsLoading ? (
-              <p className="loading">Loading detailed accident records...</p>
+              <p className="loading">{t.loadingDetailedAccidentRecords}</p>
             ) : null}
-            {needsRawAccidents && accidentsError ? <p className="error">{accidentsError}</p> : null}
+            {needsRawAccidents && accidentsError ? <p className="error">{t.dataLoadError}</p> : null}
             {!isLoading && !error ? (
               <>
                 {activeTab === 'crashMap' ? (
                   <AccidentMap
                     accidents={filteredAccidents}
-                    hotspots={hotspots}
+                    hotspots={filteredHotspots}
                     filters={filters}
                     mode={mapMode}
                     language={language}
@@ -215,7 +227,7 @@ export default function App() {
                   />
                 ) : null}
                 <div className="dashboard-slot">
-                  <Suspense fallback={<DashboardFallback title={t.dashboard} />}>
+                  <Suspense fallback={<DashboardFallback title={t.dashboard} t={t} />}>
                     <Dashboard
                       accidents={accidents ? filteredAccidents : null}
                       baseHotspots={hotspots}
@@ -231,7 +243,7 @@ export default function App() {
 
         {activeTab === 'crashFactors' ? (
           <div className="full-width-panel">
-            <Suspense fallback={<DashboardFallback title={t.crashFactors} />}>
+            <Suspense fallback={<DashboardFallback title={t.crashFactors} t={t} />}>
               <CrashFactorDashboard
                 accidents={crashDetailAccidents}
                 parties={crashDetailParties}
@@ -247,7 +259,7 @@ export default function App() {
 
         {activeTab === 'reportedViolations' ? (
           <div className="full-width-panel">
-            <Suspense fallback={<DashboardFallback title={t.trafficViolationReportTop5Statistics} />}>
+            <Suspense fallback={<DashboardFallback title={t.trafficViolationReportTop5Statistics} t={t} />}>
               <TrafficViolationReportDashboard
                 records={trafficViolationReport.records}
                 summary={trafficViolationReport.summary}
@@ -262,7 +274,7 @@ export default function App() {
 
         {activeTab === 'appraisalReconsiderations' ? (
           <div className="full-width-panel">
-            <Suspense fallback={<DashboardFallback title={t.appraisalReconsiderations} />}>
+            <Suspense fallback={<DashboardFallback title={t.appraisalReconsiderations} t={t} />}>
               <AppraisalReconsiderationDashboard {...appraisalReconsiderations} t={t} />
             </Suspense>
           </div>
@@ -271,7 +283,7 @@ export default function App() {
         {activeTab === 'dataNotes' ? (
           <section className="dashboard data-notes full-width-panel">
             <div className="section-heading">
-              <p className="eyebrow dark">Taipei Open Data</p>
+              <p className="eyebrow dark">{t.openData}</p>
               <h2>{t.dataNotes}</h2>
             </div>
             <p>{t.dataDisclaimer}</p>
@@ -284,7 +296,10 @@ export default function App() {
         ) : null}
       </main>
 
-      <Footer t={t} />
+      <Footer
+        t={t}
+        showDisclaimer={activeTab === 'crashMap' || activeTab === 'hotspotAnalysis'}
+      />
     </div>
   );
 }

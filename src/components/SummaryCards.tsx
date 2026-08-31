@@ -13,7 +13,7 @@ export function SummaryCards({ accidents, hotspots, summary, t }: Props) {
     (current, accident) => {
       if (accident.accidentType === 1) current.a1Count += 1;
 
-      const district = accident.district ?? '未辨識';
+      const district = accident.district ?? t.unknown;
       current.districtCounts.set(district, (current.districtCounts.get(district) ?? 0) + 1);
       current.hourCounts.set(accident.hour, (current.hourCounts.get(accident.hour) ?? 0) + 1);
       return current;
