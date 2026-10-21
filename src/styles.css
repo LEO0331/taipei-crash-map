@@ -724,6 +724,7 @@ td {
   .workspace-crashFactors,
   .workspace-reportedViolations,
   .workspace-appraisalReconsiderations,
+  .workspace-neihuCongestion,
   .workspace-dataNotes {
     grid-template-columns: 1fr;
   }

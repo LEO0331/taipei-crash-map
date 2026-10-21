@@ -31,6 +31,18 @@ Browser-facing datasets are generated local files under `public/data/`; raw inpu
 
 The reconsideration source uses ROC `年/月` values (for example, `106年1月`). Its converter preserves raw fields and creates a sortable Gregorian `YYYY-MM` period using ROC year + 1911. Counts and source A1/A2/A3 percentages remain separate.
 
+## Neihu corridor review
+
+Read the [Traditional Chinese MVP](docs/neihu-congestion-decision-mvp.zh-TW.md), [methodology](docs/neihu-congestion-methodology.md), and [delivery/acceptance report](docs/neihu-congestion-delivery.md) for the complete PR #7 evidence, actual capacity examples, screenshots and limitations.
+
+The separate **Neihu Congestion Decision Support** tab reviews official traffic instrumentation and evidence quality. Its source feasibility gate is documented in [the source audit](docs/neihu-congestion-source-audit.md), with the implementation boundary in [the plan](docs/neihu-congestion-implementation-plan.md).
+
+The initial edition is a readiness pilot: the accessible dynamic VD file is stale and lacks an explicit timezone, and comparable historical coverage has not been verified. It therefore publishes no recurring-congestion ranking. Quality review slots are investigations of evidence gaps, not engineering interventions. Missing coverage never means uncongested roads. Point-detector speeds are not corridor travel times; accident counts never influence this module's rankings.
+
+Acquisition is an explicit offline command, never a visitor-triggered API request. Retained official bytes and SHA256 provenance support repeatable generation; synthetic fixtures are test-only. JSON and formula-safe CSV briefings retain unavailable indicators and exclusions. Historical performance mode must remain gated until independently verified comparable observations exist. No TDX credentials belong in browser assets or Git.
+
+Run `npm run data:fetch:neihu-traffic` to reuse the retained edition (`-- --refresh` explicitly acquires a new bounded edition), `npm run data:audit:neihu-traffic` to validate hashes and source health, then `npm run data:build:neihu-traffic` to regenerate compact public artifacts. A failed source validation preserves the last published snapshot. See the audit for unsupported historical services and geographic-boundary limitations.
+
 ## Local development
 
 Requirements: a supported Node.js LTS release and npm.

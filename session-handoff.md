@@ -1,5 +1,23 @@
 # Session Handoff
 
+## Attachment follow-up — 2026-10-21
+
+PR #7 remains the single review PR. The new complete handoff is `docs/neihu-congestion-delivery.md`, with `docs/neihu-congestion-decision-mvp.zh-TW.md` (18 required sections), `docs/neihu-congestion-methodology.md`, existing source audit, and intentional screenshots under `docs/images/`.
+
+Follow-up fixes geographic wording in exports to preserve unverified study scope; one regression added. Latest test total is **66 / 4 files**. npm ci, root/Pages build, final init.sh, Pages integration 5/5, audit/reproducible builds, real production JSON/CSV, desktop/mobile and bilingual checks passed. Retained source/snapshot bytes are unchanged. No fresh API/historical acquisition, legacy accident conversion, dependencies or Portfolio changes. Review report's 22-item matrix; historical performance is still gated, with 0 eligible candidates. Prior entries below are preserved history.
+
+## Current handoff — 2026-10-21
+
+Review PR: https://github.com/LEO0331/taipei-crash-map/pull/7 (not merged). Exact original-byte retention is enforced by `.gitattributes`; staged Git hashes were checked against all six manifest entries. Production JSON and CSV downloads both passed.
+
+feat-006 is implemented on `codex/neihu-congestion-decision-support`; prepare/review one PR without automatic merge. The latest source of truth is the 2026-10-21 section of progress.md and docs/neihu-congestion-source-audit.md. Sections below this handoff are historical.
+
+The new independent bilingual module publishes a 58-device research inventory and quality-review scenarios. All geographic scopes remain unverified, 27 devices retain ambiguous direction/link mapping, and no operational/synthetic observation rows are public. Historical comparison is disabled: stale VD timestamps, unverified road-speed crosswalk, empty travel-time/pairing feeds and no authenticated TDX archive. Do not enable historical mode from a catalogue pointer or isolated snapshot.
+
+Regenerate with `npm run data:fetch:neihu-traffic` (retained edition; explicit `-- --refresh` for new bounded acquisition), `npm run data:audit:neihu-traffic`, then `npm run data:build:neihu-traffic`. Hash/schema failures preserve the published snapshot. Never run legacy accident conversion as a side effect. Credentials stay outside Git and browser assets.
+
+Final init.sh: 65 tests / 4 files, build passed. Git Bash works where default WSL Bash does not. GitHub Pages build/base-path integration, desktop/mobile, bilingual filters, capacity changes, guards, and actual JSON download verified. See progress.md for measurements and changed files. Existing dependency audit has 8 vulnerabilities (3 moderate, 5 high); existing large PWA precache is unchanged. Follow up in separately scoped work.
+
 ## Current Objective
 
 - Goal: Keep the Taipei crash map repo reviewable, verified, and ready for commit.

@@ -13,6 +13,9 @@
     "data:fetch:reported-violations": "tsx scripts/fetchTrafficViolationReportTop5Statistics.ts",
     "data:convert:reported-violations": "tsx scripts/convertTrafficViolationReportTop5Statistics.ts && tsx scripts/buildTrafficViolationReportTop5Summary.ts",
     "data:convert:appraisal-reconsiderations": "tsx scripts/convertTrafficAccidentAppraisalReconsiderations.ts",
+    "data:fetch:neihu-traffic": "tsx scripts/fetchNeihuTrafficSources.ts",
+    "data:audit:neihu-traffic": "tsx scripts/auditNeihuTrafficSources.ts",
+    "data:build:neihu-traffic": "tsx scripts/buildNeihuTrafficSnapshot.ts",
     "test": "vitest run"
   },
   "repository": {

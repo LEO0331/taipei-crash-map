@@ -1,0 +1,41 @@
+.neihu-dashboard { display: grid; gap: 22px; width: 100%; min-width: 0; }
+.neihu-dashboard h2 { margin: 3px 0 10px; font-size: clamp(1.5rem, 3vw, 2rem); }
+.neihu-dashboard h3 { margin: 0 0 14px; font-size: 1.14rem; }
+.neihu-dashboard p { line-height: 1.65; }
+.neihu-section { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: clamp(16px, 3vw, 26px); min-width: 0; }
+.neihu-intro { border-top: 5px solid var(--teal); background: linear-gradient(120deg, #f0fdfa, #fff 70%); }
+.neihu-notice { background: #fff7e7; border-left: 4px solid #ad6b09; padding: 12px 16px; border-radius: 5px; line-height: 1.6; }
+.neihu-metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 18px 0; }
+.neihu-metric { padding: 14px; border: 1px solid var(--line); border-radius: 10px; }
+.neihu-metric strong { display: block; font-size: 1.7rem; margin-top: 5px; color: var(--teal); overflow-wrap: anywhere; }
+.neihu-filters { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.neihu-dashboard label { display: grid; gap: 6px; font-size: .9rem; font-weight: 700; min-width: 0; }
+.neihu-dashboard select, .neihu-dashboard input { width: 100%; min-width: 0; padding: 10px; background: #fff; color: var(--ink); border: 1px solid #b5c4d2; border-radius: 7px; }
+.neihu-dashboard :disabled { cursor: not-allowed; color: #64748b; background: #f1f5f9; }
+.neihu-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
+.neihu-dashboard button { background: var(--teal); color: white; border-radius: 8px; padding: 10px 16px; font-weight: 700; }
+.neihu-dashboard button:disabled { color: #64748b; background: #e2e8f0; }
+.neihu-table-wrap { overflow-x: auto; max-width: 100%; margin-top: 14px; }
+.neihu-dashboard table { width: 100%; border-collapse: collapse; font-size: .88rem; }
+.neihu-dashboard th, .neihu-dashboard td { padding: 11px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; }
+.neihu-dashboard th { background: #f0f5f7; color: var(--ink); }
+.neihu-dashboard td { overflow-wrap: anywhere; }
+.neihu-dashboard caption { text-align: left; margin-bottom: 10px; color: var(--muted); }
+.neihu-code { font-family: ui-monospace, monospace; font-size: .8rem; overflow-wrap: anywhere; }
+.neihu-map { height: 360px; width: 100%; border-radius: 10px; z-index: 0; }
+.neihu-map-legend { font-size: .85rem; color: var(--ink-soft); }
+.neihu-map-legend span { color: var(--teal); }
+.neihu-empty { padding: 20px; background: #f1f5f9; border-radius: 8px; color: var(--ink-soft); }
+.neihu-source { border-bottom: 1px solid var(--line); padding: 14px 0; }
+.neihu-source:last-child { border-bottom: 0; }
+.neihu-source summary { cursor: pointer; line-height: 1.6; font-weight: 700; }
+.neihu-source dl { display: grid; grid-template-columns: minmax(100px, 160px) 1fr; gap: 8px; font-size: .88rem; }
+.neihu-source dt { color: var(--muted); }
+.neihu-source dd { margin: 0; overflow-wrap: anywhere; }
+.neihu-dashboard small { display: block; color: var(--muted); font-weight: 400; line-height: 1.5; }
+.neihu-dashboard fieldset { margin: 16px 0; border: 1px solid var(--line); border-radius: 8px; padding: 14px; }
+.neihu-dashboard .neihu-check { display: flex; align-items: flex-start; margin: 8px 0; font-weight: 400; }
+.neihu-check input { width: auto; margin-top: 4px; }
+.neihu-sensitivity { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.neihu-sensitivity article { padding: 14px; border: 1px solid var(--line); border-radius: 8px; }
+@media (max-width: 700px) { .neihu-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); } .neihu-filters, .neihu-sensitivity { grid-template-columns: 1fr; } .neihu-map { height: 300px; } .neihu-source dl { grid-template-columns: 1fr; } .neihu-source dt { margin-top: 7px; } }
