@@ -1,0 +1,3942 @@
+{
+  "schemaVersion": "1.0.0",
+  "methodologyVersion": "neihu-traffic-observation-review-v1",
+  "configurationVersion": "1.0.0",
+  "snapshotId": "neihu-readiness-49f28aaa55758ffe",
+  "generatedAt": "2026-10-21T01:43:13.322Z",
+  "mode": "readiness",
+  "sourceResourceIds": [
+    "47cb9090-e1c9-4b1d-b299-b11c375c5ee2",
+    "e57afe7f-3c9e-4f31-9208-eed859a92600",
+    "b5aaf33a-a6dc-4836-bce6-09986241fe11",
+    "e3aa9aa3-6e77-4537-8b7a-4a41908b2089",
+    "6ccdeddb-c66a-4cf5-8742-46c322f01b3b",
+    "9a5139ca-f3fe-494e-a737-5f761c037f37"
+  ],
+  "sourceSha256": {
+    "A": "4b89efc9cd0fb8f93f5ccc2af92c790c9229d7e73663e8d630ff8b0441c015b6",
+    "B": "c151a6cd7bbfb6e5758db022a0f26d7cd50a9b6b393b2f05b3841d22c52a03ee",
+    "C": "64675756035565f0071b536a2443a6f1dc0e61c23ee1e824c9b4d9d1ebc01f54",
+    "D": "6435c5420197ca477ace47fe88d365e2df40b4ea8a6c28bcc242e1669935c2c0",
+    "E": "6ab321c2a25e6efaa4381e801f0a6ef6d861fdda859107722baed36efad9bd82",
+    "F": "efe234e6c0d0beccafb0f9a3935b335d5f1360aeaa9e8430c11516d86a6c8a4e"
+  },
+  "observedFrom": null,
+  "observedThrough": null,
+  "expectedSamplingInterval": null,
+  "validSampleCount": 0,
+  "excludedSampleCount": 2195,
+  "detectorCoverage": 58,
+  "corridorCoverage": 7,
+  "directionCoverage": 31,
+  "observationQuality": [
+    "historical_observations_unavailable",
+    "stale_dynamic_feed",
+    "unverified_timezone",
+    "empty_travel_time_feed"
+  ],
+  "comparatorAssumptions": [
+    "Asia/Taipei; morning 07:00–10:00, evening 17:00–20:00, off-peak 10:00–16:00 (half-open windows).",
+    "80% completeness and 20% slowdown are configurable POC assumptions, not official grades.",
+    "No accepted working days, holiday validation, baseline or sampling cadence."
+  ],
+  "scenarioEligibility": {
+    "performance": false,
+    "quality": true,
+    "reasons": [
+      "No verified comparable historical periods."
+    ]
+  },
+  "limitations": [
+    "No comparable historical observations were acquired; no observed congestion ranking is available.",
+    "Static detector coverage does not measure demand, congestion, capacity or crash risk.",
+    "Explicit official road-name matches identify point inventory, not complete corridor coverage.",
+    "Research inventory only: administrative/park boundaries and functional connecting-corridor relationships remain unverified.",
+    "Legacy VD observations are stale and lack offset/direction identity. Road-speed snapshot has no verified historical crosswalk.",
+    "Travel-time and pairing feeds are empty and stale. TDX historical access requires separately reviewed authentication and quotas."
+  ],
+  "sources": [
+    {
+      "sourceId": "A",
+      "resourceId": "47cb9090-e1c9-4b1d-b299-b11c375c5ee2",
+      "title": "Taipei VD static",
+      "url": "https://tcgbusfs.blob.core.windows.net/blobtisv/VD.xml",
+      "status": "limited",
+      "retrievedAt": "2026-10-21T01:43:12.243Z",
+      "sha256": "4b89efc9cd0fb8f93f5ccc2af92c790c9229d7e73663e8d630ff8b0441c015b6",
+      "resourceVersion": "taipei-vd-static-v2",
+      "observedFrom": null,
+      "observedThrough": null,
+      "limitations": [
+        "Equipment metadata only; no traffic measurements."
+      ]
+    },
+    {
+      "sourceId": "B",
+      "resourceId": "e57afe7f-3c9e-4f31-9208-eed859a92600",
+      "title": "Taipei VD dynamic",
+      "url": "https://tcgbusfs.blob.core.windows.net/blobtisv/GetVDDATA.xml",
+      "status": "excluded",
+      "retrievedAt": "2026-10-21T01:43:12.890Z",
+      "sha256": "c151a6cd7bbfb6e5758db022a0f26d7cd50a9b6b393b2f05b3841d22c52a03ee",
+      "resourceVersion": "taipei-vd-legacy",
+      "observedFrom": null,
+      "observedThrough": null,
+      "limitations": [
+        "ExchangeTime 2024/11/14T16:46:02; timezone absent; current metadata continuity unverified."
+      ]
+    },
+    {
+      "sourceId": "C",
+      "resourceId": "b5aaf33a-a6dc-4836-bce6-09986241fe11",
+      "title": "Taipei road speed",
+      "url": "https://tcgbusfs.blob.core.windows.net/blobtisv/GetVD.xml.gz",
+      "status": "limited",
+      "retrievedAt": "2026-10-21T01:43:12.971Z",
+      "sha256": "64675756035565f0071b536a2443a6f1dc0e61c23ee1e824c9b4d9d1ebc01f54",
+      "resourceVersion": "taipei-road-speed-legacy",
+      "observedFrom": null,
+      "observedThrough": null,
+      "limitations": [
+        "Single current legacy snapshot; timezone, definitions and section relationship not accepted for comparison."
+      ]
+    },
+    {
+      "sourceId": "D",
+      "resourceId": "e3aa9aa3-6e77-4537-8b7a-4a41908b2089",
+      "title": "Taipei road sections",
+      "url": "https://tcgbusfs.blob.core.windows.net/blobtisv/Section.xml",
+      "status": "limited",
+      "retrievedAt": "2026-10-21T01:43:13.189Z",
+      "sha256": "6435c5420197ca477ace47fe88d365e2df40b4ea8a6c28bcc242e1669935c2c0",
+      "resourceVersion": "taipei-section-v2",
+      "observedFrom": null,
+      "observedThrough": null,
+      "limitations": [
+        "Section metadata only; no verified VD-to-section crosswalk."
+      ]
+    },
+    {
+      "sourceId": "E",
+      "resourceId": "6ccdeddb-c66a-4cf5-8742-46c322f01b3b",
+      "title": "Taipei travel time",
+      "url": "https://tcgbusfs.blob.core.windows.net/blobtisv/ETagPairLive.xml",
+      "status": "excluded",
+      "retrievedAt": "2026-10-21T01:43:13.256Z",
+      "sha256": "6ab321c2a25e6efaa4381e801f0a6ef6d861fdda859107722baed36efad9bd82",
+      "resourceVersion": "taipei-etag-live-v2",
+      "observedFrom": null,
+      "observedThrough": null,
+      "limitations": [
+        "Empty feed dated 2024-12-18."
+      ]
+    },
+    {
+      "sourceId": "F",
+      "resourceId": "9a5139ca-f3fe-494e-a737-5f761c037f37",
+      "title": "Taipei detector pairing",
+      "url": "https://tcgbusfs.blob.core.windows.net/blobtisv/ETagPair.xml",
+      "status": "excluded",
+      "retrievedAt": "2026-10-21T01:43:13.322Z",
+      "sha256": "efe234e6c0d0beccafb0f9a3935b335d5f1360aeaa9e8430c11516d86a6c8a4e",
+      "resourceVersion": "taipei-etag-pair-v2",
+      "observedFrom": null,
+      "observedThrough": null,
+      "limitations": [
+        "Empty pairing list dated 2024-12-18."
+      ]
+    },
+    {
+      "sourceId": "G",
+      "resourceId": "TDX-current-traffic-v2",
+      "title": "TDX transport exchange",
+      "url": "https://tdx.transportdata.tw/api-service/swagger/basic/7f07d940-91a4-495d-9465-1c9df89d709c",
+      "status": "unavailable",
+      "retrievedAt": "2026-10-21T01:43:13.322Z",
+      "sha256": null,
+      "resourceVersion": "not-acquired",
+      "observedFrom": null,
+      "observedThrough": null,
+      "limitations": [
+        "Authenticated historical data not acquired; no credentials required by this retained-source workflow."
+      ]
+    }
+  ],
+  "devices": [
+    {
+      "deviceId": "V6120C0",
+      "sourceId": "A",
+      "roadName": "環東大道",
+      "corridorId": "huandong",
+      "verifiedLinkId": "2000900000030A",
+      "direction": "E",
+      "roadClass": "2",
+      "location": {
+        "latitude": 25.05133,
+        "longitude": 121.57074
+      },
+      "detectorType": "2",
+      "laneCount": 2,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable"
+      ]
+    },
+    {
+      "deviceId": "V6121A0",
+      "sourceId": "A",
+      "roadName": "堤頂大道",
+      "corridorId": "tiding",
+      "verifiedLinkId": "2000700100400A",
+      "direction": "N",
+      "roadClass": "2",
+      "location": {
+        "latitude": 25.05497,
+        "longitude": 121.57682
+      },
+      "detectorType": "2",
+      "laneCount": 1,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable"
+      ]
+    },
+    {
+      "deviceId": "V6140C0",
+      "sourceId": "A",
+      "roadName": "環東大道",
+      "corridorId": "huandong",
+      "verifiedLinkId": null,
+      "direction": null,
+      "roadClass": "2",
+      "location": {
+        "latitude": 25.05465,
+        "longitude": 121.57683
+      },
+      "detectorType": "2",
+      "laneCount": null,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction"
+      ]
+    },
+    {
+      "deviceId": "V6141E0",
+      "sourceId": "A",
+      "roadName": "堤頂大道",
+      "corridorId": "tiding",
+      "verifiedLinkId": "2000700000300A",
+      "direction": "S",
+      "roadClass": "2",
+      "location": {
+        "latitude": 25.06301,
+        "longitude": 121.5725
+      },
+      "detectorType": "2",
+      "laneCount": 1,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable"
+      ]
+    },
+    {
+      "deviceId": "V6150C1",
+      "sourceId": "A",
+      "roadName": "環東大道",
+      "corridorId": "huandong",
+      "verifiedLinkId": "2000900000200A",
+      "direction": "E",
+      "roadClass": "2",
+      "location": {
+        "latitude": 25.05862,
+        "longitude": 121.58438
+      },
+      "detectorType": "2",
+      "laneCount": 2,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable"
+      ]
+    },
+    {
+      "deviceId": "V6151C0",
+      "sourceId": "A",
+      "roadName": "環東大道",
+      "corridorId": "huandong",
+      "verifiedLinkId": null,
+      "direction": null,
+      "roadClass": "2",
+      "location": {
+        "latitude": 25.05845,
+        "longitude": 121.58366
+      },
+      "detectorType": "2",
+      "laneCount": null,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction"
+      ]
+    },
+    {
+      "deviceId": "V6160C3",
+      "sourceId": "A",
+      "roadName": "環東大道",
+      "corridorId": "huandong",
+      "verifiedLinkId": "2000900000300A",
+      "direction": "E",
+      "roadClass": "2",
+      "location": {
+        "latitude": 25.05848,
+        "longitude": 121.60204
+      },
+      "detectorType": "2",
+      "laneCount": 2,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable"
+      ]
+    },
+    {
+      "deviceId": "V6171C0",
+      "sourceId": "A",
+      "roadName": "環東大道",
+      "corridorId": "huandong",
+      "verifiedLinkId": null,
+      "direction": null,
+      "roadClass": "2",
+      "location": {
+        "latitude": 25.06112,
+        "longitude": 121.6196
+      },
+      "detectorType": "2",
+      "laneCount": null,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction"
+      ]
+    },
+    {
+      "deviceId": "V6171C1",
+      "sourceId": "A",
+      "roadName": "環東大道",
+      "corridorId": "huandong",
+      "verifiedLinkId": "2000901006000A",
+      "direction": "E",
+      "roadClass": "2",
+      "location": {
+        "latitude": 25.06285,
+        "longitude": 121.61635
+      },
+      "detectorType": "2",
+      "laneCount": 1,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable"
+      ]
+    },
+    {
+      "deviceId": "V6180A1",
+      "sourceId": "A",
+      "roadName": "環東大道",
+      "corridorId": "huandong",
+      "verifiedLinkId": "2000900000600A",
+      "direction": "E",
+      "roadClass": "2",
+      "location": {
+        "latitude": 25.06106,
+        "longitude": 121.61952
+      },
+      "detectorType": "2",
+      "laneCount": 2,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable"
+      ]
+    },
+    {
+      "deviceId": "V6180A2",
+      "sourceId": "A",
+      "roadName": "環東大道",
+      "corridorId": "huandong",
+      "verifiedLinkId": "2000900000640A",
+      "direction": "E",
+      "roadClass": "2",
+      "location": {
+        "latitude": 25.0586,
+        "longitude": 121.62171
+      },
+      "detectorType": "2",
+      "laneCount": 2,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable"
+      ]
+    },
+    {
+      "deviceId": "V6310G0",
+      "sourceId": "A",
+      "roadName": "環東大道",
+      "corridorId": "huandong",
+      "verifiedLinkId": "2000900100640A",
+      "direction": "W",
+      "roadClass": "2",
+      "location": {
+        "latitude": 25.05829,
+        "longitude": 121.62187
+      },
+      "detectorType": "2",
+      "laneCount": 3,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable"
+      ]
+    },
+    {
+      "deviceId": "V6320G0",
+      "sourceId": "A",
+      "roadName": "環東大道",
+      "corridorId": "huandong",
+      "verifiedLinkId": "2000900100600A",
+      "direction": "W",
+      "roadClass": "2",
+      "location": {
+        "latitude": 25.06116,
+        "longitude": 121.61965
+      },
+      "detectorType": "2",
+      "laneCount": 2,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable"
+      ]
+    },
+    {
+      "deviceId": "V6330G0",
+      "sourceId": "A",
+      "roadName": "環東大道",
+      "corridorId": "huandong",
+      "verifiedLinkId": "2000900000520A",
+      "direction": "E",
+      "roadClass": "2",
+      "location": {
+        "latitude": 25.06324,
+        "longitude": 121.61531
+      },
+      "detectorType": "2",
+      "laneCount": 3,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable"
+      ]
+    },
+    {
+      "deviceId": "V6330G5",
+      "sourceId": "A",
+      "roadName": "環東大道",
+      "corridorId": "huandong",
+      "verifiedLinkId": "2000900100300A",
+      "direction": "W",
+      "roadClass": "2",
+      "location": {
+        "latitude": 25.05841,
+        "longitude": 121.59809
+      },
+      "detectorType": "2",
+      "laneCount": 2,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable"
+      ]
+    },
+    {
+      "deviceId": "V6340G1",
+      "sourceId": "A",
+      "roadName": "環東大道",
+      "corridorId": "huandong",
+      "verifiedLinkId": "2000900100140A",
+      "direction": "W",
+      "roadClass": "2",
+      "location": {
+        "latitude": 25.05691,
+        "longitude": 121.58087
+      },
+      "detectorType": "2",
+      "laneCount": 2,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable"
+      ]
+    },
+    {
+      "deviceId": "V6350G0",
+      "sourceId": "A",
+      "roadName": "環東大道",
+      "corridorId": "huandong",
+      "verifiedLinkId": "2000900100100A",
+      "direction": "W",
+      "roadClass": "2",
+      "location": {
+        "latitude": 25.05486,
+        "longitude": 121.57706
+      },
+      "detectorType": "2",
+      "laneCount": 2,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable"
+      ]
+    },
+    {
+      "deviceId": "V6360G1",
+      "sourceId": "A",
+      "roadName": "環東大道",
+      "corridorId": "huandong",
+      "verifiedLinkId": "2000900100030A",
+      "direction": "W",
+      "roadClass": "2",
+      "location": {
+        "latitude": 25.05135,
+        "longitude": 121.57069
+      },
+      "detectorType": "2",
+      "laneCount": 2,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable"
+      ]
+    },
+    {
+      "deviceId": "V6380E0",
+      "sourceId": "A",
+      "roadName": "環東大道",
+      "corridorId": "huandong",
+      "verifiedLinkId": "2000901102000A",
+      "direction": "W",
+      "roadClass": "2",
+      "location": {
+        "latitude": 25.04739,
+        "longitude": 121.56817
+      },
+      "detectorType": "2",
+      "laneCount": 2,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable"
+      ]
+    },
+    {
+      "deviceId": "VKFRT00",
+      "sourceId": "A",
+      "roadName": "環東大道",
+      "corridorId": "huandong",
+      "verifiedLinkId": "2000901001000A",
+      "direction": "E",
+      "roadClass": "2",
+      "location": {
+        "latitude": 25.04378,
+        "longitude": 121.56607
+      },
+      "detectorType": "2",
+      "laneCount": 2,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable"
+      ]
+    },
+    {
+      "deviceId": "VNUNJ20",
+      "sourceId": "A",
+      "roadName": "民權東路三段",
+      "corridorId": "minquan",
+      "verifiedLinkId": null,
+      "direction": null,
+      "roadClass": "6",
+      "location": {
+        "latitude": 25.06219,
+        "longitude": 121.54723
+      },
+      "detectorType": "2",
+      "laneCount": null,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction"
+      ]
+    },
+    {
+      "deviceId": "VNZM960",
+      "sourceId": "A",
+      "roadName": "民權東路四段",
+      "corridorId": "minquan",
+      "verifiedLinkId": null,
+      "direction": null,
+      "roadClass": "6",
+      "location": {
+        "latitude": 25.06198,
+        "longitude": 121.55413
+      },
+      "detectorType": "2",
+      "laneCount": null,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction"
+      ]
+    },
+    {
+      "deviceId": "VP5KR60",
+      "sourceId": "A",
+      "roadName": "民權東路二段",
+      "corridorId": "minquan",
+      "verifiedLinkId": null,
+      "direction": null,
+      "roadClass": "6",
+      "location": {
+        "latitude": 25.0623,
+        "longitude": 121.53521
+      },
+      "detectorType": "2",
+      "laneCount": null,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction"
+      ]
+    },
+    {
+      "deviceId": "VP5KR62",
+      "sourceId": "A",
+      "roadName": "民權東路三段",
+      "corridorId": "minquan",
+      "verifiedLinkId": null,
+      "direction": null,
+      "roadClass": "6",
+      "location": {
+        "latitude": 25.06226,
+        "longitude": 121.53951
+      },
+      "detectorType": "2",
+      "laneCount": null,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction"
+      ]
+    },
+    {
+      "deviceId": "VP5QG20",
+      "sourceId": "A",
+      "roadName": "民權東路四段",
+      "corridorId": "minquan",
+      "verifiedLinkId": null,
+      "direction": null,
+      "roadClass": "6",
+      "location": {
+        "latitude": 25.06197,
+        "longitude": 121.55756
+      },
+      "detectorType": "2",
+      "laneCount": null,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction"
+      ]
+    },
+    {
+      "deviceId": "VP6IG60",
+      "sourceId": "A",
+      "roadName": "民權東路一段",
+      "corridorId": "minquan",
+      "verifiedLinkId": null,
+      "direction": null,
+      "roadClass": "6",
+      "location": {
+        "latitude": 25.06256,
+        "longitude": 121.52499
+      },
+      "detectorType": "2",
+      "laneCount": null,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction"
+      ]
+    },
+    {
+      "deviceId": "VP6JY20",
+      "sourceId": "A",
+      "roadName": "民權東路二段",
+      "corridorId": "minquan",
+      "verifiedLinkId": "6005280600020A",
+      "direction": "W",
+      "roadClass": "6",
+      "location": {
+        "latitude": 25.06261,
+        "longitude": 121.53333
+      },
+      "detectorType": "2",
+      "laneCount": 3,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable"
+      ]
+    },
+    {
+      "deviceId": "VP6JY60",
+      "sourceId": "A",
+      "roadName": "民權東路二段",
+      "corridorId": "minquan",
+      "verifiedLinkId": null,
+      "direction": null,
+      "roadClass": "6",
+      "location": {
+        "latitude": 25.06241,
+        "longitude": 121.53078
+      },
+      "detectorType": "2",
+      "laneCount": null,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction"
+      ]
+    },
+    {
+      "deviceId": "VP6JY61",
+      "sourceId": "A",
+      "roadName": "民權東路二段",
+      "corridorId": "minquan",
+      "verifiedLinkId": "6005280200010A",
+      "direction": "E",
+      "roadClass": "6",
+      "location": {
+        "latitude": 25.06247,
+        "longitude": 121.53308
+      },
+      "detectorType": "2",
+      "laneCount": 3,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable"
+      ]
+    },
+    {
+      "deviceId": "VPBTD70",
+      "sourceId": "A",
+      "roadName": "舊宗路一段",
+      "corridorId": "jiuzong",
+      "verifiedLinkId": null,
+      "direction": null,
+      "roadClass": "6",
+      "location": {
+        "latitude": 25.06275,
+        "longitude": 121.57721
+      },
+      "detectorType": "2",
+      "laneCount": null,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction"
+      ]
+    },
+    {
+      "deviceId": "VPMSV40",
+      "sourceId": "A",
+      "roadName": "堤頂大道",
+      "corridorId": "tiding",
+      "verifiedLinkId": null,
+      "direction": null,
+      "roadClass": "2",
+      "location": {
+        "latitude": 25.06689,
+        "longitude": 121.57246
+      },
+      "detectorType": "2",
+      "laneCount": null,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction"
+      ]
+    },
+    {
+      "deviceId": "VQ6WK40",
+      "sourceId": "A",
+      "roadName": "成功路二段",
+      "corridorId": "chenggong",
+      "verifiedLinkId": null,
+      "direction": null,
+      "roadClass": "6",
+      "location": {
+        "latitude": 25.0671,
+        "longitude": 121.59077
+      },
+      "detectorType": "2",
+      "laneCount": null,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction"
+      ]
+    },
+    {
+      "deviceId": "VQBUL20",
+      "sourceId": "A",
+      "roadName": "民權東路六段",
+      "corridorId": "minquan",
+      "verifiedLinkId": null,
+      "direction": null,
+      "roadClass": "6",
+      "location": {
+        "latitude": 25.06674,
+        "longitude": 121.57845
+      },
+      "detectorType": "2",
+      "laneCount": null,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction"
+      ]
+    },
+    {
+      "deviceId": "VQEUU60",
+      "sourceId": "A",
+      "roadName": "民權東路六段",
+      "corridorId": "minquan",
+      "verifiedLinkId": null,
+      "direction": null,
+      "roadClass": "6",
+      "location": {
+        "latitude": 25.06845,
+        "longitude": 121.5836
+      },
+      "detectorType": "2",
+      "laneCount": null,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction"
+      ]
+    },
+    {
+      "deviceId": "VQKWL40",
+      "sourceId": "A",
+      "roadName": "成功路三段",
+      "corridorId": "chenggong",
+      "verifiedLinkId": null,
+      "direction": null,
+      "roadClass": "6",
+      "location": {
+        "latitude": 25.07435,
+        "longitude": 121.59013
+      },
+      "detectorType": "2",
+      "laneCount": null,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction"
+      ]
+    },
+    {
+      "deviceId": "VQKWL60",
+      "sourceId": "A",
+      "roadName": "民權東路六段",
+      "corridorId": "minquan",
+      "verifiedLinkId": null,
+      "direction": null,
+      "roadClass": "6",
+      "location": {
+        "latitude": 25.06887,
+        "longitude": 121.58962
+      },
+      "detectorType": "2",
+      "laneCount": null,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction"
+      ]
+    },
+    {
+      "deviceId": "VQKWL61",
+      "sourceId": "A",
+      "roadName": "民權東路六段",
+      "corridorId": "minquan",
+      "verifiedLinkId": null,
+      "direction": null,
+      "roadClass": "6",
+      "location": {
+        "latitude": 25.06721,
+        "longitude": 121.59852
+      },
+      "detectorType": "2",
+      "laneCount": null,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction"
+      ]
+    },
+    {
+      "deviceId": "VQRTE00",
+      "sourceId": "A",
+      "roadName": "舊宗路二段",
+      "corridorId": "jiuzong",
+      "verifiedLinkId": null,
+      "direction": null,
+      "roadClass": "6",
+      "location": {
+        "latitude": 25.06802,
+        "longitude": 121.57481
+      },
+      "detectorType": "2",
+      "laneCount": null,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction"
+      ]
+    },
+    {
+      "deviceId": "VRGUF00",
+      "sourceId": "A",
+      "roadName": "瑞光路",
+      "corridorId": "ruiguang",
+      "verifiedLinkId": null,
+      "direction": null,
+      "roadClass": "6",
+      "location": {
+        "latitude": 25.07258,
+        "longitude": 121.58051
+      },
+      "detectorType": "2",
+      "laneCount": null,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction"
+      ]
+    },
+    {
+      "deviceId": "VRHT600",
+      "sourceId": "A",
+      "roadName": "堤頂大道",
+      "corridorId": "tiding",
+      "verifiedLinkId": "2000700100180A",
+      "direction": "N",
+      "roadClass": "2",
+      "location": {
+        "latitude": 25.07446,
+        "longitude": 121.5725
+      },
+      "detectorType": "2",
+      "laneCount": 6,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable"
+      ]
+    },
+    {
+      "deviceId": "VRHT640",
+      "sourceId": "A",
+      "roadName": "堤頂大道",
+      "corridorId": "tiding",
+      "verifiedLinkId": "2000700000130A",
+      "direction": "S",
+      "roadClass": "2",
+      "location": {
+        "latitude": 25.07471,
+        "longitude": 121.5721
+      },
+      "detectorType": "2",
+      "laneCount": 6,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable"
+      ]
+    },
+    {
+      "deviceId": "VRHT660",
+      "sourceId": "A",
+      "roadName": "港墘路",
+      "corridorId": "gangqian",
+      "verifiedLinkId": null,
+      "direction": null,
+      "roadClass": "6",
+      "location": {
+        "latitude": 25.07472,
+        "longitude": 121.57247
+      },
+      "detectorType": "2",
+      "laneCount": null,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction"
+      ]
+    },
+    {
+      "deviceId": "VRPSV00",
+      "sourceId": "A",
+      "roadName": "堤頂大道",
+      "corridorId": "tiding",
+      "verifiedLinkId": null,
+      "direction": null,
+      "roadClass": "2",
+      "location": {
+        "latitude": 25.07314,
+        "longitude": 121.57317
+      },
+      "detectorType": "2",
+      "laneCount": null,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction"
+      ]
+    },
+    {
+      "deviceId": "VRPSV70",
+      "sourceId": "A",
+      "roadName": "舊宗路二段",
+      "corridorId": "jiuzong",
+      "verifiedLinkId": "6007210000010A",
+      "direction": "N",
+      "roadClass": "6",
+      "location": {
+        "latitude": 25.07301,
+        "longitude": 121.5735
+      },
+      "detectorType": "2",
+      "laneCount": 2,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable"
+      ]
+    },
+    {
+      "deviceId": "VS6TI00",
+      "sourceId": "A",
+      "roadName": "瑞光路",
+      "corridorId": "ruiguang",
+      "verifiedLinkId": null,
+      "direction": null,
+      "roadClass": "6",
+      "location": {
+        "latitude": 25.07569,
+        "longitude": 121.57616
+      },
+      "detectorType": "2",
+      "laneCount": null,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction"
+      ]
+    },
+    {
+      "deviceId": "VSGRX40",
+      "sourceId": "A",
+      "roadName": "瑞光路",
+      "corridorId": "ruiguang",
+      "verifiedLinkId": null,
+      "direction": null,
+      "roadClass": "6",
+      "location": {
+        "latitude": 25.07887,
+        "longitude": 121.56942
+      },
+      "detectorType": "2",
+      "laneCount": null,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction"
+      ]
+    },
+    {
+      "deviceId": "VSGRX60",
+      "sourceId": "A",
+      "roadName": "堤頂大道",
+      "corridorId": "tiding",
+      "verifiedLinkId": "2000700100130A",
+      "direction": "N",
+      "roadClass": "2",
+      "location": {
+        "latitude": 25.07713,
+        "longitude": 121.57025
+      },
+      "detectorType": "2",
+      "laneCount": 2,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable"
+      ]
+    },
+    {
+      "deviceId": "VSHZU60",
+      "sourceId": "A",
+      "roadName": "成功路五段",
+      "corridorId": "chenggong",
+      "verifiedLinkId": "6003680700010A",
+      "direction": "NW",
+      "roadClass": "6",
+      "location": {
+        "latitude": 25.08121,
+        "longitude": 121.60705
+      },
+      "detectorType": "2",
+      "laneCount": 2,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable"
+      ]
+    },
+    {
+      "deviceId": "VSKTL00",
+      "sourceId": "A",
+      "roadName": "港墘路",
+      "corridorId": "gangqian",
+      "verifiedLinkId": null,
+      "direction": null,
+      "roadClass": "6",
+      "location": {
+        "latitude": 25.07743,
+        "longitude": 121.57548
+      },
+      "detectorType": "2",
+      "laneCount": null,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction"
+      ]
+    },
+    {
+      "deviceId": "VSMQQ40",
+      "sourceId": "A",
+      "roadName": "堤頂大道",
+      "corridorId": "tiding",
+      "verifiedLinkId": "2000700000000A",
+      "direction": "S",
+      "roadClass": "2",
+      "location": {
+        "latitude": 25.08052,
+        "longitude": 121.56258
+      },
+      "detectorType": "2",
+      "laneCount": 2,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable"
+      ]
+    },
+    {
+      "deviceId": "VSNRE00",
+      "sourceId": "A",
+      "roadName": "瑞光路",
+      "corridorId": "ruiguang",
+      "verifiedLinkId": null,
+      "direction": null,
+      "roadClass": "6",
+      "location": {
+        "latitude": 25.07796,
+        "longitude": 121.57162
+      },
+      "detectorType": "2",
+      "laneCount": null,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction"
+      ]
+    },
+    {
+      "deviceId": "VSPRA20",
+      "sourceId": "A",
+      "roadName": "堤頂大道",
+      "corridorId": "tiding",
+      "verifiedLinkId": "2000700000080A",
+      "direction": "S",
+      "roadClass": "2",
+      "location": {
+        "latitude": 25.0781,
+        "longitude": 121.56623
+      },
+      "detectorType": "2",
+      "laneCount": 2,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable"
+      ]
+    },
+    {
+      "deviceId": "VSPRA60",
+      "sourceId": "A",
+      "roadName": "堤頂大道",
+      "corridorId": "tiding",
+      "verifiedLinkId": "2000700100080A",
+      "direction": "N",
+      "roadClass": "2",
+      "location": {
+        "latitude": 25.07849,
+        "longitude": 121.56555
+      },
+      "detectorType": "2",
+      "laneCount": 2,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable"
+      ]
+    },
+    {
+      "deviceId": "VT5QV00",
+      "sourceId": "A",
+      "roadName": "堤頂大道",
+      "corridorId": "tiding",
+      "verifiedLinkId": null,
+      "direction": null,
+      "roadClass": "2",
+      "location": {
+        "latitude": 25.07946,
+        "longitude": 121.5638
+      },
+      "detectorType": "2",
+      "laneCount": null,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction"
+      ]
+    },
+    {
+      "deviceId": "VTVXH20",
+      "sourceId": "A",
+      "roadName": "成功路四段",
+      "corridorId": "chenggong",
+      "verifiedLinkId": "6003670100013A",
+      "direction": "NE",
+      "roadClass": "6",
+      "location": {
+        "latitude": 25.08307,
+        "longitude": 121.59383
+      },
+      "detectorType": "2",
+      "laneCount": 2,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable"
+      ]
+    },
+    {
+      "deviceId": "VTXQL00",
+      "sourceId": "A",
+      "roadName": "堤頂大道",
+      "corridorId": "tiding",
+      "verifiedLinkId": "2000700100000A",
+      "direction": "N",
+      "roadClass": "2",
+      "location": {
+        "latitude": 25.08277,
+        "longitude": 121.56175
+      },
+      "detectorType": "2",
+      "laneCount": 2,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable"
+      ]
+    },
+    {
+      "deviceId": "VTYXQ60",
+      "sourceId": "A",
+      "roadName": "成功路四段",
+      "corridorId": "chenggong",
+      "verifiedLinkId": "6003670500020A",
+      "direction": "SW",
+      "roadClass": "6",
+      "location": {
+        "latitude": 25.08473,
+        "longitude": 121.59757
+      },
+      "detectorType": "2",
+      "laneCount": 2,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable"
+      ]
+    },
+    {
+      "deviceId": "VTZY920",
+      "sourceId": "A",
+      "roadName": "成功路四段",
+      "corridorId": "chenggong",
+      "verifiedLinkId": "6003670100020A",
+      "direction": "NE",
+      "roadClass": "6",
+      "location": {
+        "latitude": 25.08456,
+        "longitude": 121.59863
+      },
+      "detectorType": "2",
+      "laneCount": 2,
+      "metadataVersion": "25.12.1",
+      "geographicScope": "unverified",
+      "sourceQualityFlags": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable"
+      ]
+    }
+  ],
+  "corridors": [
+    {
+      "corridorId": "ruiguang",
+      "nameZh": "瑞光路",
+      "nameEn": "Ruiguang Road",
+      "deviceIds": [
+        "VRGUF00",
+        "VS6TI00",
+        "VSGRX40",
+        "VSNRE00"
+      ],
+      "limitations": [
+        "Explicit official road-name match; no assertion of complete corridor or park-boundary coverage.",
+        "No eligible historical observations."
+      ]
+    },
+    {
+      "corridorId": "gangqian",
+      "nameZh": "港墘路",
+      "nameEn": "Gangqian Road",
+      "deviceIds": [
+        "VRHT660",
+        "VSKTL00"
+      ],
+      "limitations": [
+        "Explicit official road-name match; no assertion of complete corridor or park-boundary coverage.",
+        "No eligible historical observations."
+      ]
+    },
+    {
+      "corridorId": "tiding",
+      "nameZh": "堤頂大道",
+      "nameEn": "Tiding Boulevard",
+      "deviceIds": [
+        "V6121A0",
+        "V6141E0",
+        "VPMSV40",
+        "VRHT600",
+        "VRHT640",
+        "VRPSV00",
+        "VSGRX60",
+        "VSMQQ40",
+        "VSPRA20",
+        "VSPRA60",
+        "VT5QV00",
+        "VTXQL00"
+      ],
+      "limitations": [
+        "Explicit official road-name match; no assertion of complete corridor or park-boundary coverage.",
+        "No eligible historical observations."
+      ]
+    },
+    {
+      "corridorId": "jiuzong",
+      "nameZh": "舊宗路",
+      "nameEn": "Jiuzong Road",
+      "deviceIds": [
+        "VPBTD70",
+        "VQRTE00",
+        "VRPSV70"
+      ],
+      "limitations": [
+        "Explicit official road-name match; no assertion of complete corridor or park-boundary coverage.",
+        "No eligible historical observations."
+      ]
+    },
+    {
+      "corridorId": "minquan",
+      "nameZh": "民權東路",
+      "nameEn": "Minquan East Road",
+      "deviceIds": [
+        "VNUNJ20",
+        "VNZM960",
+        "VP5KR60",
+        "VP5KR62",
+        "VP5QG20",
+        "VP6IG60",
+        "VP6JY20",
+        "VP6JY60",
+        "VP6JY61",
+        "VQBUL20",
+        "VQEUU60",
+        "VQKWL60",
+        "VQKWL61"
+      ],
+      "limitations": [
+        "Explicit official road-name match; no assertion of complete corridor or park-boundary coverage.",
+        "No eligible historical observations."
+      ]
+    },
+    {
+      "corridorId": "chenggong",
+      "nameZh": "成功路",
+      "nameEn": "Chenggong Road",
+      "deviceIds": [
+        "VQ6WK40",
+        "VQKWL40",
+        "VSHZU60",
+        "VTVXH20",
+        "VTYXQ60",
+        "VTZY920"
+      ],
+      "limitations": [
+        "Explicit official road-name match; no assertion of complete corridor or park-boundary coverage.",
+        "No eligible historical observations."
+      ]
+    },
+    {
+      "corridorId": "huandong",
+      "nameZh": "環東大道",
+      "nameEn": "Huandong Boulevard",
+      "deviceIds": [
+        "V6120C0",
+        "V6140C0",
+        "V6150C1",
+        "V6151C0",
+        "V6160C3",
+        "V6171C0",
+        "V6171C1",
+        "V6180A1",
+        "V6180A2",
+        "V6310G0",
+        "V6320G0",
+        "V6330G0",
+        "V6330G5",
+        "V6340G1",
+        "V6350G0",
+        "V6360G1",
+        "V6380E0",
+        "VKFRT00"
+      ],
+      "limitations": [
+        "Explicit official road-name match; no assertion of complete corridor or park-boundary coverage.",
+        "No eligible historical observations."
+      ]
+    }
+  ],
+  "observations": [],
+  "dailyAggregates": [],
+  "candidates": [
+    {
+      "stableCandidateId": "[\"V6120C0\",\"25.12.1\",\"E\",\"readiness\"]",
+      "corridorId": "huandong",
+      "roadCorridor": "環東大道",
+      "deviceId": "V6120C0",
+      "validatedSegmentIdentity": "2000900000030A",
+      "direction": "E",
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "review",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"V6121A0\",\"25.12.1\",\"N\",\"readiness\"]",
+      "corridorId": "tiding",
+      "roadCorridor": "堤頂大道",
+      "deviceId": "V6121A0",
+      "validatedSegmentIdentity": "2000700100400A",
+      "direction": "N",
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "review",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"V6140C0\",\"25.12.1\",null,\"readiness\"]",
+      "corridorId": "huandong",
+      "roadCorridor": "環東大道",
+      "deviceId": "V6140C0",
+      "validatedSegmentIdentity": null,
+      "direction": null,
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "urgent",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "missing_or_ambiguous_link",
+          "missing_or_ambiguous_direction",
+          "missing_direction",
+          "missing_link_mapping",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction",
+        "missing_direction",
+        "missing_link_mapping",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"V6141E0\",\"25.12.1\",\"S\",\"readiness\"]",
+      "corridorId": "tiding",
+      "roadCorridor": "堤頂大道",
+      "deviceId": "V6141E0",
+      "validatedSegmentIdentity": "2000700000300A",
+      "direction": "S",
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "review",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"V6150C1\",\"25.12.1\",\"E\",\"readiness\"]",
+      "corridorId": "huandong",
+      "roadCorridor": "環東大道",
+      "deviceId": "V6150C1",
+      "validatedSegmentIdentity": "2000900000200A",
+      "direction": "E",
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "review",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"V6151C0\",\"25.12.1\",null,\"readiness\"]",
+      "corridorId": "huandong",
+      "roadCorridor": "環東大道",
+      "deviceId": "V6151C0",
+      "validatedSegmentIdentity": null,
+      "direction": null,
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "urgent",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "missing_or_ambiguous_link",
+          "missing_or_ambiguous_direction",
+          "missing_direction",
+          "missing_link_mapping",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction",
+        "missing_direction",
+        "missing_link_mapping",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"V6160C3\",\"25.12.1\",\"E\",\"readiness\"]",
+      "corridorId": "huandong",
+      "roadCorridor": "環東大道",
+      "deviceId": "V6160C3",
+      "validatedSegmentIdentity": "2000900000300A",
+      "direction": "E",
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "review",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"V6171C0\",\"25.12.1\",null,\"readiness\"]",
+      "corridorId": "huandong",
+      "roadCorridor": "環東大道",
+      "deviceId": "V6171C0",
+      "validatedSegmentIdentity": null,
+      "direction": null,
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "urgent",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "missing_or_ambiguous_link",
+          "missing_or_ambiguous_direction",
+          "missing_direction",
+          "missing_link_mapping",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction",
+        "missing_direction",
+        "missing_link_mapping",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"V6171C1\",\"25.12.1\",\"E\",\"readiness\"]",
+      "corridorId": "huandong",
+      "roadCorridor": "環東大道",
+      "deviceId": "V6171C1",
+      "validatedSegmentIdentity": "2000901006000A",
+      "direction": "E",
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "review",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"V6180A1\",\"25.12.1\",\"E\",\"readiness\"]",
+      "corridorId": "huandong",
+      "roadCorridor": "環東大道",
+      "deviceId": "V6180A1",
+      "validatedSegmentIdentity": "2000900000600A",
+      "direction": "E",
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "review",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"V6180A2\",\"25.12.1\",\"E\",\"readiness\"]",
+      "corridorId": "huandong",
+      "roadCorridor": "環東大道",
+      "deviceId": "V6180A2",
+      "validatedSegmentIdentity": "2000900000640A",
+      "direction": "E",
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "review",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"V6310G0\",\"25.12.1\",\"W\",\"readiness\"]",
+      "corridorId": "huandong",
+      "roadCorridor": "環東大道",
+      "deviceId": "V6310G0",
+      "validatedSegmentIdentity": "2000900100640A",
+      "direction": "W",
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "review",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"V6320G0\",\"25.12.1\",\"W\",\"readiness\"]",
+      "corridorId": "huandong",
+      "roadCorridor": "環東大道",
+      "deviceId": "V6320G0",
+      "validatedSegmentIdentity": "2000900100600A",
+      "direction": "W",
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "review",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"V6330G0\",\"25.12.1\",\"E\",\"readiness\"]",
+      "corridorId": "huandong",
+      "roadCorridor": "環東大道",
+      "deviceId": "V6330G0",
+      "validatedSegmentIdentity": "2000900000520A",
+      "direction": "E",
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "review",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"V6330G5\",\"25.12.1\",\"W\",\"readiness\"]",
+      "corridorId": "huandong",
+      "roadCorridor": "環東大道",
+      "deviceId": "V6330G5",
+      "validatedSegmentIdentity": "2000900100300A",
+      "direction": "W",
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "review",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"V6340G1\",\"25.12.1\",\"W\",\"readiness\"]",
+      "corridorId": "huandong",
+      "roadCorridor": "環東大道",
+      "deviceId": "V6340G1",
+      "validatedSegmentIdentity": "2000900100140A",
+      "direction": "W",
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "review",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"V6350G0\",\"25.12.1\",\"W\",\"readiness\"]",
+      "corridorId": "huandong",
+      "roadCorridor": "環東大道",
+      "deviceId": "V6350G0",
+      "validatedSegmentIdentity": "2000900100100A",
+      "direction": "W",
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "review",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"V6360G1\",\"25.12.1\",\"W\",\"readiness\"]",
+      "corridorId": "huandong",
+      "roadCorridor": "環東大道",
+      "deviceId": "V6360G1",
+      "validatedSegmentIdentity": "2000900100030A",
+      "direction": "W",
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "review",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"V6380E0\",\"25.12.1\",\"W\",\"readiness\"]",
+      "corridorId": "huandong",
+      "roadCorridor": "環東大道",
+      "deviceId": "V6380E0",
+      "validatedSegmentIdentity": "2000901102000A",
+      "direction": "W",
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "review",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"VKFRT00\",\"25.12.1\",\"E\",\"readiness\"]",
+      "corridorId": "huandong",
+      "roadCorridor": "環東大道",
+      "deviceId": "VKFRT00",
+      "validatedSegmentIdentity": "2000901001000A",
+      "direction": "E",
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "review",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"VNUNJ20\",\"25.12.1\",null,\"readiness\"]",
+      "corridorId": "minquan",
+      "roadCorridor": "民權東路三段",
+      "deviceId": "VNUNJ20",
+      "validatedSegmentIdentity": null,
+      "direction": null,
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "urgent",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "missing_or_ambiguous_link",
+          "missing_or_ambiguous_direction",
+          "missing_direction",
+          "missing_link_mapping",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction",
+        "missing_direction",
+        "missing_link_mapping",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"VNZM960\",\"25.12.1\",null,\"readiness\"]",
+      "corridorId": "minquan",
+      "roadCorridor": "民權東路四段",
+      "deviceId": "VNZM960",
+      "validatedSegmentIdentity": null,
+      "direction": null,
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "urgent",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "missing_or_ambiguous_link",
+          "missing_or_ambiguous_direction",
+          "missing_direction",
+          "missing_link_mapping",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction",
+        "missing_direction",
+        "missing_link_mapping",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"VP5KR60\",\"25.12.1\",null,\"readiness\"]",
+      "corridorId": "minquan",
+      "roadCorridor": "民權東路二段",
+      "deviceId": "VP5KR60",
+      "validatedSegmentIdentity": null,
+      "direction": null,
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "urgent",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "missing_or_ambiguous_link",
+          "missing_or_ambiguous_direction",
+          "missing_direction",
+          "missing_link_mapping",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction",
+        "missing_direction",
+        "missing_link_mapping",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"VP5KR62\",\"25.12.1\",null,\"readiness\"]",
+      "corridorId": "minquan",
+      "roadCorridor": "民權東路三段",
+      "deviceId": "VP5KR62",
+      "validatedSegmentIdentity": null,
+      "direction": null,
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "urgent",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "missing_or_ambiguous_link",
+          "missing_or_ambiguous_direction",
+          "missing_direction",
+          "missing_link_mapping",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction",
+        "missing_direction",
+        "missing_link_mapping",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"VP5QG20\",\"25.12.1\",null,\"readiness\"]",
+      "corridorId": "minquan",
+      "roadCorridor": "民權東路四段",
+      "deviceId": "VP5QG20",
+      "validatedSegmentIdentity": null,
+      "direction": null,
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "urgent",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "missing_or_ambiguous_link",
+          "missing_or_ambiguous_direction",
+          "missing_direction",
+          "missing_link_mapping",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction",
+        "missing_direction",
+        "missing_link_mapping",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"VP6IG60\",\"25.12.1\",null,\"readiness\"]",
+      "corridorId": "minquan",
+      "roadCorridor": "民權東路一段",
+      "deviceId": "VP6IG60",
+      "validatedSegmentIdentity": null,
+      "direction": null,
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "urgent",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "missing_or_ambiguous_link",
+          "missing_or_ambiguous_direction",
+          "missing_direction",
+          "missing_link_mapping",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction",
+        "missing_direction",
+        "missing_link_mapping",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"VP6JY20\",\"25.12.1\",\"W\",\"readiness\"]",
+      "corridorId": "minquan",
+      "roadCorridor": "民權東路二段",
+      "deviceId": "VP6JY20",
+      "validatedSegmentIdentity": "6005280600020A",
+      "direction": "W",
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "review",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"VP6JY60\",\"25.12.1\",null,\"readiness\"]",
+      "corridorId": "minquan",
+      "roadCorridor": "民權東路二段",
+      "deviceId": "VP6JY60",
+      "validatedSegmentIdentity": null,
+      "direction": null,
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "urgent",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "missing_or_ambiguous_link",
+          "missing_or_ambiguous_direction",
+          "missing_direction",
+          "missing_link_mapping",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction",
+        "missing_direction",
+        "missing_link_mapping",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"VP6JY61\",\"25.12.1\",\"E\",\"readiness\"]",
+      "corridorId": "minquan",
+      "roadCorridor": "民權東路二段",
+      "deviceId": "VP6JY61",
+      "validatedSegmentIdentity": "6005280200010A",
+      "direction": "E",
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "review",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"VPBTD70\",\"25.12.1\",null,\"readiness\"]",
+      "corridorId": "jiuzong",
+      "roadCorridor": "舊宗路一段",
+      "deviceId": "VPBTD70",
+      "validatedSegmentIdentity": null,
+      "direction": null,
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "urgent",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "missing_or_ambiguous_link",
+          "missing_or_ambiguous_direction",
+          "missing_direction",
+          "missing_link_mapping",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction",
+        "missing_direction",
+        "missing_link_mapping",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"VPMSV40\",\"25.12.1\",null,\"readiness\"]",
+      "corridorId": "tiding",
+      "roadCorridor": "堤頂大道",
+      "deviceId": "VPMSV40",
+      "validatedSegmentIdentity": null,
+      "direction": null,
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "urgent",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "missing_or_ambiguous_link",
+          "missing_or_ambiguous_direction",
+          "missing_direction",
+          "missing_link_mapping",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction",
+        "missing_direction",
+        "missing_link_mapping",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"VQ6WK40\",\"25.12.1\",null,\"readiness\"]",
+      "corridorId": "chenggong",
+      "roadCorridor": "成功路二段",
+      "deviceId": "VQ6WK40",
+      "validatedSegmentIdentity": null,
+      "direction": null,
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "urgent",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "missing_or_ambiguous_link",
+          "missing_or_ambiguous_direction",
+          "missing_direction",
+          "missing_link_mapping",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction",
+        "missing_direction",
+        "missing_link_mapping",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"VQBUL20\",\"25.12.1\",null,\"readiness\"]",
+      "corridorId": "minquan",
+      "roadCorridor": "民權東路六段",
+      "deviceId": "VQBUL20",
+      "validatedSegmentIdentity": null,
+      "direction": null,
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "urgent",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "missing_or_ambiguous_link",
+          "missing_or_ambiguous_direction",
+          "missing_direction",
+          "missing_link_mapping",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction",
+        "missing_direction",
+        "missing_link_mapping",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"VQEUU60\",\"25.12.1\",null,\"readiness\"]",
+      "corridorId": "minquan",
+      "roadCorridor": "民權東路六段",
+      "deviceId": "VQEUU60",
+      "validatedSegmentIdentity": null,
+      "direction": null,
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "urgent",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "missing_or_ambiguous_link",
+          "missing_or_ambiguous_direction",
+          "missing_direction",
+          "missing_link_mapping",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction",
+        "missing_direction",
+        "missing_link_mapping",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"VQKWL40\",\"25.12.1\",null,\"readiness\"]",
+      "corridorId": "chenggong",
+      "roadCorridor": "成功路三段",
+      "deviceId": "VQKWL40",
+      "validatedSegmentIdentity": null,
+      "direction": null,
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "urgent",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "missing_or_ambiguous_link",
+          "missing_or_ambiguous_direction",
+          "missing_direction",
+          "missing_link_mapping",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction",
+        "missing_direction",
+        "missing_link_mapping",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"VQKWL60\",\"25.12.1\",null,\"readiness\"]",
+      "corridorId": "minquan",
+      "roadCorridor": "民權東路六段",
+      "deviceId": "VQKWL60",
+      "validatedSegmentIdentity": null,
+      "direction": null,
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "urgent",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "missing_or_ambiguous_link",
+          "missing_or_ambiguous_direction",
+          "missing_direction",
+          "missing_link_mapping",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction",
+        "missing_direction",
+        "missing_link_mapping",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"VQKWL61\",\"25.12.1\",null,\"readiness\"]",
+      "corridorId": "minquan",
+      "roadCorridor": "民權東路六段",
+      "deviceId": "VQKWL61",
+      "validatedSegmentIdentity": null,
+      "direction": null,
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "urgent",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "missing_or_ambiguous_link",
+          "missing_or_ambiguous_direction",
+          "missing_direction",
+          "missing_link_mapping",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction",
+        "missing_direction",
+        "missing_link_mapping",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"VQRTE00\",\"25.12.1\",null,\"readiness\"]",
+      "corridorId": "jiuzong",
+      "roadCorridor": "舊宗路二段",
+      "deviceId": "VQRTE00",
+      "validatedSegmentIdentity": null,
+      "direction": null,
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "urgent",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "missing_or_ambiguous_link",
+          "missing_or_ambiguous_direction",
+          "missing_direction",
+          "missing_link_mapping",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction",
+        "missing_direction",
+        "missing_link_mapping",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"VRGUF00\",\"25.12.1\",null,\"readiness\"]",
+      "corridorId": "ruiguang",
+      "roadCorridor": "瑞光路",
+      "deviceId": "VRGUF00",
+      "validatedSegmentIdentity": null,
+      "direction": null,
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "urgent",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "missing_or_ambiguous_link",
+          "missing_or_ambiguous_direction",
+          "missing_direction",
+          "missing_link_mapping",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction",
+        "missing_direction",
+        "missing_link_mapping",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"VRHT600\",\"25.12.1\",\"N\",\"readiness\"]",
+      "corridorId": "tiding",
+      "roadCorridor": "堤頂大道",
+      "deviceId": "VRHT600",
+      "validatedSegmentIdentity": "2000700100180A",
+      "direction": "N",
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "review",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"VRHT640\",\"25.12.1\",\"S\",\"readiness\"]",
+      "corridorId": "tiding",
+      "roadCorridor": "堤頂大道",
+      "deviceId": "VRHT640",
+      "validatedSegmentIdentity": "2000700000130A",
+      "direction": "S",
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "review",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"VRHT660\",\"25.12.1\",null,\"readiness\"]",
+      "corridorId": "gangqian",
+      "roadCorridor": "港墘路",
+      "deviceId": "VRHT660",
+      "validatedSegmentIdentity": null,
+      "direction": null,
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "urgent",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "missing_or_ambiguous_link",
+          "missing_or_ambiguous_direction",
+          "missing_direction",
+          "missing_link_mapping",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction",
+        "missing_direction",
+        "missing_link_mapping",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"VRPSV00\",\"25.12.1\",null,\"readiness\"]",
+      "corridorId": "tiding",
+      "roadCorridor": "堤頂大道",
+      "deviceId": "VRPSV00",
+      "validatedSegmentIdentity": null,
+      "direction": null,
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "urgent",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "missing_or_ambiguous_link",
+          "missing_or_ambiguous_direction",
+          "missing_direction",
+          "missing_link_mapping",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction",
+        "missing_direction",
+        "missing_link_mapping",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"VRPSV70\",\"25.12.1\",\"N\",\"readiness\"]",
+      "corridorId": "jiuzong",
+      "roadCorridor": "舊宗路二段",
+      "deviceId": "VRPSV70",
+      "validatedSegmentIdentity": "6007210000010A",
+      "direction": "N",
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "review",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"VS6TI00\",\"25.12.1\",null,\"readiness\"]",
+      "corridorId": "ruiguang",
+      "roadCorridor": "瑞光路",
+      "deviceId": "VS6TI00",
+      "validatedSegmentIdentity": null,
+      "direction": null,
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "urgent",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "missing_or_ambiguous_link",
+          "missing_or_ambiguous_direction",
+          "missing_direction",
+          "missing_link_mapping",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction",
+        "missing_direction",
+        "missing_link_mapping",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"VSGRX40\",\"25.12.1\",null,\"readiness\"]",
+      "corridorId": "ruiguang",
+      "roadCorridor": "瑞光路",
+      "deviceId": "VSGRX40",
+      "validatedSegmentIdentity": null,
+      "direction": null,
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "urgent",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "missing_or_ambiguous_link",
+          "missing_or_ambiguous_direction",
+          "missing_direction",
+          "missing_link_mapping",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction",
+        "missing_direction",
+        "missing_link_mapping",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"VSGRX60\",\"25.12.1\",\"N\",\"readiness\"]",
+      "corridorId": "tiding",
+      "roadCorridor": "堤頂大道",
+      "deviceId": "VSGRX60",
+      "validatedSegmentIdentity": "2000700100130A",
+      "direction": "N",
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "review",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"VSHZU60\",\"25.12.1\",\"NW\",\"readiness\"]",
+      "corridorId": "chenggong",
+      "roadCorridor": "成功路五段",
+      "deviceId": "VSHZU60",
+      "validatedSegmentIdentity": "6003680700010A",
+      "direction": "NW",
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "review",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"VSKTL00\",\"25.12.1\",null,\"readiness\"]",
+      "corridorId": "gangqian",
+      "roadCorridor": "港墘路",
+      "deviceId": "VSKTL00",
+      "validatedSegmentIdentity": null,
+      "direction": null,
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "urgent",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "missing_or_ambiguous_link",
+          "missing_or_ambiguous_direction",
+          "missing_direction",
+          "missing_link_mapping",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction",
+        "missing_direction",
+        "missing_link_mapping",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"VSMQQ40\",\"25.12.1\",\"S\",\"readiness\"]",
+      "corridorId": "tiding",
+      "roadCorridor": "堤頂大道",
+      "deviceId": "VSMQQ40",
+      "validatedSegmentIdentity": "2000700000000A",
+      "direction": "S",
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "review",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"VSNRE00\",\"25.12.1\",null,\"readiness\"]",
+      "corridorId": "ruiguang",
+      "roadCorridor": "瑞光路",
+      "deviceId": "VSNRE00",
+      "validatedSegmentIdentity": null,
+      "direction": null,
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "urgent",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "missing_or_ambiguous_link",
+          "missing_or_ambiguous_direction",
+          "missing_direction",
+          "missing_link_mapping",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction",
+        "missing_direction",
+        "missing_link_mapping",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"VSPRA20\",\"25.12.1\",\"S\",\"readiness\"]",
+      "corridorId": "tiding",
+      "roadCorridor": "堤頂大道",
+      "deviceId": "VSPRA20",
+      "validatedSegmentIdentity": "2000700000080A",
+      "direction": "S",
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "review",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"VSPRA60\",\"25.12.1\",\"N\",\"readiness\"]",
+      "corridorId": "tiding",
+      "roadCorridor": "堤頂大道",
+      "deviceId": "VSPRA60",
+      "validatedSegmentIdentity": "2000700100080A",
+      "direction": "N",
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "review",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"VT5QV00\",\"25.12.1\",null,\"readiness\"]",
+      "corridorId": "tiding",
+      "roadCorridor": "堤頂大道",
+      "deviceId": "VT5QV00",
+      "validatedSegmentIdentity": null,
+      "direction": null,
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "urgent",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "missing_or_ambiguous_link",
+          "missing_or_ambiguous_direction",
+          "missing_direction",
+          "missing_link_mapping",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "missing_or_ambiguous_link",
+        "missing_or_ambiguous_direction",
+        "missing_direction",
+        "missing_link_mapping",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"VTVXH20\",\"25.12.1\",\"NE\",\"readiness\"]",
+      "corridorId": "chenggong",
+      "roadCorridor": "成功路四段",
+      "deviceId": "VTVXH20",
+      "validatedSegmentIdentity": "6003670100013A",
+      "direction": "NE",
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "review",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"VTXQL00\",\"25.12.1\",\"N\",\"readiness\"]",
+      "corridorId": "tiding",
+      "roadCorridor": "堤頂大道",
+      "deviceId": "VTXQL00",
+      "validatedSegmentIdentity": "2000700100000A",
+      "direction": "N",
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "review",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"VTYXQ60\",\"25.12.1\",\"SW\",\"readiness\"]",
+      "corridorId": "chenggong",
+      "roadCorridor": "成功路四段",
+      "deviceId": "VTYXQ60",
+      "validatedSegmentIdentity": "6003670500020A",
+      "direction": "SW",
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "review",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    },
+    {
+      "stableCandidateId": "[\"VTZY920\",\"25.12.1\",\"NE\",\"readiness\"]",
+      "corridorId": "chenggong",
+      "roadCorridor": "成功路四段",
+      "deviceId": "VTZY920",
+      "validatedSegmentIdentity": "6003670100020A",
+      "direction": "NE",
+      "timeWindow": "morning",
+      "eligible": false,
+      "reviewTier": "insufficient",
+      "qualityTier": "review",
+      "observedPerformanceEvidence": {
+        "medianSpeedKmh": null,
+        "relativeSlowdown": null,
+        "eligibleDays": 0,
+        "repeatedSlowdownDays": 0,
+        "slowdownFrequency": null
+      },
+      "dataQualityEvidence": {
+        "completenessRatio": null,
+        "invalidSampleRatio": null,
+        "flags": [
+          "geographic_scope_unverified",
+          "historical_observations_unavailable",
+          "no_comparable_history"
+        ]
+      },
+      "explanation": [
+        "geographic_scope_unverified",
+        "historical_observations_unavailable",
+        "no_comparable_history"
+      ],
+      "limitations": [
+        "No historical congestion inference; detector coverage is not traffic demand.",
+        "Weekday holiday status has not been verified."
+      ]
+    }
+  ]
+}

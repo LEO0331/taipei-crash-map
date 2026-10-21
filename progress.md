@@ -1,5 +1,25 @@
 # Session Progress Log
 
+## 2026-10-21 — feat-006 Neihu Congestion Decision Support
+
+Implemented on `codex/neihu-congestion-decision-support`. Source feasibility selects **readiness mode**. Six retained official payloads (1.71 MB) generate a 120,789-byte public snapshot: 58 research devices across seven named corridors. All study boundaries remain unverified; 31 devices have a single official link/direction and 27 preserve ambiguous mapping as unknown. No synthetic or operational observation rows are published. VD source B is stale (2024-11-14), lacks timezone/direction continuity, and excludes 2,195 lane records. Road speed is one unverified snapshot; travel-time/pairing feeds are empty/stale; authenticated TDX history was not acquired.
+
+Changed files: App/i18n/styles navigation integration; new congestion dashboard, point map, scoped CSS and cached lazy hook; traffic types and two pure utility modules; four bounded source scripts; six retained payloads plus manifest; three public JSON files; three new test suites; source audit/plan; bilingual README, package scripts, feature tracking and handoff.
+
+Simplifications: reuse tabs, lazy loading, Leaflet, static hosting and existing dependencies. Publish one compact readiness payload and keep history aggregation offline. Separate quality and performance objectives, use null for unknown coverage, preserve empty performance populations, and exclude ambiguous joins. Legacy accident conversion and service worker are unchanged.
+
+Verification:
+
+- `npm ci` passed without dependency/lockfile changes. Initial/final `./init.sh` passed using installed Git Bash (default WSL Bash denied). Final **65 tests / 4 files**, TypeScript and Vite build passed.
+- `GITHUB_PAGES=true npm run build` passed; lazy module 51.80 kB / 17.44 kB gzip and CSS 3.38 kB / 1.04 kB gzip. Base-path integration tests passed.
+- Scoped fetch reused retained acquisition; audit/build passed. Two rebuilds produced identical snapshot SHA256 `e54b852d17388683eddc16b46c930178451df4af78a4802663eaef579ccf3441`.
+- `node --check public/sw.js` and `git diff --check` passed. No lint script exists; `tsc -b` supplies static type checking.
+- Real desktop document width/scroll width 1265/1265 px (panel 1209), mobile 375/375 px (panel 355). Fixed inherited desktop double-column layout. Bilingual labels, corridor filters, quality capacity 5/10, disabled historical strategies and real JSON download verified. Download retained six hashes, snapshot identity, 10 selected candidates and unavailable performance.
+- Independent review fixed publication validation, off-peak completeness sensitivity and HTTP-date Retry-After handling; no P1 findings.
+- Local Node benchmark: 58-candidate quality scenario, 10,000 iterations, mean 0.0104 ms. One local production snapshot HTTP read: 37.5 ms, HTTP 200 under `/taipei-crash-map/data/neihu-congestion/snapshot.json`. These are local measurements, not public hosting targets.
+
+Risks: no qualifying history, verified study boundary, holiday calendar, accepted flow/occupancy semantics or travel-time pairing. Future history requires fresh source review. Existing npm audit reports 8 vulnerabilities (3 moderate, 5 high); no dependency updates included. Existing PWA precache still includes large crash-detail files; no new eager precache entry. Large legacy crash-factor records were not re-downloaded. Screenshots and visual verdict are outside Git. Next: review one feature PR, without automatic merge.
+
 ## Current State
 
 **Last Updated:** 2026-08-31 15:45 CST

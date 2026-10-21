@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ETagPairList xmlns="http://traffic.transportdata.tw/standard/traffic/schema/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://traffic.transportdata.tw/standard/traffic/schema/">
+    <UpdateTime>2024-12-18T00:00:00.000+08:00</UpdateTime>
+    <UpdateInterval>86400</UpdateInterval>
+    <AuthorityCode>TPE</AuthorityCode>
+    <ETagPairs/>
+</ETagPairList>

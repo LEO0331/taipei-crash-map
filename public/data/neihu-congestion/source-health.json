@@ -1,0 +1,110 @@
+{
+  "snapshotId": "neihu-readiness-49f28aaa55758ffe",
+  "sources": [
+    {
+      "sourceId": "A",
+      "resourceId": "47cb9090-e1c9-4b1d-b299-b11c375c5ee2",
+      "title": "Taipei VD static",
+      "url": "https://tcgbusfs.blob.core.windows.net/blobtisv/VD.xml",
+      "status": "limited",
+      "retrievedAt": "2026-10-21T01:43:12.243Z",
+      "sha256": "4b89efc9cd0fb8f93f5ccc2af92c790c9229d7e73663e8d630ff8b0441c015b6",
+      "resourceVersion": "taipei-vd-static-v2",
+      "observedFrom": null,
+      "observedThrough": null,
+      "limitations": [
+        "Equipment metadata only; no traffic measurements."
+      ]
+    },
+    {
+      "sourceId": "B",
+      "resourceId": "e57afe7f-3c9e-4f31-9208-eed859a92600",
+      "title": "Taipei VD dynamic",
+      "url": "https://tcgbusfs.blob.core.windows.net/blobtisv/GetVDDATA.xml",
+      "status": "excluded",
+      "retrievedAt": "2026-10-21T01:43:12.890Z",
+      "sha256": "c151a6cd7bbfb6e5758db022a0f26d7cd50a9b6b393b2f05b3841d22c52a03ee",
+      "resourceVersion": "taipei-vd-legacy",
+      "observedFrom": null,
+      "observedThrough": null,
+      "limitations": [
+        "ExchangeTime 2024/11/14T16:46:02; timezone absent; current metadata continuity unverified."
+      ]
+    },
+    {
+      "sourceId": "C",
+      "resourceId": "b5aaf33a-a6dc-4836-bce6-09986241fe11",
+      "title": "Taipei road speed",
+      "url": "https://tcgbusfs.blob.core.windows.net/blobtisv/GetVD.xml.gz",
+      "status": "limited",
+      "retrievedAt": "2026-10-21T01:43:12.971Z",
+      "sha256": "64675756035565f0071b536a2443a6f1dc0e61c23ee1e824c9b4d9d1ebc01f54",
+      "resourceVersion": "taipei-road-speed-legacy",
+      "observedFrom": null,
+      "observedThrough": null,
+      "limitations": [
+        "Single current legacy snapshot; timezone, definitions and section relationship not accepted for comparison."
+      ]
+    },
+    {
+      "sourceId": "D",
+      "resourceId": "e3aa9aa3-6e77-4537-8b7a-4a41908b2089",
+      "title": "Taipei road sections",
+      "url": "https://tcgbusfs.blob.core.windows.net/blobtisv/Section.xml",
+      "status": "limited",
+      "retrievedAt": "2026-10-21T01:43:13.189Z",
+      "sha256": "6435c5420197ca477ace47fe88d365e2df40b4ea8a6c28bcc242e1669935c2c0",
+      "resourceVersion": "taipei-section-v2",
+      "observedFrom": null,
+      "observedThrough": null,
+      "limitations": [
+        "Section metadata only; no verified VD-to-section crosswalk."
+      ]
+    },
+    {
+      "sourceId": "E",
+      "resourceId": "6ccdeddb-c66a-4cf5-8742-46c322f01b3b",
+      "title": "Taipei travel time",
+      "url": "https://tcgbusfs.blob.core.windows.net/blobtisv/ETagPairLive.xml",
+      "status": "excluded",
+      "retrievedAt": "2026-10-21T01:43:13.256Z",
+      "sha256": "6ab321c2a25e6efaa4381e801f0a6ef6d861fdda859107722baed36efad9bd82",
+      "resourceVersion": "taipei-etag-live-v2",
+      "observedFrom": null,
+      "observedThrough": null,
+      "limitations": [
+        "Empty feed dated 2024-12-18."
+      ]
+    },
+    {
+      "sourceId": "F",
+      "resourceId": "9a5139ca-f3fe-494e-a737-5f761c037f37",
+      "title": "Taipei detector pairing",
+      "url": "https://tcgbusfs.blob.core.windows.net/blobtisv/ETagPair.xml",
+      "status": "excluded",
+      "retrievedAt": "2026-10-21T01:43:13.322Z",
+      "sha256": "efe234e6c0d0beccafb0f9a3935b335d5f1360aeaa9e8430c11516d86a6c8a4e",
+      "resourceVersion": "taipei-etag-pair-v2",
+      "observedFrom": null,
+      "observedThrough": null,
+      "limitations": [
+        "Empty pairing list dated 2024-12-18."
+      ]
+    },
+    {
+      "sourceId": "G",
+      "resourceId": "TDX-current-traffic-v2",
+      "title": "TDX transport exchange",
+      "url": "https://tdx.transportdata.tw/api-service/swagger/basic/7f07d940-91a4-495d-9465-1c9df89d709c",
+      "status": "unavailable",
+      "retrievedAt": "2026-10-21T01:43:13.322Z",
+      "sha256": null,
+      "resourceVersion": "not-acquired",
+      "observedFrom": null,
+      "observedThrough": null,
+      "limitations": [
+        "Authenticated historical data not acquired; no credentials required by this retained-source workflow."
+      ]
+    }
+  ]
+}

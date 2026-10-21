@@ -1,5 +1,15 @@
 # Session Handoff
 
+## Current handoff — 2026-10-21
+
+feat-006 is implemented on `codex/neihu-congestion-decision-support`; prepare/review one PR without automatic merge. The latest source of truth is the 2026-10-21 section of progress.md and docs/neihu-congestion-source-audit.md. Sections below this handoff are historical.
+
+The new independent bilingual module publishes a 58-device research inventory and quality-review scenarios. All geographic scopes remain unverified, 27 devices retain ambiguous direction/link mapping, and no operational/synthetic observation rows are public. Historical comparison is disabled: stale VD timestamps, unverified road-speed crosswalk, empty travel-time/pairing feeds and no authenticated TDX archive. Do not enable historical mode from a catalogue pointer or isolated snapshot.
+
+Regenerate with `npm run data:fetch:neihu-traffic` (retained edition; explicit `-- --refresh` for new bounded acquisition), `npm run data:audit:neihu-traffic`, then `npm run data:build:neihu-traffic`. Hash/schema failures preserve the published snapshot. Never run legacy accident conversion as a side effect. Credentials stay outside Git and browser assets.
+
+Final init.sh: 65 tests / 4 files, build passed. Git Bash works where default WSL Bash does not. GitHub Pages build/base-path integration, desktop/mobile, bilingual filters, capacity changes, guards, and actual JSON download verified. See progress.md for measurements and changed files. Existing dependency audit has 8 vulnerabilities (3 moderate, 5 high); existing large PWA precache is unchanged. Follow up in separately scoped work.
+
 ## Current Objective
 
 - Goal: Keep the Taipei crash map repo reviewable, verified, and ready for commit.
