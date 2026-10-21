@@ -33,6 +33,8 @@
 
 ## 內湖道路廊帶查核
 
+完整說明請見[繁中 MVP](docs/neihu-congestion-decision-mvp.zh-TW.md)、[方法論](docs/neihu-congestion-methodology.md)及[交付／驗收報告](docs/neihu-congestion-delivery.md)，包含 PR #7 逐項核對、實際容量名單、截圖與限制。
+
 獨立的「內湖交通壅塞決策」分頁提供官方交通設備與證據品質查核。[來源稽核](docs/neihu-congestion-source-audit.md)記錄資料可行性，[實作計畫](docs/neihu-congestion-implementation-plan.md)記錄範圍與驗證方式。
 
 初版為資料完整性試點：可取得的動態 VD 檔案已過時且未明示時區，尚無經驗證的可比較歷史期間，因此不發布反覆壅塞排名。品質查核名額代表資料調查工作，不是交通工程措施。缺少觀測不代表道路不壅塞；點位車速不能視為整條廊帶旅行時間，事故件數也不參與本模組排序。

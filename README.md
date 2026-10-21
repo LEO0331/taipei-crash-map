@@ -33,6 +33,8 @@ The reconsideration source uses ROC `年/月` values (for example, `106年1月`)
 
 ## Neihu corridor review
 
+Read the [Traditional Chinese MVP](docs/neihu-congestion-decision-mvp.zh-TW.md), [methodology](docs/neihu-congestion-methodology.md), and [delivery/acceptance report](docs/neihu-congestion-delivery.md) for the complete PR #7 evidence, actual capacity examples, screenshots and limitations.
+
 The separate **Neihu Congestion Decision Support** tab reviews official traffic instrumentation and evidence quality. Its source feasibility gate is documented in [the source audit](docs/neihu-congestion-source-audit.md), with the implementation boundary in [the plan](docs/neihu-congestion-implementation-plan.md).
 
 The initial edition is a readiness pilot: the accessible dynamic VD file is stale and lacks an explicit timezone, and comparable historical coverage has not been verified. It therefore publishes no recurring-congestion ranking. Quality review slots are investigations of evidence gaps, not engineering interventions. Missing coverage never means uncongested roads. Point-detector speeds are not corridor travel times; accident counts never influence this module's rankings.

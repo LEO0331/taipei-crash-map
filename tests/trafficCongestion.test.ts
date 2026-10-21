@@ -62,6 +62,13 @@ describe('deterministic capacity scenarios and evidence scopes',()=>{
   it('honestly reports identical selections and empty populations',()=>{const a=runTrafficScenario([],{strategy:'slowdown',capacity:5});expect(a.selected).toEqual([]);expect(compareTrafficScenarios(a,a,scope,scope).identicalSelection).toBe(true);});
 });
 describe('publication contract and safe briefings',()=>{
+  it('does not certify geographic coverage in an exported readiness briefing',()=>{
+    const s=snapshot();
+    const briefing=buildTrafficBriefing(s,runTrafficScenario(s.candidates,{strategy:'quality',capacity:5}),scope);
+    expect(briefing.geographicScope).toContain('geographic scope may be unverified');
+    expect(briefing.geographicScope).not.toContain('verified connecting corridors');
+    expect(exportTrafficBriefingCsv(briefing)).toContain('geographic scope may be unverified');
+  });
   it('accepts honest readiness and rejects incompatible schema, hash and synthetic sources',()=>{expect(()=>assertTrafficSnapshot(snapshot())).not.toThrow();expect(()=>assertTrafficSnapshot({...snapshot(),schemaVersion:'2'})).toThrow();expect(()=>assertTrafficSnapshot({...snapshot(),synthetic:true})).toThrow();expect(()=>assertTrafficSnapshot({...snapshot(),sourceSha256:{bad:'abc'}})).toThrow();expect(()=>assertTrafficSnapshot({...snapshot(),scenarioEligibility:{performance:true,quality:true,reasons:[]}})).toThrow();});
   it('rejects nested synthetic observations and arbitrary historical publication claims',()=>{
     expect(()=>assertTrafficSnapshot({...snapshot(),observations:[{...history()[0],synthetic:true}]})).toThrow();

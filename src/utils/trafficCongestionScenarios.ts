@@ -48,7 +48,7 @@ export function compareTrafficScenarios(first:TrafficScenarioResult,second:Traff
 export function buildTrafficBriefing(snapshot:TrafficCongestionSnapshot,result:TrafficScenarioResult,scope:TrafficEvidenceScope,comparison?:ReturnType<typeof compareTrafficScenarios>) {
   return {title:'Neihu Corridor Review Briefing / 內湖道路壅塞與交通資料查核建議摘要',
     policyQuestion:'Which verified Neihu corridor directions and time windows warrant transportation-engineering investigation?',
-    geographicScope:'Neihu Technology Park and verified connecting corridors; detector coverage is not complete-road coverage.',
+    geographicScope:'Research inventory of candidate Neihu Technology Park roads and connections; geographic scope may be unverified. Detector coverage does not establish study-boundary, connecting-corridor or complete-road coverage.',
     snapshotId:snapshot.snapshotId,generatedAt:snapshot.generatedAt,methodologyVersion:snapshot.methodologyVersion,configurationVersion:snapshot.configurationVersion,
     mode:snapshot.mode,sources:snapshot.sources,sourceSha256:snapshot.sourceSha256,
     observationPeriod:{from:snapshot.observedFrom,through:snapshot.observedThrough},

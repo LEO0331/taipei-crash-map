@@ -1,5 +1,9 @@
 # Neihu congestion source feasibility audit
 
+Related delivery documents: [繁中 MVP](neihu-congestion-decision-mvp.zh-TW.md), [methodology](neihu-congestion-methodology.md), [attachment acceptance report](neihu-congestion-delivery.md).
+
+2026-10-21 attachment follow-up: the scoped fetch command reused the retained manifest (no fresh API acquisition); audit passed and two rebuilds retained snapshot SHA256 `e54b852d17388683eddc16b46c930178451df4af78a4802663eaef579ccf3441`. Recount confirms 31 distinct accepted static LinkIDs, 58 quality-review candidates and 0 performance candidates. TUIC web retrieval still returned 502; the TDX homepage exposed no usable documentation text in this retrieval. The earlier acquisition evidence below remains unchanged; no new authenticated archive or quota was verified.
+
 Audit begun 2026-10-21 (Asia/Taipei), before feature implementation. Gate: **readiness only**. A reachable feed is not historical evidence. No comparative congestion grades or travel-time improvements may be attributed to this snapshot.
 
 ## Initial official-resource findings

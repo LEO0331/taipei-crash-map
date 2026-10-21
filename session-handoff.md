@@ -1,5 +1,11 @@
 # Session Handoff
 
+## Attachment follow-up — 2026-10-21
+
+PR #7 remains the single review PR. The new complete handoff is `docs/neihu-congestion-delivery.md`, with `docs/neihu-congestion-decision-mvp.zh-TW.md` (18 required sections), `docs/neihu-congestion-methodology.md`, existing source audit, and intentional screenshots under `docs/images/`.
+
+Follow-up fixes geographic wording in exports to preserve unverified study scope; one regression added. Latest test total is **66 / 4 files**. npm ci, root/Pages build, final init.sh, Pages integration 5/5, audit/reproducible builds, real production JSON/CSV, desktop/mobile and bilingual checks passed. Retained source/snapshot bytes are unchanged. No fresh API/historical acquisition, legacy accident conversion, dependencies or Portfolio changes. Review report's 22-item matrix; historical performance is still gated, with 0 eligible candidates. Prior entries below are preserved history.
+
 ## Current handoff — 2026-10-21
 
 Review PR: https://github.com/LEO0331/taipei-crash-map/pull/7 (not merged). Exact original-byte retention is enforced by `.gitattributes`; staged Git hashes were checked against all six manifest entries. Production JSON and CSV downloads both passed.

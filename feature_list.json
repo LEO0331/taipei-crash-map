@@ -61,7 +61,7 @@
         "feat-003"
       ],
       "status": "done",
-      "evidence": "2026-10-21: readiness source gate; 58 official research devices, 7 corridors, no public operational/synthetic rows. Bilingual lazy dashboard, bounded hashed ETL, separate scenarios and safe exports. Final init.sh: 65 tests / 4 files and build passed; Pages build, base-path integration, desktop/mobile and real JSON download passed. Limitations in source audit and progress.md."
+      "evidence": "2026-10-21: readiness source gate; 58 official research devices, 7 corridors, no public operational/synthetic rows. Bilingual lazy dashboard, bounded hashed ETL, separate scenarios and safe exports. Final init.sh: 65 tests / 4 files and build passed; Pages build, base-path integration, desktop/mobile and real JSON download passed. Limitations in source audit and progress.md. Attachment follow-up: required 18-section MVP, methodology and delivery report plus screenshots added; geographic export wording corrected; 66 tests and both builds pass. Actual quality capacity 5/10 selects 5/10 across 3/5 corridors; performance eligible remains 0. Complete 22-item evidence matrix: docs/neihu-congestion-delivery.md."
     }
   ]
 }
