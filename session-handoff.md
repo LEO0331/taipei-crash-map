@@ -2,6 +2,8 @@
 
 ## Current handoff — 2026-10-21
 
+Review PR: https://github.com/LEO0331/taipei-crash-map/pull/7 (not merged). Exact original-byte retention is enforced by `.gitattributes`; staged Git hashes were checked against all six manifest entries. Production JSON and CSV downloads both passed.
+
 feat-006 is implemented on `codex/neihu-congestion-decision-support`; prepare/review one PR without automatic merge. The latest source of truth is the 2026-10-21 section of progress.md and docs/neihu-congestion-source-audit.md. Sections below this handoff are historical.
 
 The new independent bilingual module publishes a 58-device research inventory and quality-review scenarios. All geographic scopes remain unverified, 27 devices retain ambiguous direction/link mapping, and no operational/synthetic observation rows are public. Historical comparison is disabled: stale VD timestamps, unverified road-speed crosswalk, empty travel-time/pairing feeds and no authenticated TDX archive. Do not enable historical mode from a catalogue pointer or isolated snapshot.

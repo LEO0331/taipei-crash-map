@@ -2,6 +2,8 @@
 
 ## 2026-10-21 — feat-006 Neihu Congestion Decision Support
 
+Review PR: https://github.com/LEO0331/taipei-crash-map/pull/7 (open, not merged). Added `.gitattributes` to preserve original traffic-source bytes; all six staged Git blobs match manifest SHA256. Real production CSV download also passed. Git worktree was clean after the implementation commit.
+
 Implemented on `codex/neihu-congestion-decision-support`. Source feasibility selects **readiness mode**. Six retained official payloads (1.71 MB) generate a 120,789-byte public snapshot: 58 research devices across seven named corridors. All study boundaries remain unverified; 31 devices have a single official link/direction and 27 preserve ambiguous mapping as unknown. No synthetic or operational observation rows are published. VD source B is stale (2024-11-14), lacks timezone/direction continuity, and excludes 2,195 lane records. Road speed is one unverified snapshot; travel-time/pairing feeds are empty/stale; authenticated TDX history was not acquired.
 
 Changed files: App/i18n/styles navigation integration; new congestion dashboard, point map, scoped CSS and cached lazy hook; traffic types and two pure utility modules; four bounded source scripts; six retained payloads plus manifest; three public JSON files; three new test suites; source audit/plan; bilingual README, package scripts, feature tracking and handoff.
@@ -22,8 +24,8 @@ Risks: no qualifying history, verified study boundary, holiday calendar, accepte
 
 ## Current State
 
-**Last Updated:** 2026-08-31 15:45 CST
-**Active Feature:** feat-005 - Release and Handoff Hygiene
+**Last Updated:** 2026-10-21 Asia/Taipei
+**Active Feature:** feat-006 — complete; PR #7 awaiting review. Older sections below retain historical session context.
 
 ## Status
 
