@@ -43,6 +43,14 @@ Acquisition is an explicit offline command, never a visitor-triggered API reques
 
 Run `npm run data:fetch:neihu-traffic` to reuse the retained edition (`-- --refresh` explicitly acquires a new bounded edition), `npm run data:audit:neihu-traffic` to validate hashes and source health, then `npm run data:build:neihu-traffic` to regenerate compact public artifacts. A failed source validation preserves the last published snapshot. See the audit for unsupported historical services and geographic-boundary limitations.
 
+## Bus network and published-service review
+
+The independent **Bus Network & Service** tab inventories official Taipei PTO routes, variants, direction-specific stop occurrences and published-service documents. Evidence-gap and balanced-route scenarios allocate investigation capacity; they do not rate service shortage, demand, equity or passenger harm. Published timetables without direction remain at variant level. Actual historical reliability is unavailable until operational source and completeness gates pass.
+
+The browser loads the bus index only on tab entry, then selected-route detail on demand. Use `npm run data:fetch:bus-service` to reuse the retained acquisition, `npm run data:audit:bus-service` to validate it, and `npm run data:build:bus-service` to rebuild. Explicit `-- --refresh` on fetch acquires a new bounded edition. No credentials or live vehicle requests are sent by visitors, and no dependencies were added.
+
+Read the [Traditional Chinese MVP](docs/bus-service-decision-mvp.zh-TW.md), [source audit](docs/bus-service-source-audit.md), [methodology](docs/bus-service-methodology.md) and [delivery evidence](docs/bus-service-delivery.md) for source counts, eligibility, actual scenario examples, screenshots and verification limits.
+
 ## Local development
 
 Requirements: a supported Node.js LTS release and npm.

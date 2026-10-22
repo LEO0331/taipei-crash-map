@@ -16,6 +16,9 @@
     "data:fetch:neihu-traffic": "tsx scripts/fetchNeihuTrafficSources.ts",
     "data:audit:neihu-traffic": "tsx scripts/auditNeihuTrafficSources.ts",
     "data:build:neihu-traffic": "tsx scripts/buildNeihuTrafficSnapshot.ts",
+    "data:fetch:bus-service": "tsx scripts/fetchBusServiceSources.ts",
+    "data:audit:bus-service": "tsx scripts/auditBusServiceSources.ts",
+    "data:build:bus-service": "tsx scripts/buildBusServiceSnapshot.ts",
     "test": "vitest run"
   },
   "repository": {

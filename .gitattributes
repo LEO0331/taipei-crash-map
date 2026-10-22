@@ -1,2 +1,5 @@
 # Official retained source hashes refer to original bytes, including line endings.
 data/raw/neihu-congestion/** -text
+data/raw/bus-service/** -text
+# Browser integrity checks use the generated JSON's exact bytes on every OS.
+public/data/bus-service/** -text
