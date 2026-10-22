@@ -1,6 +1,6 @@
 # Policy #5 — bus network and published-service delivery
 
-Verified on 2026-10-22, Asia/Taipei. Branch: `codex/bus-network-service`. Base: `5443ee5815deac968c228fd46954ec148c8e09ed`, re-fetched and unchanged on resumption. PR #7 (Neihu) and PR #8 (Vite 8.3.4) are merged in this base. The bus module is a separate feature (`feat-007`); it does not modify Portfolio. The review PR is recorded in the current progress/handoff after publication; automatic merge is not enabled.
+Verified on 2026-10-22, Asia/Taipei. Branch: `codex/bus-network-service`. [Review PR #9](https://github.com/LEO0331/taipei-crash-map/pull/9) is open and not merged; automatic merge is not enabled. Base: `5443ee5815deac968c228fd46954ec148c8e09ed`, re-fetched and unchanged on resumption. PR #7 (Neihu) and PR #8 (Vite 8.3.4) are merged in this base. The bus module is a separate feature (`feat-007`); it does not modify Portfolio.
 
 Read the [18-section Traditional Chinese MVP](bus-service-decision-mvp.zh-TW.md), [methodology](bus-service-methodology.md), [source audit](bus-service-source-audit.md), [independent catalogue/TDX checks](bus-service-access-notes.md) and [implementation plan](bus-service-implementation-plan.md).
 
@@ -125,7 +125,7 @@ Base checks on 2026-10-21 passed 66 existing tests. Resume checks on 2026-10-22:
 | `GITHUB_PAGES=true npm run build` | Passed `/taipei-crash-map/` configuration |
 | Pages bus/Neihu integration suites | **11 tests / 2 files passed** |
 | `node --check public/sw.js` | Passed; service-worker source unchanged |
-| `git diff --check` / staged check | Passed before publication |
+| `git diff --check` / staged check | Passed before publication; 430 staged source/reference/manifest/public-artifact byte hashes match |
 | Legacy `convert:accidents` | Not run; accident contracts unchanged |
 
 PowerShell used `$env:GITHUB_PAGES='true'`; Git Bash ran the existing harness. Some unprivileged Vitest launches hit sandbox temporary-cache EPERM; the complete suites were rerun successfully with approved execution. One integration fixture initially failed after stricter manifest validation; it was corrected to use a valid changed-edition manifest and now exercises the actual edition-mismatch guard. An independent review found malformed sequence numbers could become null after publication; source validation now rejects them before replacing the manifest. No remaining P1/P2 findings were reported in the reviewed pipeline/engine/hooks.

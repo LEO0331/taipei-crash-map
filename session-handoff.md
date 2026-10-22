@@ -2,6 +2,8 @@
 
 ## Current Policy #5 handoff — 2026-10-22
 
+Completed feature review PR: https://github.com/LEO0331/taipei-crash-map/pull/9 (open, not merged), implementation8a619fd. All430 staged byte hashes were verified against manifests. Final step is human review; do not auto-merge. GitHub connector lacks PR write permission, so the authorized signed-in browser created the PR; the app artifact is attached.
+
 Branch `codex/bus-network-service`, base/main5443ee5815deac968c228fd46954ec148c8e09ed, PR7/8 merged. Feature feat-007 implements bus inventory/documentation review only; full current evidence in docs/bus-service-delivery.md. Preserve all earlier notes below as historical. Publish/review one PR against main; never auto-merge.
 
 Eight retained PTOv6.3 gzip files (2026-10-21 acquisition) support416 main routes/731 variants,1241 quality candidates A163/B927/C151. Unresolved212 variant-reference rows are retained/excluded, not fabricated. Published schedules have no accepted direction and historical actual events are unavailable, so those eligibility modes stay disabled. Capacities5/10/all and main-route balancing work; no district/demand/reliability/shortage claim.

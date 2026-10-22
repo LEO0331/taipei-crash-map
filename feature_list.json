@@ -72,8 +72,8 @@
         "feat-003",
         "feat-006"
       ],
-      "status": "in-progress",
-      "evidence": "2026-10-22: official retained8sources support416mainroutes731variants1241quality candidates(A163/B927/C151); historical and direction-published performance disabled.99tests/7files, root/Pages builds, init.sh,11Pagesintegrationchecks, source audit/byte-identical rebuilds, desktop/mobile and realJSON/CSV passed. Complete evidence matrix: docs/bus-service-delivery.md. Single PR publication next; base5443ee5."
+      "status": "done",
+      "evidence": "2026-10-22: official retained8sources support416mainroutes731variants1241quality candidates(A163/B927/C151); historical and direction-published performance disabled.99tests/7files, root/Pages builds, init.sh,11Pagesintegrationchecks, source audit/byte-identical rebuilds, desktop/mobile and realJSON/CSV passed. Complete evidence matrix: docs/bus-service-delivery.md. Single review PR https://github.com/LEO0331/taipei-crash-map/pull/9 open/unmerged; base5443ee5. All430 staged artifact hashes match."
     }
   ]
 }

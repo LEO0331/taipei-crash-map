@@ -2,6 +2,8 @@
 
 ## 2026-10-22 — feat-007 Policy #5 delivery
 
+Review PR: https://github.com/LEO0331/taipei-crash-map/pull/9 — open, not merged. Implementation commit8a619fd. All430 staged original/reference/public artifact byte hashes matched before publication. GitHub connector creation returned403; the authorized signed-in browser created the single PR successfully. No automatic merge.
+
 Resumed the interrupted bus feature on `codex/bus-network-service`, based on latest fetched main `5443ee5815deac968c228fd46954ec148c8e09ed` (PR #7/#8 merged). No Portfolio or dependency changes. Source feasibility was recorded before analytical implementation. [Complete delivery and 18-item acceptance matrix](docs/bus-service-delivery.md), [MVP](docs/bus-service-decision-mvp.zh-TW.md), [methodology](docs/bus-service-methodology.md), [source audit](docs/bus-service-source-audit.md) and [TDX/catalogue supplement](docs/bus-service-access-notes.md) record the final evidence.
 
 Implemented an independent bilingual lazy tab, bounded source fetch/audit/build, immutable atomic manifests, strict byte/schema/source validation, native main/variant/operator/stop/direction resolution, preserved loop occurrences, selected-route point map, raw plus parsed published schedule evidence, quality tiers/capacity/balancing/sensitivity and safe JSON/CSV briefings. Keep historical performance and direction-specific timetable comparison disabled. Simplifications: reuse existing tabs, appUrl, Leaflet and dependencies; heavy joins stay offline; route detail is loaded only on selection, cache is bounded, map shows at most140 occurrences. Scenario changes preserve the selected map view. Existing accident, Neihu and service-worker domain code remains unchanged.
@@ -55,7 +57,7 @@ Risks: no qualifying history, verified study boundary, holiday calendar, accepte
 ## Current State
 
 **Last Updated:** 2026-10-22 Asia/Taipei
-**Active Feature:** feat-007 — verified, preparing one review PR. PR #7/#8 are merged; older sections below retain historical session context.
+**Active Feature:** feat-007 — complete, PR #9 awaiting review. PR #7/#8 are merged; older sections below retain historical session context.
 
 ## Status
 
