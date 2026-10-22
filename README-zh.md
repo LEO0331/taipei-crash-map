@@ -43,6 +43,14 @@
 
 以 `npm run data:fetch:neihu-traffic` 重用保留版本（明確加上 `-- --refresh` 才重新擷取有限的新版本），以 `npm run data:audit:neihu-traffic` 查驗雜湊與來源，再以 `npm run data:build:neihu-traffic` 重新產生精簡公開檔案。來源驗證失敗時保留上一版公開快照。歷史服務與地理邊界限制請見來源稽核。
 
+## 公車路網與公布服務查核
+
+獨立的「公車路網與服務」分頁整理臺北公運處官方主路線、支線、方向站次與公布服務文件。證據缺口優先及主路線平衡情境分配的是調查名額，不是服務短缺、需求、公平或乘客傷害評分。沒有方向的班表只保留在支線層次；實際歷史可靠度需另行通過營運來源與完整性資格。
+
+進入分頁才載入公車索引，選路線後才取詳情並快取。以 `npm run data:fetch:bus-service` 重用保留來源，`npm run data:audit:bus-service` 驗證，`npm run data:build:bus-service` 重建。明確加上 `-- --refresh` 才重新擷取有限的新版本。訪客不傳憑證或觸發即時車輛請求，本功能未新增相依套件。
+
+請見[繁中 MVP](docs/bus-service-decision-mvp.zh-TW.md)、[來源稽核](docs/bus-service-source-audit.md)、[方法論](docs/bus-service-methodology.md)及[交付證據](docs/bus-service-delivery.md)，查閱實際數量、資格、情境、截圖及未驗證事項。
+
 ## 本機開發
 
 需求：受支援的 Node.js LTS 與 npm。

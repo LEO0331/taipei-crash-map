@@ -1,5 +1,21 @@
 # Session Progress Log
 
+## 2026-10-22 — feat-007 Policy #5 delivery
+
+Resumed the interrupted bus feature on `codex/bus-network-service`, based on latest fetched main `5443ee5815deac968c228fd46954ec148c8e09ed` (PR #7/#8 merged). No Portfolio or dependency changes. Source feasibility was recorded before analytical implementation. [Complete delivery and 18-item acceptance matrix](docs/bus-service-delivery.md), [MVP](docs/bus-service-decision-mvp.zh-TW.md), [methodology](docs/bus-service-methodology.md), [source audit](docs/bus-service-source-audit.md) and [TDX/catalogue supplement](docs/bus-service-access-notes.md) record the final evidence.
+
+Implemented an independent bilingual lazy tab, bounded source fetch/audit/build, immutable atomic manifests, strict byte/schema/source validation, native main/variant/operator/stop/direction resolution, preserved loop occurrences, selected-route point map, raw plus parsed published schedule evidence, quality tiers/capacity/balancing/sensitivity and safe JSON/CSV briefings. Keep historical performance and direction-specific timetable comparison disabled. Simplifications: reuse existing tabs, appUrl, Leaflet and dependencies; heavy joins stay offline; route detail is loaded only on selection, cache is bounded, map shows at most140 occurrences. Scenario changes preserve the selected map view. Existing accident, Neihu and service-worker domain code remains unchanged.
+
+Actual retained edition `pto-bus-0b70f80504e5b952`: eight official production gzip files, 5,586,935 bytes, acquired2026-10-21T07:08:14.272Z–07:08:16.679Z. Raw800 Route rows become416 main routes/731 variants/773 distinct operator associations;27 identical association duplicates remain traceable. Stop posts28,826, locations5,376, raw path occurrences43,447;212 unresolved variant references retained in quality report. 1,241 quality candidates, tiers A163/B927/C151. Capacity5 gaps/balanced represent2/5 main routes; capacity10 represents5/10; unlimited identical set1241 across416. Broader inclusion adds0 in this actual edition. Published-direction and historical candidate eligibility0; missing history never means zero service.
+
+Verification: npm ci passed (existing audit2 moderate vulnerabilities, no lock changes); full npm test and final Git Bash init.sh passed **99 tests /7 files**; root and GitHub Pages builds passed; Pages bus+Neihu integration **11/11** passed; node--check public/sw.js and whitespace checks passed. Scoped fetch validated retained inputs rather than fetching a new edition. Audit/build passed; two rebuilds gave identical manifestSHA256 `00c1f33198ef811a46bddc784119063b2ce3174c5dbe3224ba0b662098d02b7b`. Independent review caught malformed sequence input reaching publication; now rejected before replacing the last-good manifest. All reviewed P1/P2 issues resolved.
+
+Production `/taipei-crash-map/` browser: existing accident summary167,550 and Neihu58 preserved; bus Chinese/English, selected route10132 outbound37 points and32 variant schedules, capacity controls and real balanced10 JSON/CSV verified. Download retained10 candidates/10 main routes/8 source hashes/evidence edition/historyfalse; console error log empty. Desktop width/scroll1265/1265; mobile375/375. Intentional screenshots in docs/images/bus-service-*.jpg. Parsed Sunday05:10→22:20 displayed beside raw0510/2220 without claiming actual execution or verified headway bounds.
+
+Payload/performance: manifest83,384 +snapshot563,601bytes only after bus tab;416 selected-route details, referenced total28,239,649bytes+manifest. JS45.43kB/16.27kB gzip; CSS2.98kB/1.02kB gzip. Local balanced1241-candidate scenario10,000iterations mean0.3622ms. Local HTTP read/parse manifest32.8ms, snapshot11.2ms, route10132 4.4ms; not public-host guarantees. Git attributes preserve both raw and public integrity-pinned bytes across operating systems.
+
+Remaining limits: cross-border network without district/population allocation, 212 unresolved variant references, timetable direction/calendar/holiday applicability and geometry age not fully accepted, no authenticated actual-event history or expected-executed denominator. Full physical-device PWA/offline lifecycle and all legacy controls were not manually replayed. This is inventory/documentation decision support, not verified service coverage or reliability. Next: publish one reviewable PR against main, never auto-merge; source traceability and limitations are candidate inputs for future Case Study007, which is not modified here.
+
 ## 2026-10-21 — PR #7 attachment acceptance follow-up
 
 Compared the follow-up attachment with the implementation. Added the missing 18-section `docs/neihu-congestion-decision-mvp.zh-TW.md`, `docs/neihu-congestion-methodology.md`, and `docs/neihu-congestion-delivery.md`; the existing source audit now links them. Retained desktop/mobile screenshots intentionally under `docs/images/` for PR evidence. README files, feature evidence and handoff link the complete report; all historical entries remain intact.
@@ -38,8 +54,8 @@ Risks: no qualifying history, verified study boundary, holiday calendar, accepte
 
 ## Current State
 
-**Last Updated:** 2026-10-21 Asia/Taipei
-**Active Feature:** feat-006 — complete; PR #7 awaiting review. Older sections below retain historical session context.
+**Last Updated:** 2026-10-22 Asia/Taipei
+**Active Feature:** feat-007 — verified, preparing one review PR. PR #7/#8 are merged; older sections below retain historical session context.
 
 ## Status
 

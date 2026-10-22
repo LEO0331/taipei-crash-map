@@ -1,0 +1,15 @@
+{
+  "sources": [
+    {
+      "id": "pto-api-v6.3-documentation",
+      "file": "api-v6.3.pdf",
+      "url": "https://www-ws.gov.taipei/001/Upload/458/relfile/22545/6554360/5daa0a37-8de7-4455-856b-de14a3b8a327.pdf",
+      "httpStatus": 200,
+      "acquisitionDate": "2026-10-21",
+      "exactAcquisitionTime": null,
+      "sha256": "642a0177bb63b990be90a03017d82e8b72a761eab8aac3e0fc1c7ed3614505c4",
+      "bytes": 628974,
+      "purpose": "Official v6.3 identifier and field contract; documentation only, not inventory"
+    }
+  ]
+}

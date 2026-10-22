@@ -1,5 +1,15 @@
 # Session Handoff
 
+## Current Policy #5 handoff — 2026-10-22
+
+Branch `codex/bus-network-service`, base/main5443ee5815deac968c228fd46954ec148c8e09ed, PR7/8 merged. Feature feat-007 implements bus inventory/documentation review only; full current evidence in docs/bus-service-delivery.md. Preserve all earlier notes below as historical. Publish/review one PR against main; never auto-merge.
+
+Eight retained PTOv6.3 gzip files (2026-10-21 acquisition) support416 main routes/731 variants,1241 quality candidates A163/B927/C151. Unresolved212 variant-reference rows are retained/excluded, not fabricated. Published schedules have no accepted direction and historical actual events are unavailable, so those eligibility modes stay disabled. Capacities5/10/all and main-route balancing work; no district/demand/reliability/shortage claim.
+
+Latest verification: npm ci;99tests/7files; root/Pages builds; final init.sh;11 Pages bus/Neihu integration tests; scoped fetch/audit/build+byte-identical manifests; real production desktop/mobile, parsed/raw schedule, selected-map37points and JSON/CSV downloads. Source/published Git newline conversion is disabled to preserve hashes. npm audit has2 existing moderate findings; full physical-device PWA offline install not repeated. No dependencies, Portfolio edits or legacy accident conversion.
+
+Regenerate only `data:fetch:bus-service` (retained unless explicit --refresh), `data:audit:bus-service`, `data:build:bus-service`. Verify original hashes before publishing a new edition, preserve root manifest on failure, never expose credentials or include fixture/vehicle-tracking histories. See source audit/methodology for ID/calendar and v3/TDX access limits. Intentional screenshots under docs/images/bus-service-*.jpg are delivery evidence, other browser/download artifacts stay out of Git.
+
 ## Attachment follow-up — 2026-10-21
 
 PR #7 remains the single review PR. The new complete handoff is `docs/neihu-congestion-delivery.md`, with `docs/neihu-congestion-decision-mvp.zh-TW.md` (18 required sections), `docs/neihu-congestion-methodology.md`, existing source audit, and intentional screenshots under `docs/images/`.

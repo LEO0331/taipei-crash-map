@@ -62,6 +62,18 @@
       ],
       "status": "done",
       "evidence": "2026-10-21: readiness source gate; 58 official research devices, 7 corridors, no public operational/synthetic rows. Bilingual lazy dashboard, bounded hashed ETL, separate scenarios and safe exports. Final init.sh: 65 tests / 4 files and build passed; Pages build, base-path integration, desktop/mobile and real JSON download passed. Limitations in source audit and progress.md. Attachment follow-up: required 18-section MVP, methodology and delivery report plus screenshots added; geographic export wording corrected; 66 tests and both builds pass. Actual quality capacity 5/10 selects 5/10 across 3/5 corridors; performance eligible remains 0. Complete 22-item evidence matrix: docs/neihu-congestion-delivery.md."
+    },
+    {
+      "id": "feat-007",
+      "name": "Bus Network and Service Decision Support",
+      "description": "Independent verified bus network and published-service inventory, source-quality review, deterministic capacity scenarios, gated historical evidence and bilingual briefing exports.",
+      "dependencies": [
+        "feat-001",
+        "feat-003",
+        "feat-006"
+      ],
+      "status": "in-progress",
+      "evidence": "2026-10-22: official retained8sources support416mainroutes731variants1241quality candidates(A163/B927/C151); historical and direction-published performance disabled.99tests/7files, root/Pages builds, init.sh,11Pagesintegrationchecks, source audit/byte-identical rebuilds, desktop/mobile and realJSON/CSV passed. Complete evidence matrix: docs/bus-service-delivery.md. Single PR publication next; base5443ee5."
     }
   ]
 }

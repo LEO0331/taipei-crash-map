@@ -1,0 +1,35 @@
+.bus-dashboard { display: grid; gap: 22px; min-width: 0; width: 100%; }
+.bus-section { min-width: 0; padding: clamp(16px, 3vw, 26px); border: 1px solid var(--line); border-radius: 16px; background: var(--panel); }
+.bus-intro { border-top: 5px solid #245b8a; background: linear-gradient(120deg, #eef6ff, #fff 75%); }
+.bus-dashboard h2 { margin: 3px 0 12px; font-size: clamp(1.5rem, 3vw, 2rem); }
+.bus-dashboard h3 { margin: 0 0 14px; font-size: 1.15rem; }
+.bus-dashboard p { line-height: 1.65; }
+.bus-notice { border-left: 4px solid #ad6b09; border-radius: 5px; padding: 12px 16px; background: #fff7e7; line-height: 1.65; }
+.bus-metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 18px 0; }
+.bus-metric, .bus-comparison article { padding: 14px; border: 1px solid var(--line); border-radius: 10px; min-width: 0; }
+.bus-metric strong { display: block; margin-top: 5px; font-size: 1.8rem; color: #245b8a; overflow-wrap: anywhere; }
+.bus-filters, .bus-comparison { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.bus-dashboard label { display: grid; gap: 6px; min-width: 0; font-size: .9rem; font-weight: 700; }
+.bus-dashboard select, .bus-dashboard input { width: 100%; min-width: 0; padding: 10px; border: 1px solid #b5c4d2; border-radius: 7px; background: #fff; color: var(--ink); }
+.bus-dashboard button { padding: 10px 16px; border-radius: 8px; background: #245b8a; color: #fff; font-weight: 700; }
+.bus-dashboard :disabled { cursor: not-allowed; background: #edf1f5; color: #58697c; }
+.bus-dashboard :focus-visible { outline: 3px solid #d79c35; outline-offset: 3px; }
+.bus-actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 14px; }
+.bus-table-wrap { overflow-x: auto; max-width: 100%; margin-top: 14px; }
+.bus-dashboard table { width: 100%; border-collapse: collapse; font-size: .87rem; }
+.bus-dashboard th, .bus-dashboard td { padding: 11px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); overflow-wrap: anywhere; }
+.bus-dashboard th { background: #eef3f8; }
+.bus-dashboard caption { margin-bottom: 10px; text-align: left; color: var(--muted); }
+.bus-dashboard small { display: block; line-height: 1.6; color: var(--muted); font-weight: 400; }
+.bus-code { font: .8rem ui-monospace, monospace; overflow-wrap: anywhere; }
+.bus-empty { padding: 18px; border-radius: 8px; background: #f1f5f9; }
+.bus-map { width: 100%; height: 360px; border-radius: 10px; z-index: 0; }
+.bus-map-legend { font-size: .88rem; }
+.bus-source { padding: 14px 0; border-bottom: 1px solid var(--line); }
+.bus-dashboard summary { cursor: pointer; font-weight: 700; line-height: 1.65; }
+.bus-dashboard dl { display: grid; grid-template-columns: minmax(100px, 160px) minmax(0, 1fr); gap: 8px; font-size: .88rem; }
+.bus-dashboard dd { margin: 0; overflow-wrap: anywhere; }
+.bus-dashboard dt { color: var(--muted); }
+.bus-dashboard ul { padding-left: 22px; line-height: 1.7; }
+.bus-raw { max-height: 230px; overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere; padding: 12px; background: #f5f7fa; border-radius: 7px; }
+@media(max-width: 700px) { .bus-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); } .bus-filters, .bus-comparison, .bus-dashboard dl { grid-template-columns: 1fr; } .bus-map { height: 300px; } .bus-dashboard td, .bus-dashboard th { padding: 8px; } }

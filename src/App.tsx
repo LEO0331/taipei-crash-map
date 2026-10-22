@@ -31,8 +31,11 @@ const AppraisalReconsiderationDashboard = lazy(() =>
 const NeihuCongestionDashboard = lazy(() =>
   import('./components/NeihuCongestionDashboard').then((module) => ({ default: module.NeihuCongestionDashboard })),
 );
+const BusServiceDecisionDashboard = lazy(() =>
+  import('./components/BusServiceDecisionDashboard').then((module) => ({ default: module.BusServiceDecisionDashboard })),
+);
 
-type AppTab = 'crashMap' | 'hotspotAnalysis' | 'crashFactors' | 'reportedViolations' | 'appraisalReconsiderations' | 'neihuCongestion' | 'dataNotes';
+type AppTab = 'crashMap' | 'hotspotAnalysis' | 'crashFactors' | 'reportedViolations' | 'appraisalReconsiderations' | 'neihuCongestion' | 'busService' | 'dataNotes';
 
 function DashboardFallback({ title, t }: { title: string; t: Translation }) {
   return (
@@ -154,6 +157,7 @@ export default function App() {
     { id: 'reportedViolations', label: t.reportedViolationsTop5 },
     { id: 'appraisalReconsiderations', label: t.appraisalReconsiderations },
     { id: 'neihuCongestion', label: t.neihuCongestion },
+    { id: 'busService', label: t.busService },
     { id: 'dataNotes', label: t.dataNotes },
   ];
 
@@ -277,6 +281,14 @@ export default function App() {
           <div className="full-width-panel">
             <Suspense fallback={<DashboardFallback title={t.neihuCongestion} t={t} />}>
               <NeihuCongestionDashboard language={language} />
+            </Suspense>
+          </div>
+        ) : null}
+
+        {activeTab === 'busService' ? (
+          <div className="full-width-panel">
+            <Suspense fallback={<DashboardFallback title={t.busService} t={t} />}>
+              <BusServiceDecisionDashboard language={language} />
             </Suspense>
           </div>
         ) : null}

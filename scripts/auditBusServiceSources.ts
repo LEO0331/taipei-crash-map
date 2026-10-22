@@ -1,0 +1,11 @@
+import { pathToFileURL } from 'node:url';
+import path from 'node:path';
+import { readBusSources, busCoordinate } from './busServiceSources';
+import type { BusAuditCounts } from '../src/types/busService';
+export async function auditBusServiceSources(rawDir?: string) {
+  const { manifest, records } = await readBusSources(rawDir);
+  const mainIds = new Set(records.Route.map(r => String(r.Id))); const variants = new Set(records.Route.map(r => String(r.pathAttributeId))); const stopIds = new Set(records.Stop.map(r => String(r.Id))); const locations = new Set(records.StopLocation.map(r=>String(r.id)));
+  const report: BusAuditCounts = { routeRecords: records.Route.length, mainRouteIds: mainIds.size, variantIds: variants.size, operatorAssociations: new Set(records.Route.map(r=>[r.Id,r.pathAttributeId,r.providerId].join(':'))).size, stopPosts: records.Stop.length, physicalLocations: records.StopLocation.length, pathOccurrences: records.PathDetail.length, duplicateStopIds: records.Stop.length-stopIds.size, missingMainRouteReferences: records.Stop.filter(r=>!mainIds.has(String(r.routeId))).length, missingVariantReferences: records.PathDetail.filter(r=>!variants.has(String(r.pathAttributeId))).length, missingStopReferences: records.PathDetail.filter(r=>!stopIds.has(String(r.stopId))).length, missingLocationReferences: records.Stop.filter(r=>!locations.has(String(r.stopLocationId))).length, invalidStopCoordinates: records.Stop.filter(r=>busCoordinate(r.latitude,90)===null||busCoordinate(r.longitude,180)===null).length, headwayRecords: records.SemiTimeTable.length, departureRecords: records.TimeTable.length, shapeRecords: records.BusShape.length, specialScheduleEntries: records.SpecTimeTable.length, historicalPerformanceEligible: false, historicalReasons: ['Published inventory and schedules are not actual historical stop events.', 'No comparable windows, executed-trip denominator, service-day crosswalk or outage handling verified.'] };
+  return { manifest, records, report };
+}
+if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href) auditBusServiceSources().then(({report})=>console.log(JSON.stringify(report,null,2))).catch(error=>{console.error(String(error));process.exitCode=1;});
