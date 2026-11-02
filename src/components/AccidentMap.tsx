@@ -20,7 +20,7 @@ type Props = {
   language: Language;
   t: Translation;
   userLocation?: { latitude: number; longitude: number };
-  recordCount: number;
+  recordCount?: number;
   onModeChange: (mode: MapMode) => void;
 };
 
@@ -60,7 +60,9 @@ export function AccidentMap({
     <section className="map-shell">
       <div className="map-toolbar">
         <MapModeToggle mode={mode} t={t} onChange={onModeChange} />
-        <span className="record-badge">{t.recordsShown}: {recordCount.toLocaleString()}</span>
+        {recordCount !== undefined ? (
+          <span className="record-badge">{t.recordsShown}: {recordCount.toLocaleString()}</span>
+        ) : null}
       </div>
       <MapContainer
         center={[25.0478, 121.517]}

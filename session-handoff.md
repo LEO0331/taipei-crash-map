@@ -1,5 +1,13 @@
 # Session Handoff
 
+## All four first-load priorities — 2026-11-02
+
+Implemented priorities 3/4 in the same feat-005 first-load scope: viewport-deferred map dashboard (160px margin; direct analysis and unsupported observer load immediately), first-entry secondary-tab JSON with in-flight/results retained. Includes preceding early-basemap and SW v4 changes. Current branch `codex/map-first-load` starts at merged main `96bccb4`; Civic Explorer PR #12 is already merged. User authorized commit and push, never automatic merge. Final init.sh/root/Pages builds and 127 tests/13 files pass; Chromium1440/375 confirms no chart/secondary startup requests, scroll/direct-analysis rendering, secondary datasets fetched once, no overflow/page errors, and controlled-visit offline map/demand cache. New optional scripts/checkFirstLoad.cjs reuses existing Playwright and keeps artifacts ignored. Full evidence/limits in newest progress.md entry. Review pushed branch, then measure public mobile cold load after deployment. Earlier handoffs below retain historical state.
+
+## First-load map handoff — 2026-11-02
+
+Completed a scoped feat-005 bugfix: mount basemap immediately while JSON loads; keep map on data errors; hide unavailable record counts; reduce SW install precache to four map essentials and migrate cache v3 to v4. Detail datasets cache on demand. Cache migration clears old offline resources; revisit screens online to cache them again. No dependencies/generated data changed. Final init.sh, 114 tests/11 files, root/Pages builds, SW syntax and diff checks pass. Pages Chromium 1440/375 checks confirm tile requests before held JSON resolves, stable map identity, hotspots/count, bilingual UI, no overflow/page errors. Fresh install excludes large detail downloads; demand cache works offline; map offline reload passes after a completed worker-controlled online visit. Immediate first-install offline readiness and offline external tiles are not guaranteed. Evidence and limitations in the newest progress.md entry; temporary browser artifacts ignored in .omx. No deployment or commit performed. Next: review/deploy scoped changes, measure public cold mobile loading; optional chart/secondary-tab deferral remains separate.
+
 ## Civic Explorer handoff — 2026-11-02
 
 Review [Draft PR #12](https://github.com/LEO0331/taipei-crash-map/pull/12), open/unmerged, attached to this chat. Upstream merged the undici fix during work; branch synchronized with `092b211` in `2c82386`, clean install/harness rerun and final full audit0. The initial1high dev finding described below is resolved by upstream, not a feature dependency edit. Remaining limits are physical-device/other-browser/remote-deployment checks.
