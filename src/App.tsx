@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect, useMemo, useState } from 'react';
+import { Component, lazy, Suspense, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import type { AccidentFilters, MapMode } from './types/accident';
 import type { Language, Translation } from './i18n';
 import { translations } from './i18n';
@@ -13,6 +13,7 @@ import { AccidentMap } from './components/AccidentMap';
 import { NearbyHistoricalAccidents } from './components/NearbyHistoricalAccidents';
 import { Footer } from './components/Footer';
 import { appUrl } from './utils/urls';
+import { appTabs, explorerGroups, type AppTab } from './utils/explorer';
 import 'leaflet/dist/leaflet.css';
 import './styles.css';
 
@@ -35,7 +36,19 @@ const BusServiceDecisionDashboard = lazy(() =>
   import('./components/BusServiceDecisionDashboard').then((module) => ({ default: module.BusServiceDecisionDashboard })),
 );
 
-type AppTab = 'crashMap' | 'hotspotAnalysis' | 'crashFactors' | 'reportedViolations' | 'appraisalReconsiderations' | 'neihuCongestion' | 'busService' | 'dataNotes';
+const CivicExplorer = lazy(() => import('./components/CivicExplorer'));
+
+class ExplorerBoundary extends Component<{ children: ReactNode; language: Language; onBack: () => void }, { failed: boolean }> {
+  state = { failed: false };
+  static getDerivedStateFromError() { return { failed: true }; }
+  render() {
+    if (!this.state.failed) return this.props.children;
+    return <section className="explorer-fallback" role="alert">
+      <p>{this.props.language === 'zh' ? '探索介面無法載入，請返回原檢視或重新整理。' : 'Explorer could not load. Return to the current view or reload.'}</p>
+      <button type="button" onClick={this.props.onBack}>{this.props.language === 'zh' ? '返回原檢視' : 'Back to current view'}</button>
+    </section>;
+  }
+}
 
 function DashboardFallback({ title, t }: { title: string; t: Translation }) {
   return (
@@ -76,6 +89,27 @@ export default function App() {
   const [filters, setFilters] = useState(defaultFilters);
   const [mapMode, setMapMode] = useState<MapMode>('hotspots');
   const [activeTab, setActiveTab] = useState<AppTab>('crashMap');
+  const [exploring, setExploring] = useState(false);
+  const explorerEntry = useRef<HTMLButtonElement>(null);
+  const workspace = useRef<HTMLElement>(null);
+  const previousScroll = useRef(0);
+  useEffect(() => {
+    // Leaflet measures its container on resize. Recheck after a hidden view is
+    // revealed, including orientation changes made while Explorer was open.
+    if (!exploring) window.dispatchEvent(new Event('resize'));
+  }, [exploring]);
+  function closeExplorer() {
+    setExploring(false);
+    requestAnimationFrame(() => {
+      explorerEntry.current?.focus({ preventScroll: true });
+      window.scrollTo(0, previousScroll.current);
+    });
+  }
+  function navigateFromExplorer(tab: AppTab) {
+    setActiveTab(tab);
+    setExploring(false);
+    requestAnimationFrame(() => workspace.current?.focus());
+  }
   const [userLocation, setUserLocation] = useState<{ latitude: number; longitude: number }>();
   const {
     accidents,
@@ -150,16 +184,7 @@ export default function App() {
     [accidents, filteredAccidents, hotspots],
   );
   const visibleRecordCount = accidents ? filteredAccidents.length : (summary?.totalRecords ?? 0);
-  const tabs: Array<{ id: AppTab; label: string }> = [
-    { id: 'crashMap', label: t.crashMap },
-    { id: 'hotspotAnalysis', label: t.hotspotAnalysis },
-    { id: 'crashFactors', label: t.crashFactors },
-    { id: 'reportedViolations', label: t.reportedViolationsTop5 },
-    { id: 'appraisalReconsiderations', label: t.appraisalReconsiderations },
-    { id: 'neihuCongestion', label: t.neihuCongestion },
-    { id: 'busService', label: t.busService },
-    { id: 'dataNotes', label: t.dataNotes },
-  ];
+  const tabs = appTabs(t);
 
   return (
     <div className="app">
@@ -175,20 +200,32 @@ export default function App() {
       </header>
 
       <nav className="app-tabs" aria-label={t.appSections}>
+        <button ref={explorerEntry} type="button" aria-expanded={exploring} aria-controls="civic-explorer" className="explorer-entry" onClick={() => {
+          if (exploring) { closeExplorer(); return; }
+          previousScroll.current = window.scrollY;
+          setExploring(true);
+        }}>{language === 'zh' ? '探索導覽' : 'Civic Explorer'}</button>
         {tabs.map((tab) => (
           <button
             key={tab.id}
             type="button"
             className={activeTab === tab.id ? 'active' : ''}
             aria-pressed={activeTab === tab.id}
-            onClick={() => setActiveTab(tab.id)}
+            onClick={() => { setActiveTab(tab.id); setExploring(false); }}
           >
             {tab.label}
           </button>
         ))}
       </nav>
 
-      <main className={`workspace workspace-${activeTab}`}>
+      {exploring ? <div id="civic-explorer"><ExplorerBoundary language={language} onBack={closeExplorer}>
+        <Suspense fallback={<section className="explorer-fallback" aria-busy="true"><p role="status">{language === 'zh' ? '載入探索導覽中…' : 'Loading Explorer…'}</p><button type="button" onClick={closeExplorer}>{language === 'zh' ? '返回原檢視' : 'Back to current view'}</button></section>}>
+          <CivicExplorer groups={explorerGroups(language, t)} language={language} activeTab={activeTab} onNavigate={navigateFromExplorer} onBack={closeExplorer} />
+        </Suspense>
+      </ExplorerBoundary></div> : null}
+
+      <div hidden={exploring}>
+      <main ref={workspace} tabIndex={-1} className={`workspace workspace-${activeTab}`}>
         {activeTab === 'crashMap' || activeTab === 'hotspotAnalysis' ? (
           <>
             <aside className="control-deck">
@@ -310,6 +347,7 @@ export default function App() {
           </section>
         ) : null}
       </main>
+      </div>
 
       <Footer
         t={t}

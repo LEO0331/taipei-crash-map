@@ -1,0 +1,79 @@
+{
+  "commit": "b2253fe",
+  "build": "npm run build -- --manifest",
+  "dependencyReuse": "Ancestor node_modules from current unchanged lockfile npm ci",
+  "bundle": {
+    "staticEntryFiles": [
+      {
+        "file": "assets/index-KmJqzhur.js",
+        "bytes": 423153,
+        "gzipBytes": 126846
+      },
+      {
+        "file": "assets/index-HnwViynS.css",
+        "bytes": 27306,
+        "gzipBytes": 9629
+      }
+    ]
+  },
+  "browser": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "pressed": [
+        "事故地圖"
+      ],
+      "tabCount": 8,
+      "mapMode": [
+        "高頻事故地點"
+      ],
+      "language": "zh-Hant",
+      "dimensions": {
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      "dataRequests": [
+        "/data/accident-hotspots.json",
+        "/data/accident-summary.json",
+        "/data/traffic-violation-report-top5-statistics-records.json",
+        "/data/traffic-violation-report-top5-statistics-summary.json",
+        "/data/traffic-accident-appraisal-reconsiderations/records.json",
+        "/data/traffic-accident-appraisal-reconsiderations/metadata.json"
+      ],
+      "researchChunks": [],
+      "rawAccidents": [],
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "pressed": [
+        "事故地圖"
+      ],
+      "tabCount": 8,
+      "mapMode": [
+        "高頻事故地點"
+      ],
+      "language": "zh-Hant",
+      "dimensions": {
+        "width": 375,
+        "scrollWidth": 375
+      },
+      "dataRequests": [
+        "/data/accident-hotspots.json",
+        "/data/accident-summary.json",
+        "/data/traffic-violation-report-top5-statistics-records.json",
+        "/data/traffic-violation-report-top5-statistics-summary.json",
+        "/data/traffic-accident-appraisal-reconsiderations/records.json",
+        "/data/traffic-accident-appraisal-reconsiderations/metadata.json"
+      ],
+      "researchChunks": [],
+      "rawAccidents": [],
+      "errors": []
+    }
+  ]
+}

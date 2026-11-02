@@ -61,6 +61,10 @@ a {
   min-height: 100vh;
 }
 
+.app-tabs button.explorer-entry { border: 1px solid var(--teal); }
+.explorer-fallback { padding: 2rem; }
+.explorer-fallback button { min-height: 44px; padding: .7rem 1rem; }
+
 .hero {
   align-items: stretch;
   background:
