@@ -1,5 +1,21 @@
 # Session Handoff
 
+## Current publication status — 2026-11-02
+
+Fetched `origin/main` is `141ff8c` (merge of [cache-isolation PR #14](https://github.com/LEO0331/taipei-crash-map/pull/14)). The cache correction is merged. First-load [PR #13](https://github.com/LEO0331/taipei-crash-map/pull/13) and Civic Explorer [PR #12](https://github.com/LEO0331/taipei-crash-map/pull/12) are also in this main history. Earlier review/open-PR instructions below are historical snapshots, not current tasks. Merge evidence does not establish deployment.
+
+This follow-up is documentation only on `codex/refresh-crash-publication-handoff`, based on that fetched main. Its new Draft PR is the item to review; earlier implementation PRs need no further merge action. Runtime, datasets, dependency files and analytical boundaries remain unchanged.
+
+Current Pages production build: entry JS 418.22 kB / 126.61 kB gzip; shared chart chunk 351.20 kB / 103.78 kB gzip; optional Explorer 5.56 kB / 2.38 kB gzip. These are emitted file sizes, not public-host latency measurements. Charts already load on viewport approach or explicit analysis entry, and secondary data loads on its first tab visit. No additional bundle correction is justified by this documentation follow-up; retain the existing lazy boundaries and measure public cold-mobile loading before choosing further work.
+
+Fresh verification: 127 tests / 13 files, GitHub Pages production build and npm audit (zero vulnerabilities) passed. Existing production Chromium 1440/375 navigation, deferred requests and visited offline checks are recorded with the follow-up evidence. No remote deployment, physical-device installation or other-browser claim. Next: review this documentation Draft PR, then check the published release and real mobile performance separately.
+
+## Historical handoffs
+
+The entries below preserve the state reported in earlier sessions; their branch, PR, vulnerability and next-action statements are historical.
+
+
+
 ## All four first-load priorities — 2026-11-02
 
 Implemented priorities 3/4 in the same feat-005 first-load scope: viewport-deferred map dashboard (160px margin; direct analysis and unsupported observer load immediately), first-entry secondary-tab JSON with in-flight/results retained. Includes preceding early-basemap and SW v4 changes. Current branch `codex/map-first-load` starts at merged main `96bccb4`; Civic Explorer PR #12 is already merged. User authorized commit and push, never automatic merge. Final init.sh/root/Pages builds and 127 tests/13 files pass; Chromium1440/375 confirms no chart/secondary startup requests, scroll/direct-analysis rendering, secondary datasets fetched once, no overflow/page errors, and controlled-visit offline map/demand cache. New optional scripts/checkFirstLoad.cjs reuses existing Playwright and keeps artifacts ignored. Full evidence/limits in newest progress.md entry. Review pushed branch, then measure public mobile cold load after deployment. Earlier handoffs below retain historical state.
