@@ -1,6 +1,6 @@
 # Traffic Map Civic Explorer delivery
 
-2026-11-02 · **PASS_WITH_LIMITATIONS** · branch `codex/civic-explorer`, base `b2253fe` (latest main at startup). One Draft PR; human merge only.
+2026-11-02 · **PASS_WITH_LIMITATIONS** · branch `codex/civic-explorer`, baseline `b2253fe` (latest main at startup), synchronized with upstream `092b211` before handoff. [Draft PR #12](https://github.com/LEO0331/taipei-crash-map/pull/12); human merge only.
 
 ## Final design and mapping
 
@@ -52,7 +52,7 @@ Total entry JS grows **2,909 raw / 1,651 gzip bytes** (~0.69% / 1.30%). The smal
 - Final Git Bash `./init.sh`: passed; `npm test`: **106 tests / 9 files**, passed; `npm run build`: passed.
 - Root and `GITHUB_PAGES=true npm run build -- --manifest`: passed. Preview must use the same `GITHUB_PAGES` value as its build.
 - `git diff --check`, protected-file diff, `node --check public/sw.js`: passed.
-- `npm audit --omit=dev`: **0 vulnerabilities**. Full `npm audit --json`: existing **1 high-severity development dependency (`undici`)**; no dependency changes in this scope. A separate existing Dependabot branch targets undici 7.30.1.
+- `npm audit --omit=dev`: **0 vulnerabilities**. The initial full audit found **1 high-severity development dependency (`undici`)**. Upstream merged Dependabot PR #11 while this feature was in progress; synchronized `092b211` (only package-lock.json changed upstream), repeated clean install/harness and full `npm audit --json`: **0 vulnerabilities**. No feature-specific dependency changes. Initial Windows clean-install retry encountered a native binding locked by our preview child; stopping that confirmed process resolved it.
 - Run optional Chromium acceptance with an existing Playwright module: set `PLAYWRIGHT_MODULE` to its module path and `EXPLORER_BASE_URL` to root or the Pages preview URL, then `node scripts/checkCivicExplorer.cjs`. This session reused Portfolio's installed Playwright, without adding a project dependency. The runner saves JSON/screenshots under ignored `.omx` by default. Retained [Pages evidence](civic-explorer-browser-evidence.json) and [root evidence](civic-explorer-root-browser-evidence.json).
 
 Initial sandbox test temporary-file renames and localhost isolation failed; rerunning verification with the approved unrestricted execution context resolved them. Initial Git Bash was similarly retried successfully. No browser checks remain blocked. Remote production deployment, physical mobile install, Safari/Firefox and assistive-technology sessions were not performed. Deployment is intentionally deferred to human merge. Existing large SW precache and baseline hook requests are unchanged.
@@ -73,4 +73,4 @@ Mobile Traditional Chinese, optional hub mode:
 
 ## Handoff
 
-Review this single Draft PR and merge manually only. Keep the original AppTab IDs and analytical boundaries. Reproduce with `AGENTS.md`, `feature_list.json`, `progress.md`, `./init.sh` and the browser runner above. Remaining work is human review/deployment, plus separately scoped dependency maintenance. Status **PASS_WITH_LIMITATIONS** reflects the development audit finding and unperformed physical-device/remote-deployment checks.
+Review this single Draft PR and merge manually only. Keep the original AppTab IDs and analytical boundaries. Reproduce with `AGENTS.md`, `feature_list.json`, `progress.md`, `./init.sh` and the browser runner above. Remaining work is human review/deployment. Status **PASS_WITH_LIMITATIONS** reflects unperformed physical-device, other-browser and remote-deployment checks.
