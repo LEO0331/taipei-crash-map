@@ -18,10 +18,16 @@ async function loadJson<T>(path: string): Promise<T> {
   return response.json() as Promise<T>;
 }
 
-export function useTrafficViolationReportData(): State {
+export function useTrafficViolationReportData(enabled = false): State {
   const [state, setState] = useState<State>({ records: [], summary: null, isLoading: true });
+  const [requested, setRequested] = useState(enabled);
 
   useEffect(() => {
+    if (enabled) setRequested(true);
+  }, [enabled]);
+
+  useEffect(() => {
+    if (!requested) return;
     let cancelled = false;
     Promise.all([
       loadJson<TrafficViolationReportTop5StatisticRecord[]>('data/traffic-violation-report-top5-statistics-records.json'),
@@ -37,7 +43,7 @@ export function useTrafficViolationReportData(): State {
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [requested]);
 
   return state;
 }

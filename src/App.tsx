@@ -12,6 +12,7 @@ import { FilterPanel } from './components/FilterPanel';
 import { AccidentMap } from './components/AccidentMap';
 import { NearbyHistoricalAccidents } from './components/NearbyHistoricalAccidents';
 import { Footer } from './components/Footer';
+import { DeferredDashboard } from './components/DeferredDashboard';
 import { appUrl } from './utils/urls';
 import { appTabs, explorerGroups, type AppTab } from './utils/explorer';
 import 'leaflet/dist/leaflet.css';
@@ -130,8 +131,8 @@ export default function App() {
     error: crashDetailsError,
     loadCrashDetails,
   } = useCrashDetailData();
-  const trafficViolationReport = useTrafficViolationReportData();
-  const appraisalReconsiderations = useAppraisalReconsiderationData();
+  const trafficViolationReport = useTrafficViolationReportData(activeTab === 'reportedViolations');
+  const appraisalReconsiderations = useAppraisalReconsiderationData(activeTab === 'appraisalReconsiderations');
   const t = translations[language];
 
   useEffect(() => {
@@ -245,32 +246,33 @@ export default function App() {
               <p className="loading">{t.loadingDetailedAccidentRecords}</p>
             ) : null}
             {needsRawAccidents && accidentsError ? <p className="error">{t.dataLoadError}</p> : null}
+            {activeTab === 'crashMap' ? (
+              <AccidentMap
+                accidents={filteredAccidents}
+                hotspots={filteredHotspots}
+                filters={filters}
+                mode={mapMode}
+                language={language}
+                t={t}
+                userLocation={userLocation}
+                recordCount={isLoading || error ? undefined : visibleRecordCount}
+                onModeChange={setMapMode}
+              />
+            ) : null}
             {!isLoading && !error ? (
-              <>
-                {activeTab === 'crashMap' ? (
-                  <AccidentMap
-                    accidents={filteredAccidents}
-                    hotspots={filteredHotspots}
-                    filters={filters}
-                    mode={mapMode}
-                    language={language}
+              <DeferredDashboard
+                immediate={activeTab === 'hotspotAnalysis'}
+                fallback={<DashboardFallback title={t.dashboard} t={t} />}
+              >
+                <Suspense fallback={<DashboardFallback title={t.dashboard} t={t} />}>
+                  <Dashboard
+                    accidents={accidents ? filteredAccidents : null}
+                    baseHotspots={hotspots}
+                    summary={summary}
                     t={t}
-                    userLocation={userLocation}
-                    recordCount={visibleRecordCount}
-                    onModeChange={setMapMode}
                   />
-                ) : null}
-                <div className="dashboard-slot">
-                  <Suspense fallback={<DashboardFallback title={t.dashboard} t={t} />}>
-                    <Dashboard
-                      accidents={accidents ? filteredAccidents : null}
-                      baseHotspots={hotspots}
-                      summary={summary}
-                      t={t}
-                    />
-                  </Suspense>
-                </div>
-              </>
+                </Suspense>
+              </DeferredDashboard>
             ) : null}
           </>
         ) : null}

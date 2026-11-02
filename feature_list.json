@@ -57,7 +57,7 @@
         "feat-004"
       ],
       "status": "in-progress",
-      "evidence": "Code review fixed service-worker update strategy. Anti-slop cleanup removed non-null assertions, simplified dashboard fallback markup, normalized i18n formatting, and added malformed-hour regression coverage. First-load data work verified initial requests exclude accidents.json; verification recorded in progress.md."
+      "evidence": "2026-11-02 all four first-load priorities complete: early stable basemap/valid record badge, SW v4 four-item map precache with demand detail caching, viewport-deferred charts with direct-analysis fallback, first-entry secondary JSON retained across tab switches. init.sh, 127 tests/13 files, root/Pages builds, SW/script syntax and diff checks pass. Chromium1440/375 verifies early tiles, no chart/secondary startup requests, scroll/direct analysis, two requests per secondary tab without refetch, bilingual/no overflow/errors, controlled-visit offline cache/map reload. User authorized commit/push on codex/map-first-load based on merged main96bccb4. Physical devices, public latency/deploy and immediate-install offline readiness not claimed. Broader release hygiene remains in progress; see progress.md."
     },
     {
       "id": "feat-006",

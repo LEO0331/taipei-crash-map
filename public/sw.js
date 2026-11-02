@@ -1,22 +1,12 @@
-const CACHE_NAME = 'taipei-crash-map-v3';
+const CACHE_NAME = 'taipei-crash-map-v4';
 const BASE_PATH = new URL(self.registration.scope).pathname;
 const toAppPath = (path) => `${BASE_PATH}${path.replace(/^\/+/, '')}`;
+// Keep installation small; other datasets are cached on their first request.
 const CORE_ASSETS = [
   BASE_PATH,
   toAppPath('manifest.webmanifest'),
   toAppPath('data/accident-summary.json'),
   toAppPath('data/accident-hotspots.json'),
-  toAppPath('data/crash-detail-party-records.json'),
-  toAppPath('data/crash-detail-accidents.json'),
-  toAppPath('data/crash-detail-summary.json'),
-  toAppPath('data/crash-factor-summary.json'),
-  toAppPath('data/traffic-violation-report-top5-statistics-records.json'),
-  toAppPath('data/traffic-violation-report-top5-statistics-summary.json'),
-  toAppPath('data/traffic-violation-report-top5-statistics-latest.json'),
-  toAppPath('data/crash-dashboard-summary.json'),
-  toAppPath('data/conversion-report.json'),
-  toAppPath('data/traffic-accident-appraisal-reconsiderations/records.json'),
-  toAppPath('data/traffic-accident-appraisal-reconsiderations/metadata.json'),
 ];
 
 self.addEventListener('install', (event) => {
