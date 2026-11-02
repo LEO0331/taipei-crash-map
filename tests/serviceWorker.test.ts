@@ -14,7 +14,7 @@ function worker(scopePath: string) {
     addAll: vi.fn(async (_urls: string[]) => undefined),
     put: vi.fn(async (request: Request | string, response: Response) => { stored.set(key(request), response); }),
   };
-  const caches = { open: vi.fn(async (_name: string) => cache), match: vi.fn(async (request: Request | string) => stored.get(key(request))?.clone()), keys: vi.fn(async () => ['taipei-crash-map-v3', 'taipei-crash-map-v4']), delete: vi.fn(async (_name: string) => true) };
+  const caches = { open: vi.fn(async (_name: string) => cache), match: vi.fn(async (request: Request | string) => stored.get(key(request))?.clone()), keys: vi.fn(async () => ['taipei-crash-map-v3', 'taipei-crash-map-v4', 'portfolio-v1', 'taipei-safety-map-v1']), delete: vi.fn(async (_name: string) => true) };
   const fetch = vi.fn(async (_request: Request) => new Response('{"records":1}', { headers: { 'Content-Type': 'application/json' } }));
   runInNewContext(source, { URL, caches, fetch, self: { registration: { scope }, location: { origin: new URL(scope).origin }, addEventListener: (name: string, listener: (event: unknown) => void) => listeners.set(name, listener), skipWaiting: vi.fn(), clients: { claim: vi.fn() } } });
   async function lifecycle(name: string) {
@@ -54,7 +54,7 @@ describe.each(['/', '/taipei-crash-map/'])('service worker first load under %s',
     expect(sw.fetch).toHaveBeenCalledTimes(2);
   });
 
-  it('removes the previous precache version on activation', async () => {
+  it('removes only previous crash-map caches and preserves sibling applications', async () => {
     const sw = worker(base);
     await sw.lifecycle('activate');
     expect(sw.caches.delete.mock.calls).toEqual([['taipei-crash-map-v3']]);

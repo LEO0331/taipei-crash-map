@@ -164,3 +164,5 @@ Final init.sh: 65 tests / 4 files, build passed. Git Bash works where default WS
 ## Recommended Next Step
 
 - Review the heatmap-removal plus crash-detail diff and prepare a commit with verification evidence.
+
+2026-11-02 audit follow-up: cache activation now removes only old taipei-crash-map-* caches, preserving other applications on the origin. Full 127-test suite, root/Pages builds, audit0 and desktop/mobile Chromium plus real shared-origin cache sentinel check passed. No data/dependency changes. Review Draft PR manually; deployment and physical devices remain unverified.
