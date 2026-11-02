@@ -1,5 +1,11 @@
 # Session Handoff
 
+## Civic Explorer handoff — 2026-11-02
+
+Review [Draft PR #12](https://github.com/LEO0331/taipei-crash-map/pull/12), open/unmerged, attached to this chat. Upstream merged the undici fix during work; branch synchronized with `092b211` in `2c82386`, clean install/harness rerun and final full audit0. The initial1high dev finding described below is resolved by upstream, not a feature dependency edit. Remaining limits are physical-device/other-browser/remote-deployment checks.
+
+Feature feat-008 complete on `codex/civic-explorer`, base `b2253fe`. One Draft PR, manual merge only. See docs/civic-explorer-delivery.md for exact five-hub/eight-tab mapping, MIT attribution, screenshots, baseline/final bundle measurements and regression evidence. init.sh and106tests/9files passed; root/Pages production desktop/mobile, mounted map/filter/mode preservation, research laziness, optional-chunk failure, SW scope and offline visited Explorer passed. Initial JS +2909bytes; optional JS5562/CSS4903bytes. No dependencies, data, analytics, ETL/export or PWA configuration changes. PASS_WITH_LIMITATIONS: existing1high dev undici finding, no physical mobile install/remote deploy/other-browser testing. Next step is human PR review/deployment. Keep earlier handoffs below as historical; PR #9 is now merged in this feature's base.
+
 ## Current Policy #5 handoff — 2026-10-22
 
 Completed feature review PR: https://github.com/LEO0331/taipei-crash-map/pull/9 (open, not merged), implementation8a619fd. All430 staged byte hashes were verified against manifests. Final step is human review; do not auto-merge. GitHub connector lacks PR write permission, so the authorized signed-in browser created the PR; the app artifact is attached.

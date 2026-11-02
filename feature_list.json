@@ -1,6 +1,14 @@
 {
   "features": [
     {
+      "id": "feat-008",
+      "name": "Optional Civic Explorer Navigation",
+      "description": "Five navigation-only SVG hubs for the eight existing AppTab destinations, preserving the map-first application and analytical boundaries.",
+      "dependencies": ["feat-002", "feat-003"],
+      "status": "done",
+      "evidence": "2026-11-02: 106 tests/9 files, init.sh, root/Pages builds, desktop/mobile Chromium, state and lazy-loading regression, chunk failure recovery and visited Explorer offline reload passed. No dependencies or analytical/source/PWA files changed. Initial JS +2909 raw bytes; optional Explorer 5562 JS +4903 CSS. PASS_WITH_LIMITATIONS; docs/civic-explorer-delivery.md. Single Draft PR, manual merge only."
+    },
+    {
       "id": "feat-001",
       "name": "Harness Baseline",
       "description": "Keep the agent startup path, feature state, progress log, handoff, and verification script current for this repository.",

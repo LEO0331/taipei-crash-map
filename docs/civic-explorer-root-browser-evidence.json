@@ -1,0 +1,30 @@
+[
+  {
+    "width": 1440,
+    "overflow": [
+      1440,
+      1440
+    ],
+    "noResearchOnOpen": true,
+    "filterAndMapPreserved": true,
+    "errors": []
+  },
+  {
+    "width": 375,
+    "overflow": [
+      375,
+      375
+    ],
+    "noResearchOnOpen": true,
+    "filterAndMapPreserved": true,
+    "errors": []
+  },
+  {
+    "chunkFailureRecovery": true,
+    "registration": {
+      "scope": "http://127.0.0.1:4176/",
+      "script": "http://127.0.0.1:4176/sw.js"
+    },
+    "visitedExplorerOfflineReload": true
+  }
+]
