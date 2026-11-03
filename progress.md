@@ -1,5 +1,11 @@
 # Session Progress Log
 
+## 2026-11-03 — feat-005 deployment test timeout
+
+Fixed the release blocker in Actions run https://github.com/LEO0331/taipei-crash-map/actions/runs/41398029839 (main `73019e4`). The build job failed before building because the deterministic Neihu audit test took 6.186 seconds against Vitest's default 5-second timeout. It validates and parses all six retained source files twice; this is an offline integration workload, not a failed audit assertion. Added explicit bounded 30-second timeouts to the two real-source Neihu tests, consistent with existing bus rebuild integration tests. All assertions remain active; no global timeout, workflow, dependencies, runtime or generated-data changes.
+
+Baseline and final Git Bash `./init.sh` passed: root build and **127 tests / 13 files**. Final GitHub Pages build (`GITHUB_PAGES=true npm run build`) passed. Git Bash required execution outside the sandbox after the restricted launch failed. Desktop/mobile browser and preview checks were skipped because only test timeout configuration changed, with no runtime or base-path edits. Files: tests/trafficCongestionSources.test.ts, progress.md, feature_list.json, session-handoff.md. User authorized commit/push to repair deployment; next: check the newly triggered Pages run. Broader feat-005 remains in progress.
+
 ## 2026-11-02 — feat-005 complete first-load optimization and publication
 
 User authorized commit/push plus priorities 3/4. Continued the same first-load scope using the preceding session's verified baseline rather than repeating baseline init.sh before edits. `DeferredDashboard` keeps chart code/rendering deferred until the dashboard is within 160px of the viewport; once loaded it stays mounted. Explicit Hotspot Analysis renders immediately, and browsers without IntersectionObserver load normally. The two secondary hooks now activate on first reported-violations/appraisal tab entry and retain in-flight requests, results and errors across tab switches. No dependencies or generated data edits. Priorities 1/2 from the preceding entry are included in the same final changeset.

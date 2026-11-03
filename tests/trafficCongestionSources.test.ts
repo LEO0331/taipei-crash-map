@@ -69,6 +69,7 @@ describe('offline official traffic source boundary', () => {
     expect(() => validateRetainedSource(expected, { ...retained, edition: 'future' }, bytes)).toThrow(/edition/);
     expect(() => validateRetainedSource(expected, { ...retained, file: '../elsewhere' }, bytes)).toThrow(/identity/);
   });
+  // Full retained-source XML parsing needs headroom on shared CI runners.
   it('validates original hashes and publishes no synthetic or stale operational observations', async () => {
     const input = await loadAuditedInputs();
     expect(input.manifest.sources).toHaveLength(6);
@@ -79,12 +80,12 @@ describe('offline official traffic source boundary', () => {
     expect(snapshot.snapshotId).toBe(`neihu-readiness-${sha256(JSON.stringify(snapshot.sourceSha256)).slice(0, 16)}`);
     expect(snapshot.sourceSha256).toEqual(Object.fromEntries(input.manifest.sources.map(s => [s.id, s.sha256])));
     expect(snapshot.devices.every((d: { deviceId: string }) => !d.deviceId.startsWith('fixture'))).toBe(true);
-  });
+  }, 30_000);
   it('audit is deterministic and unknown historic completeness stays unknown', async () => {
     const { report } = await auditNeihuSources();
     expect(report.periodQuality.expectedObservations).toBeNull();
     expect(report.periodQuality.missingIntervals).toBeNull();
     expect(report.travelTime.rows).toBe(0); expect(report.travelPairs.rows).toBe(0);
     expect(report).toEqual((await auditNeihuSources()).report);
-  });
+  }, 30_000);
 });

@@ -1,5 +1,9 @@
 # Session Handoff
 
+## Deployment timeout fix — 2026-11-03
+
+Current scope: feat-005 release hygiene. Failed Pages run 41398029839 on main `73019e4` hit the default 5-second test timeout while auditing retained Neihu XML twice (6.186 seconds). Both real-source Neihu tests now have bounded 30-second limits, matching bus integration tests. Baseline/final init.sh and 127 tests/13 files passed; Pages build passed. No runtime, dependency or generated-data change; visual/preview checks are not applicable. User authorized commit and push; check the resulting Pages workflow for remote confirmation. Earlier handoffs below are historical.
+
 ## Current publication status — 2026-11-02
 
 Fetched `origin/main` is `141ff8c` (merge of [cache-isolation PR #14](https://github.com/LEO0331/taipei-crash-map/pull/14)). The cache correction is merged. First-load [PR #13](https://github.com/LEO0331/taipei-crash-map/pull/13) and Civic Explorer [PR #12](https://github.com/LEO0331/taipei-crash-map/pull/12) are also in this main history. Earlier review/open-PR instructions below are historical snapshots, not current tasks. Merge evidence does not establish deployment.
