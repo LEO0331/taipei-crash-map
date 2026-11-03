@@ -28,3 +28,5 @@ The actual inventory includes `Hippocratic-2.1` for `react-leaflet` and
 Retaining these texts does not certify compatibility, permitted use, complete
 compliance or legal conclusions. Dataset terms and basemap attribution remain
 separate from software notices.
+
+Exact license bytes include upstream CRLF/blank lines; whitespace lint is disabled only for the retained TXT source/output paths to preserve those original texts. Source code checks remain active.
