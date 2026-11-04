@@ -1,5 +1,11 @@
 # Session Handoff
 
+## 2026-11-03 — Current software notice follow-up
+
+New branch codex/distribute-runtime-notices is based on latest mainc664b911 with the separately fixed CI timeout/cache corrections already present. This notice-only release hygiene change emits64 full sections from50 non-development dependency entries,13 embedded vendor texts and retained copied/upstream notices, including Hippocratic2.1. Prebuild/production dist and bilingual footer discovery are verified.127tests,root/Pages builds,audit0,exact byte/hash inclusion,source/data/lock integrity and Chromium1440/390 footer navigation pass. No licensing certification. Commit/push only as requested; no new PR,merge or deployment. Review this branch before separately authorizing publication. Older status snapshots above remain historical.
+
+Earlier dated status sections below are preserved history; the notice branch above is the current follow-up.
+
 ## Deployment timeout fix — 2026-11-03
 
 Current scope: feat-005 release hygiene. Failed Pages run 41398029839 on main `73019e4` hit the default 5-second test timeout while auditing retained Neihu XML twice (6.186 seconds). Both real-source Neihu tests now have bounded 30-second limits, matching bus integration tests. Baseline/final init.sh and 127 tests/13 files passed; Pages build passed. No runtime, dependency or generated-data change; visual/preview checks are not applicable. User authorized commit and push; check the resulting Pages workflow for remote confirmation. Earlier handoffs below are historical.

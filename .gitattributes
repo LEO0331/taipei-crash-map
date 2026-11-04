@@ -3,3 +3,8 @@ data/raw/neihu-congestion/** -text
 data/raw/bus-service/** -text
 # Browser integrity checks use the generated JSON's exact bytes on every OS.
 public/data/bus-service/** -text
+
+# Preserve exact distributed license source bytes across platforms.
+/scripts/license-sources/*.txt -text -whitespace
+/public/THIRD_PARTY_NOTICES.txt -text -whitespace
+/public/THIRD_PARTY_NOTICES.json -text

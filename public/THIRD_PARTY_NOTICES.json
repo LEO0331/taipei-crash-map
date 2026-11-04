@@ -1,0 +1,389 @@
+{
+  "scope": "non-development lockfile closure plus retained adaptations and embedded vendor texts",
+  "notices": [
+    {
+      "title": "@react-leaflet/core@3.0.0 — declared license: Hippocratic-2.1",
+      "source": "node_modules/@react-leaflet/core/LICENSE.md",
+      "bytes": 8405,
+      "sha256": "4a015e547e1c8c0faeadec6ce957a4f697e2f20b19c8987d6c5047518e0de5bf"
+    },
+    {
+      "title": "@reduxjs/toolkit@2.12.0 — declared license: MIT",
+      "source": "node_modules/@reduxjs/toolkit/LICENSE",
+      "bytes": 1069,
+      "sha256": "49784961ec6c4941437b7a2c54d8977d0528076a9e7c73dd40f7d0942b8f106d"
+    },
+    {
+      "title": "immer@11.1.8 — declared license: MIT",
+      "source": "node_modules/@reduxjs/toolkit/node_modules/immer/LICENSE",
+      "bytes": 1074,
+      "sha256": "99cf22f6960a6fe228ec84ea9aefb0d75b27999ece83a3a9801e1c2081fa270b"
+    },
+    {
+      "title": "@standard-schema/spec@1.1.0 — declared license: MIT",
+      "source": "node_modules/@standard-schema/spec/LICENSE",
+      "bytes": 1071,
+      "sha256": "653b779005a3a4d64a7288c940f7b9a0e8f0b1e0375f6aa6af9473caf131e564"
+    },
+    {
+      "title": "@standard-schema/utils@0.3.0 — declared license: MIT",
+      "source": "node_modules/@standard-schema/utils/LICENSE",
+      "bytes": 1069,
+      "sha256": "9cf2166507311f427e083ef7671da566949391cb745789abcff8bd43ac26d1f1"
+    },
+    {
+      "title": "@types/d3-array@3.2.2 — declared license: MIT",
+      "source": "node_modules/@types/d3-array/LICENSE",
+      "bytes": 1141,
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+    },
+    {
+      "title": "@types/d3-color@3.1.3 — declared license: MIT",
+      "source": "node_modules/@types/d3-color/LICENSE",
+      "bytes": 1141,
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+    },
+    {
+      "title": "@types/d3-ease@3.0.2 — declared license: MIT",
+      "source": "node_modules/@types/d3-ease/LICENSE",
+      "bytes": 1141,
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+    },
+    {
+      "title": "@types/d3-interpolate@3.0.4 — declared license: MIT",
+      "source": "node_modules/@types/d3-interpolate/LICENSE",
+      "bytes": 1141,
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+    },
+    {
+      "title": "@types/d3-path@3.1.1 — declared license: MIT",
+      "source": "node_modules/@types/d3-path/LICENSE",
+      "bytes": 1141,
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+    },
+    {
+      "title": "@types/d3-scale@4.0.9 — declared license: MIT",
+      "source": "node_modules/@types/d3-scale/LICENSE",
+      "bytes": 1141,
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+    },
+    {
+      "title": "@types/d3-shape@3.1.8 — declared license: MIT",
+      "source": "node_modules/@types/d3-shape/LICENSE",
+      "bytes": 1141,
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+    },
+    {
+      "title": "@types/d3-time@3.0.4 — declared license: MIT",
+      "source": "node_modules/@types/d3-time/LICENSE",
+      "bytes": 1141,
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+    },
+    {
+      "title": "@types/d3-timer@3.0.2 — declared license: MIT",
+      "source": "node_modules/@types/d3-timer/LICENSE",
+      "bytes": 1141,
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+    },
+    {
+      "title": "@types/react@19.2.17 — declared license: MIT",
+      "source": "node_modules/@types/react/LICENSE",
+      "bytes": 1141,
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+    },
+    {
+      "title": "@types/use-sync-external-store@0.0.6 — declared license: MIT",
+      "source": "node_modules/@types/use-sync-external-store/LICENSE",
+      "bytes": 1141,
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+    },
+    {
+      "title": "clsx@2.1.1 — declared license: MIT",
+      "source": "node_modules/clsx/license",
+      "bytes": 1104,
+      "sha256": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97"
+    },
+    {
+      "title": "csstype@3.2.3 — declared license: MIT",
+      "source": "node_modules/csstype/LICENSE",
+      "bytes": 1062,
+      "sha256": "11d55bd4541c75ee7879547ac49089c489163dae49551389713c3d026cab383e"
+    },
+    {
+      "title": "d3-array@3.2.4 — declared license: ISC",
+      "source": "node_modules/d3-array/LICENSE",
+      "bytes": 731,
+      "sha256": "3e6849627f74ff73c257a3ae1efb574015d94fc1035c05ec3c15805165efcbc4"
+    },
+    {
+      "title": "d3-color@3.1.0 — declared license: ISC",
+      "source": "node_modules/d3-color/LICENSE",
+      "bytes": 731,
+      "sha256": "faa682e3e430941f958d26180458f5934a62f58dac4d70ccdd15608c15d0f884"
+    },
+    {
+      "title": "d3-ease@3.0.1 — declared license: BSD-3-Clause",
+      "source": "node_modules/d3-ease/LICENSE",
+      "bytes": 1504,
+      "sha256": "b989d9085148d21ff64a75e14462aefa06b2589a55553b07b1460c70081c7d08"
+    },
+    {
+      "title": "d3-format@3.1.2 — declared license: ISC",
+      "source": "node_modules/d3-format/LICENSE",
+      "bytes": 731,
+      "sha256": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+    },
+    {
+      "title": "d3-interpolate@3.0.1 — declared license: ISC",
+      "source": "node_modules/d3-interpolate/LICENSE",
+      "bytes": 731,
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+    },
+    {
+      "title": "d3-path@3.1.0 — declared license: ISC",
+      "source": "node_modules/d3-path/LICENSE",
+      "bytes": 731,
+      "sha256": "a09b0d6d76e768fca2085fad05743ee81ddd11946bcda160a3cf5e1081a479aa"
+    },
+    {
+      "title": "d3-scale@4.0.2 — declared license: ISC",
+      "source": "node_modules/d3-scale/LICENSE",
+      "bytes": 731,
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+    },
+    {
+      "title": "d3-shape@3.2.0 — declared license: ISC",
+      "source": "node_modules/d3-shape/LICENSE",
+      "bytes": 731,
+      "sha256": "faa682e3e430941f958d26180458f5934a62f58dac4d70ccdd15608c15d0f884"
+    },
+    {
+      "title": "d3-time@3.1.0 — declared license: ISC",
+      "source": "node_modules/d3-time/LICENSE",
+      "bytes": 731,
+      "sha256": "faa682e3e430941f958d26180458f5934a62f58dac4d70ccdd15608c15d0f884"
+    },
+    {
+      "title": "d3-time-format@4.1.0 — declared license: ISC",
+      "source": "node_modules/d3-time-format/LICENSE",
+      "bytes": 731,
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+    },
+    {
+      "title": "d3-timer@3.0.1 — declared license: ISC",
+      "source": "node_modules/d3-timer/LICENSE",
+      "bytes": 731,
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+    },
+    {
+      "title": "decimal.js-light@2.5.1 — declared license: MIT",
+      "source": "node_modules/decimal.js-light/LICENCE.md",
+      "bytes": 1110,
+      "sha256": "fc0397fbd5c128bec7edef4e8d3f45e15db5fd043cdd0a2edfc4f14d47fbc3e4"
+    },
+    {
+      "title": "es-toolkit@1.47.0 — declared license: MIT",
+      "source": "node_modules/es-toolkit/LICENSE",
+      "bytes": 1424,
+      "sha256": "ed68888a2a28f32a05e88f24d4d4ee75075a1bda2b6372a1f2e00fa0576a5524"
+    },
+    {
+      "title": "eventemitter3@5.0.4 — declared license: MIT",
+      "source": "node_modules/eventemitter3/LICENSE",
+      "bytes": 1082,
+      "sha256": "3aecc12b1cb28832b5f65ab64291de96568c3f236a74d646281b4491f7bcadbf"
+    },
+    {
+      "title": "immer@10.2.0 — declared license: MIT",
+      "source": "node_modules/immer/LICENSE",
+      "bytes": 1074,
+      "sha256": "99cf22f6960a6fe228ec84ea9aefb0d75b27999ece83a3a9801e1c2081fa270b"
+    },
+    {
+      "title": "internmap@2.0.3 — declared license: ISC",
+      "source": "node_modules/internmap/LICENSE",
+      "bytes": 726,
+      "sha256": "9ea8903938dab5f12c4572d60725069bec2d1b0dc3bcc210b09bae946a5ebb1f"
+    },
+    {
+      "title": "leaflet@1.9.4 — declared license: BSD-2-Clause",
+      "source": "node_modules/leaflet/LICENSE",
+      "bytes": 1395,
+      "sha256": "53e8dc25862014e4324741ca18fbe3611e11d42ef69f59f86ea8c5389647d4cb"
+    },
+    {
+      "title": "leaflet.heat@0.2.0 — declared license: not declared; see retained text",
+      "source": "node_modules/leaflet.heat/LICENSE",
+      "bytes": 1321,
+      "sha256": "9010b843aad8e450890fc18dae2dfec00e68c10da775515801c42878afbb0da1"
+    },
+    {
+      "title": "leaflet.markercluster@1.5.3 — declared license: MIT",
+      "source": "node_modules/leaflet.markercluster/MIT-LICENCE.txt",
+      "bytes": 1052,
+      "sha256": "3133dacd38250bd1f524d8166cc60a016a382522e062fce143691c65bf5e4b3d"
+    },
+    {
+      "title": "react@19.2.7 — declared license: MIT",
+      "source": "node_modules/react/LICENSE",
+      "bytes": 1088,
+      "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+    },
+    {
+      "title": "react-dom@19.2.7 — declared license: MIT",
+      "source": "node_modules/react-dom/LICENSE",
+      "bytes": 1088,
+      "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+    },
+    {
+      "title": "react-is@19.2.7 — declared license: MIT",
+      "source": "node_modules/react-is/LICENSE",
+      "bytes": 1088,
+      "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+    },
+    {
+      "title": "react-leaflet@5.0.0 — declared license: Hippocratic-2.1",
+      "source": "node_modules/react-leaflet/LICENSE.md",
+      "bytes": 9582,
+      "sha256": "388d14009789fb9a4faeb142550a75ee6d4a33e25a4cd5acafb9c2b7106c2e91"
+    },
+    {
+      "title": "react-redux@9.3.0 — declared license: MIT",
+      "source": "node_modules/react-redux/LICENSE.md",
+      "bytes": 1086,
+      "sha256": "f2da73c752c6b87624755edacf927cbd915fa76555d383e74494bad4a5155ab3"
+    },
+    {
+      "title": "recharts@3.8.1 — declared license: MIT",
+      "source": "node_modules/recharts/LICENSE",
+      "bytes": 1084,
+      "sha256": "2d3aa48a8d1d3b93093680e8e68d3a64cfb590c3ade377ffcaefc69dac7c2ce5"
+    },
+    {
+      "title": "redux@5.0.1 — declared license: MIT",
+      "source": "node_modules/redux/LICENSE.md",
+      "bytes": 1086,
+      "sha256": "f2da73c752c6b87624755edacf927cbd915fa76555d383e74494bad4a5155ab3"
+    },
+    {
+      "title": "redux-thunk@3.1.0 — declared license: MIT",
+      "source": "node_modules/redux-thunk/LICENSE.md",
+      "bytes": 1107,
+      "sha256": "635da794c92d278f8355428be0f9922d643f556d4f75f33fe4aca6b98d27affe"
+    },
+    {
+      "title": "reselect@5.1.1 — declared license: MIT",
+      "source": "node_modules/reselect/LICENSE",
+      "bytes": 1114,
+      "sha256": "0bb5035e49bf9b5661655b402bab3c3efccb8eab2a50e37392100139fe3280f2"
+    },
+    {
+      "title": "scheduler@0.27.0 — declared license: MIT",
+      "source": "node_modules/scheduler/LICENSE",
+      "bytes": 1088,
+      "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+    },
+    {
+      "title": "tiny-invariant@1.3.3 — declared license: MIT",
+      "source": "node_modules/tiny-invariant/LICENSE",
+      "bytes": 1073,
+      "sha256": "b1c501095de70182748cb8e8d97ac5577701a4ef3b755ba30d59fd87b24bdb0f"
+    },
+    {
+      "title": "use-sync-external-store@1.6.0 — declared license: MIT",
+      "source": "node_modules/use-sync-external-store/LICENSE",
+      "bytes": 1088,
+      "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+    },
+    {
+      "title": "victory-vendor@37.3.6 — declared license: MIT AND ISC",
+      "source": "https://raw.githubusercontent.com/FormidableLabs/victory/v37.3.6/LICENSE.txt (wrapper MIT text omitted from installed package)",
+      "bytes": 1626,
+      "sha256": "34dee5fd5e5cc756efb5ad4d64652bce719bdf5e900ca5d7538253e737930bc4"
+    },
+    {
+      "title": "victory-vendor@37.3.6 — declared license: MIT AND ISC; embedded d3-array",
+      "source": "node_modules/victory-vendor/lib-vendor/d3-array/LICENSE",
+      "bytes": 731,
+      "sha256": "faa682e3e430941f958d26180458f5934a62f58dac4d70ccdd15608c15d0f884"
+    },
+    {
+      "title": "victory-vendor@37.3.6 — declared license: MIT AND ISC; embedded d3-color",
+      "source": "node_modules/victory-vendor/lib-vendor/d3-color/LICENSE",
+      "bytes": 731,
+      "sha256": "faa682e3e430941f958d26180458f5934a62f58dac4d70ccdd15608c15d0f884"
+    },
+    {
+      "title": "victory-vendor@37.3.6 — declared license: MIT AND ISC; embedded d3-ease",
+      "source": "node_modules/victory-vendor/lib-vendor/d3-ease/LICENSE",
+      "bytes": 1504,
+      "sha256": "b989d9085148d21ff64a75e14462aefa06b2589a55553b07b1460c70081c7d08"
+    },
+    {
+      "title": "victory-vendor@37.3.6 — declared license: MIT AND ISC; embedded d3-format",
+      "source": "node_modules/victory-vendor/lib-vendor/d3-format/LICENSE",
+      "bytes": 731,
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+    },
+    {
+      "title": "victory-vendor@37.3.6 — declared license: MIT AND ISC; embedded d3-interpolate",
+      "source": "node_modules/victory-vendor/lib-vendor/d3-interpolate/LICENSE",
+      "bytes": 731,
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+    },
+    {
+      "title": "victory-vendor@37.3.6 — declared license: MIT AND ISC; embedded d3-path",
+      "source": "node_modules/victory-vendor/lib-vendor/d3-path/LICENSE",
+      "bytes": 731,
+      "sha256": "0ab21426fad1e8b819ea8ab4c7faf5a24d4fca9c01572fe722490d600bba0d22"
+    },
+    {
+      "title": "victory-vendor@37.3.6 — declared license: MIT AND ISC; embedded d3-scale",
+      "source": "node_modules/victory-vendor/lib-vendor/d3-scale/LICENSE",
+      "bytes": 731,
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+    },
+    {
+      "title": "victory-vendor@37.3.6 — declared license: MIT AND ISC; embedded d3-shape",
+      "source": "node_modules/victory-vendor/lib-vendor/d3-shape/LICENSE",
+      "bytes": 731,
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+    },
+    {
+      "title": "victory-vendor@37.3.6 — declared license: MIT AND ISC; embedded d3-time",
+      "source": "node_modules/victory-vendor/lib-vendor/d3-time/LICENSE",
+      "bytes": 731,
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+    },
+    {
+      "title": "victory-vendor@37.3.6 — declared license: MIT AND ISC; embedded d3-time-format",
+      "source": "node_modules/victory-vendor/lib-vendor/d3-time-format/LICENSE",
+      "bytes": 731,
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+    },
+    {
+      "title": "victory-vendor@37.3.6 — declared license: MIT AND ISC; embedded d3-timer",
+      "source": "node_modules/victory-vendor/lib-vendor/d3-timer/LICENSE",
+      "bytes": 731,
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+    },
+    {
+      "title": "victory-vendor@37.3.6 — declared license: MIT AND ISC; embedded d3-voronoi",
+      "source": "node_modules/victory-vendor/lib-vendor/d3-voronoi/LICENSE",
+      "bytes": 2656,
+      "sha256": "ad6cf57648385d6c40a29f73c55e42922dd793823df5ea265ccd834873bf09b9"
+    },
+    {
+      "title": "victory-vendor@37.3.6 — declared license: MIT AND ISC; embedded internmap",
+      "source": "node_modules/victory-vendor/lib-vendor/internmap/LICENSE",
+      "bytes": 726,
+      "sha256": "9ea8903938dab5f12c4572d60725069bec2d1b0dc3bcc210b09bae946a5ebb1f"
+    },
+    {
+      "title": "Civic Explorer adaptation — Portfolio v3.0.1 / LeoChen MIT notice",
+      "source": "scripts/license-sources/LeoChen-CivicExplorer-MIT.txt",
+      "bytes": 1240,
+      "sha256": "97b5284f517c44a2ca79eb418203c293f9f956e5d35e2dc4f129c687990ee694"
+    }
+  ]
+}
